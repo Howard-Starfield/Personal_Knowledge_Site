@@ -1,0 +1,186 @@
+# yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
+configuration:
+  pageTitle: Knowledge Fieldbook
+  pageTitleSuffix: ""
+  enableSPA: true
+  enablePopovers: true
+  analytics: null
+  locale: en-US
+  ignorePatterns:
+    - private
+    - templates
+    - .obsidian
+  theme:
+    fontOrigin: local
+    cdnCaching: false
+    typography:
+      header: system-ui
+      body: system-ui
+      code: ui-monospace
+    colors:
+      lightMode:
+        light: "#f6f9f8"
+        lightgray: "#dce7e7"
+        gray: "#8ba1a8"
+        darkgray: "#34474f"
+        dark: "#18252c"
+        secondary: "#1f6987"
+        tertiary: "#a96512"
+        highlight: rgba(31, 105, 135, 0.12)
+        textHighlight: "#f2c56a66"
+      darkMode:
+        light: "#0d1b24"
+        lightgray: "#1c3441"
+        gray: "#6f8a96"
+        darkgray: "#cfdee1"
+        dark: "#f1f7f6"
+        secondary: "#78c5df"
+        tertiary: "#f0b558"
+        highlight: rgba(120, 197, 223, 0.14)
+        textHighlight: "#d99a3266"
+
+plugins:
+  - source: "@quartz-community/note-properties"
+    enabled: true
+    options:
+      includeAll: false
+      includedProperties:
+        - description
+        - tags
+        - aliases
+      excludedProperties: []
+      hidePropertiesView: true
+      delimiters: "---"
+      language: yaml
+    order: 5
+  - source: "@quartz-community/created-modified-date"
+    enabled: true
+    options:
+      defaultDateType: modified
+      priority:
+        - frontmatter
+        - git
+    order: 10
+  - source: "@quartz-community/syntax-highlighting"
+    enabled: true
+    options:
+      theme:
+        light: github-light
+        dark: github-dark
+      keepBackground: false
+    order: 20
+  - source: "@quartz-community/obsidian-flavored-markdown"
+    enabled: true
+    options:
+      enableInHtmlEmbed: false
+      enableCheckbox: true
+    order: 30
+  - source: "@quartz-community/github-flavored-markdown"
+    enabled: true
+    order: 40
+  - source: "@quartz-community/table-of-contents"
+    enabled: true
+    order: 50
+    layout:
+      position: right
+      priority: 30
+  - source: "@quartz-community/crawl-links"
+    enabled: true
+    options:
+      markdownLinkResolution: shortest
+    order: 60
+  - source: "@quartz-community/description"
+    enabled: true
+    order: 70
+  - source: "@quartz-community/explicit-publish"
+    enabled: true
+    order: 50
+  - source: "@quartz-community/content-index"
+    enabled: true
+    options:
+      enableSiteMap: false
+      enableRSS: false
+  - source: "@quartz-community/content-page"
+    enabled: true
+  - source: "@quartz-community/folder-page"
+    enabled: true
+  - source: "@quartz-community/tag-page"
+    enabled: true
+  - source: "@quartz-community/explorer"
+    enabled: true
+    layout:
+      position: left
+      priority: 50
+  - source: "@quartz-community/search"
+    enabled: true
+    layout:
+      position: left
+      priority: 20
+      group: toolbar
+      groupOptions:
+        grow: true
+  - source: "@quartz-community/backlinks"
+    enabled: true
+    layout:
+      position: right
+      priority: 50
+  - source: "@quartz-community/article-title"
+    enabled: true
+    layout:
+      position: beforeBody
+      priority: 10
+  - source: "@quartz-community/content-meta"
+    enabled: true
+    layout:
+      position: beforeBody
+      priority: 20
+  - source: "@quartz-community/tag-list"
+    enabled: true
+    layout:
+      position: beforeBody
+      priority: 30
+  - source: "@quartz-community/page-title"
+    enabled: true
+    layout:
+      position: left
+      priority: 10
+  - source: "@quartz-community/darkmode"
+    enabled: true
+    layout:
+      position: left
+      priority: 30
+      group: toolbar
+  - source: "@quartz-community/breadcrumbs"
+    enabled: true
+    layout:
+      position: beforeBody
+      priority: 5
+      condition: not-index
+  - source: "@quartz-community/footer"
+    enabled: true
+    options:
+      links:
+        GitHub: https://github.com/Howard-Starfield/Personal_Knowledge_Site
+    layout:
+      position: footer
+      priority: 50
+
+layout:
+  groups:
+    toolbar:
+      priority: 35
+      direction: row
+      gap: 0.5rem
+  byPageType:
+    "404":
+      positions:
+        beforeBody: []
+        left: []
+        right: []
+    content: {}
+    folder:
+      positions:
+        right: []
+    tag:
+      positions:
+        right: []

@@ -2,6 +2,9 @@
 .gitignore
 node_modules
 public
+output/
+.playwright-cli/
+.wrangler
 prof
 tsconfig.tsbuildinfo
 .obsidian
