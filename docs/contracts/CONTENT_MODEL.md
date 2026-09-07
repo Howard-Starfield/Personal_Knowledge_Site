@@ -118,8 +118,7 @@ never copied wholesale to `content/` or renamed into a canonical question bank.
 At canonical integration, course/lesson prose, public provenance, approved
 glossary material, question definitions, and lesson quiz selections live in
 their own approved contracts. One canonical question definition is never
-duplicated into a lesson body. OQ-09 still blocks executable question-bank
-integration.
+duplicated into a lesson body. RD-10 confirms the executable bank-backed model.
 
 ## Published article
 
@@ -190,7 +189,7 @@ comments: false
 
 The course body contains its authored overview. The site appends a generated semantic lesson table from every published active `lesson` entity whose `courseId` matches this course. Columns are lesson order, linked title, description, estimated time when present, and tags. Generated lesson links are navigation and do not create authored graph edges.
 
-The lesson table is type-specific: it does not blindly enumerate files or folders and does not mix question-bank files into lesson rows. If the provisional question-bank model is approved, public banks may appear in a separately labeled practice section defined by the executable Phase 2 schema.
+The lesson table is type-specific: it does not blindly enumerate files or folders and does not mix question-bank files into lesson rows. Public banks may appear in a separately labeled practice section defined by the executable Phase 2 schema.
 
 Course-specific fields:
 
@@ -236,23 +235,23 @@ Every published lesson is directly navigable. `lessonOrder` supplies a recommend
 
 ## Question-bank draft authoring boundary
 
-Use `docs/templates/QUESTION_BANK_AUTHORING_PACKET.md` when compiling supplied course, article, paper, or notes material into candidate questions. This editorial interchange format is intentionally richer than the provisional runtime schema: it records source allowlists, deterministic locators, claim/coverage inventories, likely-confusion risk areas, question tiers, option-level evidence, quality audits, and independent review.
+Use `docs/templates/QUESTION_BANK_AUTHORING_PACKET.md` when compiling supplied course, article, paper, or notes material into candidate questions. This editorial interchange format is intentionally richer than the executable runtime schema: it records source allowlists, deterministic locators, claim/coverage inventories, likely-confusion risk areas, question tiers, option-level evidence, quality audits, and independent review.
 
 Draft metadata is not canonical content and does not belong below `content/` until reviewed and transformed through the sanctioned integration path. Temporary draft IDs never become content, bank, quiz, or question identity. The authoring LLM may mark work only `candidate` or `blocked`; it cannot certify its own factual accuracy or publication readiness.
 
 The packet defines the complete noncanonical artifact tree. A repository-aware run uses the Git-ignored `private/question-bank-authoring/<draftSetId>/` root unless the owner supplies another explicit nonpublic working root. Source material stays at its declared read-only location and is referenced through the owner allowlist; the authoring LLM does not copy full source text or create alternate output folders. Without an authorized writable root, it returns a filename-labeled artifact and creates no directory.
 
-Question-bank authoring is non-mutating: it does not append questions to the supplied article, transcript, lesson, or notes. After independent review and Phase 2 approval, a maintainer places course question definitions once in `content/courses/<course-slug>/question-banks/<bank-slug>.md` and adds only an ordered bank/question selection block to an existing lesson. Article selection may target the existing article file, but its shared bank location remains blocked until OQ-09 resolves that contract. Importing or adapting source material into public lessons is a separate content task and publication-rights decision.
+Question-bank authoring is non-mutating: it does not append questions to the supplied article, transcript, lesson, or notes. After independent review, a maintainer places course question definitions once in `content/courses/<course-slug>/question-banks/<bank-slug>.md` and adds only an ordered bank/question selection block to an existing lesson. Article selection may target the existing article file, but a new article/shared bank location still requires an explicit placement decision in the applicable plan. Importing or adapting source material into public lessons is a separate content task and publication-rights decision.
 
 Core `source-reinforcement` questions must originate in supplied material. They cover foundations before missed details, misconceptions, exceptions, failure modes, boundary conditions, applications, and transfer. `verified-deep-dive` questions follow the core set and must extend a declared supplied-source claim using separately identified authoritative evidence. Source fidelity and independent factual verification remain separate gates. Timestamps are optional, but evidence summaries without deterministic source anchors are insufficient.
 
 Each essential learning objective requires at least one unaided generative-retrieval candidate, normally `free-recall`, or an owner-reviewed documented gap. Choice-question recognition alone does not prove recall mastery.
 
-The executable Phase 2 plan must explicitly disposition every editorial field as strict public schema, authored provenance/UI, or review-only evidence. It must also resolve article/shared-bank ownership and whether core/deep-dive groups render as one ordered quiz or separate quiz blocks. No integration agent silently drops unresolved evidence or invents placement.
+The Phase 2 plan dispositions every editorial field as strict public schema, authored provenance/UI, or review-only evidence. The first executable slice supports course-owned banks; a later article/shared-bank slice must resolve its placement rather than inventing one. Core/deep-dive labels remain review evidence unless a later public schema revision explicitly adds them.
 
-## Provisional question bank
+## Executable V1 question bank
 
-This is the recommended working contract pending PRD decision OQ-09. It must not be implemented as executable authority until the owner confirms it; Phase 2 also must not invent a competing inline-only shape.
+RD-10 confirms this canonical contract. The parser in `plugins/knowledge-quiz/src/schema.ts` is the executable V1 authority; unknown fields and unsupported schema versions fail closed.
 
 Path: `content/courses/retrieval-foundations/question-banks/fundamentals.md`
 
@@ -451,7 +450,7 @@ The pull request records the capture ID/provider reference and its disposition. 
 
 ## Quiz block
 
-Under the provisional bank-backed model, a quiz is a versioned selection block in a lesson or article body. It references one public question-bank content ID and an explicit ordered list of question IDs:
+Under the confirmed bank-backed model, a quiz is a versioned selection block in a lesson or article body. It references one public question-bank content ID and an explicit ordered list of question IDs:
 
 ````markdown
 ```knowledge-quiz
@@ -484,7 +483,7 @@ Supported question-definition variants:
 | Question type     | Additional required fields                                                                       |
 | ----------------- | ------------------------------------------------------------------------------------------------ |
 | `single-choice`   | At least two unique `options`; `correctOptionIds` containing exactly one existing option ID.     |
-| `multiple-select` | At least two unique `options`; non-empty `correctOptionIds` containing only existing option IDs. |
+| `multiple-select` | At least three unique `options`; at least two answer IDs; at least one option must be incorrect. |
 | `true-false`      | Boolean `answer`.                                                                                |
 | `free-recall`     | Non-empty plain-text `sampleAnswer`; it is self-graded rather than automatically scored.         |
 

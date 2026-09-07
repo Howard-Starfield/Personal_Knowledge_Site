@@ -1,16 +1,16 @@
 # Product Requirements Document: Public Knowledge, Courses, and Active Learning on Quartz 5
 
-| Field                    | Value                                                       |
-| ------------------------ | ----------------------------------------------------------- |
-| Status                   | Draft product baseline; product-owner decisions remain open |
-| PRD version              | 1.3                                                         |
-| Supersedes               | `archive/PRD-v1.0.md`                                       |
-| Revised                  | 2026-08-23                                                  |
-| Primary framework        | Quartz 5                                                    |
-| Public hosting target    | Cloudflare Workers Static Assets, subject to Phase 0 proof  |
-| Canonical public content | Markdown and validated data blocks in Git                   |
-| Baseline audience        | Public readers and the owner as an active learner           |
-| Baseline completion      | Phases 0–2                                                  |
+| Field                    | Value                                                           |
+| ------------------------ | --------------------------------------------------------------- |
+| Status                   | Approved product baseline; listed product decisions remain open |
+| PRD version              | 1.4                                                             |
+| Supersedes               | `archive/PRD-v1.0.md`                                           |
+| Revised                  | 2026-08-30                                                      |
+| Primary framework        | Quartz 5                                                        |
+| Public hosting target    | Cloudflare Workers Static Assets, subject to Phase 0 proof      |
+| Canonical public content | Markdown and validated data blocks in Git                       |
+| Baseline audience        | Public readers and the owner as an active learner               |
+| Baseline completion      | Phases 0–2                                                      |
 
 ---
 
@@ -410,7 +410,7 @@ An `index.md` does not blindly enumerate its filesystem folder. Its validated co
 - generated Learning Log route: filtered public learning-note listing;
 - `page`, including the homepage: curated content only unless a separate contract explicitly adds a generated section.
 
-Question-bank files are not silently mixed into a course lesson table. If OQ-09 is confirmed, a course may expose its public banks in a separately labeled practice section defined by the Phase 2 schema.
+Question-bank files are not silently mixed into a course lesson table. Under the confirmed bank-backed model, a course may expose its public banks in a separately labeled practice section defined by the Phase 2 schema.
 
 ---
 
@@ -478,11 +478,11 @@ The baseline keeps attempt and completion state in memory only. Refreshing or cl
 
 ## 13. Interactive quiz contract
 
-### 13.1 Provisional bank-backed authoring model
+### 13.1 Confirmed bank-backed authoring model
 
 The recommended working contract stores reusable question definitions in a public `type: question-bank` Markdown file below `content/`. A lesson or article contains a versioned `knowledge-quiz` block that selects stable question IDs from one bank. The renderer resolves those definitions at build time and displays the selected questions inside the lesson; the reader does not have to navigate away to the bank file.
 
-This separates question ownership from quiz placement, lets an agent update one canonical definition, and prevents answers from diverging across copied quiz blocks. It remains provisional until OQ-09 is confirmed. Phase 2 must not implement a competing inline-only schema while that decision is open.
+This separates question ownership from quiz placement, lets a maintainer update one canonical definition, and prevents answers from diverging across copied quiz blocks. The owner confirmed this model on 2026-08-30 as RD-10. Phase 2 must not implement a competing inline-only schema.
 
 Question-bank compilation uses the versioned editorial packet at `docs/templates/QUESTION_BANK_AUTHORING_PACKET.md`. The packet is an input/review interchange format, not executable website syntax. It supports course, lesson-set, article, paper, and notes inputs while preserving these product requirements:
 
@@ -493,7 +493,7 @@ Question-bank compilation uses the versioned editorial packet at `docs/templates
 - timestamps are optional, but every accepted claim and question has a deterministic source locator such as a heading, page, slide, line range, paragraph, figure, or numbered segment;
 - the generating LLM produces only candidates or blockers; an independent review checks claims, answer keys, every choice option, ambiguity, duplicates, coverage, and factual status before canonical integration;
 - source-derived risk areas are likely-confusion hypotheses, not claims about a particular learner's weakness unless owner notes or attempt evidence support that conclusion;
-- canonical IDs and runtime fields are created or preserved only by the sanctioned integration path after OQ-09 and the executable schema are approved.
+- canonical IDs and runtime fields are created or preserved only by the sanctioned integration path after independent review; the authoring LLM continues to use temporary draft IDs.
 
 The authoring pass is non-mutating. Supplied source material stays at its owner-declared read-only location; the authoring LLM neither copies the full source into its artifacts nor edits the source or published Markdown. Repository-aware draft artifacts use the fixed Git-ignored `private/question-bank-authoring/<draftSetId>/` tree defined by the packet. Without an owner-authorized output root, the LLM returns a filename-labeled artifact instead of guessing a folder.
 
@@ -545,7 +545,7 @@ questionIds:
 ```
 ````
 
-The question-bank file's frontmatter `id` is the bank identity; a fenced block must not redefine it. The exact executable schema is finalized in the Phase 2 plan after OQ-09 is answered and after inspecting the pinned transformer/component APIs. Alternative syntax requires a documented contract change, not an improvised parser.
+The question-bank file's frontmatter `id` is the bank identity; a fenced block must not redefine it. The executable V1 schema is finalized by `docs/exec-plans/completed/phase-2-bank-backed-quiz.md` after inspection of the pinned transformer and page-render APIs. Alternative syntax requires a documented contract change, not an improvised parser.
 
 Question identity rules:
 
@@ -560,7 +560,7 @@ Question identity rules:
 V1 supports:
 
 - `single-choice`: one correct option;
-- `multiple-select`: one or more correct options;
+- `multiple-select`: at least three options, at least two correct options, and at least one incorrect option;
 - `true-false`: boolean answer;
 - `free-recall`: self-graded against a sample answer and explanation.
 
@@ -1203,7 +1203,7 @@ Required outcomes:
 - freely accessible lessons with recommended ordering and no completion locks;
 - validated public annotation callouts and the generated Learning Log;
 - the owner-approved question-bank authoring decision and contract;
-- public Markdown question-bank entities when OQ-09 confirms the recommended model;
+- public Markdown question-bank entities under the confirmed bank-backed model;
 - versioned `knowledge-quiz` transformer and renderer;
 - supported question types, scoring/reveal/reset behavior;
 - answers and explanations;
@@ -1348,7 +1348,7 @@ Phases 0–2 are complete only when:
 
 ## 27. Product decisions
 
-### 27.1 Resolved in PRD 1.2
+### 27.1 Resolved decisions
 
 | ID    | Decision                                                                                                                                       |
 | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1361,20 +1361,20 @@ Phases 0–2 are complete only when:
 | RD-07 | Pending captures are private by default; reviewed annotations, questions, answers, and explanations are public Markdown.                       |
 | RD-08 | ADR-0002 separates the portable personal wiki from blog authoring; the blog uses owner-declared read-only sources and private review packages. |
 | RD-09 | Course `Study.md` files remain noncanonical source bundles; public prose, provenance, banks, and quiz selections stay separate.                |
+| RD-10 | Canonical questions live once in public `question-bank` Markdown; lesson/article quiz blocks select stable IDs and resolve them at build time. |
 
 ### 27.2 Open decisions
 
 These decisions are not permission for an agent to guess:
 
-| ID    | Decision                                                                                                                                         | Default until answered                                                                  | Blocks                               |
-| ----- | ------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- | ------------------------------------ |
-| OQ-04 | Should quiz questions be fixed-order or optionally shuffled?                                                                                     | Fixed deterministic order                                                               | Quiz enhancement options             |
-| OQ-07 | Should a reader see answers immediately through a disclosure control or only after submitting an attempt?                                        | Reveal after attempt, with no-JS disclosure fallback                                    | Quiz UX                              |
-| OQ-08 | Is the custom graph essential after baseline validation?                                                                                         | Defer to Phase 5 value gate                                                             | Graph scope                          |
-| OQ-09 | Confirm the recommended bank-backed model: canonical questions in public `question-bank` Markdown, with lesson quiz blocks selecting stable IDs. | Recommended model documented in section 13.1; no Phase 2 implementation until confirmed | Question schema and authoring helper |
-| OQ-10 | Should a later enhancement preserve an unfinished attempt across same-tab refresh?                                                               | No; the baseline resets on refresh and close                                            | Persistence enhancement              |
-| OQ-11 | Should the first capture workflow be direct private GitHub Issues, or an Access-protected form inside the site?                                  | Direct private issue first; add the in-site form as a later Phase 3 slice               | Learning Inbox adapter               |
-| OQ-12 | Should an agent process only an issue URL explicitly supplied by the owner, or automatically react to a label?                                   | Explicit issue selection; no automatic agent trigger                                    | Agent runbook and permissions        |
+| ID    | Decision                                                                                                        | Default until answered                                                    | Blocks                        |
+| ----- | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ----------------------------- |
+| OQ-04 | Should quiz questions be fixed-order or optionally shuffled?                                                    | Fixed deterministic order                                                 | Quiz enhancement options      |
+| OQ-07 | Should a reader see answers immediately through a disclosure control or only after submitting an attempt?       | Reveal after attempt, with no-JS disclosure fallback                      | Quiz UX                       |
+| OQ-08 | Is the custom graph essential after baseline validation?                                                        | Defer to Phase 5 value gate                                               | Graph scope                   |
+| OQ-10 | Should a later enhancement preserve an unfinished attempt across same-tab refresh?                              | No; the baseline resets on refresh and close                              | Persistence enhancement       |
+| OQ-11 | Should the first capture workflow be direct private GitHub Issues, or an Access-protected form inside the site? | Direct private issue first; add the in-site form as a later Phase 3 slice | Learning Inbox adapter        |
+| OQ-12 | Should an agent process only an issue URL explicitly supplied by the owner, or automatically react to a label?  | Explicit issue selection; no automatic agent trigger                      | Agent runbook and permissions |
 
 ---
 

@@ -6,6 +6,7 @@
     "target": "esnext",
     "moduleResolution": "node",
     "strict": true,
+    "allowImportingTsExtensions": true,
     "incremental": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
@@ -17,7 +18,15 @@
     "jsx": "react-jsx",
     "jsxImportSource": "preact"
   },
-  "include": ["quartz/**/*.ts", "quartz/**/*.tsx", "*.ts", "*.tsx", "./package.json"],
+  "include": [
+    "quartz/**/*.ts",
+    "quartz/**/*.tsx",
+    "plugins/**/*.ts",
+    "plugins/**/*.tsx",
+    "*.ts",
+    "*.tsx",
+    "./package.json"
+  ],
   "exclude": [
     "build/**/*.d.ts",
     ".quartz/**/src/**",

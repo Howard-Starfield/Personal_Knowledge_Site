@@ -1,0 +1,21 @@
+{
+  "name": "@knowledge-fieldbook/knowledge-quiz",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": "./index.ts",
+  "quartz": {
+    "name": "knowledge-quiz",
+    "displayName": "Knowledge quiz",
+    "category": [
+      "transformer",
+      "pageType"
+    ],
+    "version": "0.1.0",
+    "quartzVersion": ">=5.0.0",
+    "dependencies": [],
+    "defaultOrder": 80,
+    "defaultEnabled": true,
+    "defaultOptions": {}
+  }
+}

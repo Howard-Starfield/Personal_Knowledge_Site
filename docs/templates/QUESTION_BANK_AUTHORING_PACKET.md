@@ -2,8 +2,8 @@
 
 | Field               | Value                                                                                                     |
 | ------------------- | --------------------------------------------------------------------------------------------------------- |
-| Template version    | `2`                                                                                                       |
-| Status              | Editorial interchange format; not yet an executable website schema                                        |
+| Template version    | `3`                                                                                                       |
+| Status              | Editorial interchange format mapped to the executable V1 website schema                                   |
 | Purpose             | Compile a course, article, paper, or notes into an evidence-backed active-recall question-bank draft      |
 | Product authority   | `docs/product/PRD.md`                                                                                     |
 | Content authority   | `docs/contracts/CONTENT_MODEL.md` and `content/AGENTS.md`                                                 |
@@ -19,7 +19,7 @@ This template supports active recall and reinforcement of human learning. It is 
 
 Do not put source material or drafts under `content/` merely because this template exists. Published questions, answers, explanations, and provenance are public. Publication rights, privacy, factual review, canonical identity, and executable-schema validation remain separate gates.
 
-The website does not yet render this format. The planned `knowledge-question-bank` and `knowledge-quiz` formats remain provisional until PRD OQ-09 is explicitly confirmed and Phase 2 implementation evidence passes.
+The website renders the canonical `knowledge-question-bank` and `knowledge-quiz` V1 formats defined in `docs/contracts/CONTENT_MODEL.md`. This packet remains a richer noncanonical review format: the authoring LLM produces candidates with temporary IDs, and only a repository maintainer may convert reviewed candidates into canonical UUID-bearing public blocks.
 
 ## File workflow and placement contract
 
@@ -84,7 +84,53 @@ content/
 
 The maintainer updates an existing bank in place and preserves its bank/question IDs and revision rules. For a new approved course bank, it creates exactly one Markdown bank below that course's existing `question-banks/` folder. A lesson stores only the ordered bank/question selection block; it does not duplicate question definitions.
 
-For an existing article, the article remains at its existing `content/<category-path>/<article-slug>.md` path and may receive only a quiz selection block after approval. The shared/article-owned bank path is unresolved pending PRD OQ-09 and the Phase 2 contract, so neither the authoring LLM nor the maintainer may invent a `question-banks/`, `quizzes/`, or article subfolder for it.
+### Executable V1 target the candidate must support
+
+The authoring LLM does **not** emit this public block or invent the UUIDs. It must, however, provide every reviewed prompt, option, answer, and explanation needed for a maintainer to map an accepted candidate without guessing. The canonical course bank target is:
+
+````markdown
+```knowledge-question-bank
+schemaVersion: 1
+questions:
+  - id: "<maintainer-assigned-question-uuid>"
+    revision: 1
+    status: active
+    type: single-choice
+    prompt: "<plain-text prompt>"
+    options:
+      - id: a
+        text: "<plain-text option>"
+      - id: b
+        text: "<plain-text option>"
+    correctOptionIds: [b]
+    explanation: "<source-supported explanation>"
+```
+````
+
+The lesson contains only a selection:
+
+````markdown
+```knowledge-quiz
+schemaVersion: 1
+quizId: "<maintainer-assigned-quiz-uuid>"
+title: "<plain-text title>"
+questionBankId: "<question-bank frontmatter id>"
+questionIds:
+  - "<question uuid>"
+```
+````
+
+The answer key is explicit data, not inferred from option order or prose:
+
+- `single-choice` uses at least two options and exactly one existing ID in `correctOptionIds`;
+- `multiple-select` uses at least three options, at least two existing IDs in `correctOptionIds`, and at least one incorrect option;
+- `true-false` uses Boolean `answer: true` or `answer: false`;
+- `free-recall` uses non-empty `sampleAnswer` and is self-graded;
+- every type requires a non-empty source-supported `explanation`.
+
+The build rejects unknown fields, duplicate IDs, missing answer IDs, missing bank/question references, retired selections, unsupported versions, and raw HTML-bearing text. In the browser, selecting an option does not reveal correctness; the learner presses **Check answer**, and the validated answer key determines the correct/incorrect result.
+
+For an existing article, the article remains at its existing `content/<category-path>/<article-slug>.md` path and may receive only a quiz selection block after approval. The first executable slice supports course-owned banks. Until a later plan names the shared/article-owned bank path, neither the authoring LLM nor the maintainer may invent a `question-banks/`, `quizzes/`, or article subfolder for it.
 
 If the supplied course or article is not yet authored in this site, importing, summarizing, or adapting that material into public Markdown is a separate content task with its own publication-rights review. Question-bank authoring does not copy the source into a lesson or edit the source document to append questions.
 
@@ -216,7 +262,7 @@ comparisonBankRefs: [] # existing banks used only for duplicate/contradiction ch
 - `objectiveMode: supplied` prohibits silent objective replacement. `derive-draft` permits proposed objectives, but the output remains blocked until owner review.
 - `ID_REQUIRED_AT_INTEGRATION` is never a valid public ID.
 - A course-owned canonical bank requires a real course ID during integration.
-- Article/paper/notes inputs may produce drafts, but canonical shared-bank ownership and placement remain blocked until the Phase 2 contract approves them.
+- Article/paper/notes inputs may produce drafts, but canonical shared-bank ownership and placement remain blocked until a later plan explicitly approves them.
 - Counts are targets, not permission to invent filler. Return a documented gap when evidence cannot support the requested volume.
 
 ## Source-locator contract
@@ -830,12 +876,12 @@ Answer-position diversity detects bias; it never justifies changing the answer w
 
 # Draft-to-website disposition
 
-The Phase 2 executable plan must decide every row explicitly; no integration agent silently drops a field.
+The executable V1 mapping below governs every row; no integration agent silently drops a field.
 
 | Draft information                                                                   | Required disposition before publication                                                                                                        |
 | ----------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
 | `draftId`, assignment/batch IDs                                                     | Replace new-question draft IDs with sanctioned immutable UUIDs; retain batch identity only as review evidence                                  |
-| Proposed bank ownership/placement                                                   | Resolve to valid bank frontmatter ID, path, and course ownership; article/shared placement remains blocked pending contract approval           |
+| Proposed bank ownership/placement                                                   | Resolve to valid bank frontmatter ID, path, and course ownership; article/shared placement remains blocked pending a later placement plan      |
 | `quizGroups` and sequence                                                           | Convert reviewed groups to unique canonical quiz IDs and explicit ordered question IDs after target-page and multi-group behavior are verified |
 | `type`, prompt, options/answer, explanation                                         | Map to strict canonical V1 question variants                                                                                                   |
 | Canonical revision/status                                                           | New question starts at revision `1` and active only after review; later changes follow revision/retirement rules                               |
@@ -845,7 +891,7 @@ The Phase 2 executable plan must decide every row explicitly; no integration age
 | Source files and `fileWorkflow`                                                     | Keep outside public content; do not publish or copy source material merely because it was used for authoring                                   |
 | Template/draft schema versions                                                      | Validate supported input and record the canonical output schema version                                                                        |
 
-The provisional canonical design stores one question definition in one public bank. Lesson/article quiz blocks select stable IDs rather than copying definitions. Core and deep-dive ordering/grouping remains a Phase 2 UI/schema decision; this template records the owner's intent but does not prove runtime support.
+The canonical V1 design stores one question definition in one public bank. Lesson/article quiz blocks select stable IDs rather than copying definitions. Core and deep-dive group labels remain review evidence in this packet; a maintainer orders accepted question IDs explicitly in each executable quiz block.
 
 ---
 

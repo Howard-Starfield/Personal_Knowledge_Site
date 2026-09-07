@@ -30,28 +30,13 @@ works in the local build and what remains behind a product or architecture gate.
 > [!todo] Revisit after use
 > Record which search terms fail to surface the page you expected.
 
-## Active recall—semantic preview
+## Active recall—bank-backed quiz
 
-Read the prompt, answer from memory, and only then open the disclosure. This is
-a functional no-script interaction, but it is deliberately **not** the unresolved
-bank-backed quiz renderer: it has no score, stored attempt, or canonical question
-identity.
-
-<details class="recall-card">
-  <summary>Why should retrieval quality and answer quality be evaluated separately?</summary>
-  <div class="recall-answer">
-    <p><strong>Suggested answer:</strong> They fail at different boundaries. A system can retrieve weak evidence and generate a fluent answer, or retrieve strong evidence and use it poorly. Separate measures make the corrective action visible.</p>
-    <p><strong>Look for:</strong> evidence selection, answer use, and a diagnosis that names where the failure began.</p>
-  </div>
-</details>
-
-<details class="recall-card">
-  <summary>What makes a distractor useful rather than merely difficult?</summary>
-  <div class="recall-answer">
-    <p><strong>Suggested answer:</strong> A useful distractor represents a plausible misconception that evidence can disprove. Difficulty created by vague wording or hidden assumptions does not strengthen recall.</p>
-    <p><strong>Next step:</strong> Compare your answer with the testing guidance in <a href="./courses/retrieval-field-guide/lessons/02-design-the-evidence-loop">Design the evidence loop</a>.</p>
-  </div>
-</details>
+The temporary purple disclosure strips are gone. Open
+[[courses/retrieval-field-guide/lessons/02-design-the-evidence-loop|Design the evidence loop]]
+to try the real quiz: choose an answer, press **Check answer**, receive an
+explicit correct or incorrect result, and read the explanation. The four-question
+demo also proves multiple-select, true/false, and self-graded free recall.
 
 ## Content surfaces
 
@@ -62,7 +47,7 @@ identity.
 | Course       | Outcomes, recommended order, directly linked lessons | No completion gate or persisted progress               |
 | Annotation   | Question, reminder, note, and warning callouts       | Public authored content, not private capture           |
 | Learning Log | Standalone public learning note                      | Generated filtering UI remains Phase 2 work            |
-| Recall       | Native answer disclosure                             | Executable bank-backed scoring waits on OQ-09          |
+| Recall       | Canonical bank-backed interactive quiz               | Attempt state resets on refresh or navigation          |
 
 ## Later, not simulated
 

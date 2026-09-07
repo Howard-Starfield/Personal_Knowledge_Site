@@ -1,0 +1,31 @@
+{
+  "name": "@knowledge-fieldbook/knowledge-graph",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./index.ts",
+    "./components": "./components/index.ts"
+  },
+  "quartz": {
+    "name": "knowledge-graph",
+    "displayName": "Pixi graph",
+    "category": [
+      "emitter",
+      "component"
+    ],
+    "version": "0.3.0",
+    "quartzVersion": ">=5.0.0",
+    "dependencies": [],
+    "defaultOrder": 90,
+    "defaultEnabled": true,
+    "defaultOptions": {},
+    "components": {
+      "KnowledgeGraph": {
+        "displayName": "Pixi graph",
+        "defaultPosition": "right",
+        "defaultPriority": 10
+      }
+    }
+  }
+}

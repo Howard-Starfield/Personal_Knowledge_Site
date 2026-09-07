@@ -61,13 +61,14 @@ not a progress lock: every published page remains directly reachable.
 
 ## Collections
 
-| Collection                              | What lives there                                      |
-| --------------------------------------- | ----------------------------------------------------- |
-| [Knowledge systems](knowledge-systems/) | Connected articles and evaluation notes.              |
-| [Courses](courses/)                     | Ordered learning paths and public lessons.            |
-| [Learning log](learning-log/)           | Questions, reminders, and follow-up annotations.      |
-| [Feature field test](showcase)          | A guided tour of the live and gated product surfaces. |
-| [About the Fieldbook](about)            | Scope, publishing boundaries, and maintenance model.  |
+| Collection                              | What lives there                                       |
+| --------------------------------------- | ------------------------------------------------------ |
+| [Knowledge systems](knowledge-systems/) | Connected articles and evaluation notes.               |
+| [Decision tools](decision-tools/)       | Decision records, risk reviews, and small experiments. |
+| [Courses](courses/)                     | Ordered learning paths and public lessons.             |
+| [Learning log](learning-log/)           | Questions, reminders, and follow-up annotations.       |
+| [Feature field test](showcase)          | A guided tour of the live and gated product surfaces.  |
+| [About the Fieldbook](about)            | Scope, publishing boundaries, and maintenance model.   |
 
 This homepage table is authored orientation. Category pages append generated
 tables of their eligible direct children; those generated links remain

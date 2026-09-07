@@ -3,7 +3,7 @@
 | Field           | Value                                                                                                             |
 | --------------- | ----------------------------------------------------------------------------------------------------------------- |
 | Status          | Phase 0 recovery matrix; local exact-runtime proof incomplete                                                     |
-| Updated         | 2026-08-22                                                                                                        |
+| Updated         | 2026-08-30                                                                                                        |
 | Baseline commit | `c01f387a6a44a24148214059cba04b7f6847784e`                                                                        |
 | Package version | Quartz `5.0.0`                                                                                                    |
 | Lockfile        | npm lockfile v3; SHA-256 `9529e85a6a8a09de0d323225817a7203825c5ecbb7fdfc99b6f8b16d718d5da9` after adding Wrangler |
@@ -35,6 +35,23 @@ This file records the versions used for build and deployment evidence. `package-
 | `@quartz-community/graph`            |                `0.1.0` | Installed but must remain disabled until runtime-CDN issue is resolved |
 
 All other plugin and transitive versions come from the committed lockfile. Version ranges in `package.json` are not evidence of the installed version.
+
+## Local knowledge-graph runtime
+
+The site-owned graph plugin keeps `@quartz-community/graph` disabled and bundles its browser dependencies through esbuild. This preserves the repository's UUID manifest and avoids the official package's floating jsDelivr imports.
+
+| Package        | Exact resolved version | Scope                                      |
+| -------------- | ---------------------: | ------------------------------------------ |
+| `pixi.js`      |               `8.16.0` | Canvas renderer, display list, hit testing |
+| `d3-force`     |                `3.0.0` | Force simulation                           |
+| `d3-selection` |                `3.0.0` | Canvas selection adapter                   |
+| `d3-zoom`      |                `3.0.0` | Pan and zoom behavior                      |
+
+PixiJS API and lifecycle behavior were verified on 2026-08-30 through Context7 source `/pixijs/pixijs/v8.16.0`. Quartz graph behavior was verified through `/jackyzha0/quartz`, the pinned Quartz v5 graph documentation, and installed `@quartz-community/graph@0.1.0` source.
+
+## Local bank-backed quiz runtime
+
+`plugins/knowledge-quiz` version `0.1.0` is a site-owned Quartz transformer/page-type plugin. It uses installed `yaml@2.8.2`, Quartz per-file `vfile.data`, render-time `treeTransforms`, and locally bundled browser code; it adds no remote runtime dependency. Quartz plugin metadata, `allFiles`, and `nav`/`render` lifecycle behavior were verified on 2026-08-30 through Context7 source `/jackyzha0/quartz` and the pinned installed files `quartz/plugins/types.ts`, `quartz/plugins/pageTypes/dispatcher.ts`, `quartz/components/renderPage.tsx`, and `quartz/util/trace.ts`.
 
 ## Cloudflare Workers Static Assets
 

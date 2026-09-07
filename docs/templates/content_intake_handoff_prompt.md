@@ -205,9 +205,10 @@ glossary content type or canonical path.
 QUESTION BANK
 
 Follow QUESTION_BANK_AUTHORING_PACKET.md's current editorial interchange rules.
-The site does not yet render this format, and OQ-09 remains open. Generate only
-question-bank-candidate.md and quiz-selection-proposal.yaml; do not create public
-question-bank files or executable quiz blocks.
+The site renders the canonical V1 bank and quiz formats, but this intake task is
+still noncanonical. Generate only question-bank-candidate.md and
+quiz-selection-proposal.yaml; do not create public question-bank files,
+canonical UUIDs, or executable quiz blocks.
 
 Core source reinforcement comes first and must dominate the bank. Cover:
 - foundational facts and vocabulary;
@@ -267,5 +268,5 @@ The other agent's package is input to review, not a publication command. Before
 any integration, the maintainer must independently verify source hashes,
 publication rights, factual claims, taxonomy, controlled tags, authored-link
 meaning, duplicate content, assessment answers, schema compatibility, and
-canonical identity. Question-bank integration remains blocked until OQ-09 and
-the executable Phase 2 contract are approved.
+canonical identity. Only a repository maintainer may map an independently
+reviewed package into the executable V1 schema and public content tree.
