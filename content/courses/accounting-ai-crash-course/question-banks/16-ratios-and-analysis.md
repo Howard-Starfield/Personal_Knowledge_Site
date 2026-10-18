@@ -77,21 +77,21 @@ questions:
     correctOptionIds: [debt-equity]
     explanation: "Debt-to-equity divides two balance sheet snapshots taken on the same date, so the ending balances match each other and no averaging is needed. DSO, receivables turnover and DPO each pair a period total from the income statement with a balance sheet line, which is why they use average balances."
   - id: "b306f070-41a8-472a-b2f8-30f1478c0c78"
-    revision: 1
+    revision: 2
     status: active
     type: single-choice
-    prompt: "BoBo's average receivables are $28,000 and May revenue is $48,000. Using a 30-day period, what is DSO?"
+    prompt: "BoBo's average receivables are $28,000 and its May credit sales are $48,000. Using a 30-day period, what is DSO?"
     options:
       - id: dso-175
-        text: "17.5 days, from average receivables over revenue"
+        text: "17.5 days, from average receivables over credit sales"
       - id: dso-514
-        text: "51.4 days, from revenue divided by average receivables"
+        text: "51.4 days, from credit sales over average receivables"
       - id: dso-188
-        text: "18.8 days, from ending receivables over revenue"
+        text: "18.8 days, from ending receivables over credit sales"
     correctOptionIds: [dso-175]
-    explanation: "DSO is average receivables divided by revenue, times the days in the period, so $28,000 divided by $48,000 times 30 is 17.5 days. Flipping the fraction gives 51.4, which is the inverse and answers a different question, and using the ending balance of $30,000 gives 18.8 because it ignores the April starting point."
+    explanation: "DSO is average receivables divided by net credit sales, times the days in the period, so $28,000 divided by $48,000 times 30 is 17.5 days. Flipping the fraction gives 51.4, which is the inverse and answers a different question, and using the ending balance of $30,000 gives 18.8 because it ignores the April starting point."
   - id: "c57e2cdf-d1dc-4f12-8473-453a3b2996ce"
-    revision: 1
+    revision: 2
     status: active
     type: single-choice
     prompt: "A client's DSO climbs from 30 to 45 days. What is the best first step?"
@@ -133,7 +133,7 @@ questions:
       - id: debt-equity
         text: "Debt-to-equity: total liabilities over total equity"
       - id: dso
-        text: "DSO: average receivables over revenue times days"
+        text: "DSO: average receivables over credit sales times days"
       - id: ap-turnover
         text: "AP turnover: annualized costs over average payables"
     correctOptionIds: [current, quick, debt-equity]

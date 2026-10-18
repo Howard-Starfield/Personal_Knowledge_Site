@@ -131,7 +131,7 @@ questionIds:
 
 **The rule.** Never plug a difference to make the rec tie. Trace individual transactions, not just ending balances, to their source documents. If something remains unexplained, document what you checked and escalate it. Review aged outstanding checks every month too, since old uncashed checks may be lost or may fall under state unclaimed property rules, which vary by state.
 
-**Worked example.** BoBo's April first pass left a $100 gap. Re-checking cleared-check images found check #1039 booked at $250 but cleared at $350. Re-ticking the check register and the bank debits against the books also found a $100 wire fee that was never booked. Each find came from a source document, and the rec tied at $47,720 with no plug.
+**Worked example.** BoBo's April first pass left a $200 gap: adjusted books showed $47,920 against an adjusted bank balance of $47,720. Re-checking cleared-check images found check #1039 booked at $250 but cleared at $350, which explained $100. Re-ticking the check register and the bank debits against the books found a $100 wire fee that was never booked, which explained the other $100. Each find came from a source document, and the rec tied at $47,720 with no plug.
 
 In the course case study, BoBo's May first-pass worksheet was $2,300 apart (illustrative figures): the adjusted bank balance was $54,333 and the adjusted book balance was $56,633. Ticking each Stripe payout to the bank and the Stripe report found a manual $2,300 estimate with no bank deposit that was never reversed when the real $2,800 payout came in. Reversing it (debit Service Revenue, credit Cash, $2,300) brought the books to $54,333 and tied the rec.
 

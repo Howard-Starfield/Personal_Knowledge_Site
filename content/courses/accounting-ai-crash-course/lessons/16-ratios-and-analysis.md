@@ -137,12 +137,14 @@ Rule of thumb: if a ratio mixes an income statement line with a balance sheet li
 
 The efficiency ratios:
 
-- **AR turnover** = annualized revenue ÷ average AR. How many times a year you collect your receivables.
-- **DSO** (days sales outstanding) = (average AR ÷ revenue) × days in the period. Average days to collect an invoice.
+- **AR turnover** = annualized net credit sales ÷ average AR. How many times a year you collect your receivables.
+- **DSO** (days sales outstanding) = (average AR ÷ net credit sales) × days in the period. Average days to collect an invoice.
 - **AP turnover** = annualized cost of services ÷ average AP.
 - **DPO** (days payable outstanding) = (average AP ÷ cost of services) × days in the period. Average days to pay a vendor.
 
 To annualize a single month for the turnover ratios, multiply the month by 12. This lesson uses 30 days for DSO and DPO. A trailing-twelve-month figure is smoother when you have one, because multiplying one unusual month by 12 can mislead.
+
+Only sales made on credit ever pass through receivables, so the AR ratios use net credit sales. Cash or card sales collected at checkout would inflate turnover and make collections look faster than they are. To keep the arithmetic simple, this example assumes all of BoBo's $48,000 May revenue was invoiced on credit.
 
 Worked example with BoBo's May data:
 

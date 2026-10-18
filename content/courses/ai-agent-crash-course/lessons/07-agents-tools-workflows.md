@@ -87,7 +87,9 @@ for step in range(1, MAX_STEPS + 1):
     if not reply.tool_calls:
         return reply.text                      # final answer, so stop
     call = reply.tool_calls[0]
-    if used[call.name] >= TOOL_BUDGET[call.name]:
+    if call.name not in TOOL_BUDGET or call.name not in DISPATCH:
+        result = f"TOOL_ERROR: unknown tool {call.name!r}. Use one of {sorted(DISPATCH)}."
+    elif used[call.name] >= TOOL_BUDGET[call.name]:
         result = f"BUDGET_EXCEEDED for tool {call.name}. Stop calling it."
     else:
         used[call.name] += 1
