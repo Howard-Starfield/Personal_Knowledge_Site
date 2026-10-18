@@ -117,13 +117,14 @@ npm run validate:graph
 npx wrangler deploy --dry-run
 ```
 
-`npm test` passes explicit globs (`quartz/**/*.test.{ts,js}`, `plugins/**/*.test.ts`,
-`scripts/**/*.test.mjs`) so discovery is limited to tracked test locations; bare `tsx --test` walks
-the whole working tree and also runs any untracked scratch copy of a test file. `validate:graph` reads the build output, so it must run after the
-build. The Wrangler dry run needs no Cloudflare credentials. No CI job deploys; see
-`docs/exec-plans/active/ci-pr-gate.md`.
+`npm test` passes one explicit glob, `{quartz,plugins,scripts}/**/*.test.{ts,js,mjs}`, so
+discovery is limited to tracked test roots; bare `tsx --test` walks the whole working tree and also
+runs any untracked scratch copy of a test file. Quartz logs plugin load failures with a `✗` prefix
+but still exits 0, so the CI build step fails on any `✗` line; check the local build output for them
+too. `validate:graph` reads the build output, so it must run after the build. The Wrangler dry run
+needs no Cloudflare credentials. No CI job deploys; see `docs/exec-plans/active/ci-pr-gate.md`.
 
-On 2026-10-18 every command above passed locally (Node `v24.14.0` diagnostic runtime): 180 tests in
+On 2026-10-18 every command above passed locally on the pinned Node `v24.14.0`: 180 tests in
 45 suites from 14 test files, 551 content entities with 551 unique IDs, 598 emitted build files,
 2160 graph relationships, and 622 asset files read by the dry run.
 

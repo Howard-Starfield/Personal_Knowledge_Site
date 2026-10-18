@@ -28,6 +28,9 @@ documentation match the new gate.
 - No quiz, content, or plugin behavior changes.
 - No dependency upgrade; the lockfile is unchanged.
 - No branch-protection change; settings are recommended to the owner only.
+- No base/head immutable-ID comparison. That is PRD Phase 1 work ("immutable ID creation and
+  base/head validation") with its own deletion/archive and question-revision semantics; it gets a
+  separate plan. Until then `verify` proves current-tree ID validity and uniqueness only.
 - No change to Dependabot configuration, `FUNDING.yml`, or issue templates.
 
 ## 3. Acceptance gates copied from the PRD
@@ -60,27 +63,28 @@ git ls-files | grep AGENTS.md  ->  AGENTS.md, content/AGENTS.md (content/ is not
 
 ## 5. Version and environment matrix
 
-| Component             | Exact version/commit                                  | Source of truth                  | Notes                                       |
-| --------------------- | ----------------------------------------------------- | -------------------------------- | ------------------------------------------- |
-| Node (CI)             | `v22.16.0`                                            | `.node-version`                  | Bundles npm `10.9.2`, the engine minimum    |
-| Node (local evidence) | `v24.14.0`                                            | `node --version`                 | Diagnostic only, not exact-pin proof        |
-| `actions/checkout`    | `v7.0.1` = `3d3c42e5aac5ba805825da76410c181273ba90b1` | `gh api .../git/ref/tags/v7.0.1` | Commit-SHA pin; Dependabot keeps it current |
-| `actions/setup-node`  | `v7.1.0` = `949feb2413d6458794dcd2491c4babbbce0c15c1` | `gh api .../git/ref/tags/v7.1.0` | Commit-SHA pin                              |
-| Runner image          | `ubuntu-24.04`                                        | Workflow                         | Explicit image, not `ubuntu-latest`         |
-| Wrangler              | `4.125.0`                                             | `package.json`, lockfile         | Unchanged                                   |
-| TypeScript/Prettier   | lockfile-resolved                                     | `package-lock.json`              | Unchanged                                   |
-| Quartz                | `5.0.0`                                               | `package.json`                   | Unchanged                                   |
+| Component            | Exact version/commit                                  | Source of truth                  | Notes                                                           |
+| -------------------- | ----------------------------------------------------- | -------------------------------- | --------------------------------------------------------------- |
+| Node (CI and local)  | `v24.14.0`                                            | `.node-version`                  | Bundles npm `11.9.0`; was `v22.16.0`, see section 19 deviations |
+| Node minimum         | `>=22.18.0`                                           | `package.json` `engines.node`    | First release with default-on type stripping                    |
+| `actions/checkout`   | `v7.0.1` = `3d3c42e5aac5ba805825da76410c181273ba90b1` | `gh api .../git/ref/tags/v7.0.1` | Commit-SHA pin; Dependabot keeps it current                     |
+| `actions/setup-node` | `v7.1.0` = `949feb2413d6458794dcd2491c4babbbce0c15c1` | `gh api .../git/ref/tags/v7.1.0` | Commit-SHA pin                                                  |
+| Runner image         | `ubuntu-24.04`                                        | Workflow                         | Explicit image, not `ubuntu-latest`                             |
+| Wrangler             | `4.125.0`                                             | `package.json`, lockfile         | Unchanged                                                       |
+| TypeScript/Prettier  | lockfile-resolved                                     | `package-lock.json`              | Unchanged                                                       |
+| Quartz               | `5.0.0`                                               | `package.json`                   | Unchanged                                                       |
 
 ## 6. Official source verification
 
-| Claim/assumption                                               | Official URL                                                                             | Verified date | Installed source file/symbol                             | Finding                                                                                                                                                                    |
-| -------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ------------- | -------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `setup-node` reads `.node-version` and caches npm              | `https://github.com/actions/setup-node/blob/v7.1.0/action.yml`                           | 2026-10-18    | `action.yml` inputs `node-version-file`, `cache`         | Both inputs exist at the pinned SHA                                                                                                                                        |
-| `checkout` supports `fetch-depth` and `persist-credentials`    | `https://github.com/actions/checkout/blob/v7.0.1/action.yml`                             | 2026-10-18    | `action.yml` inputs `fetch-depth`, `persist-credentials` | Both inputs exist at the pinned SHA                                                                                                                                        |
-| Upstream workflows never run here                              | Repository files                                                                         | 2026-10-18    | `.github/workflows/*.yaml` job `if:`                     | All jobs gated on `github.repository == 'jackyzha0/quartz'`                                                                                                                |
-| Wrangler dry run needs no Cloudflare credentials               | `https://developers.cloudflare.com/workers/wrangler/commands/`                           | 2026-10-18    | Local run with no token env and no Wrangler auth config  | `--dry-run: exiting now.` after reading assets; exit 0                                                                                                                     |
-| Node test runner expands quoted glob arguments                 | `https://nodejs.org/docs/latest-v22.x/api/test.html#running-tests-from-the-command-line` | 2026-10-18    | `fs.globSync` on the four patterns                       | Expands to exactly the 14 tracked test files                                                                                                                               |
-| Quartz links local plugins into `.quartz/plugins` during build | Repository source                                                                        | 2026-10-18    | `quartz/plugins/loader/config-loader.ts` `installPlugin` | Symlinks appear after build; Node's default discovery skips that dot-directory (bare `tsx --test` also found 180 after a build), but it walks every other untracked folder |
+| Claim/assumption                                                            | Official URL                                                                                     | Verified date | Installed source file/symbol                                                                               | Finding                                                                                                                                                                    |
+| --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | ------------- | ---------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `setup-node` reads `.node-version` and caches npm                           | `https://github.com/actions/setup-node/blob/v7.1.0/action.yml`                                   | 2026-10-18    | `action.yml` inputs `node-version-file`, `cache`                                                           | Both inputs exist at the pinned SHA                                                                                                                                        |
+| `checkout` supports `fetch-depth` and `persist-credentials`                 | `https://github.com/actions/checkout/blob/v7.0.1/action.yml`                                     | 2026-10-18    | `action.yml` inputs `fetch-depth`, `persist-credentials`                                                   | Both inputs exist at the pinned SHA                                                                                                                                        |
+| Upstream workflows never run here                                           | Repository files                                                                                 | 2026-10-18    | `.github/workflows/*.yaml` job `if:`                                                                       | All jobs gated on `github.repository == 'jackyzha0/quartz'`                                                                                                                |
+| Wrangler dry run needs no Cloudflare credentials                            | `https://developers.cloudflare.com/workers/wrangler/commands/`                                   | 2026-10-18    | Local run with no token env and no Wrangler auth config                                                    | `--dry-run: exiting now.` after reading assets; exit 0                                                                                                                     |
+| Node test runner expands quoted glob arguments                              | `https://nodejs.org/docs/latest-v22.x/api/test.html#running-tests-from-the-command-line`         | 2026-10-18    | `fs.globSync` on the four patterns                                                                         | Expands to exactly the 14 tracked test files                                                                                                                               |
+| Site plugins export raw `index.ts`; loading needs default-on type stripping | `https://nodejs.org/docs/latest-v24.x/api/typescript.html`; Node v22 changelog "Version 22.18.0" | 2026-10-18    | `plugins/*/package.json` `exports: ./index.ts`; `quartz/plugins/loader/gitLoader.ts` `getPluginEntryPoint` | Default-on from v22.18.0/v23.6.0, stable v24.12.0; v22.16.0 fails with `Unknown file extension ".ts"`                                                                      |
+| Quartz links local plugins into `.quartz/plugins` during build              | Repository source                                                                                | 2026-10-18    | `quartz/plugins/loader/config-loader.ts` `installPlugin`                                                   | Symlinks appear after build; Node's default discovery skips that dot-directory (bare `tsx --test` also found 180 after a build), but it walks every other untracked folder |
 
 ## 7. Repository reconnaissance
 
@@ -135,7 +139,7 @@ PR runs on the same ref cancel superseded runs; `v5` pushes never cancel.
 `npm test` itself gets the explicit globs so local runs and CI cannot drift:
 
 ```text
-tsx --test "quartz/**/*.test.ts" "quartz/**/*.test.js" "plugins/**/*.test.ts" "scripts/**/*.test.mjs"
+tsx --test "{quartz,plugins,scripts}/**/*.test.{ts,js,mjs}"
 ```
 
 Double quotes stop both POSIX `sh` and Windows `cmd` from expanding the patterns; Node expands them.
@@ -222,12 +226,12 @@ Revert the commits. Deleted upstream workflows remain in Git history. No externa
 
 ## 17. Risks, unknowns, and stop conditions
 
-| Risk/unknown                                             | Impact                        | How it will be resolved                  | Stop condition? |
-| -------------------------------------------------------- | ----------------------------- | ---------------------------------------- | --------------- |
-| Local proof ran on Node 24, not 22.16.0                  | Pin-specific failure possible | First GitHub run on the pinned runtime   | No              |
-| `npm ci` not exercised locally (shared `node_modules`)   | Install failure in CI         | Lockfile/package.json sync check; CI run | No              |
-| Quartz build could need network for fonts/images         | Flaky build                   | Runner has network; observe first run    | No              |
-| Required check not enforced until owner applies settings | Gate is advisory              | Owner applies section 19 recommendations | No              |
+| Risk/unknown                                             | Impact                | How it will be resolved                  | Stop condition? |
+| -------------------------------------------------------- | --------------------- | ---------------------------------------- | --------------- |
+| Quartz exits 0 when a plugin fails to load               | Silent broken build   | CI build step fails on any `✗` line      | No              |
+| `npm ci` not exercised locally (shared `node_modules`)   | Install failure in CI | Lockfile/package.json sync check; CI run | No              |
+| Quartz build could need network for fonts/images         | Flaky build           | Runner has network; observe first run    | No              |
+| Required check not enforced until owner applies settings | Gate is advisory      | Owner applies section 19 recommendations | No              |
 
 ## 18. Adversarial review
 
@@ -269,6 +273,18 @@ npm test (after build)            exit 0  tests 180 (no symlink duplication)
 ```
 
 ### Deviations from plan
+
+- First GitHub run (Node `v22.16.0`): `npm ci`, tsc, Prettier, tests, content validation and the
+  build passed, but the build logged `✗ Failed to instantiate plugin "knowledge-quiz"` /
+  `"knowledge-graph"`: `Unknown file extension ".ts"`, still exited 0, and `validate:graph` then
+  failed on the missing `knowledgeGraph.json`. Reproduced locally with
+  `node --no-experimental-strip-types quartz/bootstrap-cli.mjs build` (593 instead of 598 files).
+  Fix: `.node-version` → `v24.14.0` (separate commit), `engines.node` → `>=22.18.0`, and the CI
+  build step now fails on `✗` lines. This is a runtime pin change, not a dependency upgrade; the
+  lockfile changes only in its root `engines` field.
+- Codex review: `npm test` now uses `{quartz,plugins,scripts}/**/*.test.{ts,js,mjs}` so every
+  documented extension is discovered in every root. Base/head ID validation is recorded as a
+  non-goal (section 2).
 
 - The review's claim that bare `tsx --test` reruns tests through `.quartz/plugins` symlinks did not
   reproduce here (180 tests either way). Explicit globs are kept to bound discovery to tracked

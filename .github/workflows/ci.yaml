@@ -53,8 +53,16 @@ jobs:
       - name: Content schema and ID validation
         run: npm run validate:content
 
-      - name: Quartz build
-        run: npx quartz build --concurrency=1
+      # Quartz logs plugin load failures with a "✗" prefix but still exits 0,
+      # so a build that silently dropped a plugin must fail here.
+      - name: Quartz build (fail on plugin errors)
+        shell: bash
+        run: |
+          npx quartz build --concurrency=1 2>&1 | tee quartz-build.log
+          if grep -n '✗' quartz-build.log; then
+            echo "::error::Quartz reported plugin failures; see the lines above."
+            exit 1
+          fi
 
       - name: Graph output validation
         run: npm run validate:graph

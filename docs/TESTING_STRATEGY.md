@@ -50,9 +50,10 @@ npm run validate:graph
 npx wrangler deploy --dry-run
 ```
 
-`npm test` uses explicit test globs; add new tests under `quartz/`, `plugins/`,
-or `scripts/` with the existing `.test.{ts,js,mjs}` naming. `validate:graph`
-reads build output and must run after the build.
+`npm test` runs `{quartz,plugins,scripts}/**/*.test.{ts,js,mjs}`; tests outside
+those roots or names are not discovered. `validate:graph` reads build output and
+must run after the build. Quartz exits 0 even when a plugin fails to load, so
+treat any `✗` line in build output as a failure (CI does).
 
 UI work additionally requires real browser evidence at representative desktop
 and mobile widths, keyboard operation, visible focus, reduced-motion review,
