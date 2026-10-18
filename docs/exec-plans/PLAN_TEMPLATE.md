@@ -1,16 +1,16 @@
 # Execution Plan: Phase X — <Name>
 
-| Field | Value |
-|---|---|
-| Status | Draft / Approved / In progress / Blocked / Complete |
-| Owner | |
-| Created | YYYY-MM-DD |
-| Updated | YYYY-MM-DD |
-| Baseline commit | |
-| Target branch | |
-| PR | |
-| PRD phase | |
-| Related ADRs | |
+| Field           | Value                                               |
+| --------------- | --------------------------------------------------- |
+| Status          | Draft / Approved / In progress / Blocked / Complete |
+| Owner           |                                                     |
+| Created         | YYYY-MM-DD                                          |
+| Updated         | YYYY-MM-DD                                          |
+| Baseline commit |                                                     |
+| Target branch   |                                                     |
+| PR              |                                                     |
+| PRD phase       |                                                     |
+| Related ADRs    |                                                     |
 
 ## 1. Objective
 
@@ -30,10 +30,10 @@ List work that is explicitly excluded. Include later PRD phases that must not le
 
 Record all instruction files active for this work.
 
-| Scope/path | Instruction file | Relevant rules |
-|---|---|---|
-| Repository | `AGENTS.md` | |
-| Nested path | `<path>/AGENTS.md` | |
+| Scope/path  | Instruction file   | Relevant rules |
+| ----------- | ------------------ | -------------- |
+| Repository  | `AGENTS.md`        |                |
+| Nested path | `<path>/AGENTS.md` |                |
 
 Verification command/output:
 
@@ -43,25 +43,25 @@ Verification command/output:
 
 ## 5. Version and environment matrix
 
-| Component | Exact version/commit | Source of truth | Notes |
-|---|---|---|---|
-| Quartz | | | |
-| Quartz plugins | | | |
-| Node | | | |
-| npm | | | |
-| Wrangler | | | |
-| Hono | | | |
-| D3/Pixi | | | |
-| Cloudflare compatibility date/flags | | | |
-| Test tools | | | |
+| Component                           | Exact version/commit | Source of truth | Notes |
+| ----------------------------------- | -------------------- | --------------- | ----- |
+| Quartz                              |                      |                 |       |
+| Quartz plugins                      |                      |                 |       |
+| Node                                |                      |                 |       |
+| npm                                 |                      |                 |       |
+| Wrangler                            |                      |                 |       |
+| Hono                                |                      |                 |       |
+| D3/Pixi                             |                      |                 |       |
+| Cloudflare compatibility date/flags |                      |                 |       |
+| Test tools                          |                      |                 |       |
 
 ## 6. Official source verification
 
 For every material implementation assumption, provide both an official source and the installed code location when applicable.
 
-| Claim/assumption | Official URL | Verified date | Installed source file/symbol | Finding |
-|---|---|---|---|---|
-| Example: ContentIndex data used by graph | | | | |
+| Claim/assumption                         | Official URL | Verified date | Installed source file/symbol | Finding |
+| ---------------------------------------- | ------------ | ------------- | ---------------------------- | ------- |
+| Example: ContentIndex data used by graph |              |               |                              |         |
 
 Rules:
 
@@ -78,8 +78,8 @@ Document commands and observed outputs before changes.
 ### Relevant code map
 
 | Area | File/symbol | Current responsibility | Expected change |
-|---|---|---|---|
-| | | | |
+| ---- | ----------- | ---------------------- | --------------- |
+|      |             |                        |                 |
 
 ### Existing tests and fixtures
 
@@ -122,8 +122,8 @@ Include diagrams where useful.
 ### Alternatives considered
 
 | Alternative | Benefit | Problem | Decision |
-|---|---|---|---|
-| | | | |
+| ----------- | ------- | ------- | -------- |
+|             |         |         |          |
 
 State whether an ADR is required. If yes, stop implementation until it is approved.
 
@@ -150,8 +150,8 @@ Use “not applicable” explicitly rather than leaving a section ambiguous.
 ## 11. File touch plan
 
 | Order | File/path | Change | Reason | Risk |
-|---:|---|---|---|---|
-| 1 | | | | |
+| ----: | --------- | ------ | ------ | ---- |
+|     1 |           |        |        |      |
 
 Do not include speculative unrelated refactors.
 
@@ -180,20 +180,20 @@ Add steps as needed. Avoid a single “implement everything” step.
 ### Unit
 
 | Behavior | Test/fixture | Expected result |
-|---|---|---|
-| | | |
+| -------- | ------------ | --------------- |
+|          |              |                 |
 
 ### Integration/build
 
 | Behavior | Command/test | Expected result |
-|---|---|---|
-| | | |
+| -------- | ------------ | --------------- |
+|          |              |                 |
 
 ### End-to-end/UI
 
 | Flow | Viewports/input modes | Evidence |
-|---|---|---|
-| | | |
+| ---- | --------------------- | -------- |
+|      |                       |          |
 
 ### Accessibility
 
@@ -251,8 +251,8 @@ Do not claim that deleting an applied migration is a rollback.
 ## 17. Risks, unknowns, and stop conditions
 
 | Risk/unknown | Impact | How it will be resolved | Stop condition? |
-|---|---|---|---|
-| | | | |
+| ------------ | ------ | ----------------------- | --------------- |
+|              |        |                         |                 |
 
 Implementation must stop when a critical row remains unresolved.
 
@@ -317,5 +317,5 @@ List every deviation and its approval/ADR.
 ## 21. Completion log
 
 | Date | Commit | Work completed | Evidence | Remaining |
-|---|---|---|---|---|
-| | | | | |
+| ---- | ------ | -------------- | -------- | --------- |
+|      |        |                |          |           |
