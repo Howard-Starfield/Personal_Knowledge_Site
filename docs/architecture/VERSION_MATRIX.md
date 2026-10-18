@@ -15,12 +15,19 @@ This file records the versions used for build and deployment evidence. `package-
 | Component     | Project pin/contract                                                        | Current local evidence                                          | Status                                                          |
 | ------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
 | Quartz source | `5.0.0` at commit `c01f387a6a44a24148214059cba04b7f6847784e`                | Git HEAD and restored `package.json`                            | Pinned                                                          |
-| Node.js       | `.node-version` = `v22.16.0`; package engine `>=22`                         | `v24.14.0`                                                      | Compatible diagnostic runtime, not exact-pin proof              |
+| Node.js       | `.node-version` = `v24.14.0`; package engine `>=22.18.0`                    | `v24.14.0`                                                      | Pinned; local and CI match                                      |
 | npm           | package engine `>=10.9.2`; exact producer not recorded by baseline lockfile | `11.9.0`                                                        | Compatible diagnostic runtime, exact reproducibility unresolved |
 | Wrangler      | `4.125.0` exact dev dependency                                              | `npx wrangler --version` = `4.125.0` outside restricted sandbox | Pinned                                                          |
 | TypeScript    | `5.9.3` resolved                                                            | `package-lock.json`                                             | Pinned by lock                                                  |
 | Prettier      | `3.9.6` resolved                                                            | `package-lock.json`                                             | Pinned by lock                                                  |
 | esbuild       | root `0.27.7`; Wrangler/tsx also resolve isolated `0.28.1` copies           | `package-lock.json`, `npm ls`                                   | Audit finding remains on root copy                              |
+
+The site-owned plugins `plugins/knowledge-quiz` and `plugins/knowledge-graph` export raw
+`index.ts`, which Quartz loads with a plain `import()`. That needs Node's built-in type stripping,
+enabled by default from Node `v22.18.0` and `v23.6.0` and stable from `v24.12.0`
+(`https://nodejs.org/docs/latest-v24.x/api/typescript.html`, changelog verified 2026-10-18). On the
+former pin `v22.16.0` both plugins failed to load while the build still exited 0, so the pin moved to
+`v24.14.0`, the runtime all local evidence already used.
 
 ## Key Quartz plugins
 
@@ -95,7 +102,7 @@ Do not run `npm audit fix` or `--force`. Dependency upgrades must be explicit, s
 ## Required commands
 
 The CI job `verify` in `.github/workflows/ci.yaml` runs these commands in order on every pull
-request and every push to `v5`, on the `.node-version` runtime (`v22.16.0`, npm `10.9.2`), with
+request and every push to `v5`, on the `.node-version` runtime (`v24.14.0`, npm `11.9.0`), with
 actions pinned to commit SHAs (`actions/checkout` `v7.0.1`, `actions/setup-node` `v7.1.0`). Run the
 same list locally before opening a pull request:
 
