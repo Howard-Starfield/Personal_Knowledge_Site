@@ -103,6 +103,7 @@ So three paragraphs become two chunks, and the first 100 characters of chunk 1 r
 qvec = embed([query])[0]
 res = coll.query(query_embeddings=[qvec], n_results=5,
                  include=["documents", "metadatas", "distances"])
+dist = res["distances"][0][0]          # best match for the first (only) query
 score = max(0.0, 1.0 - dist / 2.0)   # cosine distance, or squared L2 on unit-length vectors
 ```
 

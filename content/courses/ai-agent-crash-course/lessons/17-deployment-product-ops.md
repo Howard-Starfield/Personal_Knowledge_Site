@@ -55,8 +55,10 @@ Look back at [[courses/ai-agent-crash-course/lessons/16-multimodal-ocr|Previous 
 @asynccontextmanager
 async def lifespan(app):
     state["redis"] = redis.from_url(os.environ["REDIS_URL"])   # startup
+    state["router"] = ModelRouter.from_env()                    # the LLM router readyz checks
     yield
-    await state["redis"].close()                                # shutdown
+    await state["router"].aclose()                              # shutdown, reverse order
+    await state["redis"].close()
 
 @app.get("/readyz")
 async def readyz():

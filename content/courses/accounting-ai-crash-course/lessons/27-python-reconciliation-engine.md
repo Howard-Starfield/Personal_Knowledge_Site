@@ -75,7 +75,7 @@ The bank shows $1,000.00 on April 3 and the books show $1,000.00 on April 6. The
 
 **The rule.**
 
-- **Tier 3, reference:** a shared non-empty reference joins the rows regardless of amount. Record the amount difference so a person can see it. A few cents may be a bank fee, while a large gap is a red flag.
+- **Tier 3, reference:** a shared non-empty reference joins the rows only when the amount difference is within a small tolerance (for example $1.00), and the difference is recorded so a person can see it. A few cents may be a bank fee. A larger gap on a shared reference is a red flag, such as a reused or mistyped check number, so those pairs go to the exception queue for human review instead of being marked matched.
 - **Tier 4, fuzzy:** compare lowercased descriptions with rapidfuzz `token_set_ratio`, which scores 0 to 100 and ignores word order. Keep only candidates whose amount is within a small tolerance, and only accept scores at or above the threshold. The course uses 85 as a defensible starting point and reviews every fuzzy match by eye for the first three months.
 
 **Worked example.**
