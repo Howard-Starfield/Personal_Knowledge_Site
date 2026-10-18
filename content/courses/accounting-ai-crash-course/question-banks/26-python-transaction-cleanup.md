@@ -17,19 +17,19 @@ These practice questions use the fictional BoBo Digital Services LLC case study;
 schemaVersion: 1
 questions:
   - id: "c4169ae8-34f1-455f-bd7e-d24c3d825f2d"
-    revision: 1
+    revision: 2
     status: active
     type: single-choice
     prompt: "The bank export has a row \"Stripe Payout MAR16\" for +8400.00, and no vendor rule matches it. Which category does categorize() return?"
     options:
       - id: review
-        text: "Uncategorized — REVIEW, since no vendor rule matched the row"
+        text: "Uncategorized deposit — REVIEW, so a person decides what it is"
       - id: revenue
-        text: "Revenue, since the amount is positive and no rule matched"
+        text: "Revenue, since the amount is positive and no rule matched it"
       - id: software
         text: "Software & Subscriptions, since Stripe is a software company"
-    correctOptionIds: [revenue]
-    explanation: "categorize() first looks the vendor up in CATEGORY_MAP, and a vendor with no entry then faces the amount test, where any positive amount returns Revenue. Uncategorized — REVIEW is only reached by unmatched rows that are zero or negative. A payout is really a transfer from the processor, so a person should still glance at it."
+    correctOptionIds: [review]
+    explanation: "categorize() looks the vendor up in CATEGORY_MAP, and an unmatched positive row goes to the deposit review bucket instead of Revenue. Revenue is the tempting answer, but a payout is a transfer of sales already recorded from Stripe's export, so booking it as revenue would count those sales twice."
   - id: "b935a5d4-ca27-4c1a-9c47-acab6f39dfb5"
     revision: 1
     status: active

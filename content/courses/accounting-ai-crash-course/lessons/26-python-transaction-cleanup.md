@@ -129,7 +129,7 @@ questionIds:
 
 - A **regex** (pattern language) with `\b` word boundaries and a case-insensitive flag matches the stable part of a string and ignores changing suffixes.
 - Rules are checked in order; the first match wins. If nothing matches, tidy the original string so it is at least consistent.
-- `CATEGORY_MAP` is keyed by canonical vendor name. A vendor not in the map is `Revenue` if the amount is positive and `Uncategorized — REVIEW` otherwise.
+- `CATEGORY_MAP` is keyed by canonical vendor name. A vendor not in the map is never guessed: an unmatched deposit goes to `Uncategorized deposit — REVIEW` and an unmatched charge to `Uncategorized — REVIEW`. Positive rows are often payouts, owner contributions, loans, refunds or transfers, not revenue.
 - Normalization must run before categorization, or the dictionary keys never match.
 
 **Worked example.**
@@ -164,11 +164,11 @@ def categorize(vendor, amount):
     if vendor in CATEGORY_MAP:
         return CATEGORY_MAP[vendor]
     if amount > 0:
-        return "Revenue"
+        return "Uncategorized deposit — REVIEW"   # payout, transfer, loan... a person decides
     return "Uncategorized — REVIEW"
 ```
 
-Run this on Roberto's eight sample bank rows. All three Amazon rows become Amazon and Office Supplies (47.82 + 23.41 + 91.04 = 162.27 out). Verizon (142.18) goes to Utilities, Uber (22.75) to Travel and Zoom (149.90) to Software and Subscriptions. The unknown 52.00 charge lands in the review bucket. The Stripe payout of +8,400.00 has no rule and is positive, so it returns Revenue.
+Run this on Roberto's eight sample bank rows. All three Amazon rows become Amazon and Office Supplies (47.82 + 23.41 + 91.04 = 162.27 out). Verizon (142.18) goes to Utilities, Uber (22.75) to Travel and Zoom (149.90) to Software and Subscriptions. The unknown 52.00 charge lands in the review bucket. The Stripe payout of +8,400.00 has no rule, so it lands in the deposit review bucket rather than being booked as revenue.
 
 > [!warning] Common mistake
 > Matching with `vendor == "Amazon"`. Real strings never equal the clean name, so most Amazon rows stay unmatched and the review bucket looks bigger than it should.
@@ -202,7 +202,7 @@ questionIds:
 If a source later renames a column, for example Stripe changes `created_at` to `created_utc`, update every place that names it: the `parse_dates` list in the Stripe reader and the key in `STRIPE_MAP`.
 
 > [!warning] Common mistake
-> Treating a positive bank row as revenue without a look. The default rule labels any unmatched positive amount Revenue, but a Stripe payout is money moving from the processor to the bank, and Stripe's own export already holds those payments. Review such rows before they are counted twice.
+> Defaulting unmatched deposits to Revenue. A Stripe payout is money moving from the processor to the bank, and Stripe's own export already holds those sales, so booking the payout as revenue counts it twice. Owner contributions, loans and transfers are not revenue at all. Every unmatched deposit gets a human decision.
 
 ```knowledge-quiz
 schemaVersion: 1
@@ -227,7 +227,7 @@ Roberto sends eight bank rows for March: AMZN MKTP US*2H3K9 (-47.82), VERIZON WI
 > print(df.groupby("category")["amount"].sum())
 > ```
 >
-> Predicted totals: Office Supplies -162.27, Utilities -142.18, Revenue 8,400.00, Travel -22.75, Software and Subscriptions -149.90, Uncategorized — REVIEW -52.00. The unknown row needs a person to identify it, and the Stripe payout deserves a look before it is treated as new revenue.
+> Predicted totals: Office Supplies -162.27, Utilities -142.18, Travel -22.75, Software and Subscriptions -149.90, Uncategorized — REVIEW -52.00, Uncategorized deposit — REVIEW 8,400.00. A person identifies the unknown charge, and confirms the Stripe payout is a transfer of sales already recorded from Stripe's export, not new revenue.
 
 ## Key takeaways
 

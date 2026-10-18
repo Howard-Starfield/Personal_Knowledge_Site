@@ -129,7 +129,7 @@ questions:
     correctOptionIds: [explicit-format]
     explanation: "Naming the format removes the guesswork, and logging rows that fail to parse shows you problems instead of hiding them. Widening the window to cover a month-long gap is tempting, but it would loosen every tier and let wrong rows match."
   - id: "85c8693d-426a-4029-97c4-ef90d05f8b4f"
-    revision: 1
+    revision: 2
     status: active
     type: multiple-select
     prompt: "A teammate wants to use AI to speed up exception review. Which guardrails should apply? Select every correct answer."
@@ -145,7 +145,7 @@ questions:
       - id: skip-review
         text: "Skip human review for items the AI labels as timing items"
     correctOptionIds: [suggest-only, cite-rows]
-    explanation: "AI may suggest a category and must point to real source rows, but a person decides every exception and posts every journal. Random tie-breaking is tempting as a quick fix, yet the same inputs must always give the same outputs, so ties are broken by row ID in ascending order."
+    explanation: "AI may suggest a category and must point to real source rows, but a person decides every exception and posts every journal. Random tie-breaking is tempting as a quick fix, but a tie means the evidence cannot tell the candidates apart, so tied candidates go to exceptions for a person to decide."
   - id: "4cad73e3-3644-47de-b0ee-8e847052bd1c"
     revision: 1
     status: active

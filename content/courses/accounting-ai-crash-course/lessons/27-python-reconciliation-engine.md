@@ -48,7 +48,7 @@ All data here comes from the fictional BoBo Digital Services LLC case study, and
 **The rule.** The engine first loads both CSVs and normalizes them: dates become real dates, amounts are rounded to cents, descriptions are lowercased, and a `matched` flag starts as false. Then:
 
 - **Tier 1, exact:** identical amount and identical date.
-- **Tier 2, date window:** identical amount and a date gap of at most N days (the course default is 3), preferring the closest date.
+- **Tier 2, date window:** identical amount and a date gap of at most N days (the course default is 3), preferring the closest date. If two candidates are equally close, the pair is ambiguous and goes to exceptions.
 - **Mark once:** the moment a row matches, it is flagged, and every later tier skips flagged rows.
 
 **Worked example.**
@@ -127,7 +127,7 @@ Four book rows sum to one bank row, which fits inside the default cap of 5.
 
 **The rule.** The run produces three files: `matched.csv` (each match with its tier, row IDs, amounts and, for fuzzy, the score), `exceptions.csv` (everything unmatched, bank side and book side) and `summary.md` (counts per tier and exception counts, for a manager to read quickly). `matched.csv` is the audit log, so keep it.
 
-**Guardrails when using AI.** Never let AI invent matches or journal entries, cite real source row IDs, keep matching deterministic (ties broken by row ID, never at random), have a person review every exception, never auto-post journals, and keep the audit trail.
+**Guardrails when using AI.** Never let AI invent matches or journal entries, cite real source row IDs, keep matching deterministic and require a unique best candidate (when two or more candidates tie, send them all to `exceptions.csv` for a person instead of picking one by row ID or at random), have a person review every exception, never auto-post journals, and keep the audit trail.
 
 **Worked example.** Last month the run left 14 exceptions. This month it leaves 73. Do not carry on: something changed, such as a new export format, so investigate first. Then categorize each exception (timing difference, missing journal, duplicate, true error, in-transit item), post journals for real book gaps, re-run, and attach `summary.md` and `exceptions.csv` to the workpaper.
 
