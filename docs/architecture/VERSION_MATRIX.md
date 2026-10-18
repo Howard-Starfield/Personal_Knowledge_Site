@@ -3,7 +3,7 @@
 | Field           | Value                                                                                                             |
 | --------------- | ----------------------------------------------------------------------------------------------------------------- |
 | Status          | Phase 0 recovery matrix; local exact-runtime proof incomplete                                                     |
-| Updated         | 2026-08-30                                                                                                        |
+| Updated         | 2026-10-18                                                                                                        |
 | Baseline commit | `c01f387a6a44a24148214059cba04b7f6847784e`                                                                        |
 | Package version | Quartz `5.0.0`                                                                                                    |
 | Lockfile        | npm lockfile v3; SHA-256 `9529e85a6a8a09de0d323225817a7203825c5ecbb7fdfc99b6f8b16d718d5da9` after adding Wrangler |
@@ -94,18 +94,35 @@ Do not run `npm audit fix` or `--force`. Dependency upgrades must be explicit, s
 
 ## Required commands
 
-Phase 0 used these commands:
+The CI job `verify` in `.github/workflows/ci.yaml` runs these commands in order on every pull
+request and every push to `v5`, on the `.node-version` runtime (`v22.16.0`, npm `10.9.2`), with
+actions pinned to commit SHAs (`actions/checkout` `v7.0.1`, `actions/setup-node` `v7.1.0`). Run the
+same list locally before opening a pull request:
 
 ```text
-npm run check
+npm ci
+npx tsc --noEmit
+npx prettier . --check
 npm test
+npm run validate:content
 npx quartz build --concurrency=1
+npm run validate:graph
 npx wrangler deploy --dry-run
 ```
 
-`npm test` passed all 163 tests across 45 suites outside the restricted process sandbox. The real Quartz build reported 39 emitted files from the single published placeholder page, and Wrangler read 43 files from the final asset directory in the assets-only dry-run. The temporary routing fixture separately proved `/`, extensionless nested pages, canonical trailing-slash redirects, `static/contentIndex.json`, and an actual HTTP 404 response.
+`npm test` passes explicit globs (`quartz/**/*.test.{ts,js}`, `plugins/**/*.test.ts`,
+`scripts/**/*.test.mjs`) so discovery is limited to tracked test locations; bare `tsx --test` walks
+the whole working tree and also runs any untracked scratch copy of a test file. `validate:graph` reads the build output, so it must run after the
+build. The Wrangler dry run needs no Cloudflare credentials. No CI job deploys; see
+`docs/exec-plans/active/ci-pr-gate.md`.
 
-`npm run check` passed TypeScript but failed the repository-wide Prettier gate on 12 pre-existing/unrelated documentation files. The files changed in this slice have their own targeted Prettier check. Replace `npm install` with deterministic clean-install evidence once Node/npm pinning and plugin installation behavior are reconciled. Do not claim clean-clone reproducibility before that proof exists.
+On 2026-10-18 every command above passed locally (Node `v24.14.0` diagnostic runtime): 180 tests in
+45 suites from 14 test files, 551 content entities with 551 unique IDs, 598 emitted build files,
+2160 graph relationships, and 622 asset files read by the dry run.
+
+Phase 0 history: `npm test` passed all 163 tests across 45 suites outside the restricted process sandbox. The real Quartz build reported 39 emitted files from the single published placeholder page, and Wrangler read 43 files from the final asset directory in the assets-only dry-run. The temporary routing fixture separately proved `/`, extensionless nested pages, canonical trailing-slash redirects, `static/contentIndex.json`, and an actual HTTP 404 response.
+
+At that time `npm run check` failed the repository-wide Prettier gate on pre-existing documentation files; the CI gate slice formatted the remaining files and the repository-wide check now passes. Replace `npm install` with deterministic clean-install evidence once Node/npm pinning and plugin installation behavior are reconciled. Do not claim clean-clone reproducibility before that proof exists.
 
 ## Output-readiness findings
 

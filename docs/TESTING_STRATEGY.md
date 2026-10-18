@@ -35,16 +35,24 @@ plan. This document defines the project-wide proof model.
 ## Baseline command families
 
 The exact current commands and versions live in
-`docs/architecture/VERSION_MATRIX.md`. A normal local implementation proves the
-relevant equivalents of:
+`docs/architecture/VERSION_MATRIX.md`. The CI job `verify`
+(`.github/workflows/ci.yaml`) runs this list on every pull request and every
+push to `v5`; a normal local implementation proves the same before opening a
+pull request:
 
 ```powershell
-npx prettier <changed-files> --check
 npx tsc --noEmit
+npx prettier . --check
 npm test
+npm run validate:content
 npx quartz build --concurrency=1
+npm run validate:graph
 npx wrangler deploy --dry-run
 ```
+
+`npm test` uses explicit test globs; add new tests under `quartz/`, `plugins/`,
+or `scripts/` with the existing `.test.{ts,js,mjs}` naming. `validate:graph`
+reads build output and must run after the build.
 
 UI work additionally requires real browser evidence at representative desktop
 and mobile widths, keyboard operation, visible focus, reduced-motion review,

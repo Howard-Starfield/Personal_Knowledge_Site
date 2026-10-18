@@ -73,14 +73,14 @@ git ls-files | grep AGENTS.md  ->  AGENTS.md, content/AGENTS.md (content/ is not
 
 ## 6. Official source verification
 
-| Claim/assumption                                               | Official URL                                                                             | Verified date | Installed source file/symbol                             | Finding                                                          |
-| -------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ------------- | -------------------------------------------------------- | ---------------------------------------------------------------- |
-| `setup-node` reads `.node-version` and caches npm              | `https://github.com/actions/setup-node/blob/v7.1.0/action.yml`                           | 2026-10-18    | `action.yml` inputs `node-version-file`, `cache`         | Both inputs exist at the pinned SHA                              |
-| `checkout` supports `fetch-depth` and `persist-credentials`    | `https://github.com/actions/checkout/blob/v7.0.1/action.yml`                             | 2026-10-18    | `action.yml` inputs `fetch-depth`, `persist-credentials` | Both inputs exist at the pinned SHA                              |
-| Upstream workflows never run here                              | Repository files                                                                         | 2026-10-18    | `.github/workflows/*.yaml` job `if:`                     | All jobs gated on `github.repository == 'jackyzha0/quartz'`      |
-| Wrangler dry run needs no Cloudflare credentials               | `https://developers.cloudflare.com/workers/wrangler/commands/`                           | 2026-10-18    | Local run with no token env and no Wrangler auth config  | `--dry-run: exiting now.` after reading assets; exit 0           |
-| Node test runner expands quoted glob arguments                 | `https://nodejs.org/docs/latest-v22.x/api/test.html#running-tests-from-the-command-line` | 2026-10-18    | `fs.globSync` on the four patterns                       | Expands to exactly the 14 tracked test files                     |
-| Quartz links local plugins into `.quartz/plugins` during build | Repository source                                                                        | 2026-10-18    | `quartz/plugins/loader/config-loader.ts` `installPlugin` | Symlinks appear after build; bare `tsx --test` would rescan them |
+| Claim/assumption                                               | Official URL                                                                             | Verified date | Installed source file/symbol                             | Finding                                                                                                                                                                    |
+| -------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ------------- | -------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `setup-node` reads `.node-version` and caches npm              | `https://github.com/actions/setup-node/blob/v7.1.0/action.yml`                           | 2026-10-18    | `action.yml` inputs `node-version-file`, `cache`         | Both inputs exist at the pinned SHA                                                                                                                                        |
+| `checkout` supports `fetch-depth` and `persist-credentials`    | `https://github.com/actions/checkout/blob/v7.0.1/action.yml`                             | 2026-10-18    | `action.yml` inputs `fetch-depth`, `persist-credentials` | Both inputs exist at the pinned SHA                                                                                                                                        |
+| Upstream workflows never run here                              | Repository files                                                                         | 2026-10-18    | `.github/workflows/*.yaml` job `if:`                     | All jobs gated on `github.repository == 'jackyzha0/quartz'`                                                                                                                |
+| Wrangler dry run needs no Cloudflare credentials               | `https://developers.cloudflare.com/workers/wrangler/commands/`                           | 2026-10-18    | Local run with no token env and no Wrangler auth config  | `--dry-run: exiting now.` after reading assets; exit 0                                                                                                                     |
+| Node test runner expands quoted glob arguments                 | `https://nodejs.org/docs/latest-v22.x/api/test.html#running-tests-from-the-command-line` | 2026-10-18    | `fs.globSync` on the four patterns                       | Expands to exactly the 14 tracked test files                                                                                                                               |
+| Quartz links local plugins into `.quartz/plugins` during build | Repository source                                                                        | 2026-10-18    | `quartz/plugins/loader/config-loader.ts` `installPlugin` | Symlinks appear after build; Node's default discovery skips that dot-directory (bare `tsx --test` also found 180 after a build), but it walks every other untracked folder |
 
 ## 7. Repository reconnaissance
 
@@ -145,7 +145,7 @@ Double quotes stop both POSIX `sh` and Windows `cmd` from expanding the patterns
 | Alternative                              | Benefit                  | Problem                                               | Decision |
 | ---------------------------------------- | ------------------------ | ----------------------------------------------------- | -------- |
 | Keep upstream files, change the `if:`    | Smaller diff             | Leaves Pages/GHCR/tag jobs one edit away from running | Rejected |
-| Globs only in the workflow               | `package.json` unchanged | Local `npm test` keeps rescanning `.quartz/plugins`   | Rejected |
+| Globs only in the workflow               | `package.json` unchanged | Local `npm test` still runs untracked scratch copies  | Rejected |
 | OS matrix like upstream                  | Cross-OS proof           | Production build runs on one Linux runner; 3× cost    | Deferred |
 | `cloudflare/wrangler-action` for dry run | Official action          | Adds an action dependency for a no-auth CLI call      | Rejected |
 
@@ -254,9 +254,25 @@ Settings → Branches or Rules; not applied by this change):
 - block force pushes and deletions;
 - optionally include administrators so `push.bat` direct pushes are also blocked.
 
+Local run on 2026-10-18 from clean `public/` and `.quartz/`, in workflow order (Node `v24.14.0`;
+shared `node_modules`, so `npm ci` was not exercised):
+
+```text
+npx tsc --noEmit                  exit 0
+npx prettier . --check            exit 0  All matched files use Prettier code style!
+npm test                          exit 0  tests 180, suites 45, pass 180, fail 0
+npm run validate:content          exit 0  551 entities, 551 unique IDs
+npx quartz build --concurrency=1  exit 0  552 files processed, 598 emitted
+npm run validate:graph            exit 0  551 pages, 2 tags, 2160 relationships, 533 graph pages
+npx wrangler deploy --dry-run     exit 0  622 asset files read, no bindings
+npm test (after build)            exit 0  tests 180 (no symlink duplication)
+```
+
 ### Deviations from plan
 
-None so far.
+- The review's claim that bare `tsx --test` reruns tests through `.quartz/plugins` symlinks did not
+  reproduce here (180 tests either way). Explicit globs are kept to bound discovery to tracked
+  test locations; docs describe that reason rather than the symlink claim.
 
 ## 20. Final acceptance checklist
 
@@ -270,6 +286,8 @@ None so far.
 
 ## 21. Completion log
 
-| Date       | Commit  | Work completed | Evidence           | Remaining      |
-| ---------- | ------- | -------------- | ------------------ | -------------- |
-| 2026-10-18 | pending | Plan created   | Section 7 baseline | Implementation |
+| Date       | Commit      | Work completed                                                    | Evidence                    | Remaining                                 |
+| ---------- | ----------- | ----------------------------------------------------------------- | --------------------------- | ----------------------------------------- |
+| 2026-10-18 | `132f12b`   | Plan created                                                      | Section 7 baseline          | Implementation                            |
+| 2026-10-18 | `f983d70`   | Prettier on 8 docs files                                          | `prettier . --check` exit 0 | Workflow                                  |
+| 2026-10-18 | this commit | Workflow, upstream removal, test globs, PR template, command docs | Section 19                  | First GitHub run; owner branch protection |

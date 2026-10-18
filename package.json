@@ -19,7 +19,7 @@
     "generate:graph-demo": "node scripts/generate-graph-demo.mjs",
     "validate:content": "node scripts/validate-content.mjs",
     "validate:graph": "node scripts/validate-graph-output.mjs",
-    "test": "tsx --test",
+    "test": "tsx --test \"quartz/**/*.test.ts\" \"quartz/**/*.test.js\" \"plugins/**/*.test.ts\" \"scripts/**/*.test.mjs\"",
     "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1",
     "install-plugins": "npx tsx ./quartz/plugins/loader/install-plugins.ts",
     "prebuild": "npm run install-plugins"

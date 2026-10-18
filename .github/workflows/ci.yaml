@@ -1,83 +1,63 @@
-name: Build and Test
+# Pull-request gate. Plan: docs/exec-plans/active/ci-pr-gate.md
+# Mirrors the local proof chain in docs/architecture/VERSION_MATRIX.md.
+# No deploy, publish, or tag step belongs in this workflow.
+name: CI
 
 on:
   pull_request:
-    branches:
-      - v5
   push:
     branches:
       - v5
   workflow_dispatch:
 
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
 jobs:
-  build-and-test:
-    if: ${{ github.repository == 'jackyzha0/quartz' }}
-    strategy:
-      matrix:
-        os: [windows-latest, macos-latest, ubuntu-latest]
-    runs-on: ${{ matrix.os }}
-    permissions:
-      contents: write
+  verify:
+    name: verify
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      WRANGLER_SEND_METRICS: "false"
     steps:
-      - uses: actions/checkout@v6
+      - name: Check out
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
+          # Full history so the git-backed created/modified dates resolve.
           fetch-depth: 0
+          persist-credentials: false
 
-      - name: Setup Node
-        uses: actions/setup-node@v6
+      - name: Set up Node from .node-version
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
-          node-version: 24
+          node-version-file: .node-version
+          cache: npm
 
-      - name: Cache dependencies
-        uses: actions/cache@v5
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+      - name: Install (clean, from lockfile)
+        run: npm ci
 
-      - name: Cache Quartz plugins
-        uses: actions/cache@v5
-        with:
-          path: .quartz/plugins
-          key: ${{ runner.os }}-plugins-${{ hashFiles('quartz.lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-plugins-
+      - name: TypeScript
+        run: npx tsc --noEmit
 
-      - run: npm install
+      - name: Prettier
+        run: npx prettier . --check
 
-      - name: Install Quartz plugins
-        run: npx quartz plugin install
-
-      - name: Check types and style
-        run: npm run check
-
-      - name: Test
+      - name: Unit tests (explicit globs in package.json)
         run: npm test
 
-      - name: Ensure Quartz builds, check bundle info
-        run: npx quartz build --bundleInfo -d docs
+      - name: Content schema and ID validation
+        run: npm run validate:content
 
-  publish-tag:
-    if: ${{ github.repository == 'jackyzha0/quartz' && github.ref == 'refs/heads/v5' }}
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - uses: actions/checkout@v6
-        with:
-          fetch-depth: 0
-      - name: Setup Node
-        uses: actions/setup-node@v6
-        with:
-          node-version: 24
-      - name: Get package version
-        run: node -p -e '`PACKAGE_VERSION=${require("./package.json").version}`' >> $GITHUB_ENV
-      - name: Create release tag
-        uses: pkgdeps/git-tag-action@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          github_repo: ${{ github.repository }}
-          version: ${{ env.PACKAGE_VERSION }}
-          git_commit_sha: ${{ github.sha }}
-          git_tag_prefix: "v"
+      - name: Quartz build
+        run: npx quartz build --concurrency=1
+
+      - name: Graph output validation
+        run: npm run validate:graph
+
+      - name: Wrangler dry run (assets-only Worker, no credentials)
+        run: npx wrangler deploy --dry-run
