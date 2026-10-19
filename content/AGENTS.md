@@ -9,7 +9,8 @@ Before changing files below `content/`, read:
 3. `docs/contracts/CONTENT_MODEL.md`;
 4. applicable accepted ADRs, including ADR-0002 for source-based authoring;
 5. the applicable active execution plan;
-6. `docs/templates/content_intake_handoff_prompt.md` when a change originates from owner-declared source material.
+6. `docs/templates/content_intake_handoff_prompt.md` when a change originates from owner-declared source material;
+7. `docs/runbooks/LINKEDIN_COURSE_INGESTION.md` when ingesting or modifying a LinkedIn Learning course.
 
 The machine-readable content and quiz schemas, once implemented, are executable authority and must remain consistent with the Markdown contract.
 

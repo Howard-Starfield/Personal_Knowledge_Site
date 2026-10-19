@@ -8,6 +8,7 @@
 | Content authority      | `docs/contracts/CONTENT_MODEL.md` and `content/AGENTS.md`                                                      |
 | Assessment authority   | `docs/templates/QUESTION_BANK_AUTHORING_PACKET.md`                                                             |
 | Architecture authority | `docs/decisions/ADR-0002-separate-personal-wiki.md`                                                            |
+| Runbook authority      | `docs/runbooks/LINKEDIN_COURSE_INGESTION.md` (for LinkedIn Learning bundles)                                   |
 
 ## What this prompt does
 
