@@ -3,7 +3,7 @@
 | Field           | Value                                                                                                             |
 | --------------- | ----------------------------------------------------------------------------------------------------------------- |
 | Status          | Phase 0 recovery matrix; local exact-runtime proof incomplete                                                     |
-| Updated         | 2026-08-30                                                                                                        |
+| Updated         | 2026-10-18                                                                                                        |
 | Baseline commit | `c01f387a6a44a24148214059cba04b7f6847784e`                                                                        |
 | Package version | Quartz `5.0.0`                                                                                                    |
 | Lockfile        | npm lockfile v3; SHA-256 `9529e85a6a8a09de0d323225817a7203825c5ecbb7fdfc99b6f8b16d718d5da9` after adding Wrangler |
@@ -15,12 +15,19 @@ This file records the versions used for build and deployment evidence. `package-
 | Component     | Project pin/contract                                                        | Current local evidence                                          | Status                                                          |
 | ------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
 | Quartz source | `5.0.0` at commit `c01f387a6a44a24148214059cba04b7f6847784e`                | Git HEAD and restored `package.json`                            | Pinned                                                          |
-| Node.js       | `.node-version` = `v22.16.0`; package engine `>=22`                         | `v24.14.0`                                                      | Compatible diagnostic runtime, not exact-pin proof              |
+| Node.js       | `.node-version` = `v24.14.0`; package engine `>=22.18.0`                    | `v24.14.0`                                                      | Pinned; local and CI match                                      |
 | npm           | package engine `>=10.9.2`; exact producer not recorded by baseline lockfile | `11.9.0`                                                        | Compatible diagnostic runtime, exact reproducibility unresolved |
 | Wrangler      | `4.125.0` exact dev dependency                                              | `npx wrangler --version` = `4.125.0` outside restricted sandbox | Pinned                                                          |
 | TypeScript    | `5.9.3` resolved                                                            | `package-lock.json`                                             | Pinned by lock                                                  |
 | Prettier      | `3.9.6` resolved                                                            | `package-lock.json`                                             | Pinned by lock                                                  |
 | esbuild       | root `0.27.7`; Wrangler/tsx also resolve isolated `0.28.1` copies           | `package-lock.json`, `npm ls`                                   | Audit finding remains on root copy                              |
+
+The site-owned plugins `plugins/knowledge-quiz` and `plugins/knowledge-graph` export raw
+`index.ts`, which Quartz loads with a plain `import()`. That needs Node's built-in type stripping,
+enabled by default from Node `v22.18.0` and `v23.6.0` and stable from `v24.12.0`
+(`https://nodejs.org/docs/latest-v24.x/api/typescript.html`, changelog verified 2026-10-18). On the
+former pin `v22.16.0` both plugins failed to load while the build still exited 0, so the pin moved to
+`v24.14.0`, the runtime all local evidence already used.
 
 ## Key Quartz plugins
 
@@ -94,18 +101,36 @@ Do not run `npm audit fix` or `--force`. Dependency upgrades must be explicit, s
 
 ## Required commands
 
-Phase 0 used these commands:
+The CI job `verify` in `.github/workflows/ci.yaml` runs these commands in order on every pull
+request and every push to `v5`, on the `.node-version` runtime (`v24.14.0`, npm `11.9.0`), with
+actions pinned to commit SHAs (`actions/checkout` `v7.0.1`, `actions/setup-node` `v7.1.0`). Run the
+same list locally before opening a pull request:
 
 ```text
-npm run check
+npm ci
+npx tsc --noEmit
+npx prettier . --check
 npm test
+npm run validate:content
 npx quartz build --concurrency=1
+npm run validate:graph
 npx wrangler deploy --dry-run
 ```
 
-`npm test` passed all 163 tests across 45 suites outside the restricted process sandbox. The real Quartz build reported 39 emitted files from the single published placeholder page, and Wrangler read 43 files from the final asset directory in the assets-only dry-run. The temporary routing fixture separately proved `/`, extensionless nested pages, canonical trailing-slash redirects, `static/contentIndex.json`, and an actual HTTP 404 response.
+`npm test` passes one explicit glob, `{quartz,plugins,scripts}/**/*.test.{ts,js,mjs}`, so
+discovery is limited to tracked test roots; bare `tsx --test` walks the whole working tree and also
+runs any untracked scratch copy of a test file. Quartz logs plugin load failures with a `✗` prefix
+but still exits 0, so the CI build step fails on any `✗` line; check the local build output for them
+too. `validate:graph` reads the build output, so it must run after the build. The Wrangler dry run
+needs no Cloudflare credentials. No CI job deploys; see `docs/exec-plans/active/ci-pr-gate.md`.
 
-`npm run check` passed TypeScript but failed the repository-wide Prettier gate on 12 pre-existing/unrelated documentation files. The files changed in this slice have their own targeted Prettier check. Replace `npm install` with deterministic clean-install evidence once Node/npm pinning and plugin installation behavior are reconciled. Do not claim clean-clone reproducibility before that proof exists.
+On 2026-10-18 every command above passed locally on the pinned Node `v24.14.0`: 180 tests in
+45 suites from 14 test files, 551 content entities with 551 unique IDs, 598 emitted build files,
+2160 graph relationships, and 622 asset files read by the dry run.
+
+Phase 0 history: `npm test` passed all 163 tests across 45 suites outside the restricted process sandbox. The real Quartz build reported 39 emitted files from the single published placeholder page, and Wrangler read 43 files from the final asset directory in the assets-only dry-run. The temporary routing fixture separately proved `/`, extensionless nested pages, canonical trailing-slash redirects, `static/contentIndex.json`, and an actual HTTP 404 response.
+
+At that time `npm run check` failed the repository-wide Prettier gate on pre-existing documentation files; the CI gate slice formatted the remaining files and the repository-wide check now passes. Replace `npm install` with deterministic clean-install evidence once Node/npm pinning and plugin installation behavior are reconciled. Do not claim clean-clone reproducibility before that proof exists.
 
 ## Output-readiness findings
 

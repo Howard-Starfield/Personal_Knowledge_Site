@@ -19,14 +19,15 @@
     "generate:graph-demo": "node scripts/generate-graph-demo.mjs",
     "validate:content": "node scripts/validate-content.mjs",
     "validate:graph": "node scripts/validate-graph-output.mjs",
-    "test": "tsx --test",
+    "check:questions": "tsx scripts/check-question-quality.ts",
+    "test": "tsx --test \"{quartz,plugins,scripts}/**/*.test.{ts,js,mjs}\"",
     "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1",
     "install-plugins": "npx tsx ./quartz/plugins/loader/install-plugins.ts",
     "prebuild": "npm run install-plugins"
   },
   "engines": {
     "npm": ">=10.9.2",
-    "node": ">=22"
+    "node": ">=22.18.0"
   },
   "keywords": [
     "site generator",

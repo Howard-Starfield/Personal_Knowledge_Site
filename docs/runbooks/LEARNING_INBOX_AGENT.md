@@ -1,12 +1,12 @@
 # Learning Inbox Agent Runbook
 
-| Field | Value |
-|---|---|
-| Status | Draft; provider-neutral until PRD OQ-11 and OQ-12 are answered |
-| Scope | One owner-selected capture to one reviewed content pull request |
-| Canonical product authority | `docs/product/PRD.md` |
-| Canonical content contract | `docs/contracts/CONTENT_MODEL.md` |
-| Content-editing policy | `content/AGENTS.md` |
+| Field                       | Value                                                           |
+| --------------------------- | --------------------------------------------------------------- |
+| Status                      | Draft; provider-neutral until PRD OQ-11 and OQ-12 are answered  |
+| Scope                       | One owner-selected capture to one reviewed content pull request |
+| Canonical product authority | `docs/product/PRD.md`                                           |
+| Canonical content contract  | `docs/contracts/CONTENT_MODEL.md`                               |
+| Content-editing policy      | `content/AGENTS.md`                                             |
 
 ## Purpose
 
@@ -57,15 +57,15 @@ The route and selected text are context only. Do not attach a capture to a page 
 
 ## Disposition matrix
 
-| Disposition | When to use | Canonical edit |
-|---|---|---|
-| `inline-callout` | The note is local context for one article/lesson | Add a labeled Markdown callout to that page |
-| `learning-note` | The item should be independently discoverable or tracked | Add/update one public `type: learning-note` file |
-| `question-bank` | A supported answer/explanation can become reusable active recall | Add/update one canonical bank question and quiz selection if requested |
-| `editorial-correction` | Existing published wording is inaccurate or misleading | Correct the owning Markdown with evidence |
-| `duplicate` | Equivalent public content already resolves the capture | No content edit; link the existing resolution in the disposition |
-| `needs-answer` | Evidence does not support a correct answer/explanation | No canonical answer or question-bank edit |
-| `rejected` | Out of scope, unsafe, spam, or not intended for publication | No content edit; record a concise reason |
+| Disposition            | When to use                                                      | Canonical edit                                                         |
+| ---------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| `inline-callout`       | The note is local context for one article/lesson                 | Add a labeled Markdown callout to that page                            |
+| `learning-note`        | The item should be independently discoverable or tracked         | Add/update one public `type: learning-note` file                       |
+| `question-bank`        | A supported answer/explanation can become reusable active recall | Add/update one canonical bank question and quiz selection if requested |
+| `editorial-correction` | Existing published wording is inaccurate or misleading           | Correct the owning Markdown with evidence                              |
+| `duplicate`            | Equivalent public content already resolves the capture           | No content edit; link the existing resolution in the disposition       |
+| `needs-answer`         | Evidence does not support a correct answer/explanation           | No canonical answer or question-bank edit                              |
+| `rejected`             | Out of scope, unsafe, spam, or not intended for publication      | No content edit; record a concise reason                               |
 
 ## Question-bank rules
 

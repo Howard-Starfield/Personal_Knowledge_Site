@@ -2,16 +2,16 @@
 
 # Quartz 5 + Cloudflare Knowledge Publishing and Personal Notes Platform
 
-| Field | Value |
-|---|---|
-| Status | Superseded by `../PRD.md` version 1.1 before implementation |
-| PRD version | 1.0 |
-| Last verified | 2026-08-22 |
-| Primary framework | Quartz 5 |
-| Runtime platform | Cloudflare |
-| Content source of truth | Markdown files in Git |
-| Dynamic-data source of truth | Cloudflare D1 |
-| Intended implementers | Human engineers, Codex, and other coding agents |
+| Field                        | Value                                                       |
+| ---------------------------- | ----------------------------------------------------------- |
+| Status                       | Superseded by `../PRD.md` version 1.1 before implementation |
+| PRD version                  | 1.0                                                         |
+| Last verified                | 2026-08-22                                                  |
+| Primary framework            | Quartz 5                                                    |
+| Runtime platform             | Cloudflare                                                  |
+| Content source of truth      | Markdown files in Git                                       |
+| Dynamic-data source of truth | Cloudflare D1                                               |
+| Intended implementers        | Human engineers, Codex, and other coding agents             |
 
 ---
 
@@ -278,28 +278,28 @@ Needs to:
 
 ## 7. Glossary and semantic model
 
-| Term | Meaning |
-|---|---|
-| Content entity | A published Markdown article, category page, or standalone page with an immutable ID. |
-| Immutable ID | UUID stored in the entity's own frontmatter. It never changes after publication. |
-| Path | Current repository location under `content/`; mutable. |
-| Slug | Current Quartz-resolved route segment or route; mutable. |
-| Permalink | Optional author-selected public URL intended to remain stable across path moves. It is not identity. |
-| Alias | Alternate title or prior route/name used for link resolution or redirects. |
-| Category | A folder represented by a category `index.md` and a graph cluster. |
-| Subcategory | A nested category folder. |
-| Category page | The real `index.md` content entity that provides the folder's curated introduction. |
-| Category table | Generated navigation table of descendant articles. It is not authored Markdown and creates no explicit graph edges. |
-| Tag | Controlled cross-category classification. Represented as a graph node and dotted membership edge. |
-| Explicit relationship | Authored internal link in Markdown body content. Represented as a solid graph edge. |
-| Generated navigation | Links produced by the site framework rather than authored in source text. |
-| Graph manifest | Build-time JSON contract consumed by the browser graph component. |
-| Content manifest | Build-time JSON mapping stable content IDs to current metadata and routes. |
-| Personal note | Private D1 record linked to a stable content ID. It is not written into article Markdown. |
-| Highlight | Private anchored selection using durable text selectors. |
-| Media ID | Immutable UUID for a video or other note-addressable media item. |
-| ADR | Architecture Decision Record required for a material change to an approved decision. |
-| Execution plan | Phase- or PR-specific, source-referenced plan written before coding. |
+| Term                  | Meaning                                                                                                             |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| Content entity        | A published Markdown article, category page, or standalone page with an immutable ID.                               |
+| Immutable ID          | UUID stored in the entity's own frontmatter. It never changes after publication.                                    |
+| Path                  | Current repository location under `content/`; mutable.                                                              |
+| Slug                  | Current Quartz-resolved route segment or route; mutable.                                                            |
+| Permalink             | Optional author-selected public URL intended to remain stable across path moves. It is not identity.                |
+| Alias                 | Alternate title or prior route/name used for link resolution or redirects.                                          |
+| Category              | A folder represented by a category `index.md` and a graph cluster.                                                  |
+| Subcategory           | A nested category folder.                                                                                           |
+| Category page         | The real `index.md` content entity that provides the folder's curated introduction.                                 |
+| Category table        | Generated navigation table of descendant articles. It is not authored Markdown and creates no explicit graph edges. |
+| Tag                   | Controlled cross-category classification. Represented as a graph node and dotted membership edge.                   |
+| Explicit relationship | Authored internal link in Markdown body content. Represented as a solid graph edge.                                 |
+| Generated navigation  | Links produced by the site framework rather than authored in source text.                                           |
+| Graph manifest        | Build-time JSON contract consumed by the browser graph component.                                                   |
+| Content manifest      | Build-time JSON mapping stable content IDs to current metadata and routes.                                          |
+| Personal note         | Private D1 record linked to a stable content ID. It is not written into article Markdown.                           |
+| Highlight             | Private anchored selection using durable text selectors.                                                            |
+| Media ID              | Immutable UUID for a video or other note-addressable media item.                                                    |
+| ADR                   | Architecture Decision Record required for a material change to an approved decision.                                |
+| Execution plan        | Phase- or PR-specific, source-referenced plan written before coding.                                                |
 
 ---
 
@@ -367,34 +367,34 @@ flowchart LR
 
 ### 9.1 Publishing and frontend
 
-| Concern | Decision |
-|---|---|
-| Static knowledge framework | Quartz 5, pinned to an exact reviewed commit/tag during Phase 0 |
-| Language | TypeScript |
-| Authoring | Markdown with Quartz's Obsidian-compatible processing |
-| UI rendering | Quartz's Preact/component/page-frame architecture |
-| Styling | Quartz theme variables and project-owned SCSS/CSS overrides |
-| Graph | Project-owned extension/fork of the Quartz community graph implementation, retaining D3 force simulation and PixiJS rendering unless a measured blocker is documented |
-| Search | Quartz ContentIndex/search baseline |
-| Package manager | npm with committed lockfile |
-| Minimum runtime | Node.js 22 or later as required by the pinned Quartz version; exact Node and npm versions recorded in a version matrix |
-| Browser tests | Playwright |
-| Unit/integration tests | Existing Quartz-compatible test runner plus focused project tests; exact scripts confirmed in Phase 0 |
+| Concern                    | Decision                                                                                                                                                              |
+| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Static knowledge framework | Quartz 5, pinned to an exact reviewed commit/tag during Phase 0                                                                                                       |
+| Language                   | TypeScript                                                                                                                                                            |
+| Authoring                  | Markdown with Quartz's Obsidian-compatible processing                                                                                                                 |
+| UI rendering               | Quartz's Preact/component/page-frame architecture                                                                                                                     |
+| Styling                    | Quartz theme variables and project-owned SCSS/CSS overrides                                                                                                           |
+| Graph                      | Project-owned extension/fork of the Quartz community graph implementation, retaining D3 force simulation and PixiJS rendering unless a measured blocker is documented |
+| Search                     | Quartz ContentIndex/search baseline                                                                                                                                   |
+| Package manager            | npm with committed lockfile                                                                                                                                           |
+| Minimum runtime            | Node.js 22 or later as required by the pinned Quartz version; exact Node and npm versions recorded in a version matrix                                                |
+| Browser tests              | Playwright                                                                                                                                                            |
+| Unit/integration tests     | Existing Quartz-compatible test runner plus focused project tests; exact scripts confirmed in Phase 0                                                                 |
 
 ### 9.2 Cloudflare platform
 
-| Concern | Decision |
-|---|---|
-| Public static hosting | Workers Static Assets, SSG 404 behavior, Quartz `public/` output |
-| API | Cloudflare Worker using TypeScript and Hono after Phase 0 verification |
-| Human authentication | Cloudflare Access |
-| Machine authentication | Dedicated Cloudflare Access service tokens |
-| Private structured data | D1 |
-| Binary files and originals | R2 |
-| Managed video | Stream when adaptive playback/captions/signed access are required |
-| Secrets | Cloudflare secrets; never committed variables or browser-exposed values |
-| Logs/traces | Workers Observability |
-| Environments | Local, preview, production with separate bindings and data resources |
+| Concern                    | Decision                                                                |
+| -------------------------- | ----------------------------------------------------------------------- |
+| Public static hosting      | Workers Static Assets, SSG 404 behavior, Quartz `public/` output        |
+| API                        | Cloudflare Worker using TypeScript and Hono after Phase 0 verification  |
+| Human authentication       | Cloudflare Access                                                       |
+| Machine authentication     | Dedicated Cloudflare Access service tokens                              |
+| Private structured data    | D1                                                                      |
+| Binary files and originals | R2                                                                      |
+| Managed video              | Stream when adaptive playback/captions/signed access are required       |
+| Secrets                    | Cloudflare secrets; never committed variables or browser-exposed values |
+| Logs/traces                | Workers Observability                                                   |
+| Environments               | Local, preview, production with separate bindings and data resources    |
 
 ### 9.3 Deployment decision requiring Phase 0 proof
 
@@ -640,22 +640,22 @@ tags: []
 
 ### 13.4 Field definitions
 
-| Field | Required | Contract |
-|---|---:|---|
-| `id` | Yes | Lower-case canonical UUID string generated once. UUIDv4 is the baseline because it can be generated with the platform cryptographic API without a new ID dependency. Never edited after publication. |
-| `title` | Yes | Non-empty human-readable title. Duplicate titles are allowed only when links remain unambiguous through path or alias policy. |
-| `description` | Yes | Plain-text summary, target 40–180 characters. Used in category tables, previews, search, and manifests. It must not contain Markdown links or relationship semantics. |
-| `type` | Yes | `article`, `category`, or `page`. Category files must be `index.md`; ordinary articles must not declare `category`. |
-| `publish` | Yes for public content | Must be `true` for public output. Explicit-publish filtering is the baseline. Missing or false content is excluded from production. |
-| `status` | Yes | `active` or `archived`. Archived content is handled through a tombstone/redirect policy and is excluded from ordinary listings. |
-| `created` | Yes | ISO `YYYY-MM-DD`; preserved across moves. |
-| `tags` | Yes | Array, possibly empty. Values must exist in the controlled taxonomy and use normalized lower-case kebab-case. |
-| `order` | No | Integer used as the first deterministic category-table sort key. Equal or missing values fall back to title. |
-| `listingScope` | Category only, optional | `descendants` by default or `direct`. Controls generated article table scope. |
-| `permalink` | Optional | Custom public URL. It is not identity. Must be globally unique and pass route-collision validation. |
-| `aliases` | Optional | Alternate titles or historical routes. Must not collide ambiguously with another canonical page. |
-| `lang` | Optional | BCP 47 language code if multilingual content is introduced. |
-| `socialImage` | Optional | Valid approved asset reference. |
+| Field          |                Required | Contract                                                                                                                                                                                             |
+| -------------- | ----------------------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `id`           |                     Yes | Lower-case canonical UUID string generated once. UUIDv4 is the baseline because it can be generated with the platform cryptographic API without a new ID dependency. Never edited after publication. |
+| `title`        |                     Yes | Non-empty human-readable title. Duplicate titles are allowed only when links remain unambiguous through path or alias policy.                                                                        |
+| `description`  |                     Yes | Plain-text summary, target 40–180 characters. Used in category tables, previews, search, and manifests. It must not contain Markdown links or relationship semantics.                                |
+| `type`         |                     Yes | `article`, `category`, or `page`. Category files must be `index.md`; ordinary articles must not declare `category`.                                                                                  |
+| `publish`      |  Yes for public content | Must be `true` for public output. Explicit-publish filtering is the baseline. Missing or false content is excluded from production.                                                                  |
+| `status`       |                     Yes | `active` or `archived`. Archived content is handled through a tombstone/redirect policy and is excluded from ordinary listings.                                                                      |
+| `created`      |                     Yes | ISO `YYYY-MM-DD`; preserved across moves.                                                                                                                                                            |
+| `tags`         |                     Yes | Array, possibly empty. Values must exist in the controlled taxonomy and use normalized lower-case kebab-case.                                                                                        |
+| `order`        |                      No | Integer used as the first deterministic category-table sort key. Equal or missing values fall back to title.                                                                                         |
+| `listingScope` | Category only, optional | `descendants` by default or `direct`. Controls generated article table scope.                                                                                                                        |
+| `permalink`    |                Optional | Custom public URL. It is not identity. Must be globally unique and pass route-collision validation.                                                                                                  |
+| `aliases`      |                Optional | Alternate titles or historical routes. Must not collide ambiguously with another canonical page.                                                                                                     |
+| `lang`         |                Optional | BCP 47 language code if multilingual content is introduced.                                                                                                                                          |
+| `socialImage`  |                Optional | Valid approved asset reference.                                                                                                                                                                      |
 
 ### 13.5 Fields and combinations that are forbidden
 
@@ -826,14 +826,14 @@ The table must:
 
 Required desktop columns:
 
-| Column | Source | Notes |
-|---|---|---|
-| Article | `title` and current route | Primary navigation link. |
-| Description | `description` | Short plain-text description; no relationship extraction. |
-| Category | derived folder path | Shown when recursive or useful. |
-| Tags | `tags` | Links to tag listing pages; these are navigation in the table, not new graph records. |
-| Updated | Git-derived date | Deterministic and sortable. |
-| ID | `id` | Compact display with full copy/accessibility value. |
+| Column      | Source                    | Notes                                                                                 |
+| ----------- | ------------------------- | ------------------------------------------------------------------------------------- |
+| Article     | `title` and current route | Primary navigation link.                                                              |
+| Description | `description`             | Short plain-text description; no relationship extraction.                             |
+| Category    | derived folder path       | Shown when recursive or useful.                                                       |
+| Tags        | `tags`                    | Links to tag listing pages; these are navigation in the table, not new graph records. |
+| Updated     | Git-derived date          | Deterministic and sortable.                                                           |
+| ID          | `id`                      | Compact display with full copy/accessibility value.                                   |
 
 Optional later columns may include content type, difficulty, duration, or media presence only after adding them to the canonical schema through an ADR or schema revision.
 
@@ -1035,12 +1035,12 @@ Phase 3 includes a measured design/technical spike comparing feasible PixiJS/D3 
 
 ### 18.5 Visual language
 
-| Relationship | Visual | Meaning |
-|---|---|---|
-| Explicit internal link | Solid line | The author intentionally linked one content page to another. |
-| Tag membership | Dotted line from page to tag node | The page declares membership in a controlled topic. |
-| Folder membership | Cluster/region, no line | The file is physically organized in a category. |
-| Semantic similarity | Not implemented | Reserved for a later PRD. |
+| Relationship           | Visual                            | Meaning                                                      |
+| ---------------------- | --------------------------------- | ------------------------------------------------------------ |
+| Explicit internal link | Solid line                        | The author intentionally linked one content page to another. |
+| Tag membership         | Dotted line from page to tag node | The page declares membership in a controlled topic.          |
+| Folder membership      | Cluster/region, no line           | The file is physically organized in a category.              |
+| Semantic similarity    | Not implemented                   | Reserved for a later PRD.                                    |
 
 Nodes must also differ by accessible shape/icon or labeling, not color alone.
 
@@ -1431,29 +1431,29 @@ The exact SQL is produced in Phase 5 through D1 migration files. The logical mod
 
 ### 23.1 `principals`
 
-| Field | Notes |
-|---|---|
-| `id` | Internal immutable principal UUID. |
-| `access_subject` | Stable Access identity subject/service identity when available; unique. |
-| `email` | Human identity where available; not the primary authorization key by itself. |
-| `display_name` | Optional. |
-| `principal_type` | `human` or `service`. |
-| `created_at` | Server timestamp. |
-| `last_seen_at` | Server timestamp. |
+| Field            | Notes                                                                        |
+| ---------------- | ---------------------------------------------------------------------------- |
+| `id`             | Internal immutable principal UUID.                                           |
+| `access_subject` | Stable Access identity subject/service identity when available; unique.      |
+| `email`          | Human identity where available; not the primary authorization key by itself. |
+| `display_name`   | Optional.                                                                    |
+| `principal_type` | `human` or `service`.                                                        |
+| `created_at`     | Server timestamp.                                                            |
+| `last_seen_at`   | Server timestamp.                                                            |
 
 ### 23.2 `content_registry`
 
 A derived projection of the latest successful content manifest:
 
-| Field | Notes |
-|---|---|
-| `content_id` | Immutable Markdown ID; primary key. |
-| `type` | Article/category/page. |
-| `current_slug` | Current route. |
-| `title` | Cached display title. |
-| `status` | Active/archived. |
-| `build_id` | Manifest/build that supplied this row. |
-| `updated_at` | Projection update time. |
+| Field          | Notes                                  |
+| -------------- | -------------------------------------- |
+| `content_id`   | Immutable Markdown ID; primary key.    |
+| `type`         | Article/category/page.                 |
+| `current_slug` | Current route.                         |
+| `title`        | Cached display title.                  |
+| `status`       | Active/archived.                       |
+| `build_id`     | Manifest/build that supplied this row. |
+| `updated_at`   | Projection update time.                |
 
 This table is not canonical article storage. It may be rebuilt from a successful content manifest.
 
@@ -2093,71 +2093,71 @@ Before production Phase 5/6, add runbooks for:
 
 ## 31. Edge-case and failure-mode matrix
 
-| Scenario | Required behavior |
-|---|---|
-| Published file lacks `id` | Fail validation and production build. Offer creation-tool remediation; never generate silently during build. |
-| Two files share an ID | Fail validation with both paths. |
-| Existing file's ID changes in a PR | Fail base/head immutability check unless an approved migration ADR is present and explicitly recognized. |
-| File is renamed or moved | Preserve ID; update route/manifest; validate links/aliases; private notes continue resolving. |
-| Case-only rename | Use validated two-step move or fail on platforms where Git/filesystem behavior is ambiguous. |
-| ID is reused after deletion | Fail against the ID history/tombstone registry. |
-| Duplicate article titles | Allowed only when links are path-qualified or otherwise unambiguous. Validator reports shortest-link ambiguity. |
-| Duplicate permalink or route | Fail build. |
-| Alias collides with another canonical title/alias | Fail or require explicit disambiguation; never choose first match silently. |
-| Article has `publish: true` and `draft: true` | Fail schema validation. |
-| Unpublished article has public attachment in `content/` | Security check warns/fails according to asset policy; filtering Markdown alone is not considered privacy. |
-| Unknown tag | Fail taxonomy validation. |
-| Tag capitalization/plural variant | Normalize only when unambiguous; otherwise fail and request taxonomy choice. |
-| Empty category | Render curated content, subcategories if any, and a meaningful empty table state. |
-| Missing category `index.md` | Local warning; fail production once category is intended/published under enforced policy. |
-| Category `index.md` contains no authored link | Generated rows work as navigation and create zero explicit edges. |
-| Category `index.md` contains authored `[[link]]` | Create the corresponding explicit edge exactly once. |
-| Category table recursively includes nested articles | Include category breadcrumb/column and no duplicate rows. |
-| Article appears through alias and canonical path | One table row keyed by ID. |
-| Generated tag chip is clicked | Navigate to tag page; does not create a new graph edge beyond frontmatter tag membership. |
-| Shared tag on 100 pages | Create one tag node and 100 membership edges, not a 4,950-edge page clique. |
-| Self-link | Keep page navigation semantics if needed; omit graph self-edge. |
-| Same target linked ten times | One edge with reference count 10. |
-| Circular links | Valid and represented. |
-| Broken published link | Fail CI with source path/location and candidate targets. |
-| Link to heading/block | Edge targets page entity; anchor retained for navigation metadata. |
-| Embedded page transclusion | Explicit edge with `embed` subtype; asset embeds do not become page edges. |
-| Folder move with no authored links | Only cluster membership/route changes; no new relationship edge. |
-| Category page versus cluster | Category `index.md` may be a node; folder remains separate cluster metadata. |
-| Standalone About/Legal page | Excluded from global knowledge graph by default. |
-| Graph JSON missing/corrupt | Article remains readable; graph shows unavailable state; diagnostic includes schema/build ID. |
-| Unsupported graph schema version | Reject safely; no best-effort field guessing. |
-| JavaScript disabled | Article/category table still usable; graph/private notes unavailable with explanation. |
-| Very large graph | Lazy load, filter/progressive detail, bounded simulation; never freeze article page indefinitely. |
-| Reduced-motion enabled | Minimize/disable continuous force animation and transitions. |
-| D3/Pixi CDN unavailable | Not applicable in production because dependencies are bundled locally. |
-| Content manifest and D1 registry differ | Mark registry stale, block writes that cannot be safely validated, alert operations, and resync from successful manifest. |
-| Article archived with notes | Route shows archived/tombstone state; owner can still access notes and current metadata. |
-| Article permanently removed after notes exist | Requires approved migration/retention decision; no silent cascade delete. |
-| Highlight text changes slightly | Re-anchor with quote/prefix/suffix; otherwise mark orphaned without deleting note. |
-| Two identical quotes on a page | Use position and prefix/suffix to disambiguate; if uncertain, mark for reattachment. |
-| Concurrent note edits | Reject stale revision with conflict response; preserve both versions for user resolution. |
-| Duplicate mutation retry | Idempotency prevents duplicate note/upload intent where applicable. |
-| D1 write fails | UI retains unsaved text and shows failure; does not claim success. |
-| API unavailable | Public article continues to work; private controls degrade gracefully. |
-| Forged identity header | Rejected because Access context/JWT is validated. |
-| Access missing on protected route | Deny with controlled 401/403; do not create an anonymous principal. |
-| Agent uses shared service token | Reject process/review; issue individual least-privilege token. |
-| Video still processing | Show processing state and poll with bounded backoff. |
-| Video asset missing | Preserve media record/notes; show unavailable state. |
-| Stream video is private | Use signed playback/token flow; do not expose API token. |
-| Upload over provider threshold or unreliable network | Use current documented resumable/direct-upload method; do not proxy entire large body through Worker. |
-| Caption missing | Player remains usable; clearly show no captions rather than fake transcript. |
-| Caption language duplicated | Reject according to media contract/provider capability. |
-| Timestamp exceeds known duration | Reject or clamp only through explicit user correction; never silently store invalid timestamp. |
-| Signed URL expires during playback | Refresh through authenticated endpoint where supported; do not expose master credentials. |
-| Preview uses production D1/R2/Stream | Prohibited; environment-isolation check fails deployment. |
-| Destructive D1 migration | Requires backup/recovery plan, preview proof, and separate approval. |
-| Applied migration edited | Fail migration integrity check. |
-| Worker rollback after additive migration | Supported when schema is backward compatible; plan must state compatibility window. |
-| Cloudflare Access behavior differs with static assets | Phase spike verifies route/context; use official fallback JWT validation or split route architecture via ADR. |
-| Quartz/plugin upgrade changes link data shape | Contract tests fail; update adapter only through dependency-upgrade plan. |
-| Agent cannot locate documented API | Stop, inspect pinned source/docs, and record unresolved assumption; do not invent it. |
+| Scenario                                                | Required behavior                                                                                                         |
+| ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| Published file lacks `id`                               | Fail validation and production build. Offer creation-tool remediation; never generate silently during build.              |
+| Two files share an ID                                   | Fail validation with both paths.                                                                                          |
+| Existing file's ID changes in a PR                      | Fail base/head immutability check unless an approved migration ADR is present and explicitly recognized.                  |
+| File is renamed or moved                                | Preserve ID; update route/manifest; validate links/aliases; private notes continue resolving.                             |
+| Case-only rename                                        | Use validated two-step move or fail on platforms where Git/filesystem behavior is ambiguous.                              |
+| ID is reused after deletion                             | Fail against the ID history/tombstone registry.                                                                           |
+| Duplicate article titles                                | Allowed only when links are path-qualified or otherwise unambiguous. Validator reports shortest-link ambiguity.           |
+| Duplicate permalink or route                            | Fail build.                                                                                                               |
+| Alias collides with another canonical title/alias       | Fail or require explicit disambiguation; never choose first match silently.                                               |
+| Article has `publish: true` and `draft: true`           | Fail schema validation.                                                                                                   |
+| Unpublished article has public attachment in `content/` | Security check warns/fails according to asset policy; filtering Markdown alone is not considered privacy.                 |
+| Unknown tag                                             | Fail taxonomy validation.                                                                                                 |
+| Tag capitalization/plural variant                       | Normalize only when unambiguous; otherwise fail and request taxonomy choice.                                              |
+| Empty category                                          | Render curated content, subcategories if any, and a meaningful empty table state.                                         |
+| Missing category `index.md`                             | Local warning; fail production once category is intended/published under enforced policy.                                 |
+| Category `index.md` contains no authored link           | Generated rows work as navigation and create zero explicit edges.                                                         |
+| Category `index.md` contains authored `[[link]]`        | Create the corresponding explicit edge exactly once.                                                                      |
+| Category table recursively includes nested articles     | Include category breadcrumb/column and no duplicate rows.                                                                 |
+| Article appears through alias and canonical path        | One table row keyed by ID.                                                                                                |
+| Generated tag chip is clicked                           | Navigate to tag page; does not create a new graph edge beyond frontmatter tag membership.                                 |
+| Shared tag on 100 pages                                 | Create one tag node and 100 membership edges, not a 4,950-edge page clique.                                               |
+| Self-link                                               | Keep page navigation semantics if needed; omit graph self-edge.                                                           |
+| Same target linked ten times                            | One edge with reference count 10.                                                                                         |
+| Circular links                                          | Valid and represented.                                                                                                    |
+| Broken published link                                   | Fail CI with source path/location and candidate targets.                                                                  |
+| Link to heading/block                                   | Edge targets page entity; anchor retained for navigation metadata.                                                        |
+| Embedded page transclusion                              | Explicit edge with `embed` subtype; asset embeds do not become page edges.                                                |
+| Folder move with no authored links                      | Only cluster membership/route changes; no new relationship edge.                                                          |
+| Category page versus cluster                            | Category `index.md` may be a node; folder remains separate cluster metadata.                                              |
+| Standalone About/Legal page                             | Excluded from global knowledge graph by default.                                                                          |
+| Graph JSON missing/corrupt                              | Article remains readable; graph shows unavailable state; diagnostic includes schema/build ID.                             |
+| Unsupported graph schema version                        | Reject safely; no best-effort field guessing.                                                                             |
+| JavaScript disabled                                     | Article/category table still usable; graph/private notes unavailable with explanation.                                    |
+| Very large graph                                        | Lazy load, filter/progressive detail, bounded simulation; never freeze article page indefinitely.                         |
+| Reduced-motion enabled                                  | Minimize/disable continuous force animation and transitions.                                                              |
+| D3/Pixi CDN unavailable                                 | Not applicable in production because dependencies are bundled locally.                                                    |
+| Content manifest and D1 registry differ                 | Mark registry stale, block writes that cannot be safely validated, alert operations, and resync from successful manifest. |
+| Article archived with notes                             | Route shows archived/tombstone state; owner can still access notes and current metadata.                                  |
+| Article permanently removed after notes exist           | Requires approved migration/retention decision; no silent cascade delete.                                                 |
+| Highlight text changes slightly                         | Re-anchor with quote/prefix/suffix; otherwise mark orphaned without deleting note.                                        |
+| Two identical quotes on a page                          | Use position and prefix/suffix to disambiguate; if uncertain, mark for reattachment.                                      |
+| Concurrent note edits                                   | Reject stale revision with conflict response; preserve both versions for user resolution.                                 |
+| Duplicate mutation retry                                | Idempotency prevents duplicate note/upload intent where applicable.                                                       |
+| D1 write fails                                          | UI retains unsaved text and shows failure; does not claim success.                                                        |
+| API unavailable                                         | Public article continues to work; private controls degrade gracefully.                                                    |
+| Forged identity header                                  | Rejected because Access context/JWT is validated.                                                                         |
+| Access missing on protected route                       | Deny with controlled 401/403; do not create an anonymous principal.                                                       |
+| Agent uses shared service token                         | Reject process/review; issue individual least-privilege token.                                                            |
+| Video still processing                                  | Show processing state and poll with bounded backoff.                                                                      |
+| Video asset missing                                     | Preserve media record/notes; show unavailable state.                                                                      |
+| Stream video is private                                 | Use signed playback/token flow; do not expose API token.                                                                  |
+| Upload over provider threshold or unreliable network    | Use current documented resumable/direct-upload method; do not proxy entire large body through Worker.                     |
+| Caption missing                                         | Player remains usable; clearly show no captions rather than fake transcript.                                              |
+| Caption language duplicated                             | Reject according to media contract/provider capability.                                                                   |
+| Timestamp exceeds known duration                        | Reject or clamp only through explicit user correction; never silently store invalid timestamp.                            |
+| Signed URL expires during playback                      | Refresh through authenticated endpoint where supported; do not expose master credentials.                                 |
+| Preview uses production D1/R2/Stream                    | Prohibited; environment-isolation check fails deployment.                                                                 |
+| Destructive D1 migration                                | Requires backup/recovery plan, preview proof, and separate approval.                                                      |
+| Applied migration edited                                | Fail migration integrity check.                                                                                           |
+| Worker rollback after additive migration                | Supported when schema is backward compatible; plan must state compatibility window.                                       |
+| Cloudflare Access behavior differs with static assets   | Phase spike verifies route/context; use official fallback JWT validation or split route architecture via ADR.             |
+| Quartz/plugin upgrade changes link data shape           | Contract tests fail; update adapter only through dependency-upgrade plan.                                                 |
+| Agent cannot locate documented API                      | Stop, inspect pinned source/docs, and record unresolved assumption; do not invent it.                                     |
 
 ---
 
@@ -2910,23 +2910,23 @@ The baseline described by Phases 0–6 is complete only when:
 
 ## 45. Risk register
 
-| Risk | Impact | Mitigation |
-|---|---|---|
-| Quartz v5/plugin APIs change | Custom plugins break on upgrade | Pin commits, contract tests, isolated local plugins, upgrade-specific PRs. |
-| Category table accidentally affects graph | Misleading relationships | Render after authored-link extraction; golden manifest test. |
-| Folder clusters overload graph | Poor readability/performance | Phase 3 spike, toggles, progressive detail, benchmarks. |
-| Tags create visual star clutter | Graph becomes noisy | Controlled taxonomy, filters, zoom/detail policy, local graph defaults. |
-| Stable IDs are edited manually | Private data detaches | Creation tool, base/head CI check, tombstone registry. |
-| Quartz filter hides page but emits attachment | Private data leak | Public asset policy, ignore patterns, static-output scan, R2/Stream for private media. |
-| Worker Static Assets routing conflicts with API/Access | Auth or route failures | Phase 0 deployed spike, selective Worker-first rules, ADR fallback/split. |
-| D1 registry drifts from static manifest | Notes link to stale routes | Build IDs, sync gate, stale-write protection, alerts/resync. |
-| Stream original cannot be recovered exactly | Source loss | Retention ADR; store original in R2 when required. |
-| Browser editor bypasses review | Unsafe publication | PR-only Git workflow, protected branch, shared validators. |
-| Agent invents API or stale snippet | Fragile code | Mandatory source table and local source inspection in plan. |
-| Initial single-user assumption leaks data later | Authorization flaw | Principal ownership on every row/query from first release. |
-| Graph runtime blocks reading | Poor UX | Lazy bundle, independent failure boundary, no-JS content. |
-| Highlight anchors drift | Lost context | multi-selector anchors, orphan state, reattachment UI. |
-| Cloudflare/provider cost surprises | Operational risk | Phase-specific cost/usage ADR, quotas, alerts, upload limits. |
+| Risk                                                   | Impact                          | Mitigation                                                                             |
+| ------------------------------------------------------ | ------------------------------- | -------------------------------------------------------------------------------------- |
+| Quartz v5/plugin APIs change                           | Custom plugins break on upgrade | Pin commits, contract tests, isolated local plugins, upgrade-specific PRs.             |
+| Category table accidentally affects graph              | Misleading relationships        | Render after authored-link extraction; golden manifest test.                           |
+| Folder clusters overload graph                         | Poor readability/performance    | Phase 3 spike, toggles, progressive detail, benchmarks.                                |
+| Tags create visual star clutter                        | Graph becomes noisy             | Controlled taxonomy, filters, zoom/detail policy, local graph defaults.                |
+| Stable IDs are edited manually                         | Private data detaches           | Creation tool, base/head CI check, tombstone registry.                                 |
+| Quartz filter hides page but emits attachment          | Private data leak               | Public asset policy, ignore patterns, static-output scan, R2/Stream for private media. |
+| Worker Static Assets routing conflicts with API/Access | Auth or route failures          | Phase 0 deployed spike, selective Worker-first rules, ADR fallback/split.              |
+| D1 registry drifts from static manifest                | Notes link to stale routes      | Build IDs, sync gate, stale-write protection, alerts/resync.                           |
+| Stream original cannot be recovered exactly            | Source loss                     | Retention ADR; store original in R2 when required.                                     |
+| Browser editor bypasses review                         | Unsafe publication              | PR-only Git workflow, protected branch, shared validators.                             |
+| Agent invents API or stale snippet                     | Fragile code                    | Mandatory source table and local source inspection in plan.                            |
+| Initial single-user assumption leaks data later        | Authorization flaw              | Principal ownership on every row/query from first release.                             |
+| Graph runtime blocks reading                           | Poor UX                         | Lazy bundle, independent failure boundary, no-JS content.                              |
+| Highlight anchors drift                                | Lost context                    | multi-selector anchors, orphan state, reattachment UI.                                 |
+| Cloudflare/provider cost surprises                     | Operational risk                | Phase-specific cost/usage ADR, quotas, alerts, upload limits.                          |
 
 ---
 
@@ -2934,25 +2934,25 @@ The baseline described by Phases 0–6 is complete only when:
 
 These are intentionally not left for agents to improvise. The named phase must resolve them through evidence and, where stated, an ADR.
 
-| Decision | Owner phase | Required output |
-|---|---:|---|
-| Exact Quartz commit and plugin versions | 0 | Version matrix |
-| Exact local-plugin directory/install strategy | 0 | Repository layout note/ADR if changed |
-| Single Worker versus split Worker after Access/static tests | 0 | Deployment ADR |
-| Exact compatibility date/flags | 0 | Version matrix and deployed proof |
-| Category page plugin hook | 2 | Plan with inspected source locations |
-| ID tombstone/history storage | 2 | Content contract decision |
-| Recursive table large-data threshold | 2 | Benchmark and acceptance threshold |
-| Graph input: ContentIndex adapter versus dedicated emitter data | 3 | Graph ADR/contract |
-| Folder cluster rendering algorithm | 3 | Design/technical ADR |
-| Global graph large-data degradation strategy | 3 | Benchmark report |
-| Stream versus R2 original retention | 4 | Media retention/cost ADR |
-| Managed video player integration details | 4 | Media contract |
-| Access identity path under selected topology | 5 | Security plan and tests |
-| D1 content registry synchronization mechanism | 5 | API/data contract |
-| Highlight anchor algorithm/library | 5 | Annotation ADR if dependency added |
-| Browser publishing console | 6 | Separate vertical-slice plan and source-control ADR |
-| Semantic graph | 7 | Separate PRD and ADR |
+| Decision                                                        | Owner phase | Required output                                     |
+| --------------------------------------------------------------- | ----------: | --------------------------------------------------- |
+| Exact Quartz commit and plugin versions                         |           0 | Version matrix                                      |
+| Exact local-plugin directory/install strategy                   |           0 | Repository layout note/ADR if changed               |
+| Single Worker versus split Worker after Access/static tests     |           0 | Deployment ADR                                      |
+| Exact compatibility date/flags                                  |           0 | Version matrix and deployed proof                   |
+| Category page plugin hook                                       |           2 | Plan with inspected source locations                |
+| ID tombstone/history storage                                    |           2 | Content contract decision                           |
+| Recursive table large-data threshold                            |           2 | Benchmark and acceptance threshold                  |
+| Graph input: ContentIndex adapter versus dedicated emitter data |           3 | Graph ADR/contract                                  |
+| Folder cluster rendering algorithm                              |           3 | Design/technical ADR                                |
+| Global graph large-data degradation strategy                    |           3 | Benchmark report                                    |
+| Stream versus R2 original retention                             |           4 | Media retention/cost ADR                            |
+| Managed video player integration details                        |           4 | Media contract                                      |
+| Access identity path under selected topology                    |           5 | Security plan and tests                             |
+| D1 content registry synchronization mechanism                   |           5 | API/data contract                                   |
+| Highlight anchor algorithm/library                              |           5 | Annotation ADR if dependency added                  |
+| Browser publishing console                                      |           6 | Separate vertical-slice plan and source-control ADR |
+| Semantic graph                                                  |           7 | Separate PRD and ADR                                |
 
 ---
 
