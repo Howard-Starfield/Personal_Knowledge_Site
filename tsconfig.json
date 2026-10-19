@@ -23,6 +23,7 @@
     "quartz/**/*.tsx",
     "plugins/**/*.ts",
     "plugins/**/*.tsx",
+    "scripts/**/*.ts",
     "*.ts",
     "*.tsx",
     "./package.json"

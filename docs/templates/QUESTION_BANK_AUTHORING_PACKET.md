@@ -872,6 +872,27 @@ Audit at least:
 
 Answer-position diversity detects bias; it never justifies changing the answer without moving the matching option text. An all-A bank is a failed audit.
 
+## Machine-checked rejection criteria
+
+`npm run check:questions [content-root]` (`scripts/check-question-quality.ts`) enforces the test-wiseness subset of the audit above. It is read-only, reports per file, and exits nonzero when any failure exists. A candidate or integration change with a failure is rejected; passing the check does not replace the independent audit. Thresholds live in the exported `thresholds` constant and the plan `docs/exec-plans/active/question-quality-checker.md`.
+
+It reads two formats: canonical `knowledge-question-bank` blocks, parsed with the executable V1 parser (`parseQuestionBankBlock`), and inline lesson questions (`- A) …`, `- **A)** …` or `- [ ] A) …` option lines followed by `<details class="quiz-answer">` containing `**Correct Answer:** X`). One assessment is one bank block or all inline questions on one page. Scored items are single-choice questions; multiple-select options are checked only for all/none of the above.
+
+| Scope      | Rule                    | Level   | Rejects when                                                                                                                                                            |
+| ---------- | ----------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Assessment | `longest-share`         | failure | The correct option is the longest option (ties count) in more than 35% of items. Small sets are not exempt.                                                             |
+| Assessment | `position-balance`      | failure | With at least 8 items of the same option count k, any answer position's share lies outside 60%–140% of an even 1/k share (15%–35% for four options).                    |
+| Assessment | `position-run`          | failure | More than 3 consecutive items share the same correct position.                                                                                                          |
+| Item       | `length-cue`            | warning | The correct option is more than 1.25× the longest wrong option.                                                                                                         |
+| Item       | `all-none-of-above`     | warning | An option says "all of the above" or "none of the above".                                                                                                               |
+| Page       | `certification-claim`   | failure | `certify`, `certified`, or `certification` wording appears in frontmatter, a heading, a `<summary>`, or the prose of a course index or question-bank page (FR-QUIZ-03). |
+| Page       | `certification-mention` | warning | The same wording appears elsewhere in body text; confirm it is subject matter, not a claim about the course.                                                            |
+| Page       | `placeholder-page`      | failure | A `publish: true` page has no body text beyond headings, or a body of at most 40 words containing a placeholder phrase such as "Lesson content in development".         |
+| Page       | `malformed-question`    | failure | Inline options lack a key, a key lacks options, letters skip or repeat, the key is not an option, more than one key is given, or a quiz-answer block is unclosed.       |
+| Page       | `invalid-bank`          | failure | The V1 parser rejects a `knowledge-question-bank` block.                                                                                                                |
+
+Option length is measured in characters after removing Markdown emphasis/code markers and collapsing whitespace. Fix a length or position failure by rewriting option text so that distractors are parallel and plausible, or by moving the complete correct option text to a different position; never fix it by changing which answer is correct.
+
 ---
 
 # Draft-to-website disposition

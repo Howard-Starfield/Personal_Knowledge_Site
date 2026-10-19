@@ -19,12 +19,17 @@ npx quartz build --serve --port 8080 --concurrency=1
 Open `http://localhost:8080/`. The development server watches `content/` and
 project styling for changes. Stop it with `Ctrl+C`.
 
-For verification without a server:
+For verification without a server (the same checks the CI job `verify` runs on
+every pull request):
 
 ```powershell
 npx tsc --noEmit
+npx prettier . --check
 npm test
+npm run validate:content
 npx quartz build --concurrency=1
+npm run validate:graph
+npx wrangler deploy --dry-run
 ```
 
 ## Project map
