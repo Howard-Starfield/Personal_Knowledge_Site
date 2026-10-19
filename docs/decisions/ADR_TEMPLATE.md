@@ -1,14 +1,14 @@
 # ADR-XXXX: <Decision title>
 
-| Field | Value |
-|---|---|
-| Status | Proposed / Accepted / Rejected / Superseded |
-| Date | YYYY-MM-DD |
-| Decision owners | |
-| Related PRD section | |
-| Related execution plan | |
-| Supersedes | |
-| Superseded by | |
+| Field                  | Value                                       |
+| ---------------------- | ------------------------------------------- |
+| Status                 | Proposed / Accepted / Rejected / Superseded |
+| Date                   | YYYY-MM-DD                                  |
+| Decision owners        |                                             |
+| Related PRD section    |                                             |
+| Related execution plan |                                             |
+| Supersedes             |                                             |
+| Superseded by          |                                             |
 
 ## Context
 
@@ -28,8 +28,8 @@ Describe the problem, current architecture, constraints, and why the existing PR
 ## Verified evidence
 
 | Claim | Official source URL | Verified date | Pinned source file/symbol or experiment | Finding |
-|---|---|---|---|---|
-| | | | | |
+| ----- | ------------------- | ------------- | --------------------------------------- | ------- |
+|       |                     |               |                                         |         |
 
 Do not base an ADR on undocumented assumptions.
 

@@ -1,16 +1,16 @@
 # Execution Plan: Category Index Tables and LLM Maintainer Entrypoint
 
-| Field | Value |
-|---|---|
-| Status | Completed |
-| Owner | Product owner with Codex documentation support |
-| Created | 2026-08-22 |
-| Updated | 2026-08-22 |
-| Baseline commit | `c01f387` |
-| Target branch | `v5` |
-| PR | Not created |
-| PRD phase | Product-contract clarification before Phase 1 |
-| Related ADRs | None; no architecture boundary changes |
+| Field           | Value                                          |
+| --------------- | ---------------------------------------------- |
+| Status          | Completed                                      |
+| Owner           | Product owner with Codex documentation support |
+| Created         | 2026-08-22                                     |
+| Updated         | 2026-08-22                                     |
+| Baseline commit | `c01f387`                                      |
+| Target branch   | `v5`                                           |
+| PR              | Not created                                    |
+| PRD phase       | Product-contract clarification before Phase 1  |
+| Related ADRs    | None; no architecture boundary changes         |
 
 ## 1. Objective
 
@@ -34,10 +34,10 @@ Make every public category `index.md` append an accessible generated table of it
 
 ## 4. Instruction sources
 
-| Scope/path | Instruction file | Relevant rules |
-|---|---|---|
-| Repository | `AGENTS.md` | PRD authority, plan-before-change, identity and graph invariants |
-| `content/` | `content/AGENTS.md` | Content placement, generated navigation, authoring evidence |
+| Scope/path | Instruction file    | Relevant rules                                                   |
+| ---------- | ------------------- | ---------------------------------------------------------------- |
+| Repository | `AGENTS.md`         | PRD authority, plan-before-change, identity and graph invariants |
+| `content/` | `content/AGENTS.md` | Content placement, generated navigation, authoring evidence      |
 
 Verification: both instruction files and the active PRD/content contract were read before edits.
 
@@ -72,13 +72,13 @@ Documentation contract only. Remove the provisional `listingScope: descendants` 
 
 ## 11. File touch plan
 
-| Order | File/path | Change | Reason | Risk |
-|---:|---|---|---|---|
-| 1 | `docs/product/PRD.md` | Require direct-child category tables and type-specific index behavior | Product authority | Low |
-| 2 | `docs/contracts/CONTENT_MODEL.md` | Correct category/course examples and table rules | Normative content contract | Low |
-| 3 | `content/AGENTS.md` | Constrain content authors and agents | Prevent manual/recursive listings | Low |
-| 4 | `AGENTS.md` | Declare the LLM maintainer entry point/read chain | Safe handoff | Low |
-| 5 | This plan | Record checks and adversarial completion | Evidence | Low |
+| Order | File/path                         | Change                                                                | Reason                            | Risk |
+| ----: | --------------------------------- | --------------------------------------------------------------------- | --------------------------------- | ---- |
+|     1 | `docs/product/PRD.md`             | Require direct-child category tables and type-specific index behavior | Product authority                 | Low  |
+|     2 | `docs/contracts/CONTENT_MODEL.md` | Correct category/course examples and table rules                      | Normative content contract        | Low  |
+|     3 | `content/AGENTS.md`               | Constrain content authors and agents                                  | Prevent manual/recursive listings | Low  |
+|     4 | `AGENTS.md`                       | Declare the LLM maintainer entry point/read chain                     | Safe handoff                      | Low  |
+|     5 | This plan                         | Record checks and adversarial completion                              | Evidence                          | Low  |
 
 ## 12. Incremental implementation steps
 
@@ -104,26 +104,26 @@ Documentation-only changes can be reverted without user data impact. The prior P
 
 ## 17. Risks, unknowns, and stop conditions
 
-| Risk/unknown | Impact | Resolution | Stop? |
-|---|---|---|---|
-| Quartz extension cannot emit the required table safely | Contract cannot be implemented without core patch | Phase 1 source spike/ADR | Yes |
-| Direct-child classification is ambiguous after aliases/routes | Duplicate or missing rows | Use canonical source entities and physical parent at build time | Yes if unproven |
-| One-file LLM handoff drifts from contracts | Unsafe maintenance | Use `AGENTS.md` as entry point with linked authority chain | No |
+| Risk/unknown                                                  | Impact                                            | Resolution                                                      | Stop?           |
+| ------------------------------------------------------------- | ------------------------------------------------- | --------------------------------------------------------------- | --------------- |
+| Quartz extension cannot emit the required table safely        | Contract cannot be implemented without core patch | Phase 1 source spike/ADR                                        | Yes             |
+| Direct-child classification is ambiguous after aliases/routes | Duplicate or missing rows                         | Use canonical source entities and physical parent at build time | Yes if unproven |
+| One-file LLM handoff drifts from contracts                    | Unsafe maintenance                                | Use `AGENTS.md` as entry point with linked authority chain      | No              |
 
 ## 18. Adversarial review
 
-| Challenge | Result |
-|---|---|
-| Could a parent duplicate every grandchild? | No; only immediate canonical children are eligible and recursive flattening is prohibited. |
-| Could a subcategory disappear because category indexes were excluded? | No; immediate child category indexes are required rows. |
-| Could the table list itself? | No; the current `index.md` is explicitly excluded. |
-| Could drafts, archives, attachments, aliases, or permalinks leak/duplicate? | They are explicitly excluded and targeted fixtures are required. |
-| Could filesystem order become content order? | No; order is explicit `order`, normalized title, then immutable ID. |
-| Could a course list unrelated files as lessons? | No; membership uses validated `courseId`, and the table sorts by `lessonOrder`. |
-| Could question banks appear as lessons? | No; practice banks require a separate labeled section after OQ-09 approval. |
-| Could generated rows become knowledge-graph relationships? | No; graph isolation remains an explicit invariant and test gate. |
-| Could every generic `index.md` dump its folder? | No; generated behavior is selected by validated content type. |
-| Could one copied handoff file drift from repository policy? | No hand-maintained bundle was added; root `AGENTS.md` is the entry point and requires access to linked authorities. |
+| Challenge                                                                   | Result                                                                                                              |
+| --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| Could a parent duplicate every grandchild?                                  | No; only immediate canonical children are eligible and recursive flattening is prohibited.                          |
+| Could a subcategory disappear because category indexes were excluded?       | No; immediate child category indexes are required rows.                                                             |
+| Could the table list itself?                                                | No; the current `index.md` is explicitly excluded.                                                                  |
+| Could drafts, archives, attachments, aliases, or permalinks leak/duplicate? | They are explicitly excluded and targeted fixtures are required.                                                    |
+| Could filesystem order become content order?                                | No; order is explicit `order`, normalized title, then immutable ID.                                                 |
+| Could a course list unrelated files as lessons?                             | No; membership uses validated `courseId`, and the table sorts by `lessonOrder`.                                     |
+| Could question banks appear as lessons?                                     | No; practice banks require a separate labeled section after OQ-09 approval.                                         |
+| Could generated rows become knowledge-graph relationships?                  | No; graph isolation remains an explicit invariant and test gate.                                                    |
+| Could every generic `index.md` dump its folder?                             | No; generated behavior is selected by validated content type.                                                       |
+| Could one copied handoff file drift from repository policy?                 | No hand-maintained bundle was added; root `AGENTS.md` is the entry point and requires access to linked authorities. |
 
 ## 19. Completion evidence
 
@@ -140,6 +140,6 @@ Structural checks reported one H1 per edited document, balanced fences, and uniq
 
 ## 21. Completion log
 
-| Date | Commit | Work completed | Evidence | Remaining |
-|---|---|---|---|---|
+| Date       | Commit        | Work completed                                                                                         | Evidence                                                            | Remaining                              |
+| ---------- | ------------- | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------- | -------------------------------------- |
 | 2026-08-22 | Not committed | Required direct-child category tables, course lesson tables, and the root LLM-maintainer handoff chain | Structural/requirement/stale-contract checks and adversarial review | Runtime implementation remains Phase 1 |
