@@ -139,8 +139,10 @@ The efficiency ratios:
 
 - **AR turnover** = annualized net credit sales ÷ average AR. How many times a year you collect your receivables.
 - **DSO** (days sales outstanding) = (average AR ÷ net credit sales) × days in the period. Average days to collect an invoice.
-- **AP turnover** = annualized cost of services ÷ average AP.
-- **DPO** (days payable outstanding) = (average AP ÷ cost of services) × days in the period. Average days to pay a vendor.
+- **AP turnover** = annualized net credit purchases ÷ average AP.
+- **DPO** (days payable outstanding) = (average AP ÷ net credit purchases) × days in the period. Average days to pay a vendor.
+
+Only purchases made on account flow through payables, so payroll, card-paid fees and other costs that never hit AP belong outside the numerator. Many small businesses do not track credit purchases separately and use cost of services as a stand-in. This example does that and treats BoBo's $16,800 May cost of services as an approximation of its credit purchases, so read its AP figures as estimates.
 
 To annualize a single month for the turnover ratios, multiply the month by 12. This lesson uses 30 days for DSO and DPO. A trailing-twelve-month figure is smoother when you have one, because multiplying one unusual month by 12 can mislead.
 

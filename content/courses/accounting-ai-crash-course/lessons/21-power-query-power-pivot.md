@@ -58,7 +58,7 @@ Review: [[courses/accounting-ai-crash-course/lessons/20-excel-essentials|Previou
 
 1. Use Remove Top Rows first to drop metadata above the real data. The Pacific Bank export has four junk rows (title, account, period and a blank line) before its header row.
 2. Then use Transform, Use First Row as Headers to turn the first real row into column names. Promoting headers before removing the junk rows would make the title line your header.
-3. Remove blank rows and error rows, because one stray empty row can distort later totals.
+3. Remove truly blank rows, but never silently delete error rows: each one is a real transaction with a bad date, amount or encoding. Reference the query, use Keep Errors to send them to an exception query, fix or investigate them, and check that the row count and amount total still match the source export before you load.
 4. Set the data type of every column that matters: Date, Decimal or Currency, and Text. Use the Using Locale option for dates like 4/5/2026 if your computer is not set to US formats.
 5. Use Transform, Format, Trim and Clean to strip extra spaces and non-printing characters.
 

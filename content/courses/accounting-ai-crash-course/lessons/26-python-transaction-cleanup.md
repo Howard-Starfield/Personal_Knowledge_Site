@@ -192,7 +192,7 @@ questionIds:
 **The rules.**
 
 - Stack with `pd.concat`, then use `groupby("category")` with `count` and `sum` for totals.
-- A monthly routine: put the exports in `./raw`, run the script, open the output, review every `Uncategorized — REVIEW` row, add rules for vendors that repeat, and save a dated copy of the script.
+- A monthly routine: put the exports in `./raw`, run the script, open the output, review every row whose category ends in `REVIEW` (both `Uncategorized — REVIEW` charges and `Uncategorized deposit — REVIEW` deposits), add rules for vendors that repeat, and save a dated copy of the script.
 - Hand-categorize unmatched rows this month so close is not blocked. Add rules for vendors that appear more than once so the bucket shrinks next month.
 - Pandas can write `.xlsx` files through the `openpyxl` library; install it on any machine that runs the script.
 - When AI drafts the code: paste the real column list rather than letting it guess, give it the header row and a few data rows, dry-run on about 20 rows, read every regex yourself, and save the prompt next to the script. AI replaces typing, not your accounting judgment.
