@@ -1,0 +1,4 @@
+# Pinned dependency for scripts/extract-linkedin-courses.py (PDF text extraction).
+# 1.24.2 is the version that produced the existing private extracts (pip show PyMuPDF, 2026-10-18).
+# Install: python -m pip install -r scripts/requirements-extract.txt
+PyMuPDF==1.24.2
