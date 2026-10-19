@@ -86,21 +86,23 @@ for step in range(1, MAX_STEPS + 1):
     reply = call_model(messages, tools)        # your model call
     if not reply.tool_calls:
         return reply.text                      # final answer, so stop
-    call = reply.tool_calls[0]
-    if call.name not in TOOL_BUDGET or call.name not in DISPATCH:
-        result = f"TOOL_ERROR: unknown tool {call.name!r}. Use one of {sorted(DISPATCH)}."
-    elif used[call.name] >= TOOL_BUDGET[call.name]:
-        result = f"BUDGET_EXCEEDED for tool {call.name}. Stop calling it."
-    else:
-        used[call.name] += 1
-        try:
-            tool_fn = DISPATCH[call.name]
-            result = tool_fn(**call.args)
-        except Exception as e:
-            result = f"TOOL_ERROR: {type(e).__name__}: {e}"
-    messages.append(call_record_and_result)    # keep the history complete
+    messages.append(reply.assistant_message)   # the turn that asked for the tools
+    for call in reply.tool_calls:              # answer EVERY call in the turn
+        if call.name not in TOOL_BUDGET or call.name not in DISPATCH:
+            result = f"TOOL_ERROR: unknown tool {call.name!r}. Use one of {sorted(DISPATCH)}."
+        elif used[call.name] >= TOOL_BUDGET[call.name]:
+            result = f"BUDGET_EXCEEDED for tool {call.name}. Stop calling it."
+        else:
+            used[call.name] += 1
+            try:
+                result = DISPATCH[call.name](**call.args)
+            except Exception as e:
+                result = f"TOOL_ERROR: {type(e).__name__}: {e}"
+        messages.append(tool_result(call.id, result))  # one result per call id
 print("STOPPED: max steps reached")
 ```
+
+A model may ask for several tools in one turn. Each request carries a call id, and the provider expects one result per id before the next model call, so the loop answers every call rather than only the first.
 
 Suppose the model keeps calling `search_docs` with reworded queries. On the fifth call the budget of four is spent, so it receives `BUDGET_EXCEEDED` instead of more results. If it ignores that too, the step cap of ten ends the run anyway. Two independent limits make a runaway loop impossible.
 

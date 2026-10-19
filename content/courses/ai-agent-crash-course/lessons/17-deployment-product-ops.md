@@ -62,9 +62,15 @@ async def lifespan(app):
 
 @app.get("/readyz")
 async def readyz():
-    ready = all([await ping(state["redis"]), state["router"].any_available()])
+    try:
+        ready = all([await ping(state["redis"]), state["router"].any_available()])
+    except Exception as e:                    # a timeout or refused connection means "not ready"
+        log.warning("readiness check failed: %s", type(e).__name__)
+        ready = False
     return JSONResponse({"ok": ready}, status_code=200 if ready else 503)
 ```
+
+The `try` matters: a Redis timeout raises instead of returning False, and an unhandled exception would surface as a 500. Readiness must answer 503 for any dependency failure, so the orchestrator stops routing traffic instead of seeing a crash.
 
 Note the `JSONResponse`. If you instead returned a tuple such as a body and `503`, FastAPI would serialise the tuple as a JSON array and answer 200, so the orchestrator would never pull the instance out of rotation.
 
