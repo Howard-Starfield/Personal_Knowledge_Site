@@ -1,0 +1,30 @@
+{
+  "name": "@knowledge-fieldbook/thread-toc",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./index.ts",
+    "./components": "./components/index.ts"
+  },
+  "quartz": {
+    "name": "thread-toc",
+    "displayName": "Thread TOC Navigation Rail",
+    "category": [
+      "component"
+    ],
+    "version": "0.1.0",
+    "quartzVersion": ">=5.0.0",
+    "dependencies": [],
+    "defaultOrder": 55,
+    "defaultEnabled": true,
+    "defaultOptions": {},
+    "components": {
+      "ThreadToc": {
+        "displayName": "Thread TOC Navigation Rail",
+        "defaultPosition": "beforeBody",
+        "defaultPriority": 20
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "@knowledge-fieldbook/settings-gear",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./index.ts",
+    "./components": "./components/index.ts"
+  },
+  "quartz": {
+    "name": "settings-gear",
+    "displayName": "Settings Gear",
+    "category": [
+      "component"
+    ],
+    "version": "0.1.0",
+    "quartzVersion": ">=5.0.0",
+    "dependencies": [],
+    "defaultOrder": 18,
+    "defaultEnabled": true,
+    "defaultOptions": {},
+    "components": {
+      "SettingsGear": {
+        "displayName": "Settings Gear",
+        "defaultPosition": "beforeBody",
+        "defaultPriority": 2
+      }
+    }
+  }
+}

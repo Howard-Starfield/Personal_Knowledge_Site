@@ -25,23 +25,80 @@
 
   & > .popover-inner {
     position: relative;
-    width: 30rem;
-    max-height: 20rem;
-    padding: 0 1rem 1rem 1rem;
+    width: 31rem;
+    max-height: 21rem;
+    padding: 0.5rem 1.25rem 1rem 1.25rem;
     font-weight: initial;
     font-style: initial;
-    line-height: normal;
-    font-size: initial;
+    line-height: 1.55;
+    font-size: 0.84rem;
     font-family: var(--bodyFont);
-    border: 1px solid var(--lightgray);
-    background-color: var(--light);
-    border-radius: 5px;
-    box-shadow: 6px 6px 36px 0 rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--notebook-border, var(--lightgray));
+    background-color: var(--notebook-panel-raised, var(--light));
+    border-radius: 8px;
+    box-shadow:
+      0 12px 32px -4px rgba(0, 0, 0, 0.35),
+      0 4px 12px -2px rgba(0, 0, 0, 0.2);
     overflow: auto;
     overscroll-behavior: contain;
     white-space: normal;
     user-select: none;
     cursor: default;
+
+    &:has(.chat-navigation-rail-container) {
+      padding-right: 2.25rem;
+    }
+
+    p,
+    li {
+      font-size: 0.84rem;
+      line-height: 1.55;
+      margin-bottom: 0.6rem;
+    }
+
+    .breadcrumbs {
+      font-size: 0.7rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0.2rem;
+      opacity: 0.85;
+    }
+
+    .content-meta {
+      font-size: 0.7rem;
+      margin-bottom: 0.35rem;
+      opacity: 0.75;
+    }
+
+    .tags {
+      font-size: 0.68rem;
+      margin-bottom: 0.5rem;
+
+      .tag-link {
+        font-size: 0.68rem;
+        padding: 0.1rem 0.45rem;
+        border-radius: 4px;
+      }
+    }
+
+    code {
+      font-size: 0.78rem;
+    }
+
+    pre {
+      font-size: 0.76rem;
+      padding: 0.5rem 0.75rem;
+      margin: 0.5rem 0;
+    }
+
+    blockquote {
+      font-size: 0.82rem;
+      padding-left: 0.65rem;
+      margin: 0.5rem 0;
+    }
+
+    hr {
+      margin: 0.65rem 0;
+    }
   }
 
   & > .popover-inner[data-content-type] {
@@ -66,8 +123,36 @@
     }
   }
 
-  h1 {
-    font-size: 1.5rem;
+  h1,
+  .article-title {
+    font-size: 1.18rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-top: 0.35rem;
+    margin-bottom: 0.35rem;
+  }
+
+  h2 {
+    font-size: 1.02rem;
+    font-weight: 600;
+    line-height: 1.35;
+    margin-top: 0.75rem;
+    margin-bottom: 0.3rem;
+  }
+
+  h3 {
+    font-size: 0.92rem;
+    font-weight: 600;
+    line-height: 1.35;
+    margin-top: 0.6rem;
+    margin-bottom: 0.25rem;
+  }
+
+  h4,
+  h5,
+  h6 {
+    font-size: 0.84rem;
+    font-weight: 600;
   }
 
   visibility: hidden;

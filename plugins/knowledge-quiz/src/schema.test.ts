@@ -6,6 +6,7 @@ import {
   parseQuizSelectionBlock,
   resolveQuiz,
 } from "./schema.ts"
+import { renderQuiz } from "./render.ts"
 
 const bankId = "14717b34-60f5-42fe-a905-5c11bd8bd2e4"
 const firstQuestionId = "8c43eef4-dd5a-4c5b-83aa-bb358c402a22"
@@ -148,4 +149,40 @@ test("rejects a multiple-select item without an incorrect option", () => {
       ),
     /at least one incorrect option/,
   )
+})
+
+test("renders compact quiz without dead space or manual check buttons", () => {
+  const bank = parseQuestionBankBlock(validBank, bankId, "bank.md")
+  const selection = parseQuizSelectionBlock(
+    `schemaVersion: 1
+quizId: "16575d31-97fb-4321-877e-9a923a07276d"
+title: "Evidence loop check"
+questionBankId: "${bankId}"
+questionIds:
+  - "${firstQuestionId}"
+`,
+    "lesson.md",
+  )
+  const resolved = resolveQuiz(selection, buildQuestionBankRegistry([bank]))
+  const tree = renderQuiz(resolved)
+  const json = JSON.stringify(tree)
+
+  // Invariants: No dead space elements
+  assert.equal(json.includes("knowledge-quiz__eyebrow"), false)
+  assert.equal(json.includes('"knowledge-quiz__progress"'), false)
+  assert.equal(json.includes("knowledge-quiz__question-meta"), false)
+  assert.equal(json.includes("knowledge-quiz__primary"), false)
+  assert.equal(json.includes("Check answer"), false)
+
+  // Invariants: Header and options
+  assert.equal(json.includes("knowledge-quiz__meta-row"), false)
+  assert.equal(json.includes("1 of 1 · 0 correct"), false)
+  assert.equal(json.includes("1 / 1"), true)
+  assert.equal(json.includes("data-option-id"), true)
+  assert.equal(json.includes("knowledge-quiz__progress-track"), true)
+  assert.equal(json.includes("knowledge-quiz__segment"), true)
+  assert.equal(json.includes("knowledge-quiz__option-letter"), true)
+  assert.equal(json.includes("knowledge-quiz__option-hint"), true)
+  assert.equal(json.includes("knowledge-quiz__next-btn"), true)
+  assert.equal(json.includes("A."), true)
 })

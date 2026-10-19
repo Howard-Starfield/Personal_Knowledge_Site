@@ -1,0 +1,82 @@
+@font-face {
+  font-family: "Bookerly";
+  /* Bookerly is a proprietary font and is not shipped; use an installed copy or fall back to serif. */
+  src: local("Bookerly");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root[data-font="inter"],
+html[data-font="inter"] {
+  --bodyFont: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --titleFont: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --headerFont: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+:root[data-font="bookerly"],
+html[data-font="bookerly"] {
+  --bodyFont: "Bookerly", Georgia, Cambria, "Times New Roman", Times, serif;
+  --titleFont: "Bookerly", Georgia, Cambria, "Times New Roman", Times, serif;
+  --headerFont: "Bookerly", Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.font-toggle {
+  cursor: pointer;
+  padding: 0 4px;
+  position: relative;
+  background: none;
+  border: 1px solid transparent;
+  width: 28px;
+  height: 32px;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--darkgray);
+  border-radius: 6px;
+  transition:
+    color 0.15s ease,
+    background-color 0.15s ease,
+    border-color 0.15s ease;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.font-toggle:hover {
+  color: var(--dark);
+  background-color: var(--highlight);
+  border-color: color-mix(in srgb, var(--lightgray) 60%, transparent);
+}
+
+.font-toggle:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--dark) 45%, transparent);
+  outline-offset: 2px;
+}
+
+.font-toggle__label {
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  display: inline-block;
+  line-height: 1;
+  font-family: "Bookerly", Georgia, serif;
+}
+
+:root[data-font="inter"] .font-toggle__label {
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  font-weight: 600;
+}
+
+:root[data-font="inter"] .font-toggle {
+  color: var(--dark);
+  background-color: var(--highlight);
+  border-color: color-mix(in srgb, var(--lightgray) 80%, transparent);
+}
