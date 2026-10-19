@@ -21,6 +21,8 @@ const failures = []
 const records = []
 const recordsById = new Map()
 const recordsByPath = new Map()
+const assetPaths = new Set()
+const assetsByName = new Map()
 
 function relative(file) {
   return path.relative(contentRoot, file).replaceAll(path.sep, "/")
@@ -31,8 +33,14 @@ function collectMarkdown(directory) {
     const absolute = path.join(directory, entry.name)
     if (entry.isDirectory()) {
       collectMarkdown(absolute)
-    } else if (entry.name.endsWith(".md") && entry.name !== "AGENTS.md") {
-      records.push(parseRecord(absolute))
+    } else if (entry.name.endsWith(".md")) {
+      if (entry.name !== "AGENTS.md") records.push(parseRecord(absolute))
+    } else if (entry.isFile()) {
+      const assetPath = relative(absolute)
+      assetPaths.add(assetPath)
+      const sameName = assetsByName.get(entry.name) ?? []
+      sameName.push(assetPath)
+      assetsByName.set(entry.name, sameName)
     }
   }
 }
@@ -208,7 +216,10 @@ function resolveContentTarget(record, target) {
 }
 
 function validateLinks(record) {
-  const wikiLinks = record.body.matchAll(/\[\[([^\]|]+)(?:\|[^\]]+)?\]\]/g)
+  const embeds = record.body.matchAll(/!\[\[([^\]|]+)(?:\|[^\]]+)?\]\]/g)
+  for (const match of embeds) validateEmbed(record, match[1].trim())
+
+  const wikiLinks = record.body.matchAll(/(?<!!)\[\[([^\]|]+)(?:\|[^\]]+)?\]\]/g)
   for (const match of wikiLinks) {
     const target = match[1].trim()
     const absoluteTarget = target.startsWith("/") ? target.slice(1) : target
@@ -220,11 +231,67 @@ function validateLinks(record) {
     }
   }
 
-  const markdownLinks = record.body.matchAll(/\[[^\]]+\]\(([^)]+)\)/g)
+  const markdownLinks = record.body.matchAll(/(?<!\!)\[[^\]]+\]\(([^)]+)\)/g)
   for (const match of markdownLinks) {
     const target = match[1].trim()
     if (/^(?:https?:|mailto:|#)/.test(target)) continue
     if (!resolveContentTarget(record, target)) fail(record, `unresolved Markdown link "${target}"`)
+  }
+
+  const imageLinks = record.body.matchAll(/!\[[^\]]*\]\(([^)]+)\)/g)
+  for (const match of imageLinks) {
+    const target = match[1].trim()
+    if (/^(?:https?:|data:)/.test(target)) continue
+    const withoutAnchor = target.split("#", 1)[0].split("?", 1)[0]
+    if (withoutAnchor === "") continue
+    const resolved = resolveAssetPath(record, withoutAnchor)
+    if (resolved === null) {
+      fail(record, `image asset "${target}" escapes the content root`)
+    } else if (!assetPaths.has(resolved)) {
+      fail(record, `unresolved image asset "${target}"`)
+    }
+  }
+}
+
+// Resolves a note-relative or root-absolute ("/…") asset path to a
+// content-relative path, or null when it escapes the content root.
+function resolveAssetPath(record, target) {
+  const joined = target.startsWith("/")
+    ? target.slice(1)
+    : path.posix.join(path.posix.dirname(record.relativePath), target)
+  const normalized = path.posix.normalize(joined)
+  if (normalized === ".." || normalized.startsWith("../") || path.posix.isAbsolute(normalized)) {
+    return null
+  }
+  return normalized
+}
+
+// `![[target]]` embeds either transclude a note or show an asset. Obsidian
+// resolves an asset by bare file name anywhere in the vault, or by a path
+// relative to the note or to the content root.
+function validateEmbed(record, target) {
+  const withoutAnchor = target.split("#", 1)[0]
+  const extension = path.posix.extname(withoutAnchor)
+  if (extension === "" || extension === ".md") {
+    const absoluteTarget = withoutAnchor.startsWith("/") ? withoutAnchor.slice(1) : withoutAnchor
+    const candidates = absoluteTarget.endsWith(".md")
+      ? [absoluteTarget]
+      : [`${absoluteTarget}.md`, `${absoluteTarget}/index.md`]
+    if (!candidates.some((candidate) => recordsByPath.has(candidate))) {
+      fail(record, `unresolved embed "${target}"`)
+    }
+    return
+  }
+  if (!withoutAnchor.includes("/")) {
+    if (!assetsByName.has(withoutAnchor)) fail(record, `unresolved embed "${target}"`)
+    return
+  }
+  const noteRelative = resolveAssetPath(record, withoutAnchor)
+  const rootRelative = resolveAssetPath({ relativePath: "index.md" }, withoutAnchor)
+  if (noteRelative === null || rootRelative === null) {
+    fail(record, `embed "${target}" escapes the content root`)
+  } else if (!assetPaths.has(noteRelative) && !assetPaths.has(rootRelative)) {
+    fail(record, `unresolved embed "${target}"`)
   }
 }
 

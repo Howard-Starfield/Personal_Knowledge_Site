@@ -101,3 +101,63 @@ Fixture note.
   assert.notEqual(result.status, 0)
   assert.match(result.stderr, /relatedContentIds target does not exist/)
 })
+
+function articleWithBody(body) {
+  return article.replace("Return to [[topic/index|the category]].", body)
+}
+
+test("accepts Markdown images and wiki embeds that resolve inside content", (t) => {
+  const root = createFixture({
+    "topic/index.md": category,
+    "topic/article.md": articleWithBody(
+      [
+        "![Relative](images/figure.svg)",
+        "![Root absolute](/topic/images/figure.svg)",
+        "![[figure.svg]]",
+        "![[topic/images/figure.svg|Root relative]]",
+        "![[topic/index]]",
+      ].join("\n\n"),
+    ),
+    "topic/images/figure.svg": "<svg xmlns='http://www.w3.org/2000/svg'/>",
+  })
+  t.after(() => fs.rmSync(root, { recursive: true, force: true }))
+
+  const result = runValidator(root)
+
+  assert.equal(result.status, 0, result.stderr)
+})
+
+test("rejects an image path that escapes the content root", (t) => {
+  const root = createFixture({ "topic/index.md": category })
+  // The escaping target exists on disk, so only the containment check can reject it.
+  const outsideName = `${path.basename(root)}-outside.png`
+  const outsidePath = path.join(root, "..", outsideName)
+  fs.writeFileSync(outsidePath, "")
+  fs.writeFileSync(
+    path.join(root, "topic/article.md"),
+    articleWithBody(`![Outside](../../${outsideName})`),
+  )
+  t.after(() => {
+    fs.rmSync(root, { recursive: true, force: true })
+    fs.rmSync(outsidePath, { force: true })
+  })
+
+  const result = runValidator(root)
+
+  assert.notEqual(result.status, 0)
+  assert.match(result.stderr, /escapes the content root/)
+})
+
+test("rejects missing images and embeds", (t) => {
+  const root = createFixture({
+    "topic/index.md": category,
+    "topic/article.md": articleWithBody("![Missing](images/missing.png)\n\n![[absent.png]]"),
+  })
+  t.after(() => fs.rmSync(root, { recursive: true, force: true }))
+
+  const result = runValidator(root)
+
+  assert.notEqual(result.status, 0)
+  assert.match(result.stderr, /unresolved image asset "images\/missing.png"/)
+  assert.match(result.stderr, /unresolved embed "absent.png"/)
+})
