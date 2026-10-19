@@ -36,26 +36,19 @@ function setupQuiz(root: HTMLElement): QuizController {
   const questions = elements(root, "[data-quiz-question]")
   const previous = button(root, "[data-quiz-previous]")
   const next = button(root, "[data-quiz-next]")
-  const check = button(root, "[data-quiz-check]")
   const reset = button(root, "[data-quiz-reset]")
   const score = root.querySelector("[data-quiz-score]")
-  const progress = root.querySelector("[data-quiz-progress]")
-  if (
-    !previous ||
-    !next ||
-    !check ||
-    !reset ||
-    !(score instanceof HTMLElement) ||
-    !(progress instanceof HTMLElement)
-  ) {
+  const counterElement = root.querySelector("[data-quiz-counter]")
+  const segments = elements(root, ".knowledge-quiz__segment")
+  const hintToggle = button(root, "[data-quiz-hint-toggle]")
+
+  if (!previous || !next || !reset) {
     return { dispose: () => undefined }
   }
   const previousButton = previous
   const nextButton = next
-  const checkButton = check
   const resetButton = reset
-  const scoreElement = score
-  const progressElement = progress
+  const scoreElement = score instanceof HTMLElement ? score : undefined
 
   let currentIndex = 0
   const results = new Map<string, QuestionResult>()
@@ -69,10 +62,89 @@ function setupQuiz(root: HTMLElement): QuizController {
     return question.dataset.questionId ?? String(currentIndex)
   }
 
+  function renderSvgIcon(icon: HTMLElement, type: "incorrect" | "correct" | "none"): void {
+    icon.textContent = ""
+    if (type === "incorrect") {
+      const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg")
+      svg.setAttribute("width", "10")
+      svg.setAttribute("height", "10")
+      svg.setAttribute("viewBox", "0 0 10 10")
+      svg.setAttribute("fill", "none")
+      svg.setAttribute("stroke", "#ffa9af")
+      svg.setAttribute("stroke-width", "2")
+      svg.setAttribute("stroke-linecap", "round")
+      const l1 = document.createElementNS("http://www.w3.org/2000/svg", "line")
+      l1.setAttribute("x1", "2")
+      l1.setAttribute("y1", "2")
+      l1.setAttribute("x2", "8")
+      l1.setAttribute("y2", "8")
+      const l2 = document.createElementNS("http://www.w3.org/2000/svg", "line")
+      l2.setAttribute("x1", "8")
+      l2.setAttribute("y1", "2")
+      l2.setAttribute("x2", "2")
+      l2.setAttribute("y2", "8")
+      svg.appendChild(l1)
+      svg.appendChild(l2)
+      icon.appendChild(svg)
+    } else if (type === "correct") {
+      const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg")
+      svg.setAttribute("width", "10")
+      svg.setAttribute("height", "10")
+      svg.setAttribute("viewBox", "0 0 10 10")
+      svg.setAttribute("fill", "none")
+      svg.setAttribute("stroke", "#90e58c")
+      svg.setAttribute("stroke-width", "2")
+      svg.setAttribute("stroke-linecap", "round")
+      const poly = document.createElementNS("http://www.w3.org/2000/svg", "polyline")
+      poly.setAttribute("points", "2,5 4.5,7.5 8,2.5")
+      svg.appendChild(poly)
+      icon.appendChild(svg)
+    }
+  }
+
+  function updateTrackAndCounter(): void {
+    if (counterElement instanceof HTMLElement) {
+      counterElement.textContent = `${currentIndex + 1} / ${questions.length}`
+    }
+    segments.forEach((segment, i) => {
+      const q = questions[i]
+      const res = q ? results.get(resultKey(q)) : undefined
+      const icon = segment.querySelector("[data-segment-icon]")
+      if (i === currentIndex) {
+        segment.dataset.active = "true"
+      } else {
+        delete segment.dataset.active
+      }
+      if (res === "correct") {
+        segment.dataset.status = "correct"
+        if (icon instanceof HTMLElement) renderSvgIcon(icon, "correct")
+      } else if (res === "review") {
+        segment.dataset.status = "incorrect"
+        if (icon instanceof HTMLElement) renderSvgIcon(icon, "incorrect")
+      } else {
+        delete segment.dataset.status
+        if (icon instanceof HTMLElement) renderSvgIcon(icon, "none")
+      }
+    })
+  }
+
   function updateScore(): void {
     const correct = Array.from(results.values()).filter((result) => result === "correct").length
     const review = Array.from(results.values()).filter((result) => result === "review").length
-    scoreElement.textContent = `${correct} of ${questions.length} correct${review > 0 ? ` · ${review} to review` : ""}`
+    const reviewText = review > 0 ? ` · ${review} to review` : ""
+    if (scoreElement) {
+      scoreElement.textContent = `${currentIndex + 1} of ${questions.length} · ${correct} correct${reviewText}`
+    }
+    updateTrackAndCounter()
+  }
+
+  function clearFeedback(question: HTMLElement): void {
+    const feedback = question.querySelector("[data-quiz-feedback]")
+    if (feedback instanceof HTMLElement) {
+      feedback.hidden = true
+      feedback.textContent = ""
+      delete feedback.dataset.result
+    }
   }
 
   function setFeedback(question: HTMLElement, result: QuestionResult, message: string): void {
@@ -90,22 +162,132 @@ function setupQuiz(root: HTMLElement): QuizController {
     if (fallback instanceof HTMLDetailsElement) {
       fallback.hidden = false
       fallback.open = true
+      updateHintToggleState()
     }
   }
 
-  function updateCheckState(): void {
-    const question = currentQuestion()
-    if (!question) return
-    const type = question.dataset.questionType
-    if (type === "free-recall") {
-      const textarea = question.querySelector("textarea")
-      checkButton.disabled =
-        !(textarea instanceof HTMLTextAreaElement) || textarea.value.trim() === ""
-      checkButton.textContent = "Reveal sample answer"
-      return
+  function updateHintToggleState(): void {
+    if (!hintToggle) return
+    const cur = currentQuestion()
+    if (!cur) return
+    const fallback = cur.querySelector(".knowledge-quiz__fallback")
+    if (fallback instanceof HTMLDetailsElement) {
+      hintToggle.textContent = fallback.open ? "Hide explanation ▴" : "Show explanation ▾"
     }
-    checkButton.textContent = "Check answer"
-    checkButton.disabled = selectedValues(question).length === 0
+  }
+
+  function gradeQuestion(question: HTMLElement): void {
+    const type = question.dataset.questionType
+    if (type === "free-recall") return
+
+    const selected = selectedValues(question)
+    const expected = expectedValues(question)
+    const optionLabels = elements(question, ".knowledge-quiz__option")
+    const explanation = question.dataset.explanation ?? ""
+
+    if (type === "single-choice" || type === "true-false") {
+      if (selected.length === 0) {
+        clearFeedback(question)
+        for (const label of optionLabels) {
+          delete label.dataset.state
+          const hint = label.querySelector("[data-option-hint]")
+          if (hint instanceof HTMLElement) {
+            hint.hidden = true
+            hint.textContent = ""
+          }
+        }
+        return
+      }
+
+      const isCorrect = arraysEqual(selected, expected)
+      for (const label of optionLabels) {
+        const input = label.querySelector("input")
+        const hint = label.querySelector("[data-option-hint]")
+        if (!input) continue
+        const val = input.value
+        if (input.checked) {
+          const optCorrect = expected.includes(val)
+          label.dataset.state = optCorrect ? "correct" : "incorrect"
+          if (hint instanceof HTMLElement) {
+            hint.hidden = false
+            hint.textContent = optCorrect ? `Correct! ${explanation}` : `Incorrect. ${explanation}`
+          }
+        } else {
+          delete label.dataset.state
+          if (hint instanceof HTMLElement) {
+            hint.hidden = true
+            hint.textContent = ""
+          }
+        }
+      }
+
+      setFeedback(
+        question,
+        isCorrect ? "correct" : "review",
+        isCorrect
+          ? "The selected answer matches the key."
+          : "Review the explanation, change your selection, and check again.",
+      )
+    } else if (type === "multiple-select") {
+      if (selected.length === 0) {
+        clearFeedback(question)
+        for (const label of optionLabels) {
+          delete label.dataset.state
+          const hint = label.querySelector("[data-option-hint]")
+          if (hint instanceof HTMLElement) {
+            hint.hidden = true
+            hint.textContent = ""
+          }
+        }
+        results.delete(resultKey(question))
+        updateScore()
+        return
+      }
+
+      for (const label of optionLabels) {
+        const input = label.querySelector("input")
+        const hint = label.querySelector("[data-option-hint]")
+        if (!input) continue
+        const val = input.value
+        if (input.checked) {
+          const optCorrect = expected.includes(val)
+          label.dataset.state = optCorrect ? "correct" : "incorrect"
+          if (hint instanceof HTMLElement) {
+            hint.hidden = false
+            hint.textContent = optCorrect
+              ? "Correct. This option is part of the answer key."
+              : "Incorrect. This option does not belong to the answer key."
+          }
+        } else {
+          delete label.dataset.state
+          if (hint instanceof HTMLElement) {
+            hint.hidden = true
+            hint.textContent = ""
+          }
+        }
+      }
+
+      const isAllCorrect = arraysEqual(selected, expected)
+      if (isAllCorrect) {
+        setFeedback(question, "correct", "All correct answers selected.")
+      } else {
+        const hasWrongSelection = selected.some((val) => !expected.includes(val))
+        if (hasWrongSelection) {
+          setFeedback(
+            question,
+            "review",
+            "Some selected options are not part of the answer key. Review the explanation.",
+          )
+        } else {
+          const remaining = expected.length - selected.length
+          setFeedback(
+            question,
+            "review",
+            `Correct so far! Select ${remaining} more answer${remaining > 1 ? "s" : ""}.`,
+          )
+        }
+      }
+    }
   }
 
   function renderCurrent(): void {
@@ -114,39 +296,8 @@ function setupQuiz(root: HTMLElement): QuizController {
     })
     previousButton.disabled = currentIndex === 0
     nextButton.disabled = currentIndex === questions.length - 1
-    progressElement.replaceChildren()
-    questions.forEach((question, index) => {
-      const marker = document.createElement("span")
-      marker.className = "knowledge-quiz__progress-marker"
-      marker.dataset.state =
-        index === currentIndex ? "current" : (results.get(resultKey(question)) ?? "pending")
-      marker.textContent = String(index + 1)
-      marker.setAttribute("aria-label", `Question ${index + 1}: ${marker.dataset.state}`)
-      progressElement.append(marker)
-    })
-    updateCheckState()
-  }
-
-  function gradeCurrent(): void {
-    const question = currentQuestion()
-    if (!question) return
-    if (question.dataset.questionType === "free-recall") {
-      showFallback(question)
-      const selfGrade = question.querySelector("[data-self-grade]")
-      if (selfGrade instanceof HTMLElement) selfGrade.hidden = false
-      checkButton.disabled = true
-      return
-    }
-    const correct = arraysEqual(selectedValues(question), expectedValues(question))
-    showFallback(question)
-    setFeedback(
-      question,
-      correct ? "correct" : "review",
-      correct
-        ? "The selected answer matches the key."
-        : "Review the explanation, change your selection, and check again.",
-    )
-    renderCurrent()
+    updateScore()
+    updateHintToggleState()
   }
 
   function move(delta: number): void {
@@ -162,14 +313,21 @@ function setupQuiz(root: HTMLElement): QuizController {
       question.querySelectorAll("input").forEach((candidate) => {
         if (candidate instanceof HTMLInputElement) candidate.checked = false
       })
+      question.querySelectorAll(".knowledge-quiz__option").forEach((label) => {
+        if (label instanceof HTMLElement) {
+          delete label.dataset.state
+          const hint = label.querySelector("[data-option-hint]")
+          if (hint instanceof HTMLElement) {
+            hint.hidden = true
+            hint.textContent = ""
+          }
+        }
+      })
       const textarea = question.querySelector("textarea")
       if (textarea instanceof HTMLTextAreaElement) textarea.value = ""
-      const feedback = question.querySelector("[data-quiz-feedback]")
-      if (feedback instanceof HTMLElement) {
-        feedback.hidden = true
-        feedback.textContent = ""
-        delete feedback.dataset.result
-      }
+      const revealButton = question.querySelector("[data-quiz-reveal]")
+      if (revealButton instanceof HTMLButtonElement) revealButton.disabled = false
+      clearFeedback(question)
       const fallback = question.querySelector(".knowledge-quiz__fallback")
       if (fallback instanceof HTMLDetailsElement) {
         fallback.open = false
@@ -182,25 +340,50 @@ function setupQuiz(root: HTMLElement): QuizController {
     renderCurrent()
   }
 
+  if (hintToggle) {
+    const onToggleHint = () => {
+      const cur = currentQuestion()
+      if (!cur) return
+      const fallback = cur.querySelector(".knowledge-quiz__fallback")
+      if (fallback instanceof HTMLDetailsElement) {
+        fallback.hidden = false
+        fallback.open = !fallback.open
+        updateHintToggleState()
+      }
+    }
+    hintToggle.addEventListener("click", onToggleHint)
+    cleanups.push(() => hintToggle.removeEventListener("click", onToggleHint))
+  }
+
   const onPrevious = () => move(-1)
   const onNext = () => move(1)
-  const onCheck = () => gradeCurrent()
   const onReset = () => resetQuiz()
   previousButton.addEventListener("click", onPrevious)
   nextButton.addEventListener("click", onNext)
-  checkButton.addEventListener("click", onCheck)
   resetButton.addEventListener("click", onReset)
   cleanups.push(
     () => previousButton.removeEventListener("click", onPrevious),
     () => nextButton.removeEventListener("click", onNext),
-    () => checkButton.removeEventListener("click", onCheck),
     () => resetButton.removeEventListener("click", onReset),
   )
 
   for (const question of questions) {
-    const onInput = () => updateCheckState()
+    const onInput = () => gradeQuestion(question)
     question.addEventListener("input", onInput)
     cleanups.push(() => question.removeEventListener("input", onInput))
+
+    const revealButton = question.querySelector("[data-quiz-reveal]")
+    if (revealButton instanceof HTMLButtonElement) {
+      const onReveal = () => {
+        showFallback(question)
+        const selfGrade = question.querySelector("[data-self-grade]")
+        if (selfGrade instanceof HTMLElement) selfGrade.hidden = false
+        revealButton.disabled = true
+      }
+      revealButton.addEventListener("click", onReveal)
+      cleanups.push(() => revealButton.removeEventListener("click", onReveal))
+    }
+
     for (const selfButton of elements(question, "[data-self-result]")) {
       if (!(selfButton instanceof HTMLButtonElement)) continue
       const onSelfGrade = () => {
@@ -212,7 +395,6 @@ function setupQuiz(root: HTMLElement): QuizController {
             ? "You marked this recall as understood."
             : "You marked this recall for another review.",
         )
-        renderCurrent()
       }
       selfButton.addEventListener("click", onSelfGrade)
       cleanups.push(() => selfButton.removeEventListener("click", onSelfGrade))

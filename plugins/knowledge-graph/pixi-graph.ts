@@ -750,7 +750,7 @@ async function renderPixiGraph(
 ): Promise<RenderedForceGraph | undefined> {
   container.replaceChildren()
   const width = Math.max(container.clientWidth, 1)
-  const height = Math.max(container.clientHeight, 250)
+  const height = Math.max(container.clientHeight, 1)
   const degree = new Map<string, number>()
   for (const edge of graph.edges) {
     degree.set(edge.source, (degree.get(edge.source) ?? 0) + 1)
@@ -803,13 +803,13 @@ async function renderPixiGraph(
   app.stage.eventMode = "static"
   app.stage.hitArea = app.screen
 
-  const secondary = themeColor("--secondary", "#8b5cf6")
-  const tertiary = themeColor("--tertiary", "#d16d9e")
-  const gray = themeColor("--gray", "#6c6c6c")
-  const lightGray = themeColor("--lightgray", "#d5d5dc")
-  const dark = themeColor("--dark", "#202124")
-  const light = themeColor("--light", "#fafafa")
-  const bodyFont = themeColor("--bodyFont", "system-ui")
+  const secondary = themeColor("--secondary", "#e2e3e4")
+  const tertiary = themeColor("--tertiary", "#8e9096")
+  const gray = themeColor("--gray", "#8e9096")
+  const lightGray = themeColor("--lightgray", "#282a32")
+  const dark = themeColor("--dark", "#e2e3e4")
+  const light = themeColor("--light", "#16171c")
+  const bodyFont = themeColor("--bodyFont", "Inter, system-ui")
 
   const edgeVisuals: PixiEdgeVisual[] = []
   for (const edge of graph.edges) {

@@ -14,30 +14,30 @@ configuration:
     fontOrigin: local
     cdnCaching: false
     typography:
-      header: system-ui
-      body: system-ui
-      code: ui-monospace
+      header: Bookerly
+      body: Bookerly
+      code: JetBrains Mono
     colors:
       lightMode:
-        light: "#f7f7f8"
-        lightgray: "#e3e3e8"
-        gray: "#8b8b98"
-        darkgray: "#4a4a57"
-        dark: "#24242c"
-        secondary: "#7058c7"
-        tertiary: "#a74f87"
-        highlight: rgba(112, 88, 199, 0.12)
-        textHighlight: "#d6c9ff80"
+        light: "#faf8f8"
+        lightgray: "#e5e5e5"
+        gray: "#b8b8b8"
+        darkgray: "#4e4e4e"
+        dark: "#2b2b2b"
+        secondary: "#284b63"
+        tertiary: "#84a59d"
+        highlight: "rgba(143, 159, 169, 0.15)"
+        textHighlight: "#fff23688"
       darkMode:
-        light: "#202024"
-        lightgray: "#34343c"
-        gray: "#9292a0"
-        darkgray: "#d1d1d9"
-        dark: "#f2f2f5"
-        secondary: "#a993f5"
-        tertiary: "#e18abd"
-        highlight: rgba(169, 147, 245, 0.14)
-        textHighlight: "#6f59b880"
+        light: "#161618"
+        lightgray: "#393639"
+        gray: "#646464"
+        darkgray: "#d4d4d4"
+        dark: "#ebebec"
+        secondary: "#7b97aa"
+        tertiary: "#84a59d"
+        highlight: "rgba(143, 159, 169, 0.15)"
+        textHighlight: "#b3aa0288"
 
 plugins:
   - source: "@quartz-community/note-properties"
@@ -79,11 +79,14 @@ plugins:
     enabled: true
     order: 40
   - source: "@quartz-community/table-of-contents"
-    enabled: true
+    enabled: false
     order: 50
+  - source: "./plugins/thread-toc"
+    enabled: true
+    order: 55
     layout:
-      position: right
-      priority: 30
+      position: beforeBody
+      priority: 20
   - source: "@quartz-community/crawl-links"
     enabled: true
     options:
@@ -92,6 +95,11 @@ plugins:
   - source: "@quartz-community/description"
     enabled: true
     order: 70
+  - source: "@quartz-community/latex"
+    enabled: true
+    options:
+      renderEngine: katex
+    order: 75
   - source: "./plugins/knowledge-quiz"
     enabled: true
     order: 80
@@ -111,28 +119,36 @@ plugins:
     enabled: true
   - source: "@quartz-community/explorer"
     enabled: true
+    options:
+      folderClickBehavior: collapse
     layout:
       position: left
       priority: 50
   - source: "@quartz-community/search"
     enabled: true
     layout:
-      position: left
-      priority: 20
-      group: toolbar
+      position: beforeBody
+      priority: 1
+      group: header-bar
       groupOptions:
         grow: true
-  - source: "@quartz-community/backlinks"
+  - source: "./plugins/settings-gear"
     enabled: true
     layout:
-      position: right
-      priority: 50
+      position: beforeBody
+      priority: 2
+      group: header-bar
   - source: "./plugins/knowledge-graph"
     enabled: true
     order: 90
     layout:
-      position: right
-      priority: 10
+      position: left
+      priority: 15
+  - source: "@quartz-community/backlinks"
+    enabled: true
+    layout:
+      position: left
+      priority: 25
   - source: "@quartz-community/article-title"
     enabled: true
     layout:
@@ -153,12 +169,6 @@ plugins:
     layout:
       position: left
       priority: 10
-  - source: "@quartz-community/darkmode"
-    enabled: true
-    layout:
-      position: left
-      priority: 30
-      group: toolbar
   - source: "@quartz-community/breadcrumbs"
     enabled: true
     layout:
@@ -176,17 +186,19 @@ plugins:
 
 layout:
   groups:
-    toolbar:
-      priority: 35
+    header-bar:
+      priority: 1
       direction: row
-      gap: 0.5rem
+      gap: 0.75rem
   byPageType:
     "404":
       positions:
         beforeBody: []
         left: []
         right: []
-    content: {}
+    content:
+      positions:
+        right: []
     folder:
       positions:
         right: []

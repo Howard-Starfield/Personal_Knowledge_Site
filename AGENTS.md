@@ -22,9 +22,10 @@ For content maintenance, the agent follows this chain:
 4. `docs/contracts/CONTENT_MODEL.md` for frontmatter, question-bank, quiz, and capture schemas;
 5. `docs/templates/content_intake_handoff_prompt.md` when compiling one owner-declared course/article/source set into a private review package;
 6. `docs/templates/QUESTION_BANK_AUTHORING_PACKET.md` when compiling a course, article, paper, or notes into a question-bank draft;
-7. the applicable active execution plan;
-8. `docs/runbooks/LEARNING_INBOX_AGENT.md` when processing a captured question/reminder;
-9. relevant ADRs and pinned-source evidence for implementation work.
+7. `docs/runbooks/LINKEDIN_COURSE_INGESTION.md` when compiling a LinkedIn Learning course download into a structured public course;
+8. the applicable active execution plan;
+9. `docs/runbooks/LEARNING_INBOX_AGENT.md` when processing a captured question/reminder;
+10. relevant ADRs and pinned-source evidence for implementation work.
 
 A maintainer agent that cannot read the referenced repository files must stop rather than assume the missing rules. A one-file offline handoff, if ever needed, must be generated and versioned from these authorities; it is not maintained manually.
 

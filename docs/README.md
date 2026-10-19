@@ -11,18 +11,19 @@ Do not treat every Markdown file under `docs/` as equal authority. Root
 
 ## Project authority
 
-| Document                         | Responsibility                                                     | Read when                                                        |
-| -------------------------------- | ------------------------------------------------------------------ | ---------------------------------------------------------------- |
-| `product/PRD.md`                 | Product outcomes, requirements, phases, open decisions             | Planning or changing product behavior                            |
-| `architecture/ARCHITECTURE.md`   | System boundaries and data flow                                    | Changing components, storage, hosting, or integration boundaries |
-| `architecture/VERSION_MATRIX.md` | Exact versions and current runtime evidence                        | Dependency, build, hosting, or reproducibility work              |
-| `contracts/CONTENT_MODEL.md`     | Frontmatter, content, course, quiz, and capture contracts          | Authoring or validating public content                           |
-| `TESTING_STRATEGY.md`            | Project-wide proof philosophy and test layers                      | Planning or reviewing any implementation                         |
-| `SECURITY.md`                    | Public/private, identity, source, browser, and provider boundaries | Any content, API, auth, media, or external-service work          |
-| `decisions/`                     | Architecturally significant decisions                              | When a relevant lasting trade-off exists                         |
-| `exec-plans/active/`             | Exact files, steps, tests, and stop conditions for current work    | Before making a nontrivial change                                |
-| `runbooks/`                      | Deterministic operating procedures                                 | Running the named workflow                                       |
-| `templates/`                     | Owner/agent authoring packets                                      | Producing the named private artifact                             |
+| Document                          | Responsibility                                                                                      | Read when                                                               |
+| --------------------------------- | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `product/PRD.md`                  | Product outcomes, requirements, phases, open decisions                                              | Planning or changing product behavior                                   |
+| `architecture/ARCHITECTURE.md`    | System boundaries and data flow                                                                     | Changing components, storage, hosting, or integration boundaries        |
+| `architecture/VERSION_MATRIX.md`  | Exact versions and current runtime evidence                                                         | Dependency, build, hosting, or reproducibility work                     |
+| `contracts/CONTENT_MODEL.md`      | Frontmatter, content, course, quiz, and capture contracts                                           | Authoring or validating public content                                  |
+| `TESTING_STRATEGY.md`             | Project-wide proof philosophy and test layers                                                       | Planning or reviewing any implementation                                |
+| `SECURITY.md`                     | Public/private, identity, source, browser, and provider boundaries                                  | Any content, API, auth, media, or external-service work                 |
+| `decisions/`                      | Architecturally significant decisions                                                               | When a relevant lasting trade-off exists                                |
+| `exec-plans/active/`              | Exact files, steps, tests, and stop conditions for current work                                     | Before making a nontrivial change                                       |
+| `runbooks/`                       | Deterministic operating procedures (e.g. `LINKEDIN_COURSE_INGESTION.md`, `LEARNING_INBOX_AGENT.md`) | Running the named workflow                                              |
+| `templates/`                      | Owner/agent authoring packets                                                                       | Producing the named private artifact                                    |
+| `templates/CHAPTER_WORK_ORDER.md` | Brief for one per-chapter session of the LinkedIn course pipeline (v2)                              | Starting a chapter session from `private/linkedin-extracts/FANOUT.json` |
 
 ## Maintainer entry
 

@@ -15,3 +15,10 @@ replit.nix
 .quartz/
 quartz/cli/tui/dist/
 .turbo/
+
+# Owner-local material that must never reach the public repo (review 2026-10-18)
+/scratch/
+/codex_dot_characters/
+/docs/AI_AGENT_CRASH_COURSE/
+/docs/accounting_ai_crash_course/
+/quartz/static/fonts/Bookerly-Regular.ttf

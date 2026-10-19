@@ -41,33 +41,50 @@ function fallbackDetails(question: KnowledgeQuestion): Element {
   ])
 }
 
+const OPTION_LETTERS = ["A", "B", "C", "D", "E", "F", "G", "H"]
+
 function choiceInput(
   quizId: string,
   question: KnowledgeQuestion,
   option: QuizOption,
   inputType: "radio" | "checkbox",
+  index: number,
 ): Element {
   const inputId = `quiz-${quizId}-${question.id}-${option.id}`
-  return element("label", { className: ["knowledge-quiz__option"] }, [
+  const letter = OPTION_LETTERS[index] ?? String(index + 1)
+  return element("label", { className: ["knowledge-quiz__option"], "data-option-id": option.id }, [
     element("input", {
       id: inputId,
+      className: ["knowledge-quiz__sr-input"],
       type: inputType,
       name: `quiz-${quizId}-${question.id}`,
       value: option.id,
     }),
-    element("span", {}, [text(option.text)]),
+    element("div", { className: ["knowledge-quiz__option-body"] }, [
+      element("div", { className: ["knowledge-quiz__option-header"] }, [
+        element("span", { className: ["knowledge-quiz__option-letter"] }, [text(`${letter}.`)]),
+        element("span", { className: ["knowledge-quiz__option-text"] }, [text(option.text)]),
+      ]),
+      element(
+        "div",
+        { className: ["knowledge-quiz__option-hint"], "data-option-hint": "", hidden: true },
+        [],
+      ),
+    ]),
   ])
 }
 
-function objectiveFieldset(quizId: string, question: KnowledgeQuestion): Element {
+function objectiveFieldset(quizId: string, question: KnowledgeQuestion, index: number): Element {
   if (question.type === "true-false") {
     const options: QuizOption[] = [
       { id: "true", text: "True" },
       { id: "false", text: "False" },
     ]
     return element("fieldset", { className: ["knowledge-quiz__fieldset"] }, [
-      element("legend", { className: ["knowledge-quiz__prompt"] }, [text(question.prompt)]),
-      ...options.map((option) => choiceInput(quizId, question, option, "radio")),
+      element("legend", { className: ["knowledge-quiz__prompt"] }, [
+        text(`${index + 1}. ${question.prompt}`),
+      ]),
+      ...options.map((option, idx) => choiceInput(quizId, question, option, "radio", idx)),
     ])
   }
   if (question.type === "free-recall") {
@@ -75,16 +92,11 @@ function objectiveFieldset(quizId: string, question: KnowledgeQuestion): Element
   }
   const inputType = question.type === "single-choice" ? "radio" : "checkbox"
   return element("fieldset", { className: ["knowledge-quiz__fieldset"] }, [
-    element("legend", { className: ["knowledge-quiz__prompt"] }, [text(question.prompt)]),
-    ...question.options.map((option) => choiceInput(quizId, question, option, inputType)),
+    element("legend", { className: ["knowledge-quiz__prompt"] }, [
+      text(`${index + 1}. ${question.prompt}`),
+    ]),
+    ...question.options.map((option, idx) => choiceInput(quizId, question, option, inputType, idx)),
   ])
-}
-
-function questionTypeLabel(question: KnowledgeQuestion): string {
-  if (question.type === "single-choice") return "Choose one"
-  if (question.type === "multiple-select") return "Choose every correct answer"
-  if (question.type === "true-false") return "True or false"
-  return "Free recall · self-graded"
 }
 
 function questionElement(quizId: string, question: KnowledgeQuestion, index: number): Element {
@@ -98,15 +110,26 @@ function questionElement(quizId: string, question: KnowledgeQuestion, index: num
     question.type === "free-recall"
       ? element("div", { className: ["knowledge-quiz__recall"] }, [
           element("label", {}, [
-            element("span", { className: ["knowledge-quiz__prompt"] }, [text(question.prompt)]),
+            element("span", { className: ["knowledge-quiz__prompt"] }, [
+              text(`${index + 1}. ${question.prompt}`),
+            ]),
             element("textarea", {
               id: `quiz-${quizId}-${question.id}-recall`,
-              rows: 5,
+              rows: 4,
               placeholder: "Write what you remember before revealing the sample answer.",
             }),
           ]),
+          element(
+            "button",
+            {
+              className: ["knowledge-quiz__reveal-btn"],
+              type: "button",
+              "data-quiz-reveal": "",
+            },
+            [text("Reveal sample answer")],
+          ),
         ])
-      : objectiveFieldset(quizId, question)
+      : objectiveFieldset(quizId, question, index)
 
   return element(
     "section",
@@ -117,12 +140,9 @@ function questionElement(quizId: string, question: KnowledgeQuestion, index: num
       "data-question-type": question.type,
       "data-correct-option-ids": answerIds,
       "data-question-index": String(index),
+      "data-explanation": question.explanation,
     },
     [
-      element("div", { className: ["knowledge-quiz__question-meta"] }, [
-        element("span", {}, [text(`Question ${index + 1}`)]),
-        element("span", {}, [text(questionTypeLabel(question))]),
-      ]),
       response,
       element(
         "div",
@@ -158,41 +178,79 @@ export function renderQuiz(resolved: ResolvedQuiz): Element {
       className: ["knowledge-quiz"],
       "data-knowledge-quiz": "",
       "data-quiz-id": selection.quizId,
-      "aria-labelledby": `quiz-${selection.quizId}-title`,
+      "aria-label": selection.title,
     },
     [
       element("header", { className: ["knowledge-quiz__header"] }, [
-        element("div", {}, [
-          element("p", { className: ["knowledge-quiz__eyebrow"] }, [text("Practice")]),
-          element("h2", { id: `quiz-${selection.quizId}-title` }, [text(selection.title)]),
-        ]),
-        element("p", { className: ["knowledge-quiz__score"], "data-quiz-score": "" }, [
-          text(`0 of ${questions.length} correct`),
+        element("div", { className: ["knowledge-quiz__top-bar"] }, [
+          element(
+            "div",
+            { className: ["knowledge-quiz__progress-track"], "data-quiz-track": "" },
+            questions.map((_, i) =>
+              element(
+                "div",
+                {
+                  className: ["knowledge-quiz__segment"],
+                  "data-segment-index": String(i),
+                },
+                [
+                  element(
+                    "span",
+                    { className: ["knowledge-quiz__segment-icon"], "data-segment-icon": "" },
+                    [],
+                  ),
+                  element("span", { className: ["knowledge-quiz__segment-bar"] }, []),
+                ],
+              ),
+            ),
+          ),
+          element("div", { className: ["knowledge-quiz__counter"], "data-quiz-counter": "" }, [
+            text(`1 / ${questions.length}`),
+          ]),
         ]),
       ]),
-      element(
-        "div",
-        {
-          className: ["knowledge-quiz__progress"],
-          "data-quiz-progress": "",
-          "aria-label": "Quiz progress",
-        },
-        [],
-      ),
       ...questions.map((question, index) => questionElement(selection.quizId, question, index)),
       element("div", { className: ["knowledge-quiz__controls"], "data-quiz-controls": "" }, [
-        element("button", { type: "button", "data-quiz-previous": "" }, [text("Previous")]),
-        element(
-          "button",
-          { className: ["knowledge-quiz__primary"], type: "button", "data-quiz-check": "" },
-          [text("Check answer")],
-        ),
-        element("button", { type: "button", "data-quiz-next": "" }, [text("Next")]),
-        element(
-          "button",
-          { className: ["knowledge-quiz__reset"], type: "button", "data-quiz-reset": "" },
-          [text("Reset quiz")],
-        ),
+        element("div", { className: ["knowledge-quiz__controls-left"] }, [
+          element(
+            "button",
+            {
+              className: ["knowledge-quiz__btn", "knowledge-quiz__reset"],
+              type: "button",
+              "data-quiz-reset": "",
+            },
+            [text("Reset")],
+          ),
+          element(
+            "button",
+            {
+              className: ["knowledge-quiz__hint-toggle"],
+              type: "button",
+              "data-quiz-hint-toggle": "",
+            },
+            [text("Show explanation ▾")],
+          ),
+        ]),
+        element("div", { className: ["knowledge-quiz__controls-right"] }, [
+          element(
+            "button",
+            {
+              className: ["knowledge-quiz__btn"],
+              type: "button",
+              "data-quiz-previous": "",
+            },
+            [text("Previous")],
+          ),
+          element(
+            "button",
+            {
+              className: ["knowledge-quiz__btn", "knowledge-quiz__next-btn"],
+              type: "button",
+              "data-quiz-next": "",
+            },
+            [text("Next →")],
+          ),
+        ]),
       ]),
     ],
   )
