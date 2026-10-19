@@ -215,13 +215,19 @@ function resolveContentTarget(record, target) {
   return candidates.some((candidate) => recordsByPath.has(candidate))
 }
 
+// Inside a Markdown table, Obsidian writes the alias separator as `\|`, which
+// leaves a trailing backslash on the captured target.
+function wikiTarget(match) {
+  return match[1].trim().replace(/\\$/, "").trim()
+}
+
 function validateLinks(record) {
   const embeds = record.body.matchAll(/!\[\[([^\]|]+)(?:\|[^\]]+)?\]\]/g)
-  for (const match of embeds) validateEmbed(record, match[1].trim())
+  for (const match of embeds) validateEmbed(record, wikiTarget(match))
 
   const wikiLinks = record.body.matchAll(/(?<!!)\[\[([^\]|]+)(?:\|[^\]]+)?\]\]/g)
   for (const match of wikiLinks) {
-    const target = match[1].trim()
+    const target = wikiTarget(match)
     const absoluteTarget = target.startsWith("/") ? target.slice(1) : target
     const candidates = absoluteTarget.endsWith(".md")
       ? [absoluteTarget]

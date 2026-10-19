@@ -127,6 +127,26 @@ test("accepts Markdown images and wiki embeds that resolve inside content", (t) 
   assert.equal(result.status, 0, result.stderr)
 })
 
+test("accepts table-escaped wiki aliases and still rejects a missing target", (t) => {
+  const table = [
+    "| Page | Note |",
+    "| ---- | ---- |",
+    "| [[topic/index\\|the category]] | ok |",
+    "| [[topic/missing\\|gone]] | broken |",
+  ].join("\n")
+  const root = createFixture({
+    "topic/index.md": category,
+    "topic/article.md": articleWithBody(table),
+  })
+  t.after(() => fs.rmSync(root, { recursive: true, force: true }))
+
+  const result = runValidator(root)
+
+  assert.notEqual(result.status, 0)
+  assert.match(result.stderr, /unresolved wiki link "topic\/missing"/)
+  assert.doesNotMatch(result.stderr, /topic\/index/)
+})
+
 test("rejects an image path that escapes the content root", (t) => {
   const root = createFixture({ "topic/index.md": category })
   // The escaping target exists on disk, so only the containment check can reject it.
