@@ -109,7 +109,7 @@ authorization; visitors who follow the link get GitHub's `404`. The inbox
 repository's name appears in public HTML and is not treated as a secret.
 
 **3. Agent run.** When the owner starts a session and runs `/process-inbox`, the
-agent processes every open note labelled `ready`. An owner-authored `ready` note is the owner's explicit selection (the matching AGENTS.md carve-out); the owner removes the label to hold a note back:
+agent processes every open note labelled `ready`. This batch mode becomes operative only when slice 0 updates `content/AGENTS.md` (Learning Inbox ingestion) and `docs/runbooks/LEARNING_INBOX_AGENT.md` to authorize it; until then the existing one-explicit-item procedure governs. An owner-authored `ready` note is the owner's explicit selection (the matching AGENTS.md carve-out); the owner removes the label to hold a note back:
 
 1. A helper (`scripts/inbox.ts`) lists notes through `gh` and validates each
    envelope. A note fails closed when its author is not the owner, its

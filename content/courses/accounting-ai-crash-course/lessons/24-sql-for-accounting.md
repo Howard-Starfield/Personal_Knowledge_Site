@@ -119,9 +119,9 @@ For a trial balance you want every account, even those with no activity, so you 
 SELECT
     c.account_number,
     c.account_name,
-    SUM(t.debit)                 AS total_debits,
-    SUM(t.credit)                AS total_credits,
-    SUM(t.debit) - SUM(t.credit) AS net_debit
+    COALESCE(SUM(t.debit), 0)                                AS total_debits,
+    COALESCE(SUM(t.credit), 0)                               AS total_credits,
+    COALESCE(SUM(t.debit), 0) - COALESCE(SUM(t.credit), 0)   AS net_debit
 FROM chart_of_accounts c
 LEFT JOIN transactions t
        ON t.account_id = c.account_id
@@ -129,6 +129,8 @@ LEFT JOIN transactions t
 GROUP BY c.account_number, c.account_name
 ORDER BY c.account_number;
 ```
+
+An account with no activity still appears thanks to the LEFT JOIN, but `SUM` over no rows returns NULL, not 0, so each total is wrapped in `COALESCE(..., 0)` to print a clean zero balance.
 
 Across all accounts, total debits minus total credits should be zero. If it is not, stop and find the unbalanced entry.
 

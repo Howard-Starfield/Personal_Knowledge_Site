@@ -103,16 +103,21 @@ with prices quoted per million tokens. The lab's `PRICING` table uses example pr
 **Worked example.**
 
 ```python
+from openai import APIConnectionError, APITimeoutError, InternalServerError, RateLimitError
+
+RETRYABLE = (RateLimitError, APIConnectionError, APITimeoutError, InternalServerError)
+
 for model in chain:
     try:
         out = call(model, messages)
         return {**out, "model": model, "fallback_used": model != chain[0]}
-    except Exception as e:
+    except RETRYABLE as e:          # 429, network, timeout, 5xx: try the next model
         last_err = e
+    # anything else (bad key, malformed request, unknown model, a bug) raises at once
 raise RuntimeError(f"All models in chain failed: {last_err}")
 ```
 
-If the key for the OpenAI models is invalid, an ADMIN request falls through both OpenAI entries and the local model answers, with `fallback_used` set to true. Test this on purpose by setting a bad key and confirming it.
+Fall back only on failures that another model might not share: rate limits (429), connection errors, timeouts and 5xx server errors. An invalid key, a malformed request or an unknown model ID is a defect, not an outage, so it should raise immediately instead of hiding behind a successful fallback. Test both paths on purpose: simulate a timeout and confirm `fallback_used` is true, then set a bad key and confirm the request fails loudly.
 
 > [!warning] Common mistake
 > Hard-coding one provider client everywhere. Retries, fallbacks, cost logs, and cooldowns then become one-off patches, and an outage becomes your outage.

@@ -28,7 +28,7 @@ Every lesson has one bank-backed `knowledge-question-bank` with 12 questions. Th
 
 - **Content contract** (`docs/contracts/CONTENT_MODEL.md`): every page has exactly one lowercase UUIDv4, `publish: true` and `status: active`. Lessons reference their course by `courseId` and have a unique `lessonOrder`.
 - **Quiz references:** every quiz block references an existing bank and active question IDs (PRD FR-QUIZ-01).
-- **Item quality:** `check:questions` passes with no length or position cues.
+- **Item quality:** `check:questions` passes with no length or position cues. The checker ships in PR #12, so this PR merges only after #12, and the gate is then reproducible with `npm run check:questions content/courses/ai-agent-crash-course` and `npm run check:questions content/courses/accounting-ai-crash-course`.
 - **No secrets or private paths:** no private data, transcripts or local paths in published files.
 
 ## 4. Source evidence
