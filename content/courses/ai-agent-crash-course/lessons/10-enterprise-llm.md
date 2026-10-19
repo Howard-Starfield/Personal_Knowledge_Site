@@ -8,8 +8,6 @@ status: active
 created: "2026-10-18"
 tags:
   - ai-agents
-  - enterprise-ai
-  - access-control
 courseId: "d28ed363-de32-4f9c-9f2f-1418ed881df0"
 lessonOrder: 10
 estimatedMinutes: 50

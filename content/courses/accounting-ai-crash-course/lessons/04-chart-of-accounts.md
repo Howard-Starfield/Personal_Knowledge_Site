@@ -8,8 +8,6 @@ status: active
 created: "2026-10-18"
 tags:
   - accounting
-  - chart-of-accounts
-  - classification
 courseId: "7fa12f57-0c5a-49af-8c1e-0f1e84677f90"
 lessonOrder: 4
 estimatedMinutes: 40

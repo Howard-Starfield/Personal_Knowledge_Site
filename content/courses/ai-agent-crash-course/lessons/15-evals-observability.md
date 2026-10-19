@@ -8,8 +8,6 @@ status: active
 created: "2026-10-18"
 tags:
   - ai-agents
-  - evals
-  - observability
 courseId: "d28ed363-de32-4f9c-9f2f-1418ed881df0"
 lessonOrder: 15
 estimatedMinutes: 55
