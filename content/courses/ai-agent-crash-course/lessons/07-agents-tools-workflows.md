@@ -95,7 +95,8 @@ for step in range(1, MAX_STEPS + 1):
         else:
             used[call.name] += 1
             try:
-                result = DISPATCH[call.name](**call.args)
+                tool_fn = DISPATCH[call.name]
+                result = tool_fn(**call.args)
             except Exception as e:
                 result = f"TOOL_ERROR: {type(e).__name__}: {e}"
         messages.append(tool_result(call.id, result))  # one result per call id
