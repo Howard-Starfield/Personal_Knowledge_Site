@@ -162,6 +162,7 @@ On paper or in a small script, design the guard layer for a two-document assista
 5. Name one test you would add to prove no ADMIN-only chunk reaches a USER.
 
 > [!example]- Sample solution
+>
 > 1. `refunds` has `min_role: USER`; `salaries` has `min_role: ADMIN`.
 > 2. USER sees `["USER"]`, MANAGER sees `["USER", "MANAGER"]`, ADMIN sees `["USER", "MANAGER", "ADMIN"]`.
 > 3. Only `refunds` can be returned. Its best score of 0.22 is below 0.35, so the assistant opens a support ticket and does not call the model.

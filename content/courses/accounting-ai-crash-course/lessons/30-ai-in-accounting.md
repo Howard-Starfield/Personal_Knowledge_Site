@@ -41,7 +41,7 @@ Review: [[courses/accounting-ai-crash-course/lessons/29-anomaly-detection|Previo
 
 **Analogy.** Think of a very fluent new hire who hates saying "I don't know" and fills gaps with confident guesses.
 
-**The rule.** A *hallucination* is output that is confidently false, with no basis in any supplied source. *Grounding* means forcing the AI to answer only from source material you supply, ideally with citations. In accounting, if the AI cannot cite it, do not trust the number.
+**The rule.** A _hallucination_ is output that is confidently false, with no basis in any supplied source. _Grounding_ means forcing the AI to answer only from source material you supply, ideally with citations. In accounting, if the AI cannot cite it, do not trust the number.
 
 **Worked example.** At BoBo Digital Services LLC, May marketing was $5,840, April was $4,120 and the budget was $4,500. You give the AI the GL extract and it drafts a paragraph. You check it:
 
@@ -72,7 +72,7 @@ questionIds:
 
 **Analogy.** Excel and QuickBooks are the kitchen where the food is cooked; the AI is a sous-chef who plates beautifully. The customer, whether the CFO, an auditor or the IRS, is served only after the head chef, you, has tasted the dish.
 
-**The rule.** Determinism means same input, same output. Probabilism means same input, similar but not identical output. The AI's *confidence score* is the model's own estimate of itself, so it is a sort key for what to review first, never proof of accuracy.
+**The rule.** Determinism means same input, same output. Probabilism means same input, similar but not identical output. The AI's _confidence score_ is the model's own estimate of itself, so it is a sort key for what to review first, never proof of accuracy.
 
 **Worked example.** Your AI tool extracts an invoice total and reports 96% confidence. You open the PDF next to the proposal anyway. At BoBo's pilot, one extraction on a partial-month consulting bill came out $312 too high because of a sales tax miscalculation; the clerk caught it only because the PDF was open. The score said "probably fine," and the source said otherwise.
 
@@ -99,18 +99,18 @@ questionIds:
 
 **The rule.**
 
-| AI acts as | Treat it like | Examples |
-| --- | --- | --- |
-| Drafter, extractor, searcher | An intern or scanner; review the output | Variance commentary, invoice field extraction, contract summaries, checklists, audit-prep templates, searching your own policies with citations |
-| Calculator or forecaster | Helpful but heavy review; the system of record wins | Depreciation, forecasts |
-| Poster, payer, master-data editor, tax decider | Stop; a human approver, always | Auto-posting journal entries, approving payments, changing vendor bank details, tax conclusions, overwriting records |
+| AI acts as                                     | Treat it like                                       | Examples                                                                                                                                        |
+| ---------------------------------------------- | --------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| Drafter, extractor, searcher                   | An intern or scanner; review the output             | Variance commentary, invoice field extraction, contract summaries, checklists, audit-prep templates, searching your own policies with citations |
+| Calculator or forecaster                       | Helpful but heavy review; the system of record wins | Depreciation, forecasts                                                                                                                         |
+| Poster, payer, master-data editor, tax decider | Stop; a human approver, always                      | Auto-posting journal entries, approving payments, changing vendor bank details, tax conclusions, overwriting records                            |
 
 The cleanest test: if this AI output were wrong, who would catch it before harm is done? If the answer is nobody, do not ship it.
 
 **Worked example.** Three requests arrive on day two of close.
 
 1. Summarize a new $80,000 vendor contract: safe with review. Re-open the contract and confirm renewal, termination and indemnity clauses; the summary is a map, not the terrain.
-2. Suggest GL codes for bank-feed lines: safe with review. Keep the *suggest* switch on and the *post* switch off.
+2. Suggest GL codes for bank-feed lines: safe with review. Keep the _suggest_ switch on and the _post_ switch off.
 3. Update three vendor records from emailed instructions: never. Call each vendor on a number you already have, require two human approvers, and document it.
 
 > [!warning] Common mistake
@@ -122,7 +122,7 @@ The cleanest test: if this AI output were wrong, who would catch it before harm 
 
 **Analogy.** Pilots use autopilot but still run a checklist. The automation helps; the accountability stays with the pilot.
 
-**The rule.** Three verbs: *draft* (AI proposes), *verify* (you tie every number to source), *log* (record the prompt, sources, output, reviewer and decision). Add a note such as "tied to GL extract" to anything you share, escalate anything that touches master data, payments or tax, and tell your manager when AI helped.
+**The rule.** Three verbs: _draft_ (AI proposes), _verify_ (you tie every number to source), _log_ (record the prompt, sources, output, reviewer and decision). Add a note such as "tied to GL extract" to anything you share, escalate anything that touches master data, payments or tax, and tell your manager when AI helped.
 
 **Worked example.** Your AR aging summary from the AI shows a 90+ bucket of $1,482, but QuickBooks shows $1,428. The system of record wins, so you use $1,428, work out why the AI differed (stale paste, rounding or invention) and note the discrepancy in your AI log. A log row looks like: date, task, tool, prompt summary, sources, reviewer, decision.
 
@@ -151,6 +151,7 @@ Maya lists four ideas the team is considering. For each, write **Safe with revie
 4. AI updates vendor bank details from emailed remittance instructions.
 
 > [!example]- Sample solution
+>
 > 1. **Safe with review.** Feed the actual GL extract, require citations to invoices, tie every dollar amount to source, get reviewer sign-off and log the prompt and output.
 > 2. **Never as described.** The AI may propose the entry to a review queue, but a human posts it, the preparer and approver are different people, and QuickBooks keeps the audit trail.
 > 3. **Safe with review.** Use a sanctioned grounded tool, require section citations, re-open the contract to confirm renewal, termination and indemnity terms, and mark the brief "AI-drafted, human-verified."

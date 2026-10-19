@@ -41,7 +41,7 @@ If these feel shaky, revisit [[courses/accounting-ai-crash-course/lessons/11-adj
 
 **Analogy.** Think of a pilot's preflight checklist. The pilot does not trust a feeling that the plane is ready; they run the list line by line, every time. Day 1 is walking up to the plane with the list in your hand.
 
-**The rule.** *Cutoff* is the rule that revenue and expense belong in the period they were earned or incurred, not when cash moved. A close is a sequence, not a sprint: you cannot report before you have adjusted, and you cannot adjust well before you have reconciled.
+**The rule.** _Cutoff_ is the rule that revenue and expense belong in the period they were earned or incurred, not when cash moved. A close is a sequence, not a sprint: you cannot report before you have adjusted, and you cannot adjust well before you have reconciled.
 
 **Worked example.** On Day 1 of BoBo's December close you:
 
@@ -60,19 +60,19 @@ If these feel shaky, revisit [[courses/accounting-ai-crash-course/lessons/11-adj
 
 **Analogy.** It is like checking your own receipt pile against the card statement before you pay it. If they disagree, you do not scribble a difference in the margin; you find the missing receipt.
 
-**The rule.** *Investigate, don't plug.* A difference, even a small one, is a clue. You trace it to a cause, record the correct entry and document it. A reconciliation without support is just a guess.
+**The rule.** _Investigate, don't plug._ A difference, even a small one, is a clue. You trace it to a cause, record the correct entry and document it. A reconciliation without support is just a guess.
 
 **Worked example: BoBo's bank rec.**
 
-| Line | Amount |
-|---|---|
-| GL cash before adjustments | $42,508.18 |
-| Less bank fees not yet booked | −$60.00 |
-| **Adjusted GL balance** | **$42,448.18** |
-| Bank statement ending balance | $39,255.93 |
-| Plus deposit in transit | +$4,088.00 |
-| Less outstanding checks ($510.00 + $385.75) | −$895.75 |
-| **Adjusted bank balance** | **$42,448.18** |
+| Line                                        | Amount         |
+| ------------------------------------------- | -------------- |
+| GL cash before adjustments                  | $42,508.18     |
+| Less bank fees not yet booked               | −$60.00        |
+| **Adjusted GL balance**                     | **$42,448.18** |
+| Bank statement ending balance               | $39,255.93     |
+| Plus deposit in transit                     | +$4,088.00     |
+| Less outstanding checks ($510.00 + $385.75) | −$895.75       |
+| **Adjusted bank balance**                   | **$42,448.18** |
 
 The two adjusted figures agree. The $60 fee is the only entry needed: debit Bank Fees $60, credit Cash $60. Outstanding checks and the deposit in transit need no entry because the ledger already has them.
 
@@ -101,16 +101,16 @@ questionIds:
 
 **Worked example: BoBo's December adjustments, all dated 12/31.**
 
-| Entry | Debit | Credit | Amount |
-|---|---|---|---|
-| Contractor work done in December, invoice not yet received | Contractor Costs | Accrued Expenses | $1,800.00 |
-| Annual insurance policy ($2,400 per year, one month) | Insurance Expense | Prepaid Insurance | $200.00 |
-| Annual software plan ($660 per year, one month) | Software Expense | Prepaid Software | $55.00 |
-| Straight-line depreciation (laptop $125 + camera $112 + furniture $75) | Depreciation Expense | Accumulated Depreciation | $312.00 |
-| Monthly portion of three annual-plan clients | Customer Deposits / Unearned Revenue | Service Revenue | $4,500.00 |
-| Wages earned 12/29 to 12/31, paid in January | Wages Expense | Accrued Payroll | $1,440.00 |
-| Employer FICA on those wages (7.65%) | Payroll Taxes Expense | Accrued Payroll Taxes | $110.16 |
-| Notion charge sitting in suspense | Software Expense (Productivity) | Ask My Accountant (suspense) | $89.00 |
+| Entry                                                                  | Debit                                | Credit                       | Amount    |
+| ---------------------------------------------------------------------- | ------------------------------------ | ---------------------------- | --------- |
+| Contractor work done in December, invoice not yet received             | Contractor Costs                     | Accrued Expenses             | $1,800.00 |
+| Annual insurance policy ($2,400 per year, one month)                   | Insurance Expense                    | Prepaid Insurance            | $200.00   |
+| Annual software plan ($660 per year, one month)                        | Software Expense                     | Prepaid Software             | $55.00    |
+| Straight-line depreciation (laptop $125 + camera $112 + furniture $75) | Depreciation Expense                 | Accumulated Depreciation     | $312.00   |
+| Monthly portion of three annual-plan clients                           | Customer Deposits / Unearned Revenue | Service Revenue              | $4,500.00 |
+| Wages earned 12/29 to 12/31, paid in January                           | Wages Expense                        | Accrued Payroll              | $1,440.00 |
+| Employer FICA on those wages (7.65%)                                   | Payroll Taxes Expense                | Accrued Payroll Taxes        | $110.16   |
+| Notion charge sitting in suspense                                      | Software Expense (Productivity)      | Ask My Accountant (suspense) | $89.00    |
 
 Two traps from the source solution key. First, the December utility bill: an estimate of $185 and the actual bill of $204 describe the same expense, so you book the actual $204 to Accounts Payable and skip the estimate rather than booking both. Second, the unbilled contractor work goes to Accrued Expenses, not Accounts Payable, because no invoice has arrived yet.
 
@@ -137,11 +137,11 @@ questionIds:
 
 **Worked example: BoBo's result.**
 
-| Item | Amount |
-|---|---|
-| Net income before adjustments | $18,911.63 |
-| Net effect of the adjusting entries, the actual utility bill and the $60 bank fee | +$229.84 |
-| **December net income** | **$19,141.47** |
+| Item                                                                              | Amount         |
+| --------------------------------------------------------------------------------- | -------------- |
+| Net income before adjustments                                                     | $18,911.63     |
+| Net effect of the adjusting entries, the actual utility bill and the $60 bank fee | +$229.84       |
+| **December net income**                                                           | **$19,141.47** |
 
 The $229.84 is +$4,500 deferred revenue release, then −$1,800 contractor, −$204 utilities, −$200 insurance, −$55 software, −$312 depreciation, −$1,440 wages, −$110.16 payroll tax, −$89 reclass and −$60 bank fee. Total assets of $91,782.18 equal total liabilities plus equity of $91,782.18, so the balance sheet ties. If yours does not, retrace the entries rather than adjusting an arbitrary line.
 
@@ -178,13 +178,14 @@ questionIds:
 Build a one-page close tracker for BoBo's December close. Include these columns: step, day, task, owner, prepared by, reviewed by, workpaper and status. Fill in at least one task for each of the five days, and add a status of Not Started, In Progress, Blocked or Complete. Then write the memo, workpaper reference and source for the contractor accrual entry.
 
 > [!example]- Sample solution
-> | Step | Day | Task | Owner | Prepared by | Reviewed by | Workpaper | Status |
-> |---|---|---|---|---|---|---|---|
-> | 1 | D1 | Send cutoff email; soft lock posting | Junior | Junior | Junior | Email and screenshot | Complete |
-> | 2 | D2 | Bank rec: $42,448.18 adjusted on both sides | Junior | Junior | Senior | 04_bank_rec.xlsx | Complete |
-> | 3 | D3 | Tie AR and AP subledgers to the GL | Junior | Junior | Senior | 06_AR_tie.xlsx | In Progress |
-> | 4 | D4 | Accrue $1,800 contractor cost | Junior | Junior | Senior | 10_accruals.xlsx | Not Started |
-> | 5 | D5 | Rerun TB; variance analysis; lock close date | Senior | Junior | Controller | 18_variance.xlsx | Not Started |
+>
+> | Step | Day | Task                                         | Owner  | Prepared by | Reviewed by | Workpaper            | Status      |
+> | ---- | --- | -------------------------------------------- | ------ | ----------- | ----------- | -------------------- | ----------- |
+> | 1    | D1  | Send cutoff email; soft lock posting         | Junior | Junior      | Junior      | Email and screenshot | Complete    |
+> | 2    | D2  | Bank rec: $42,448.18 adjusted on both sides  | Junior | Junior      | Senior      | 04_bank_rec.xlsx     | Complete    |
+> | 3    | D3  | Tie AR and AP subledgers to the GL           | Junior | Junior      | Senior      | 06_AR_tie.xlsx       | In Progress |
+> | 4    | D4  | Accrue $1,800 contractor cost                | Junior | Junior      | Senior      | 10_accruals.xlsx     | Not Started |
+> | 5    | D5  | Rerun TB; variance analysis; lock close date | Senior | Junior      | Controller  | 18_variance.xlsx     | Not Started |
 >
 > Contractor accrual entry dated 12/31: debit Contractor Costs $1,800, credit Accrued Expenses $1,800. Memo: "Accrue December contractor work, invoice received 1/4. WP 10." Source: the contractor's invoice saved in the support folder.
 

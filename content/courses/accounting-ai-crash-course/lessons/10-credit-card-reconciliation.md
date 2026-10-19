@@ -41,23 +41,23 @@ Revisit your answers in [[courses/accounting-ai-crash-course/lessons/09-bank-rec
 
 **Worked example.** BoBo's Visa shows these charges for the cycle:
 
-| Merchant | Amount | Account |
-|---|---|---|
-| Adobe Creative Cloud | $79.99 | Software Subscriptions – Design (6110) |
-| Canva Pro | $14.99 | Software Subscriptions – Design (6110) |
-| Notion | $29.00 | Software Subscriptions – Productivity (6120) |
-| Google Ads | $1,240.00 | Marketing – Google Ads (6020) |
-| Nobu dinner | $187.43 | Travel & Meals (6710) |
+| Merchant             | Amount    | Account                                      |
+| -------------------- | --------- | -------------------------------------------- |
+| Adobe Creative Cloud | $79.99    | Software Subscriptions – Design (6110)       |
+| Canva Pro            | $14.99    | Software Subscriptions – Design (6110)       |
+| Notion               | $29.00    | Software Subscriptions – Productivity (6120) |
+| Google Ads           | $1,240.00 | Marketing – Google Ads (6020)                |
+| Nobu dinner          | $187.43   | Travel & Meals (6710)                        |
 
 The cycle entry (booked line by line in QuickBooks Online, shown here as one summary):
 
-| Account | Debit | Credit |
-|---|---|---|
-| Software Subscriptions – Design (6110) | 94.98 | |
-| Software Subscriptions – Productivity (6120) | 29.00 | |
-| Marketing – Google Ads (6020) | 1,240.00 | |
-| Travel & Meals (6710) | 187.43 | |
-| Credit Card Payable – Visa (2020) | | 1,551.41 |
+| Account                                      | Debit    | Credit   |
+| -------------------------------------------- | -------- | -------- |
+| Software Subscriptions – Design (6110)       | 94.98    |          |
+| Software Subscriptions – Productivity (6120) | 29.00    |          |
+| Marketing – Google Ads (6020)                | 1,240.00 |          |
+| Travel & Meals (6710)                        | 187.43   |          |
+| Credit Card Payable – Visa (2020)            |          | 1,551.41 |
 
 When Bo pays the $1,551.41 statement by ACH, the entry is a debit to Credit Card Payable – Visa (2020) and a credit to Cash – Operating Bank (1010) for $1,551.41. No expense account appears.
 
@@ -99,10 +99,10 @@ AI can help by suggesting an account for a merchant, but it only suggests. A per
 
 **Worked example.** The Peloton class for $44.00 posts to Owner Draws:
 
-| Account | Debit | Credit |
-|---|---|---|
-| Owner Draws (3020) | 44.00 | |
-| Credit Card Payable – Visa (2020) | | 44.00 |
+| Account                           | Debit | Credit |
+| --------------------------------- | ----- | ------ |
+| Owner Draws (3020)                | 44.00 |        |
+| Credit Card Payable – Visa (2020) |       | 44.00  |
 
 If Bo repays by Venmo to Pacific Bank, the reimbursement debits Cash – Operating Bank (1010) $44.00 and credits Owner Draws (3020) $44.00. If the Nobu receipt never arrives, the cutoff entry debits Owner Draws (3020) and credits Travel & Meals (6710) for $187.43. If Google Ads confirms a duplicate $1,240.00 charge and Visa credits it, you debit Credit Card Payable – Visa (2020) and credit Marketing – Google Ads (6020) for $1,240.00.
 

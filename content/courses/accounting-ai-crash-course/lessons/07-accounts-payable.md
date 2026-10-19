@@ -45,17 +45,17 @@ If these feel shaky, revisit [[courses/accounting-ai-crash-course/lessons/06-cas
 
 **Worked example.** On May 15, 2026 BoBo receives HubSpot invoice HS-55120 for $2,400, Net 30, so it is due June 14.
 
-| Date | Account | Debit | Credit |
-|------|---------|------:|-------:|
-| 2026-05-15 | 6030 Marketing – Other | 2,400.00 | |
-| 2026-05-15 | 2010 Accounts Payable | | 2,400.00 |
+| Date       | Account                |    Debit |   Credit |
+| ---------- | ---------------------- | -------: | -------: |
+| 2026-05-15 | 6030 Marketing – Other | 2,400.00 |          |
+| 2026-05-15 | 2010 Accounts Payable  |          | 2,400.00 |
 
 BoBo pays by ACH on June 12.
 
-| Date | Account | Debit | Credit |
-|------|---------|------:|-------:|
-| 2026-06-12 | 2010 Accounts Payable | 2,400.00 | |
-| 2026-06-12 | 1010 Cash – Operating Bank | | 2,400.00 |
+| Date       | Account                    |    Debit |   Credit |
+| ---------- | -------------------------- | -------: | -------: |
+| 2026-06-12 | 2010 Accounts Payable      | 2,400.00 |          |
+| 2026-06-12 | 1010 Cash – Operating Bank |          | 2,400.00 |
 
 After both entries, AP for HubSpot is back to zero and the expense sits in May, the month it was incurred.
 
@@ -103,13 +103,13 @@ questionIds:
 
 **Worked example.** PrintPro bills BoBo $5,000 on May 1 under 2/10 Net 30. BoBo pays on May 9, inside the 10 days. The discount is $5,000 × 2% = $100, so cash paid is $4,900.
 
-| Date | Account | Debit | Credit |
-|------|---------|------:|-------:|
-| 2026-05-01 | 6030 Marketing – Other | 5,000.00 | |
-| 2026-05-01 | 2010 Accounts Payable | | 5,000.00 |
-| 2026-05-09 | 2010 Accounts Payable | 5,000.00 | |
-| 2026-05-09 | 1010 Cash – Operating Bank | | 4,900.00 |
-| 2026-05-09 | 6920 Purchase Discounts Taken | | 100.00 |
+| Date       | Account                       |    Debit |   Credit |
+| ---------- | ----------------------------- | -------: | -------: |
+| 2026-05-01 | 6030 Marketing – Other        | 5,000.00 |          |
+| 2026-05-01 | 2010 Accounts Payable         |          | 5,000.00 |
+| 2026-05-09 | 2010 Accounts Payable         | 5,000.00 |          |
+| 2026-05-09 | 1010 Cash – Operating Bank    |          | 4,900.00 |
+| 2026-05-09 | 6920 Purchase Discounts Taken |          |   100.00 |
 
 Why bother? Saving 2% for paying 20 days earlier repeats about 18 times a year (365 ÷ 20), so the saving works out to roughly a 36–37% annual return, far above what idle cash would earn.
 
@@ -126,14 +126,14 @@ Why bother? Saving 2% for paying 20 days earlier repeats about 18 times a year (
 
 **Worked example.** BoBo used an estimated $620 of AWS in December 2026; the invoice arrives on January 8, 2027 for $634.50.
 
-| Date | Account | Debit | Credit |
-|------|---------|------:|-------:|
-| 2026-12-31 | 6120 Software Subscriptions – Productivity | 620.00 | |
-| 2026-12-31 | 2060 Accrued Expenses | | 620.00 |
-| 2027-01-01 | 2060 Accrued Expenses | 620.00 | |
-| 2027-01-01 | 6120 Software Subscriptions – Productivity | | 620.00 |
-| 2027-01-08 | 6120 Software Subscriptions – Productivity | 634.50 | |
-| 2027-01-08 | 2010 Accounts Payable | | 634.50 |
+| Date       | Account                                    |  Debit | Credit |
+| ---------- | ------------------------------------------ | -----: | -----: |
+| 2026-12-31 | 6120 Software Subscriptions – Productivity | 620.00 |        |
+| 2026-12-31 | 2060 Accrued Expenses                      |        | 620.00 |
+| 2027-01-01 | 2060 Accrued Expenses                      | 620.00 |        |
+| 2027-01-01 | 6120 Software Subscriptions – Productivity |        | 620.00 |
+| 2027-01-08 | 6120 Software Subscriptions – Productivity | 634.50 |        |
+| 2027-01-08 | 2010 Accounts Payable                      |        | 634.50 |
 
 December shows $620 of expense. January shows −$620 + $634.50 = $14.50, the variance from the estimate. That is acceptable when the difference is small; for a large difference, adjust the December estimate instead.
 
@@ -180,20 +180,20 @@ questionIds:
 
 Build an aging report as of May 16, 2026, grouped by days past the due date, for these four unpaid, approved BoBo bills:
 
-| Vendor | Invoice | Amount | Due date |
-|--------|---------|-------:|----------|
-| Google Ads | GA-77104 | 2,300.00 | 2026-05-01 |
-| Canva Pro | CNV-2210 | 119.99 | 2026-04-09 |
-| Office Cleaner Co. | OCC-441 | 480.00 | 2026-03-07 |
-| LegalZoom | LZ-5560 | 1,200.00 | 2026-02-11 |
+| Vendor             | Invoice  |   Amount | Due date   |
+| ------------------ | -------- | -------: | ---------- |
+| Google Ads         | GA-77104 | 2,300.00 | 2026-05-01 |
+| Canva Pro          | CNV-2210 |   119.99 | 2026-04-09 |
+| Office Cleaner Co. | OCC-441  |   480.00 | 2026-03-07 |
+| LegalZoom          | LZ-5560  | 1,200.00 | 2026-02-11 |
 
 Compute days past due for each, place it in a bucket, total each bucket, and say which buckets need urgent attention.
 
 > [!example]- Sample solution
 > Days past due on May 16: Google Ads 15, Canva 37, Office Cleaner 70, LegalZoom 94.
 >
-> | 0–30 | 31–60 | 61–90 | 90+ | Total |
-> |-----:|------:|------:|----:|------:|
+> |     0–30 |  31–60 |  61–90 |      90+ |    Total |
+> | -------: | -----: | -----: | -------: | -------: |
 > | 2,300.00 | 119.99 | 480.00 | 1,200.00 | 4,099.99 |
 >
 > The 61–90 and 90+ buckets total $1,680.00 and need urgent attention. LegalZoom at 94 days should be paid or its dispute resolved this week.

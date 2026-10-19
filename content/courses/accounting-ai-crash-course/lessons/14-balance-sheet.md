@@ -58,19 +58,19 @@ Together they follow one equation, with no tolerance for "close enough":
 
 ## Step 2 — Classify by the 12-month line
 
-**In plain language.** A *classified* balance sheet sorts assets and liabilities by time. Items that turn into cash, or come due, within 12 months are current (formal standards use the operating cycle if it is longer than a year, which rarely matters for a service firm like BoBo). Items that last or come due later are long-term.
+**In plain language.** A _classified_ balance sheet sorts assets and liabilities by time. Items that turn into cash, or come due, within 12 months are current (formal standards use the operating cycle if it is longer than a year, which rarely matters for a service firm like BoBo). Items that last or come due later are long-term.
 
 **Analogy.** Sort your mail into "deal with this month" and "deal with later". The sort tells you how urgent each bill is.
 
 **The rules.**
 
-| Group | What goes in it |
-|---|---|
-| Current assets | Cash, receivables, prepaids and short-term inventory, expected to turn to cash or be used within 12 months |
-| Fixed assets (PP&E) | Long-lived equipment, shown at cost, less accumulated depreciation, which gives net book value |
-| Current liabilities | Payables, credit cards, unearned revenue, sales tax payable, and the next 12 months of loan principal |
-| Long-term liabilities | Debt principal due beyond 12 months |
-| Equity | Owner capital plus retained earnings, less owner draws |
+| Group                 | What goes in it                                                                                            |
+| --------------------- | ---------------------------------------------------------------------------------------------------------- |
+| Current assets        | Cash, receivables, prepaids and short-term inventory, expected to turn to cash or be used within 12 months |
+| Fixed assets (PP&E)   | Long-lived equipment, shown at cost, less accumulated depreciation, which gives net book value             |
+| Current liabilities   | Payables, credit cards, unearned revenue, sales tax payable, and the next 12 months of loan principal      |
+| Long-term liabilities | Debt principal due beyond 12 months                                                                        |
+| Equity                | Owner capital plus retained earnings, less owner draws                                                     |
 
 Accumulated depreciation is a **contra-asset**: a running total of depreciation recorded to date that reduces the asset instead of adding a new one. Customer deposits and unearned revenue are **liabilities**, not income, because the company still owes the service.
 
@@ -110,15 +110,15 @@ questionIds:
 
 $8,540 + $6,000 - $6,000 = **$8,540** ending retained earnings.
 
-| Section | Items | Total |
-|---|---|---:|
-| Current assets | Cash $18,420 + $4,500, receivables $9,750, prepaids $1,200 + $2,400 | $36,270 |
-| Fixed assets, net | $12,000 cost less $4,800 accumulated depreciation | $7,200 |
-| **Total assets** | | **$43,470** |
-| Current liabilities | $3,180 + $2,640 + $5,400 + $310 + $2,400 | $13,930 |
-| Long-term liabilities | Equipment loan, long-term part | $6,000 |
-| Equity | Owner capital $15,000 + retained earnings $8,540 | $23,540 |
-| **Liabilities + equity** | $13,930 + $6,000 + $23,540 | **$43,470** |
+| Section                  | Items                                                               |       Total |
+| ------------------------ | ------------------------------------------------------------------- | ----------: |
+| Current assets           | Cash $18,420 + $4,500, receivables $9,750, prepaids $1,200 + $2,400 |     $36,270 |
+| Fixed assets, net        | $12,000 cost less $4,800 accumulated depreciation                   |      $7,200 |
+| **Total assets**         |                                                                     | **$43,470** |
+| Current liabilities      | $3,180 + $2,640 + $5,400 + $310 + $2,400                            |     $13,930 |
+| Long-term liabilities    | Equipment loan, long-term part                                      |      $6,000 |
+| Equity                   | Owner capital $15,000 + retained earnings $8,540                    |     $23,540 |
+| **Liabilities + equity** | $13,930 + $6,000 + $23,540                                          | **$43,470** |
 
 > [!warning] Common mistake
 > Posting owner draws as an operating expense. Draws are distributions to the owner, so they reduce equity and never appear on the income statement.
@@ -170,19 +170,19 @@ questionIds:
 
 Harbor Print LLC (a made-up firm) has this adjusted trial balance at June 30, 2026. Build the classified balance sheet, prove that it balances, and compute working capital, the current ratio and the quick ratio.
 
-| Account | Amount | Normal side |
-|---|---:|---|
-| Cash | $9,000 | Debit |
-| Accounts Receivable | $4,000 | Debit |
-| Prepaid Insurance | $1,000 | Debit |
-| Equipment | $10,000 | Debit |
-| Accumulated Depreciation | $3,000 | Credit |
-| Accounts Payable | $2,500 | Credit |
-| Unearned Revenue | $1,500 | Credit |
-| Note Payable, current part | $2,000 | Credit |
-| Note Payable, long-term part | $5,000 | Credit |
-| Owner Capital | $6,000 | Credit |
-| Retained Earnings | $4,000 | Credit |
+| Account                      |  Amount | Normal side |
+| ---------------------------- | ------: | ----------- |
+| Cash                         |  $9,000 | Debit       |
+| Accounts Receivable          |  $4,000 | Debit       |
+| Prepaid Insurance            |  $1,000 | Debit       |
+| Equipment                    | $10,000 | Debit       |
+| Accumulated Depreciation     |  $3,000 | Credit      |
+| Accounts Payable             |  $2,500 | Credit      |
+| Unearned Revenue             |  $1,500 | Credit      |
+| Note Payable, current part   |  $2,000 | Credit      |
+| Note Payable, long-term part |  $5,000 | Credit      |
+| Owner Capital                |  $6,000 | Credit      |
+| Retained Earnings            |  $4,000 | Credit      |
 
 > [!example]- Sample solution
 > **Current assets:** $9,000 + $4,000 + $1,000 = $14,000. **Fixed assets, net:** $10,000 - $3,000 = $7,000. **Total assets:** $21,000.

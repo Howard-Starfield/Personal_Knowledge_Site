@@ -49,7 +49,7 @@ If you need a refresher, revisit [[courses/ai-agent-crash-course/lessons/03-prom
 - B: `(1*1 + 0*1) / (1 * 1.414) = 0.707`
 - C: `0 / (1 * 1) = 0`
 
-Chunk A wins even though it is the *longest* and farthest away in straight-line distance (distance 4, against 1 for B). Cosine only looks at direction.
+Chunk A wins even though it is the _longest_ and farthest away in straight-line distance (distance 4, against 1 for B). Cosine only looks at direction.
 
 > [!warning] Common mistake
 > Treating cosine similarity and Euclidean distance as the same thing. They rank differently unless all vectors are length-normalized, and a longer vector pointing the same way is still a perfect cosine match.
@@ -87,7 +87,7 @@ So three paragraphs become two chunks, and the first 100 characters of chunk 1 r
 
 ## Step 3 — Index the chunks and search
 
-**In plain words.** Embed every chunk once, offline, and store the vectors in a vector store. At question time, embed the query with the *same* model, find the closest stored vectors, and return the top few.
+**In plain words.** Embed every chunk once, offline, and store the vectors in a vector store. At question time, embed the query with the _same_ model, find the closest stored vectors, and return the top few.
 
 **The rule.**
 
@@ -151,7 +151,7 @@ X narrowly wins. The rank sums are equal (4 and 4), but RRF adds reciprocals, so
 
 **The rule.**
 
-- A **bi-encoder** (every standard embedding model) encodes query and document separately. A **cross-encoder** reads the query and passage *together* and outputs a relevance score directly. It is far more accurate and far slower per pair, so you run it only on the top 20 to 50 candidates.
+- A **bi-encoder** (every standard embedding model) encodes query and document separately. A **cross-encoder** reads the query and passage _together_ and outputs a relevance score directly. It is far more accurate and far slower per pair, so you run it only on the top 20 to 50 candidates.
 - A typical stack: retrieve the top 50 with hybrid search, rerank to the top 5, then give those to the LLM with citations.
 - **Recall@k** asks whether the correct document appears in the top k. **MRR** (Mean Reciprocal Rank) averages `1 / rank` of the first correct result across a test set.
 - Build an evaluation set of 20 to 50 pairs of a query and its expected source early, and re-run it after every change.

@@ -142,16 +142,16 @@ questionIds:
 
 **Worked example.** One tenant sends 1,000 queries a day, each with 6,000 stable and 200 variable input tokens, and 400 output tokens. Using the lesson's illustrative Sonnet prices of $3.00 input, $15.00 output, $6.00 per million for one-hour cache writes, and $0.30 for cache reads:
 
-| Item | Calculation | Per day |
-|---|---|---|
-| No caching, input | 6.2 M x $3.00 | $18.60 |
-| No caching, output | 0.4 M x $15.00 | $6.00 |
-| No caching total | | $24.60 |
-| Cache writes (24 x 6,000 tokens) | 0.144 M x $6.00 | $0.86 |
-| Cache reads (976 x 6,000 tokens) | 5.856 M x $0.30 | $1.76 |
-| Question tokens | 0.2 M x $3.00 | $0.60 |
-| Output | 0.4 M x $15.00 | $6.00 |
-| Cached total | | about $9.22 |
+| Item                             | Calculation     | Per day     |
+| -------------------------------- | --------------- | ----------- |
+| No caching, input                | 6.2 M x $3.00   | $18.60      |
+| No caching, output               | 0.4 M x $15.00  | $6.00       |
+| No caching total                 |                 | $24.60      |
+| Cache writes (24 x 6,000 tokens) | 0.144 M x $6.00 | $0.86       |
+| Cache reads (976 x 6,000 tokens) | 5.856 M x $0.30 | $1.76       |
+| Question tokens                  | 0.2 M x $3.00   | $0.60       |
+| Output                           | 0.4 M x $15.00  | $6.00       |
+| Cached total                     |                 | about $9.22 |
 
 That is about a 63 percent saving. Prices change often, so check each provider's current price list before you rely on these numbers.
 

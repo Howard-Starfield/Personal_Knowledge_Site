@@ -67,14 +67,14 @@ A **lead schedule** is the top-level summary for a financial statement line, for
 
 **Worked example.** BoBo's Pacific Bank account (GL 1010) at March 31, 2026:
 
-| Line | Amount |
-|---|---|
-| Balance per bank statement | $25,000.00 |
-| Less: outstanding check #1142 to Adobe | ($54.00) |
-| Add: deposit in transit | $1,000.00 |
-| **Adjusted bank balance** | **$25,946.00** |
-| Balance per general ledger | $25,946.00 |
-| Difference | $0.00 |
+| Line                                   | Amount         |
+| -------------------------------------- | -------------- |
+| Balance per bank statement             | $25,000.00     |
+| Less: outstanding check #1142 to Adobe | ($54.00)       |
+| Add: deposit in transit                | $1,000.00      |
+| **Adjusted bank balance**              | **$25,946.00** |
+| Balance per general ledger             | $25,946.00     |
+| Difference                             | $0.00          |
 
 The outstanding check has not reached the bank yet, so it lowers the bank balance. The deposit in transit has not been credited by the bank yet, so it raises it. The header names the client, period, workpaper number and sources. The footer concludes in one sentence, such as "Cash account 1010 agrees to the ledger at $25,946.00 as of 3/31/26 after reconciling items. No exceptions," then adds signatures and dates.
 
@@ -97,16 +97,16 @@ questionIds:
 
 **The rule.** Every symbol you use must appear in the legend, and every legend entry must have been used. This lesson's sample legend:
 
-| Tickmark | Meaning |
-|---|---|
-| A | Agreed to general ledger detail |
-| B | Agreed to the bank statement |
-| F | Footed: totals re-added |
-| X | Examined the original source document |
-| R | Recalculated independently |
-| V | Vouched from the ledger back to source |
-| T | Traced from source forward to the ledger |
-| ✓ | No exception |
+| Tickmark | Meaning                                  |
+| -------- | ---------------------------------------- |
+| A        | Agreed to general ledger detail          |
+| B        | Agreed to the bank statement             |
+| F        | Footed: totals re-added                  |
+| X        | Examined the original source document    |
+| R        | Recalculated independently               |
+| V        | Vouched from the ledger back to source   |
+| T        | Traced from source forward to the ledger |
+| ✓        | No exception                             |
 
 Two directions of testing matter. **Vouching** starts from a recorded amount and checks it against the source, which tests **existence** (is the recorded amount real? the overstatement risk). **Tracing** starts from the source and follows it into the records, which tests **completeness** (was everything recorded? the understatement risk).
 
@@ -163,6 +163,7 @@ BoBo's reconciliation at March 31 shows a bank balance of $14,221.45, outstandin
 3. List the steps you take on the workpaper and with the reviewer.
 
 > [!example]- Sample solution
+>
 > 1. Adjusted bank balance: $14,221.45 − $2,510.23 + $776.00 = $12,487.22. (The original, wrongly footed total gave $14,221.45 − $2,150.23 + $776.00 = $12,847.22.)
 > 2. It no longer ties: $12,847.22 − $12,487.22 = $360.00 difference. The footing error was hiding a real unexplained difference, so you must investigate the cause (for example a missing reconciling item or a ledger error) before concluding.
 > 3. Steps: re-foot the list from the bank records to confirm $2,510.23; correct the workpaper with a dated footnote explaining the restatement; update the lead schedule; re-sign and date; tell the reviewer in writing before the walkthrough and bring both versions; add a "refoot all subtotals before signing" line to your checklist.

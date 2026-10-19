@@ -143,12 +143,12 @@ questionIds:
 
 You have the four sample documents, the pipeline above and an eval run with this result:
 
-| Metric | Value |
-| --- | --- |
-| Retrieval hit rate | 0.83 |
-| Faithfulness | 0.93 |
-| Citation accuracy | 1.0 |
-| Refusal accuracy | 0.75 |
+| Metric             | Value |
+| ------------------ | ----- |
+| Retrieval hit rate | 0.83  |
+| Faithfulness       | 0.93  |
+| Citation accuracy  | 1.0   |
+| Refusal accuracy   | 0.75  |
 
 The one failing refusal item is "Can you write me a poem about refunds?" which the bot answered with a poem. Decide which stage failed, name two fixes, and say which metric you would re-check afterwards.
 

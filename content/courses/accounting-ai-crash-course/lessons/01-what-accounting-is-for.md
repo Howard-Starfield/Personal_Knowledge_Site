@@ -43,11 +43,11 @@ Throughout this course we use a fictional case study, BoBo Digital Services LLC,
 
 **The rule.** A widely used textbook definition (from the American Accounting Association) describes accounting as the process of identifying, measuring and communicating economic information so that users can make informed judgments and decisions. In practice that includes recording, classifying and summarizing the events of a business. Three words capture it: capture, classify, communicate. Work happens in three layers:
 
-| Layer | Job | Example at BoBo |
-| --- | --- | --- |
+| Layer       | Job                             | Example at BoBo                                       |
+| ----------- | ------------------------------- | ----------------------------------------------------- |
 | Bookkeeping | Capture and record transactions | Recording a $79 PayPal sale against its payout report |
-| Accounting | Classify, summarize and report | Producing the April profit and loss statement |
-| Analysis | Interpret and decide | Judging whether to apply for a line of credit |
+| Accounting  | Classify, summarize and report  | Producing the April profit and loss statement         |
+| Analysis    | Interpret and decide            | Judging whether to apply for a line of credit         |
 
 Different users read the same books with different questions. The owner asks "did we make money?", a lender asks "can they repay?", a tax authority asks "was tax computed correctly?", an investor asks "is this worth backing?", and employees ask "is the business stable?" This five-user grouping is the course's teaching device. The FASB's conceptual framework names existing and potential investors, lenders and other creditors as the primary users of general purpose financial reports, because they cannot demand information directly. Owners, employees and others use the same records too.
 
@@ -78,12 +78,12 @@ questionIds:
 
 **Worked example.** BoBo's April PayPal statement shows $9,840 gross, $285 fees, $9,555 deposited.
 
-| Account | Debit | Credit |
-| --- | ---: | ---: |
-| Cash - PayPal (1020) | $9,555 | |
-| PayPal Processing Fees (5040) | $285 | |
-| Service Revenue | | $9,840 |
-| Total | $9,840 | $9,840 |
+| Account                       |  Debit | Credit |
+| ----------------------------- | -----: | -----: |
+| Cash - PayPal (1020)          | $9,555 |        |
+| PayPal Processing Fees (5040) |   $285 |        |
+| Service Revenue               |        | $9,840 |
+| Total                         | $9,840 | $9,840 |
 
 Across all three channels: gross $9,840 + $7,425 + $2,180 = $19,445, fees $285 + $215 + $218 = $718, and net deposits $19,445 − $718 = $18,727. Always check that gross minus fees equals the net deposits.
 
@@ -127,17 +127,17 @@ questionIds:
 
 **Worked example.** A contractor finishes $2,800 of work in April, and BoBo pays on May 10. On April 30 the entry debits Contractor Costs - Direct (5010) $2,800 and credits Accounts Payable (2010) $2,800. No cash moves in April. Putting April together:
 
-| Line | Amount |
-| --- | ---: |
-| Gross revenue | $19,445.00 |
-| Less refunds | ($250.00) |
-| Net revenue | $19,195.00 |
-| Processing fees ($285 + $215 + $218) | ($718.00) |
-| Contractor costs (accrued) | ($2,800.00) |
-| Total cost of sales | ($3,518.00) |
-| Gross profit | $15,677.00 |
-| Software subscriptions (Adobe $79.99 + Canva $14.99) | ($94.98) |
-| Operating profit | $15,582.02 |
+| Line                                                 |      Amount |
+| ---------------------------------------------------- | ----------: |
+| Gross revenue                                        |  $19,445.00 |
+| Less refunds                                         |   ($250.00) |
+| Net revenue                                          |  $19,195.00 |
+| Processing fees ($285 + $215 + $218)                 |   ($718.00) |
+| Contractor costs (accrued)                           | ($2,800.00) |
+| Total cost of sales                                  | ($3,518.00) |
+| Gross profit                                         |  $15,677.00 |
+| Software subscriptions (Adobe $79.99 + Canva $14.99) |    ($94.98) |
+| Operating profit                                     |  $15,582.02 |
 
 Notice what is absent: Bo's $1,500 draw, because it is equity and not an expense.
 
@@ -164,6 +164,7 @@ Use these May figures for BoBo (sample data). PayPal gross $11,420 with $330 fee
 4. State the month in which the $3,200 contractor cost belongs, and the gross profit after fees and that cost.
 
 > [!example]- Sample solution
+>
 > 1. Gross revenue is $11,420 + $8,940 + $1,650 = $22,010. Fees are $330 + $259 + $165 = $754. Net merchant deposits are $22,010 − $754 = $21,256.
 > 2. Net revenue is $22,010 − $480 = $21,530.
 > 3. The $2,000 is an Owner Draw (3020), an equity account. It does not affect profit.

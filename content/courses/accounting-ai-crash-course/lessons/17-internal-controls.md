@@ -88,12 +88,12 @@ If one person can set up a vendor, approve a payment, send it, and book the entr
 
 **Worked example.** After a near-miss, Bo redesigned BoBo's accounts payable cycle.
 
-| Step | Who does it | Who checks or approves |
-| --- | --- | --- |
-| Vendor setup | Maya, in QBO | Bo initials a weekly New Vendors Added report |
-| Bill entry and coding | Maya | Bills wait in an approval state for Bo |
-| Payment approval and release | Bo only, with confirmation prompts sent to his phone | Not applicable |
-| Bank reconciliation | Maya prepares it | Bo signs it and an outside CPA reviews it |
+| Step                         | Who does it                                          | Who checks or approves                        |
+| ---------------------------- | ---------------------------------------------------- | --------------------------------------------- |
+| Vendor setup                 | Maya, in QBO                                         | Bo initials a weekly New Vendors Added report |
+| Bill entry and coding        | Maya                                                 | Bills wait in an approval state for Bo        |
+| Payment approval and release | Bo only, with confirmation prompts sent to his phone | Not applicable                                |
+| Bank reconciliation          | Maya prepares it                                     | Bo signs it and an outside CPA reviews it     |
 
 Maya both sets up vendors and enters bills, which breaks pure SoD. The compensating controls are Bo's weekly report, an extra approval for any vendor less than 60 days old, and a CPA sampling new vendors against their W-9 forms. The outside CPA review matters most because it supplies the independence the team cannot produce internally.
 
@@ -142,9 +142,10 @@ questionIds:
 Pick this risk: "A fake vendor is added to commit fraud." Write one row of a control matrix for it with these columns: Risk, Control, Type (preventive, detective or both), Owner, and How tested. Then name one thing you would check to show the control is working.
 
 > [!example]- Sample solution
-> | Risk | Control | Type | Owner | How tested |
-> | --- | --- | --- | --- | --- |
-> | Fake vendor added to commit fraud | New vendors need a W-9 and address verification, and Bo reviews and initials a weekly New Vendors Added report | Both (W-9 check preventive, weekly report review detective) | Bo | Sample 5 new vendors per quarter and confirm the W-9 is on file and Bo's initials are present |
+>
+> | Risk                              | Control                                                                                                        | Type                                                        | Owner | How tested                                                                                    |
+> | --------------------------------- | -------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- | ----- | --------------------------------------------------------------------------------------------- |
+> | Fake vendor added to commit fraud | New vendors need a W-9 and address verification, and Bo reviews and initials a weekly New Vendors Added report | Both (W-9 check preventive, weekly report review detective) | Bo    | Sample 5 new vendors per quarter and confirm the W-9 is on file and Bo's initials are present |
 >
 > A good check is the sample itself: pick new vendors at random and confirm both the W-9 and the signed review, because a control that leaves no evidence cannot be shown to work.
 

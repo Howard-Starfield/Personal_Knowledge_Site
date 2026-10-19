@@ -43,18 +43,18 @@ Need a refresher on spotting errors in the books? See the [[courses/accounting-a
 
 **Worked example.** BoBo's October export lands in a Table named `Tx`:
 
-| TxID | Date | Vendor | Category | Amount |
-|---|---|---|---|---|
-| T-001 | 2025-10-02 | Adobe | Software | 79.99 |
-| T-002 | 2025-10-03 | AWS | Software | 412.50 |
-| T-003 | 2025-10-05 | Staples | Office Supplies | 88.20 |
-| T-004 | 2025-10-07 | Delta Airlines | Travel | 642.10 |
-| T-005 | 2025-10-09 | Adobe | Software | 79.99 |
-| T-006 | 2025-10-12 | Uber | Travel | 38.40 |
-| T-007 | 2025-10-15 | Staples | Office Supplies | 124.60 |
-| T-008 | 2025-10-18 | AWS | Software | 412.50 |
-| T-009 | 2025-10-22 | LinkedIn | Marketing | 299.00 |
-| T-010 | 2025-10-28 | Delta Airlines | Travel | 318.75 |
+| TxID  | Date       | Vendor         | Category        | Amount |
+| ----- | ---------- | -------------- | --------------- | ------ |
+| T-001 | 2025-10-02 | Adobe          | Software        | 79.99  |
+| T-002 | 2025-10-03 | AWS            | Software        | 412.50 |
+| T-003 | 2025-10-05 | Staples        | Office Supplies | 88.20  |
+| T-004 | 2025-10-07 | Delta Airlines | Travel          | 642.10 |
+| T-005 | 2025-10-09 | Adobe          | Software        | 79.99  |
+| T-006 | 2025-10-12 | Uber           | Travel          | 38.40  |
+| T-007 | 2025-10-15 | Staples        | Office Supplies | 124.60 |
+| T-008 | 2025-10-18 | AWS            | Software        | 412.50 |
+| T-009 | 2025-10-22 | LinkedIn       | Marketing       | 299.00 |
+| T-010 | 2025-10-28 | Delta Airlines | Travel          | 318.75 |
 
 `=SUM(Tx[Amount])` returns 2,496.03 today, and still includes the rows you paste next month. For a conditional-formatting rule that must test each row's own columns, write `=AND($E2<TODAY(),$F2>0)`: the dollar signs lock the columns, and the row number stays free to move.
 
@@ -194,12 +194,12 @@ Use the ten-row `Tx` sample from Step 1. On a Summary tab, build a SUMIFS-driven
 > [!example]- Sample solution
 > Each category uses `=SUMIFS(Tx[Amount],Tx[Category],"<name>")`:
 >
-> | Category | Total |
-> |---|---|
-> | Software | 984.98 |
-> | Office Supplies | 212.80 |
-> | Travel | 999.25 |
-> | Marketing | 299.00 |
+> | Category        | Total        |
+> | --------------- | ------------ |
+> | Software        | 984.98       |
+> | Office Supplies | 212.80       |
+> | Travel          | 999.25       |
+> | Marketing       | 299.00       |
 > | **Grand Total** | **2,496.03** |
 >
 > The cross-check cell is `=ROUND(SUM(B2:B5),2)=ROUND(SUM(Tx[Amount]),2)`, which returns TRUE. Four rows are flagged: T-001 and T-005 (Adobe, 79.99) and T-002 and T-008 (AWS, 412.50). The Staples rows have different amounts, so they are not flagged.

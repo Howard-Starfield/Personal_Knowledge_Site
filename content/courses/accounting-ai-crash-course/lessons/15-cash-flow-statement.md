@@ -68,15 +68,15 @@ Answer these from memory before reading on. Previous lesson: [[courses/accountin
 
 **Worked example (BoBo, May).** Net income was $12,400.
 
-| Line | Amount | Why |
-|---|---:|---|
-| Net income | 12,400 | Starting point |
-| Depreciation | +850 | Non-cash expense |
-| AR increase | -9,800 | Sales not yet collected |
-| Prepaid expenses increase | -1,800 | Adobe subscription paid up front |
-| AP decrease | -1,200 | Old vendor bills paid down |
-| Customer deposits / unearned revenue (2050) increase | +600 | Client prepaid June work |
-| **Operating cash flow** | **1,050** | Far below the profit |
+| Line                                                 |    Amount | Why                              |
+| ---------------------------------------------------- | --------: | -------------------------------- |
+| Net income                                           |    12,400 | Starting point                   |
+| Depreciation                                         |      +850 | Non-cash expense                 |
+| AR increase                                          |    -9,800 | Sales not yet collected          |
+| Prepaid expenses increase                            |    -1,800 | Adobe subscription paid up front |
+| AP decrease                                          |    -1,200 | Old vendor bills paid down       |
+| Customer deposits / unearned revenue (2050) increase |      +600 | Client prepaid June work         |
+| **Operating cash flow**                              | **1,050** | Far below the profit             |
 
 A quick memory aid: assets that go up use cash, liabilities that go up hold on to cash.
 
@@ -107,12 +107,12 @@ questionIds:
 
 **Worked example (BoBo, May).**
 
-| Section | Item | Amount |
-|---|---|---:|
-| Investing | Purchase of editing workstation | -4,200 |
-| Financing | Owner contribution | +8,200 |
-| Financing | Owner draw | -6,000 |
-| Financing total | | +2,200 |
+| Section         | Item                            | Amount |
+| --------------- | ------------------------------- | -----: |
+| Investing       | Purchase of editing workstation | -4,200 |
+| Financing       | Owner contribution              | +8,200 |
+| Financing       | Owner draw                      | -6,000 |
+| Financing total |                                 | +2,200 |
 
 For a loan payment of $1,200 made up of $1,000 principal and $200 interest, only the $1,000 goes in financing. The $200 is already reflected in net income.
 

@@ -53,13 +53,13 @@ Financial statements that follow GAAP (Generally Accepted Accounting Principles,
 **Worked example.** On January 1, BigClient LLC pays BoBo $12,000 for a 12-month digital marketing retainer. Both methods total $12,000 for the year, but they spread it differently.
 
 | Month | Cash received | Cash-basis revenue | Accrual revenue | Unearned revenue balance |
-| --- | --- | --- | --- | --- |
-| Jan | $12,000 | $12,000 | $1,000 | $11,000 |
-| Feb | $0 | $0 | $1,000 | $10,000 |
-| Mar | $0 | $0 | $1,000 | $9,000 |
-| ... | $0 | $0 | $1,000 | falls $1,000 a month |
-| Dec | $0 | $0 | $1,000 | $0 |
-| Total | $12,000 | $12,000 | $12,000 | |
+| ----- | ------------- | ------------------ | --------------- | ------------------------ |
+| Jan   | $12,000       | $12,000            | $1,000          | $11,000                  |
+| Feb   | $0            | $0                 | $1,000          | $10,000                  |
+| Mar   | $0            | $0                 | $1,000          | $9,000                   |
+| ...   | $0            | $0                 | $1,000          | falls $1,000 a month     |
+| Dec   | $0            | $0                 | $1,000          | $0                       |
+| Total | $12,000       | $12,000            | $12,000         |                          |
 
 Cash basis makes January look like a hero month and the rest of the year look empty. A bank looking at those statements in March would see almost no recent revenue. Accrual shows the steady $1,000 a month that actually happened.
 
@@ -76,12 +76,12 @@ Cash basis makes January look like a hero month and the rest of the year look em
 
 **Worked example.** BigClient's $12,000 prepayment:
 
-| Date | Account | Debit | Credit |
-| --- | --- | --- | --- |
-| Jan 1 | Cash – Stripe | $12,000 | |
-| Jan 1 | Customer Deposits / Unearned Revenue (2050) | | $12,000 |
-| Jan 31 | Customer Deposits / Unearned Revenue (2050) | $1,000 | |
-| Jan 31 | Service Revenue | | $1,000 |
+| Date   | Account                                     | Debit   | Credit  |
+| ------ | ------------------------------------------- | ------- | ------- |
+| Jan 1  | Cash – Stripe                               | $12,000 |         |
+| Jan 1  | Customer Deposits / Unearned Revenue (2050) |         | $12,000 |
+| Jan 31 | Customer Deposits / Unearned Revenue (2050) | $1,000  |         |
+| Jan 31 | Service Revenue                             |         | $1,000  |
 
 Repeat the January 31 entry at every month-end through December. A good tie-out is the rollforward: beginning balance, plus new prepayments, minus revenue recognized, equals the ending balance, and it must match the general ledger.
 
@@ -112,25 +112,25 @@ questionIds:
 
 **Worked example 1: prepaid insurance.** BoBo pays $2,400 on January 1 for a 12-month policy.
 
-| Date | Account | Debit | Credit |
-| --- | --- | --- | --- |
-| Jan 1 | Prepaid Insurance (asset) | $2,400 | |
-| Jan 1 | Cash – Bank | | $2,400 |
-| Jan 31 | Insurance Expense | $200 | |
-| Jan 31 | Prepaid Insurance | | $200 |
+| Date   | Account                   | Debit  | Credit |
+| ------ | ------------------------- | ------ | ------ |
+| Jan 1  | Prepaid Insurance (asset) | $2,400 |        |
+| Jan 1  | Cash – Bank               |        | $2,400 |
+| Jan 31 | Insurance Expense         | $200   |        |
+| Jan 31 | Prepaid Insurance         |        | $200   |
 
 The $200 is $2,400 divided by 12 months. By December 31, the Prepaid Insurance balance is $0.
 
 **Worked example 2: accrued contractor.** Acme Contractor works December 26 to 31, sends a $1,200 invoice on January 5, and is paid January 12.
 
-| Date | Account | Debit | Credit |
-| --- | --- | --- | --- |
-| Dec 31 | Contractor Expense | $1,200 | |
-| Dec 31 | Accrued Expenses (2060) | | $1,200 |
-| Jan 5 | Accrued Expenses (2060) | $1,200 | |
-| Jan 5 | Accounts Payable | | $1,200 |
-| Jan 12 | Accounts Payable | $1,200 | |
-| Jan 12 | Cash – Bank | | $1,200 |
+| Date   | Account                 | Debit  | Credit |
+| ------ | ----------------------- | ------ | ------ |
+| Dec 31 | Contractor Expense      | $1,200 |        |
+| Dec 31 | Accrued Expenses (2060) |        | $1,200 |
+| Jan 5  | Accrued Expenses (2060) | $1,200 |        |
+| Jan 5  | Accounts Payable        |        | $1,200 |
+| Jan 12 | Accounts Payable        | $1,200 |        |
+| Jan 12 | Cash – Bank             |        | $1,200 |
 
 The expense lives in December, when the work happened. The cash leaves in January.
 
@@ -163,23 +163,23 @@ The bridge accounts (unearned revenue, prepaid expenses, accrued expenses, accru
 
 **Worked example 1: standard receivable.** BoBo delivers a logo on December 28, invoices $800 the same day, and is paid January 10.
 
-| Date | Account | Debit | Credit |
-| --- | --- | --- | --- |
-| Dec 28 | Accounts Receivable | $800 | |
-| Dec 28 | Service Revenue | | $800 |
-| Jan 10 | Cash – Bank | $800 | |
-| Jan 10 | Accounts Receivable | | $800 |
+| Date   | Account             | Debit | Credit |
+| ------ | ------------------- | ----- | ------ |
+| Dec 28 | Accounts Receivable | $800  |        |
+| Dec 28 | Service Revenue     |       | $800   |
+| Jan 10 | Cash – Bank         | $800  |        |
+| Jan 10 | Accounts Receivable |       | $800   |
 
 Under cash basis the $800 would be January revenue. Under accrual it is correctly December revenue.
 
 **Worked example 2: accrued revenue.** BoBo finishes a $2,500 website for ShopX on December 30 but does not invoice until January 2.
 
-| Date | Account | Debit | Credit |
-| --- | --- | --- | --- |
-| Dec 31 | Accrued Revenue (asset) | $2,500 | |
-| Dec 31 | Service Revenue | | $2,500 |
-| Jan 2 | Accounts Receivable | $2,500 | |
-| Jan 2 | Accrued Revenue | | $2,500 |
+| Date   | Account                 | Debit  | Credit |
+| ------ | ----------------------- | ------ | ------ |
+| Dec 31 | Accrued Revenue (asset) | $2,500 |        |
+| Dec 31 | Service Revenue         |        | $2,500 |
+| Jan 2  | Accounts Receivable     | $2,500 |        |
+| Jan 2  | Accrued Revenue         |        | $2,500 |
 
 > [!warning] Common mistake
 > Confusing AR with revenue, or AP with expense. They both feel like money moving, but AR and AP are balance sheet balances owed, while revenue and expense are income statement results of activity.
@@ -215,6 +215,7 @@ Calculate net income under each method, the difference, and list the adjusting e
 > Cash basis overstates December by $2,500 net: it books the full $6,000 retainer and misses the $900 contractor cost, which raise profit. Expensing the full $2,400 insurance payment and missing the $1,200 audit revenue partly offset this.
 >
 > Adjusting entries needed on December 31:
+>
 > - Transaction 1: debit Customer Deposits / Unearned Revenue (2050) $1,000, credit Service Revenue $1,000 (after the receipt was credited to the liability).
 > - Transaction 2: debit Insurance Expense $200, credit Prepaid Insurance $200.
 > - Transaction 4: debit Contractor Expense $900, credit Accrued Expenses (2060) $900.

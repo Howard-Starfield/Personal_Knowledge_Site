@@ -41,18 +41,18 @@ Accounts receivable (AR) is where earned revenue turns into cash, or fails to. A
 
 **Worked example.** BoBo issues INV-2026-0142 to Northwind for $3,500 on April 1, Net 30, so it is due May 1.
 
-| Account | Debit | Credit |
-|---|---:|---:|
-| Accounts Receivable — Northwind | $3,500 | |
-| Service Revenue | | $3,500 |
+| Account                         |  Debit | Credit |
+| ------------------------------- | -----: | -----: |
+| Accounts Receivable — Northwind | $3,500 |        |
+| Service Revenue                 |        | $3,500 |
 
 Later Northwind pays through Stripe, which keeps a $105 fee and deposits $3,395.
 
-| Account | Debit | Credit |
-|---|---:|---:|
-| Cash — Operating Bank | $3,395 | |
-| Merchant Processing Fees | $105 | |
-| Accounts Receivable — Northwind | | $3,500 |
+| Account                         |  Debit | Credit |
+| ------------------------------- | -----: | -----: |
+| Cash — Operating Bank           | $3,395 |        |
+| Merchant Processing Fees        |   $105 |        |
+| Accounts Receivable — Northwind |        | $3,500 |
 
 The invoice closes in full and revenue stays at the gross $3,500. The fee is an operating expense.
 
@@ -78,6 +78,7 @@ questionIds:
 **Analogy.** A payment is like checking a name off a list, so the right line has to be crossed out. A credit memo is like a store crossing an item off your bill because you were charged for something you never received.
 
 **The rules.**
+
 - Follow the customer's remittance advice, the note that says which invoice the money is for. If there is none, ask the customer rather than guessing. Cash you cannot yet match sits in unapplied cash and should be cleared quickly.
 - A partial payment reduces the open balance, but the invoice keeps aging from its original date.
 - A credit memo debits Sales Returns & Allowances (a contra-revenue account) and credits AR. A refund is different: it returns cash that was already received.
@@ -85,10 +86,10 @@ questionIds:
 
 **Worked example.** Acme is billed $1,200 on INV-2026-0133: a $500 logo, a $300 style guide and $400 of copywriting. Acme disputes the copywriting and a manager agrees to remove it.
 
-| Account | Debit | Credit |
-|---|---:|---:|
-| Sales Returns & Allowances | $400 | |
-| Accounts Receivable — Acme | | $400 |
+| Account                    | Debit | Credit |
+| -------------------------- | ----: | -----: |
+| Sales Returns & Allowances |  $400 |        |
+| Accounts Receivable — Acme |       |   $400 |
 
 The invoice now shows $800 open. When Acme pays $800, debit Cash $800 and credit AR $800, and the invoice closes. Separately, if Northwind sends a $1,500 partial payment against a $3,500 invoice, you debit Cash $1,500, credit AR $1,500, and $2,000 stays open.
 
@@ -102,19 +103,20 @@ The invoice now shows $800 open. When Acme pays $800, debit Cash $800 and credit
 **Analogy.** Think of a fridge with a date shelf: fresh food in front, old food at the back that needs to be dealt with today. Aging is that shelf for invoices.
 
 **The rules.**
+
 - Days past due is counted from the due date. Buckets are Current (not yet due), 1–30, 31–60, 61–90 and 90+.
 - DSO = (ending AR ÷ credit sales for the period) × days in the period. Lower is better, and you compare it with your terms.
 - DSO is an average. It can look healthy while one customer is months late.
 
 **Worked example.** On April 30, five invoices are open. Count days from each due date to April 30.
 
-| Invoice | Due date | Days past due | Amount | Bucket |
-|---|---|---:|---:|---|
-| A | May 10 | not due | $800 | Current |
-| B | Apr 21 | 9 | $550 | 1–30 |
-| C | Mar 30 | 31 | $1,200 | 31–60 |
-| D | Feb 19 | 70 | $1,500 | 61–90 |
-| E | Jan 27 | 93 | $700 | 90+ |
+| Invoice | Due date | Days past due | Amount | Bucket  |
+| ------- | -------- | ------------: | -----: | ------- |
+| A       | May 10   |       not due |   $800 | Current |
+| B       | Apr 21   |             9 |   $550 | 1–30    |
+| C       | Mar 30   |            31 | $1,200 | 31–60   |
+| D       | Feb 19   |            70 | $1,500 | 61–90   |
+| E       | Jan 27   |            93 |   $700 | 90+     |
 
 Total AR is $4,750. For DSO, suppose AR is $30,000 and credit sales for a 30-day month were $45,000. Then DSO = (30,000 ÷ 45,000) × 30 = 20 days. If terms are Net 30, 20 days looks good, yet the aging above shows $700 stuck beyond 90 days that the average hides.
 
@@ -140,6 +142,7 @@ questionIds:
 **Analogy.** A shop that sells on credit sets aside a few percent of each month's tab as "probably lost," without knowing which customers it will be.
 
 **The rules.**
+
 - The Allowance for Doubtful Accounts is a contra-asset that reduces AR to net AR on the balance sheet.
 - Setting it up debits Bad Debt Expense and credits the allowance. It is adjusted to a target, so you book only the difference from the current balance.
 - A write-off of a specific uncollectible invoice debits the allowance and credits AR. Profit is not hit again, because the expense was already recorded.
@@ -148,10 +151,10 @@ questionIds:
 
 **Worked example.** AR is $18,000 and the policy is 3%, so the target allowance is $540. The allowance already has a $200 credit balance, so add $340.
 
-| Account | Debit | Credit |
-|---|---:|---:|
-| Bad Debt Expense | $340 | |
-| Allowance for Doubtful Accounts | | $340 |
+| Account                         | Debit | Credit |
+| ------------------------------- | ----: | -----: |
+| Bad Debt Expense                |  $340 |        |
+| Allowance for Doubtful Accounts |       |   $340 |
 
 Now suppose gross AR is $20,000 and the allowance is $1,000, so net AR is $19,000. A customer goes bankrupt and a $300 invoice is written off: debit Allowance $300, credit AR $300. Gross AR is $19,700, the allowance is $700, and net AR is still $19,000. Profit did not move.
 
@@ -174,13 +177,13 @@ questionIds:
 
 BoBo has $25,000 of AR at month-end, aged as follows. The allowance currently has a $400 credit balance. The policy uses these loss rates: 1% current, 3% for 1–30, 10% for 31–60, 25% for 61–90 and 50% for 90+.
 
-| Bucket | Balance |
-|---|---:|
+| Bucket  | Balance |
+| ------- | ------: |
 | Current | $14,000 |
-| 1–30 | $6,000 |
-| 31–60 | $3,000 |
-| 61–90 | $1,500 |
-| 90+ | $500 |
+| 1–30    |  $6,000 |
+| 31–60   |  $3,000 |
+| 61–90   |  $1,500 |
+| 90+     |    $500 |
 
 Compute the target allowance, write the adjusting entry, and show net AR on the balance sheet.
 

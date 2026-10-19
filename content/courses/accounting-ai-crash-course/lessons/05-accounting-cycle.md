@@ -49,24 +49,24 @@ We use the fictional BoBo Digital Services LLC case study again. All figures are
 
 **The nine steps at a glance:**
 
-| # | Step | Produces |
-| --- | --- | --- |
-| 1 | Gather source documents | Validated evidence |
-| 2 | Journalize | Dated journal entries |
-| 3 | Post to the ledger | A running balance per account |
-| 4 | Unadjusted trial balance | A debits-equal-credits report |
-| 5 | Adjusting entries | Entries that put amounts in the right period |
-| 6 | Adjusted trial balance | The report statements are built from |
-| 7 | Financial statements | Income statement, balance sheet, cash flow, equity |
-| 8 | Closing entries | Temporary accounts reset, profit moved to equity |
-| 9 | Post-closing trial balance | Proof that only permanent accounts remain |
+| #   | Step                       | Produces                                           |
+| --- | -------------------------- | -------------------------------------------------- |
+| 1   | Gather source documents    | Validated evidence                                 |
+| 2   | Journalize                 | Dated journal entries                              |
+| 3   | Post to the ledger         | A running balance per account                      |
+| 4   | Unadjusted trial balance   | A debits-equal-credits report                      |
+| 5   | Adjusting entries          | Entries that put amounts in the right period       |
+| 6   | Adjusted trial balance     | The report statements are built from               |
+| 7   | Financial statements       | Income statement, balance sheet, cash flow, equity |
+| 8   | Closing entries            | Temporary accounts reset, profit moved to equity   |
+| 9   | Post-closing trial balance | Proof that only permanent accounts remain          |
 
 **Worked example.** On October 1, BoBo's owner pays $2,400 through PayPal for a 12-month design software plan. The PayPal receipt is filed (step 1). Because the benefit lasts twelve months, the payment is first recorded as an asset, not an expense (step 2):
 
-| Date | Account | Debit | Credit |
-| --- | --- | --- | --- |
-| 10/1 | Prepaid Software | 2,400 | |
-| 10/1 | PayPal (Cash) | | 2,400 |
+| Date | Account          | Debit | Credit |
+| ---- | ---------------- | ----- | ------ |
+| 10/1 | Prepaid Software | 2,400 |        |
+| 10/1 | PayPal (Cash)    |       | 2,400  |
 
 Posting (step 3) updates both ledgers. Prepaid Software goes from $0 to $2,400. PayPal cash opens at $8,000 and falls by $2,400. If three more payments of $600, $300 and $250 are credited to PayPal cash in October, its balance is 8,000 − 2,400 − 600 − 300 − 250 = $4,450.
 
@@ -83,19 +83,19 @@ Posting (step 3) updates both ledgers. Prepaid Software goes from $0 to $2,400. 
 
 **Worked example.** BoBo's October transactions are: 10/1 the $2,400 software plan; 10/3 a $1,500 Stripe client payment; 10/5 a $600 contractor payment; 10/10 $90 of Stripe fees; 10/15 a $300 refund; 10/20 a $2,000 invoice, unpaid; 10/25 $250 of marketing. With an assumed opening owner's equity of $8,000, the trial balance is:
 
-| Account | Debit | Credit |
-| --- | --- | --- |
-| Cash - PayPal | 4,450 | |
-| Cash - Stripe | 1,410 | |
-| Accounts Receivable | 2,000 | |
-| Prepaid Software | 2,400 | |
-| Owner's Equity | | 8,000 |
-| Service Revenue | | 3,500 |
-| Sales Returns/Refunds | 300 | |
-| Contractor Expense | 600 | |
-| Processing Fees Expense | 90 | |
-| Marketing Expense | 250 | |
-| **Totals** | **11,500** | **11,500** |
+| Account                 | Debit      | Credit     |
+| ----------------------- | ---------- | ---------- |
+| Cash - PayPal           | 4,450      |            |
+| Cash - Stripe           | 1,410      |            |
+| Accounts Receivable     | 2,000      |            |
+| Prepaid Software        | 2,400      |            |
+| Owner's Equity          |            | 8,000      |
+| Service Revenue         |            | 3,500      |
+| Sales Returns/Refunds   | 300        |            |
+| Contractor Expense      | 600        |            |
+| Processing Fees Expense | 90         |            |
+| Marketing Expense       | 250        |            |
+| **Totals**              | **11,500** | **11,500** |
 
 Now suppose the totals were $42,300 and $42,030. The $270 gap could be two swapped digits, because a transposition produces a difference divisible by 9 (270 ÷ 9 = 30), or an entry posted to only one side. You trace it to the journal. You never add a plug to force a match.
 
@@ -122,10 +122,10 @@ questionIds:
 
 **Worked example.** One month of the $2,400 plan is used in October, so 2,400 ÷ 12 = $200:
 
-| Date | Account | Debit | Credit |
-| --- | --- | --- | --- |
-| 10/31 | Software Expense | 200 | |
-| 10/31 | Prepaid Software | | 200 |
+| Date  | Account          | Debit | Credit |
+| ----- | ---------------- | ----- | ------ |
+| 10/31 | Software Expense | 200   |        |
+| 10/31 | Prepaid Software |       | 200    |
 
 Prepaid Software falls to $2,200 and Software Expense becomes $200. Totals remain equal at $11,500. The October income statement then reads:
 
@@ -148,14 +148,14 @@ The balance sheet shows cash of $5,860, receivables of $2,000 and Prepaid Softwa
 
 **Worked example.** Treating October as a close, with revenue of $3,500 and $1,440 of contra-revenue and expenses (300 + 600 + 250 + 90 + 200):
 
-| Account | Debit | Credit |
-| --- | --- | --- |
-| Service Revenue | 3,500 | |
-| Income Summary | | 3,500 |
-| Income Summary | 1,440 | |
-| Expense accounts and refunds | | 1,440 |
-| Income Summary | 2,060 | |
-| Owner's Equity (Retained Earnings) | | 2,060 |
+| Account                            | Debit | Credit |
+| ---------------------------------- | ----- | ------ |
+| Service Revenue                    | 3,500 |        |
+| Income Summary                     |       | 3,500  |
+| Income Summary                     | 1,440 |        |
+| Expense accounts and refunds       |       | 1,440  |
+| Income Summary                     | 2,060 |        |
+| Owner's Equity (Retained Earnings) |       | 2,060  |
 
 The post-closing trial balance holds only permanent accounts: Cash 4,450 + 1,410, Receivables 2,000, Prepaid Software 2,200, against Owner's Equity of 10,060. Both sides total $10,060.
 

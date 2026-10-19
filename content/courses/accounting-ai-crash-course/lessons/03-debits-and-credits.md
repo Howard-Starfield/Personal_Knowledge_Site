@@ -45,10 +45,10 @@ Need a refresher? Revisit the [[courses/accounting-ai-crash-course/lessons/02-ac
 
 **Worked example.** BoBo sells a logo pack for $300 through Stripe.
 
-| Account | Debit | Credit |
-|---|---|---|
-| Cash – Stripe Clearing | 300.00 | |
-| Service Revenue | | 300.00 |
+| Account                | Debit  | Credit |
+| ---------------------- | ------ | ------ |
+| Cash – Stripe Clearing | 300.00 |        |
+| Service Revenue        |        | 300.00 |
 
 What BoBo got is $300 in its Stripe balance (debit). Where it came from is a sale (credit). The left total is $300 and the right total is $300, so it balances.
 
@@ -95,12 +95,12 @@ questionIds:
 
 **Worked example.** A client is invoiced $1,200 for a website refresh on 3 March, net 14. On 10 March the client pays into PayPal.
 
-| Date | Account | Debit | Credit |
-|---|---|---|---|
-| 3 Mar | Accounts Receivable | 1,200.00 | |
-| 3 Mar | Service Revenue | | 1,200.00 |
-| 10 Mar | Cash – PayPal | 1,200.00 | |
-| 10 Mar | Accounts Receivable | | 1,200.00 |
+| Date   | Account             | Debit    | Credit   |
+| ------ | ------------------- | -------- | -------- |
+| 3 Mar  | Accounts Receivable | 1,200.00 |          |
+| 3 Mar  | Service Revenue     |          | 1,200.00 |
+| 10 Mar | Cash – PayPal       | 1,200.00 |          |
+| 10 Mar | Accounts Receivable |          | 1,200.00 |
 
 Revenue was booked once, on 3 March. The 10 March entry swaps one asset for another, so the receivable returns to zero.
 
@@ -134,12 +134,12 @@ questionIds:
 
 **Worked examples.**
 
-| Event | Debit | Credit |
-|---|---|---|
-| Stripe fee of $10 on a $300 sale (the sale is already recorded) | Merchant Processing Fees 10.00 | Cash – Stripe Clearing 10.00 |
-| Refund of $150 via Stripe | Sales Returns & Refunds 150.00 | Cash – Stripe Clearing 150.00 |
-| Bo puts in $2,000 of savings | Cash – Business Checking 2,000.00 | Owner's Capital 2,000.00 |
-| Bo withdraws $300 for groceries | Owner Draws 300.00 | Cash – Business Checking 300.00 |
+| Event                                                           | Debit                             | Credit                          |
+| --------------------------------------------------------------- | --------------------------------- | ------------------------------- |
+| Stripe fee of $10 on a $300 sale (the sale is already recorded) | Merchant Processing Fees 10.00    | Cash – Stripe Clearing 10.00    |
+| Refund of $150 via Stripe                                       | Sales Returns & Refunds 150.00    | Cash – Stripe Clearing 150.00   |
+| Bo puts in $2,000 of savings                                    | Cash – Business Checking 2,000.00 | Owner's Capital 2,000.00        |
+| Bo withdraws $300 for groceries                                 | Owner Draws 300.00                | Cash – Business Checking 300.00 |
 
 Each processor, such as Stripe, PayPal and eBay, is treated like its own small bank account, so each gets its own cash account.
 
@@ -183,6 +183,7 @@ Journalize these four BoBo transactions, then confirm that debits equal credits 
 4. 13 March: Bo contributes $500 of personal savings to business checking.
 
 > [!example]- Sample solution
+>
 > 1. Debit Cash – Stripe Clearing 250.00; credit Service Revenue 250.00.
 > 2. Debit Merchant Processing Fees 8.00; credit Cash – Stripe Clearing 8.00.
 > 3. Debit Sales Returns & Refunds 80.00; credit Cash – PayPal 80.00.

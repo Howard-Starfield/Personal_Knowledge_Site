@@ -165,6 +165,7 @@ for token_id in ids:
 ```
 
 > [!example]- Sample solution
+>
 > 1. The sentence has 8 words. You should see more than 8 tokens, because words such as "Tokenization" and "unbelievable" split into several pieces and a leading space belongs to the token that follows it. The exact number depends on the installed encoding, so report what your run prints rather than a remembered number.
 > 2. The window is shared: 16,000 minus 15,200 leaves 800 tokens, so the output limit can be at most 800.
 > 3. 6 times 350 is 2,100, plus 150 is 2,250 input tokens.

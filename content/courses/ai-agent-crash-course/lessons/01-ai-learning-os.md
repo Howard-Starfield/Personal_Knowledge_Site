@@ -229,6 +229,7 @@ Build the minimum viable lab from scratch and prove it works.
 5. Write one memory card in `memory-cards/00_local_ai_lab.md` answering: what problem does this structure solve?
 
 > [!example]- Sample solution
+>
 > ```bash
 > mkdir -p ai-crash-course/{chapters,labs,projects,evals,datasets,memory-cards,resume-artifacts,screenshots}
 > cd ai-crash-course && git init
@@ -238,6 +239,7 @@ Build the minimum viable lab from scratch and prove it works.
 > echo 'OPENAI_API_KEY=fake-value-for-testing' > .env
 > git status
 > ```
+>
 > In the output, `.gitignore` and `.env.example` appear as untracked files you can commit, while `.env` is absent. If `.env` appears, the `.gitignore` is wrong or the file was committed earlier. The memory card should say that the structure makes experiments reproducible, secrets protected, projects portable, and artifacts findable.
 
 ## Key takeaways

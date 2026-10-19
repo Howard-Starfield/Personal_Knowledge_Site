@@ -41,11 +41,11 @@ If you need a refresher on invoice handling, revisit the [[courses/accounting-ai
 
 **The precise rule.** A pattern can be one of three things, and each gives a different kind of anomaly:
 
-- A written rule, such as "invoices over $5,000 need a PO". Breaking it is a *rule violation*.
-- History, such as a vendor who usually bills about $400 a month. Breaking it is a *statistical outlier*.
-- A relationship, such as a vendor address matching an employee address. Breaking it is a *data integrity flag*.
+- A written rule, such as "invoices over $5,000 need a PO". Breaking it is a _rule violation_.
+- History, such as a vendor who usually bills about $400 a month. Breaking it is a _statistical outlier_.
+- A relationship, such as a vendor address matching an employee address. Breaking it is a _data integrity flag_.
 
-Detection comes in two flavors. *Rule-based* detection asks "did this specific condition happen?" and is cheap, transparent and easy to defend to an auditor. *Statistical* detection asks "is this unusual compared with history?" using tools such as a z-score (how many standard deviations a value sits from the mean) or Benford's Law (the expected spread of leading digits). Statistics can see subtler patterns but are harder to explain and easier to over-trust, so entry-level teams normally start with rules.
+Detection comes in two flavors. _Rule-based_ detection asks "did this specific condition happen?" and is cheap, transparent and easy to defend to an auditor. _Statistical_ detection asks "is this unusual compared with history?" using tools such as a z-score (how many standard deviations a value sits from the mean) or Benford's Law (the expected spread of leading digits). Statistics can see subtler patterns but are harder to explain and easier to over-trust, so entry-level teams normally start with rules.
 
 **Worked example.** Suppose a vendor's monthly bills have a mean of $400 and a standard deviation of $100 (illustrative numbers). A $650 bill has z = (650 - 400) / 100 = 2.5, so it is not flagged by a "z above 3 in absolute value" rule. A $750 bill has z = 3.5 and is flagged. Neither number tells you whether the bill is legitimate; it only tells you a person should look.
 
@@ -58,13 +58,13 @@ Detection comes in two flavors. *Rule-based* detection asks "did this specific c
 
 **The precise rules.** These flags are the core of the weekly BoBo Digital Services LLC accounts payable report:
 
-| Flag | Condition |
-|---|---|
-| Duplicate invoice number | Same vendor and same invoice number on more than one row |
-| Weekend payment | Pay date falls on Saturday or Sunday |
-| Round-dollar payment | Amount above $1,000 and divisible by 100 |
-| New vendor, high payment | Payment above $1,000 within 30 days of the vendor being created |
-| Missing approval | No approver recorded on a payment above the approval threshold (the source example uses $500) |
+| Flag                     | Condition                                                                                     |
+| ------------------------ | --------------------------------------------------------------------------------------------- |
+| Duplicate invoice number | Same vendor and same invoice number on more than one row                                      |
+| Weekend payment          | Pay date falls on Saturday or Sunday                                                          |
+| Round-dollar payment     | Amount above $1,000 and divisible by 100                                                      |
+| New vendor, high payment | Payment above $1,000 within 30 days of the vendor being created                               |
+| Missing approval         | No approver recorded on a payment above the approval threshold (the source example uses $500) |
 
 The thresholds ($1,000 and 30 days) are defaults you can tune. In pandas, Monday is weekday 0, so Saturday and Sunday are 5 and 6.
 
@@ -163,14 +163,15 @@ questionIds:
 
 Below are four rows from a week's AP register. List every flag from this lesson that fires on each row, and give a disposition (dismiss, document or escalate).
 
-| Row | Vendor | Amount | Pay date | Vendor created | Other |
-|---|---|---|---|---|---|
-| A | Google Workspace | $216.00 | Sat 05/04 | 2020 | Recurring, already whitelisted |
-| B | Podcast Pro LLC | $1,150.00 | Fri 05/03 | 2024-04-20 | PO, W-9 and contract on file |
-| C | Rent, Larkspur LLC | $7,500.00 | Wed 05/01 | 2018 | Lease on file |
-| D | New Logo Designs LLC | $2,500.00 | Mon 05/06 | 2024-05-01 | No approver recorded |
+| Row | Vendor               | Amount    | Pay date  | Vendor created | Other                          |
+| --- | -------------------- | --------- | --------- | -------------- | ------------------------------ |
+| A   | Google Workspace     | $216.00   | Sat 05/04 | 2020           | Recurring, already whitelisted |
+| B   | Podcast Pro LLC      | $1,150.00 | Fri 05/03 | 2024-04-20     | PO, W-9 and contract on file   |
+| C   | Rent, Larkspur LLC   | $7,500.00 | Wed 05/01 | 2018           | Lease on file                  |
+| D   | New Logo Designs LLC | $2,500.00 | Mon 05/06 | 2024-05-01     | No approver recorded           |
 
 > [!example]- Sample solution
+>
 > - **Row A:** weekend payment only. The vendor is whitelisted, so dismiss with a note that the whitelist applied.
 > - **Row B:** new vendor with a high payment (paid 13 days after creation, above $1,000). It is not a round-dollar amount and it is not a weekend. Documentation is complete, so document and dismiss.
 > - **Row C:** round-dollar above $1,000 ($7,500 is divisible by 100). The lease supports it, so verify the lease and propose whitelisting the landlord for this rule with documented approval.

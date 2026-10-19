@@ -192,6 +192,7 @@ questionIds:
 Write your own `SEAMS.md`. List at least five seams in a pipeline you have built (or the one described in this lesson). For each, name the two components, the exact value that crosses, and one test that would catch a mismatch.
 
 > [!example]- Sample solution
+>
 > 1. Chunker to memory: the chunk id must be the same string type and format; test by asserting a retrieved chunk's id exists in the memory provenance lookup.
 > 2. Agent to permissions: the tool name must be a key in the scope map; test by asserting every registered tool has a declared scope and an unscoped tool refuses to run.
 > 3. Request id to all modules: carried in a context variable; test with the integration test that checks audit actions for one request id.

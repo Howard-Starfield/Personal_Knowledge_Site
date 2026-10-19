@@ -39,16 +39,16 @@ Review: [[courses/accounting-ai-crash-course/lessons/10-credit-card-reconciliati
 
 **The rule.** An adjusting entry is a journal entry posted at the end of a period to apply the revenue recognition principle (record revenue when it is earned) and the matching principle (record expenses in the period they help earn revenue). Each one touches at least one income statement account and one balance sheet account, and it does not move cash. There are two families:
 
-- An **accrual** records revenue or expense *before* the cash moves.
-- A **deferral** records revenue or expense *after* the cash has already moved, by spreading it over time.
+- An **accrual** records revenue or expense _before_ the cash moves.
+- A **deferral** records revenue or expense _after_ the cash has already moved, by spreading it over time.
 
 **Worked example.** Three BoBo Digital Services LLC situations, all sample data:
 
-| Situation | Cash timing | Family |
-|---|---|---|
-| Jordan Lee finishes a video in December; the invoice comes in January | Cash after the work | Accrual |
-| BoBo pays $2,400 in July for a 12-month software plan | Cash before the use | Deferral (prepaid) |
-| A client pays $12,000 on October 1 for a year of service | Cash before the service | Deferral (unearned revenue) |
+| Situation                                                             | Cash timing             | Family                      |
+| --------------------------------------------------------------------- | ----------------------- | --------------------------- |
+| Jordan Lee finishes a video in December; the invoice comes in January | Cash after the work     | Accrual                     |
+| BoBo pays $2,400 in July for a 12-month software plan                 | Cash before the use     | Deferral (prepaid)          |
+| A client pays $12,000 on October 1 for a year of service              | Cash before the service | Deferral (unearned revenue) |
 
 The six standard adjustments are prepaid expense amortization, accrued expenses, accrued revenue, depreciation, unearned revenue recognition and the bad debt allowance.
 
@@ -67,10 +67,10 @@ The six standard adjustments are prepaid expense amortization, accrued expenses,
 **Worked example 1: prepaid software.** BoBo paid $2,400 on July 1 for 12 months. Each month consumes $2,400 ÷ 12 = $200. A prepaid roll shows the balance:
 
 | Month | Beginning | Amortization | Ending |
-|---|---:|---:|---:|
-| Jul | 2,400 | (200) | 2,200 |
-| Oct | 1,800 | (200) | 1,600 |
-| Dec | 1,400 | (200) | 1,200 |
+| ----- | --------: | -----------: | -----: |
+| Jul   |     2,400 |        (200) |  2,200 |
+| Oct   |     1,800 |        (200) |  1,600 |
+| Dec   |     1,400 |        (200) |  1,200 |
 
 December 31 entry: debit Software Expense 200, credit Prepaid Software 200.
 
@@ -124,11 +124,11 @@ questionIds:
 
 **Worked example.** Jordan Lee finishes a $1,800 video on December 28, and the invoice arrives January 5.
 
-| Date | Entry |
-|---|---|
-| 12/31 | Debit Contractor Costs - Direct 1,800; credit Accrued Expenses 1,800 |
-| 1/1 | Debit Accrued Expenses 1,800; credit Contractor Costs - Direct 1,800 |
-| 1/5 | AP books the invoice normally: debit Contractor Costs - Direct 1,800; credit Accounts Payable 1,800 |
+| Date  | Entry                                                                                               |
+| ----- | --------------------------------------------------------------------------------------------------- |
+| 12/31 | Debit Contractor Costs - Direct 1,800; credit Accrued Expenses 1,800                                |
+| 1/1   | Debit Accrued Expenses 1,800; credit Contractor Costs - Direct 1,800                                |
+| 1/5   | AP books the invoice normally: debit Contractor Costs - Direct 1,800; credit Accounts Payable 1,800 |
 
 January's net effect for that work is $0, because the reversal and the invoice cancel out. The cost correctly stays in December.
 

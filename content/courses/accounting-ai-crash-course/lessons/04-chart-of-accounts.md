@@ -41,14 +41,14 @@ If you want to refresh your memory, revisit [[courses/accounting-ai-crash-course
 
 **The rule.** The COA is a structured, numbered list of every general ledger account the business uses. Most small US businesses use four-digit ranges:
 
-| Range | Family | Question it answers |
-|---|---|---|
-| 1000s | Assets | What do we own? |
-| 2000s | Liabilities | What do we owe? |
-| 3000s | Equity | What is left for the owners? |
-| 4000s | Revenue | What came in? |
+| Range | Family                    | Question it answers                             |
+| ----- | ------------------------- | ----------------------------------------------- |
+| 1000s | Assets                    | What do we own?                                 |
+| 2000s | Liabilities               | What do we owe?                                 |
+| 3000s | Equity                    | What is left for the owners?                    |
+| 4000s | Revenue                   | What came in?                                   |
 | 5000s | Cost of goods sold (COGS) | What did it directly cost to deliver the sales? |
-| 6000s | Operating expenses | What does it cost to run the business? |
+| 6000s | Operating expenses        | What does it cost to run the business?          |
 
 Ranges are a convention, not a law; some charts also use 7000s to 9000s for other income, other expense and tax. The numbers matter in practice because they let you check the family before you read the name: "number first, name second."
 
@@ -72,14 +72,14 @@ Ranges are a convention, not a law; some charts also use 7000s to 9000s for othe
 
 **Worked example.** BoBo's bookkeeper hands you these items. Assume BoBo capitalizes purchases over $1,000.
 
-| Transaction | Account | Why |
-|---|---|---|
-| $1,800 laptop | 1500 Computer Equipment | Lasts more than a year and is above the threshold, so it is capitalized. |
-| $79.99 Adobe monthly charge | 6110 Software Subscriptions – Design | Design software used for service delivery. |
-| $300 to a freelance video editor on a client project | 5010 Contractor Costs – Direct | Directly tied to a billable deliverable. |
-| $150 to the virtual assistant for admin work | 6210 Contractor Costs – Indirect (Admin) | Supports the business but not a specific sale. |
-| $2,000 from Bo's personal account to fund BoBo | 3010 Owner Capital Contributions | An equity increase, not income. |
-| $800 paid to Bo personally | 3020 Owner Draws | An equity decrease, not an expense. |
+| Transaction                                          | Account                                  | Why                                                                      |
+| ---------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------ |
+| $1,800 laptop                                        | 1500 Computer Equipment                  | Lasts more than a year and is above the threshold, so it is capitalized. |
+| $79.99 Adobe monthly charge                          | 6110 Software Subscriptions – Design     | Design software used for service delivery.                               |
+| $300 to a freelance video editor on a client project | 5010 Contractor Costs – Direct           | Directly tied to a billable deliverable.                                 |
+| $150 to the virtual assistant for admin work         | 6210 Contractor Costs – Indirect (Admin) | Supports the business but not a specific sale.                           |
+| $2,000 from Bo's personal account to fund BoBo       | 3010 Owner Capital Contributions         | An equity increase, not income.                                          |
+| $800 paid to Bo personally                           | 3020 Owner Draws                         | An equity decrease, not an expense.                                      |
 
 **Prepaid items.** A hypothetical $1,200 annual QuickBooks plan paid in January is debited to 1200 Prepaid Software Subscriptions, then $100 a month moves to 6130 Software Subscriptions – Accounting. Expensing the whole amount in January would overstate that month and understate the next eleven.
 
@@ -104,12 +104,12 @@ questionIds:
 
 **The rule.** A contra account is paired with a parent account and carries the opposite normal balance. BoBo's chart includes:
 
-| Contra account | Offsets | Normal balance |
-|---|---|---|
-| 1590 Accumulated Depreciation – Equipment | 1500 Computer Equipment | Credit |
-| 1110 Allowance for Doubtful Accounts | 1100 Accounts Receivable | Credit |
-| 4900 Refunds & Allowances | Service Revenue (4010 to 4040) | Debit |
-| 3020 Owner Draws | Owner equity, tracked against 3010 Owner Capital Contributions | Debit |
+| Contra account                            | Offsets                                                        | Normal balance |
+| ----------------------------------------- | -------------------------------------------------------------- | -------------- |
+| 1590 Accumulated Depreciation – Equipment | 1500 Computer Equipment                                        | Credit         |
+| 1110 Allowance for Doubtful Accounts      | 1100 Accounts Receivable                                       | Credit         |
+| 4900 Refunds & Allowances                 | Service Revenue (4010 to 4040)                                 | Debit          |
+| 3020 Owner Draws                          | Owner equity, tracked against 3010 Owner Capital Contributions | Debit          |
 
 The balance sheet then shows equipment net of depreciation, and the income statement shows gross revenue less refunds equals net revenue, while the ledger keeps the original detail.
 
@@ -160,6 +160,7 @@ Code each of these BoBo transactions with an account number and name, and give a
 5. A $500 refund to an unhappy logo client.
 
 > [!example]- Sample solution
+>
 > 1. 6010 Marketing – Facebook Ads: paid advertising, an operating expense.
 > 2. 6410 Bank Fees: fees charged by the bank, an operating expense.
 > 3. 5020 Stock Assets / Licensed Media: used directly on a sold project, so COGS.

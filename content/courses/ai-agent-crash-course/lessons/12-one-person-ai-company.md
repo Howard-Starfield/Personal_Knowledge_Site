@@ -50,14 +50,14 @@ Write the contract before the prompt. If you cannot measure a role weekly, you c
 
 **Worked example.** The course's Marketer role looks like this:
 
-| Field | Value |
-|---|---|
-| Job | Create content, positioning and ad copy |
-| Tools | content.draft, memory.read |
-| Tier | read-write-internal |
+| Field             | Value                                    |
+| ----------------- | ---------------------------------------- |
+| Job               | Create content, positioning and ad copy  |
+| Tools             | content.draft, memory.read               |
+| Tier              | read-write-internal                      |
 | Approval triggers | content.publish, ad spend, public claims |
-| Weekly budget | 20 USD |
-| Weekly metric | Approval acceptance rate |
+| Weekly budget     | 20 USD                                   |
+| Weekly metric     | Approval acceptance rate                 |
 
 Notice that the Marketer can draft but cannot publish. Two roles, Critic and Security, are review-only by design: they read everything and write nothing, a cheap insurance policy against productive agents shipping bad work.
 
@@ -159,6 +159,7 @@ Design a Refund Clerk role for a small online shop and test a budget check.
 3. A Marketer agent has a 20 USD weekly cap and has spent 19.80 USD. A call is projected to cost 0.35 USD. Should the hook allow it?
 
 > [!example]- Sample solution
+>
 > 1. Job: prepare refund decisions for customer orders. Tools: crm.read, kb.search, refund.request (which only creates a pending approval). Tier: external-action-with-approval for refunds, read-only otherwise. Approval trigger: every refund and every customer email. Weekly budget: for example 10 USD, adjusted after the first week of real numbers. Metric: refunds approved on first review, or first-response time.
 > 2. Queue: issuing a refund and emailing the customer. Drafting a reply and reading an order are internal, so adding friction would slow work without protecting anyone.
 > 3. 19.80 + 0.35 = 20.15, which is greater than 20.00, so the hook refuses and marks the agent over-budget until the next period or an owner override.

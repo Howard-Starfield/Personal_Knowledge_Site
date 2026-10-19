@@ -45,11 +45,11 @@ Think back to the reconciliation work in the previous lesson, [[courses/accounti
 
 ```json
 {
-  "vendor": {"value": "Adobe Inc.", "confidence": 0.99, "source": "header: 'Adobe Inc.'"},
-  "invoice_number": {"value": "ADB-2026-04-118", "confidence": 0.97, "source": "top-right"},
-  "subtotal": {"value": 54.99, "confidence": 0.99, "source": "line: 'Subtotal 54.99'"},
-  "tax": {"value": 4.40, "confidence": 0.99, "source": "'Tax 4.40'"},
-  "total": {"value": 59.39, "confidence": 0.99, "source": "'Total 59.39'"}
+  "vendor": { "value": "Adobe Inc.", "confidence": 0.99, "source": "header: 'Adobe Inc.'" },
+  "invoice_number": { "value": "ADB-2026-04-118", "confidence": 0.97, "source": "top-right" },
+  "subtotal": { "value": 54.99, "confidence": 0.99, "source": "line: 'Subtotal 54.99'" },
+  "tax": { "value": 4.4, "confidence": 0.99, "source": "'Tax 4.40'" },
+  "total": { "value": 59.39, "confidence": 0.99, "source": "'Total 59.39'" }
 }
 ```
 
@@ -144,6 +144,7 @@ Triage these three queue items. For each, choose Approve, Correct and approve, R
 3. Google Ads, $2,150.00, with the same invoice number and date as an invoice already in the register.
 
 > [!example]- Sample solution
+>
 > 1. Approve. Open the PDF, confirm totals and vendor, and log: "Reviewed PDF; totals reconcile; vendor and GL pattern match prior invoices; approved."
 > 2. Escalate or correct. $250.00 plus $20.00 is $270.00, not $290.00, so the reconciliation fails. Open the PDF; if OCR misread a figure, correct it with a reason, otherwise contact the vendor. Log which figure was wrong.
 > 3. Reject as a duplicate. Compare both PDFs, confirm the four fields match, and log: "Duplicate of the earlier invoice; same invoice received twice; no payment action."

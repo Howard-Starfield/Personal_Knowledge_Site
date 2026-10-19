@@ -148,33 +148,34 @@ questionIds:
 
 Walk these ten bank and ten book lines through the tiers by hand. Decide which tier matches each pair and which lines become exceptions.
 
-| Bank | Date | Amount | Reference |
-| --- | --- | --- | --- |
-| B1 | Apr 2 | 1,500.00 | INV-2210 |
-| B2 | Apr 3 | -85.40 | none |
-| B3 | Apr 5 | -427.18 | CHK1042 |
-| B4 | Apr 8 | 18,427.66 | none |
-| B5 | Apr 10 | -250.00 | none |
-| B6 | Apr 12 | -1,200.00 | LEASE-04 |
-| B7 | Apr 15 | -42.00 | none |
-| B8 | Apr 18 | 750.00 | INV-2215 |
-| B9 | Apr 22 | -99.99 | none |
-| B10 | Apr 28 | -350.00 | RFD-04 |
+| Bank | Date   | Amount    | Reference |
+| ---- | ------ | --------- | --------- |
+| B1   | Apr 2  | 1,500.00  | INV-2210  |
+| B2   | Apr 3  | -85.40    | none      |
+| B3   | Apr 5  | -427.18   | CHK1042   |
+| B4   | Apr 8  | 18,427.66 | none      |
+| B5   | Apr 10 | -250.00   | none      |
+| B6   | Apr 12 | -1,200.00 | LEASE-04  |
+| B7   | Apr 15 | -42.00    | none      |
+| B8   | Apr 18 | 750.00    | INV-2215  |
+| B9   | Apr 22 | -99.99    | none      |
+| B10  | Apr 28 | -350.00   | RFD-04    |
 
-| Book | Date | Amount | Reference |
-| --- | --- | --- | --- |
-| K1 | Apr 2 | 1,500.00 | INV-2210 |
-| K2 | Apr 2 | -85.40 | none |
-| K3 | Apr 5 | -427.20 | CHK1042 |
-| K4 | Apr 4 | 7,200.00 | none |
-| K5 | Apr 5 | 6,000.00 | none |
-| K6 | Apr 6 | 5,790.00 | none |
-| K7 | Apr 6 | -562.34 | none |
-| K8 | Apr 12 | -1,200.00 | LEASE-04 |
-| K9 | Apr 18 | 750.00 | INV-2215 |
-| K10 | Apr 23 | -99.99 | none |
+| Book | Date   | Amount    | Reference |
+| ---- | ------ | --------- | --------- |
+| K1   | Apr 2  | 1,500.00  | INV-2210  |
+| K2   | Apr 2  | -85.40    | none      |
+| K3   | Apr 5  | -427.20   | CHK1042   |
+| K4   | Apr 4  | 7,200.00  | none      |
+| K5   | Apr 5  | 6,000.00  | none      |
+| K6   | Apr 6  | 5,790.00  | none      |
+| K7   | Apr 6  | -562.34   | none      |
+| K8   | Apr 12 | -1,200.00 | LEASE-04  |
+| K9   | Apr 18 | 750.00    | INV-2215  |
+| K10  | Apr 23 | -99.99    | none      |
 
 > [!example]- Sample solution
+>
 > - B1 and K1: Tier 1 (same amount and date).
 > - B2 and K2: Tier 2 (same amount, dates one day apart).
 > - B3 and K3: Tier 3 (reference CHK1042, difference of $0.02 logged).

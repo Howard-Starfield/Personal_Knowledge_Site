@@ -37,9 +37,9 @@ Need a refresher? Revisit the [[courses/accounting-ai-crash-course/lessons/18-au
 
 ## Step 1 — Why people commit fraud, and why you shouldn't assume it
 
-**Plain language.** Fraud is deliberate deception for gain. Criminologist Donald Cressey described three conditions that tend to be present together, called the **Fraud Triangle**: *pressure* (money trouble or a target to hit), *opportunity* (a gap in controls), and *rationalization* ("I'll pay it back"). Think of a fire: it needs fuel, heat and oxygen. You cannot see someone's pressure or rationalization in a report, but you can see opportunity and the residue fraud leaves in data.
+**Plain language.** Fraud is deliberate deception for gain. Criminologist Donald Cressey described three conditions that tend to be present together, called the **Fraud Triangle**: _pressure_ (money trouble or a target to hit), _opportunity_ (a gap in controls), and _rationalization_ ("I'll pay it back"). Think of a fire: it needs fuel, heat and oxygen. You cannot see someone's pressure or rationalization in a report, but you can see opportunity and the residue fraud leaves in data.
 
-**The rule.** Opportunity is the side that accounting controls can reduce, through segregation of duties, approval limits, mandatory vacations and review of journal entries. A red flag is a *pattern that deserves a question*, not a verdict. Most odd findings turn out to be messy data, such as an invoice keyed twice, so you do not decide whether something is error or fraud. You only decide whether it deserves a second look, and the second look belongs to your supervisor, the controller, internal audit or forensic specialists.
+**The rule.** Opportunity is the side that accounting controls can reduce, through segregation of duties, approval limits, mandatory vacations and review of journal entries. A red flag is a _pattern that deserves a question_, not a verdict. Most odd findings turn out to be messy data, such as an invoice keyed twice, so you do not decide whether something is error or fraud. You only decide whether it deserves a second look, and the second look belongs to your supervisor, the controller, internal audit or forensic specialists.
 
 **Worked example.** At BoBo Digital Services LLC (a fictional company), a clerk both adds new vendors to the vendor master and approves payments to them. Pressure and rationalization are invisible, but the missing second person is plainly visible: that is opportunity, and the fix is to require a different approver for vendor changes than for payments.
 
@@ -83,7 +83,7 @@ questionIds:
 
 **The definitions.**
 
-- **Skimming:** stealing cash or check receipts *before* they are recorded, so there is no entry to find, only a missing one.
+- **Skimming:** stealing cash or check receipts _before_ they are recorded, so there is no entry to find, only a missing one.
 - **Lapping:** hiding a stolen receipt from Customer A by applying Customer B's later payment to A's account, and so on in a continual shuffle. Look for aging anomalies and customers complaining about "missing" payments.
 - **Ghost vendor:** a fake vendor in the payables master. Look for a PO Box only, no website or phone, a name close to a real vendor, and bank details or an address matching an employee.
 - **Phantom employee:** a fake person on payroll whose pay goes to an account the fraudster controls. Look for no benefit deductions, no time off taken, or details matching another employee.
@@ -140,6 +140,7 @@ BoBo's March list has four lines. For each, say whether you would flag it and wh
 4. 03/07 and 03/14, two vendors with different names and IDs but the same street address.
 
 > [!example]- Sample solution
+>
 > 1. Normal. A routine recurring charge; no flag.
 > 2. Flag. The same amount, vendor and date appear twice, which looks like a double claim or a sloppy reimbursement. Send it to the payables supervisor and do not contact the employee.
 > 3. Flag. It is a weekend payment to a new vendor with no approver on record. It may be a legitimate emergency, but the approval gap has to be closed. Send it to the controller (or one level higher if the controller approved it).

@@ -52,12 +52,12 @@ Each stored memory carries a type, so retrieval can filter at the source and exp
 
 **Worked example.** Sort these four items:
 
-| Item | Type |
-| --- | --- |
-| "On 2026-05-09 the user escalated ticket 4421 to legal." | episodic |
-| "Our refund window is 30 days." | semantic |
-| "When generating invoices, always include the ABN." | procedural |
-| "The user prefers answers under three sentences." | user-profile |
+| Item                                                     | Type         |
+| -------------------------------------------------------- | ------------ |
+| "On 2026-05-09 the user escalated ticket 4421 to legal." | episodic     |
+| "Our refund window is 30 days."                          | semantic     |
+| "When generating invoices, always include the ABN."      | procedural   |
+| "The user prefers answers under three sentences."        | user-profile |
 
 In the chapter's design the episodic entry expires after 14 days unless it is distilled, while the profile entry lasts and is flagged for periodic review.
 
@@ -197,6 +197,7 @@ Build a tiny typed memory with a write gate, no databases needed. In a Python fi
 5. Test it with these five inputs: a formatting preference (user-profile), an invoice rule (procedural), "user seems annoyed", "maybe the user is vegetarian", and a fake key.
 
 > [!example]- Sample solution
+>
 > ```python
 > import re, uuid, datetime
 >
@@ -231,6 +232,7 @@ Build a tiny typed memory with a write gate, no databases needed. In a Python fi
 >     store[:] = [m for m in store if m["id"] != memory_id]
 >     return len(store) < before
 > ```
+>
 > Expected: the first two are allowed; "user seems annoyed" is denied as a mood, "maybe the user is vegetarian" as an unverified assumption, and the fake key as a secret. Real systems need more patterns and per-user scoping; this is a teaching sketch.
 
 ## Key takeaways

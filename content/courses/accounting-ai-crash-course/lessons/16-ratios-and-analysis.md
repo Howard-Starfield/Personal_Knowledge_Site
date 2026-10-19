@@ -39,30 +39,30 @@ This chapter's worked examples use two statements. Keep them handy.
 
 **Income statement, month ended May 31, 2026**
 
-| Line | Amount |
-|---|---:|
-| Service revenue | $48,000 |
-| Cost of services | $16,800 |
-| Gross profit | $31,200 |
+| Line               |  Amount |
+| ------------------ | ------: |
+| Service revenue    | $48,000 |
+| Cost of services   | $16,800 |
+| Gross profit       | $31,200 |
 | Operating expenses | $22,400 |
-| Operating income | $8,800 |
-| Interest expense | $400 |
-| Net income | $8,400 |
+| Operating income   |  $8,800 |
+| Interest expense   |    $400 |
+| Net income         |  $8,400 |
 
 **Balance sheet**
 
-| Account | Apr 30 | May 31 |
-|---|---:|---:|
-| Cash | $18,500 | $22,000 |
-| Accounts receivable | $26,000 | $30,000 |
-| Prepaid software | $2,400 | $2,000 |
-| Total current assets | $46,900 | $54,000 |
-| Accounts payable | $9,800 | $11,000 |
-| Credit card payable | $3,200 | $3,500 |
-| Accrued wages | $2,500 | $2,800 |
+| Account                   |  Apr 30 |  May 31 |
+| ------------------------- | ------: | ------: |
+| Cash                      | $18,500 | $22,000 |
+| Accounts receivable       | $26,000 | $30,000 |
+| Prepaid software          |  $2,400 |  $2,000 |
+| Total current assets      | $46,900 | $54,000 |
+| Accounts payable          |  $9,800 | $11,000 |
+| Credit card payable       |  $3,200 |  $3,500 |
+| Accrued wages             |  $2,500 |  $2,800 |
 | Total current liabilities | $15,500 | $17,300 |
-| Total liabilities | $35,500 | $37,100 |
-| Owner's equity | $25,400 | $30,400 |
+| Total liabilities         | $35,500 | $37,100 |
+| Owner's equity            | $25,400 | $30,400 |
 
 ## Step 1 — Ratios are division with a story: profitability
 
@@ -70,12 +70,12 @@ A ratio is one number divided by another. The skill is knowing which two numbers
 
 Ratios fall into four families:
 
-| Family | Question it answers | Examples |
-|---|---|---|
+| Family        | Question it answers                      | Examples                                |
+| ------------- | ---------------------------------------- | --------------------------------------- |
 | Profitability | How well do we turn revenue into profit? | Gross margin, net margin, expense ratio |
-| Liquidity | Can we pay our bills soon? | Current ratio, quick ratio |
-| Leverage | How much do we rely on debt? | Debt-to-equity |
-| Efficiency | How fast do we collect and pay cash? | AR turnover, DSO, AP turnover, DPO |
+| Liquidity     | Can we pay our bills soon?               | Current ratio, quick ratio              |
+| Leverage      | How much do we rely on debt?             | Debt-to-equity                          |
+| Efficiency    | How fast do we collect and pay cash?     | AR turnover, DSO, AP turnover, DPO      |
 
 The three profitability ratios you need now:
 
@@ -176,14 +176,14 @@ One ratio alone is noise. A useful analysis pairs each ratio with three things: 
 
 Consider the made-up neighbor, Riverside Auto Detailing, over three months:
 
-| Ratio | March | April | May |
-|---|---:|---:|---:|
-| Gross margin | 42% | 40% | 36% |
-| Current ratio | 1.8 | 1.6 | 1.2 |
-| Quick ratio | 1.1 | 0.9 | 0.6 |
-| Debt-to-equity | 1.4 | 1.7 | 2.1 |
-| DSO (days) | 32 | 38 | 47 |
-| DPO (days) | 34 | 30 | 24 |
+| Ratio          | March | April | May |
+| -------------- | ----: | ----: | --: |
+| Gross margin   |   42% |   40% | 36% |
+| Current ratio  |   1.8 |   1.6 | 1.2 |
+| Quick ratio    |   1.1 |   0.9 | 0.6 |
+| Debt-to-equity |   1.4 |   1.7 | 2.1 |
+| DSO (days)     |    32 |    38 |  47 |
+| DPO (days)     |    34 |    30 |  24 |
 
 No single line explains the problem, but together they show a working-capital squeeze: margins are slipping, liquidity is falling, debt is rising to fill the gap, customers are paying later, and vendors are being paid sooner.
 
@@ -216,6 +216,7 @@ A made-up bakery shows these ratios: gross margin 28%, net margin 4%, current ra
 2. Write a short answer for the owner in plain English. Name which ratios are comfortable and which are a concern, and say what you would check next.
 
 > [!example]- Sample solution
+>
 > 1. Operating margin = $8,800 ÷ $48,000 = 0.1833, or about **18.3%**.
 > 2. Sample answer: "Profitability looks plausible for a small bakery, though I would check it against a bakery benchmark. Liquidity is the concern: a current ratio of 1.1 is thin, and a quick ratio of 0.4 means that without inventory you could cover only about 40% of short-term liabilities. Debt-to-equity of 2.5 is on the high side. The cash cycle is a bright spot, since customers pay in about 5 days and vendors are paid in about 28. Before advising anything, I would compare these numbers with prior months, see what is inside current liabilities, and look at whether any debt could be refinanced longer term."
 

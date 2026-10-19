@@ -45,11 +45,11 @@ If you want to revisit the close, see [[courses/accounting-ai-crash-course/lesso
 
 **Worked example.** BoBo Digital Services LLC (fictional sample data) had April gross revenue of $48,200 and refunds of $1,820.
 
-| Line | April 2026 |
-|---|---:|
-| Gross revenue | $48,200 |
-| Less: refunds and chargebacks | ($1,820) |
-| **Net revenue** | **$46,380** |
+| Line                          |  April 2026 |
+| ----------------------------- | ----------: |
+| Gross revenue                 |     $48,200 |
+| Less: refunds and chargebacks |    ($1,820) |
+| **Net revenue**               | **$46,380** |
 
 A refund entry looks like this: debit Refunds & Allowances $500, credit Cash – Stripe Available $500.
 
@@ -66,14 +66,14 @@ A refund entry looks like this: debit Refunds & Allowances $500, credit Cash –
 
 **Worked example.**
 
-| Cost of services | April 2026 |
-|---|---:|
-| Contractor Costs – Direct (5010) | $9,400 |
-| Stripe Processing Fees (5030) | $850 |
-| PayPal Processing Fees (5040) | $380 |
-| eBay Final Value Fees (5050) | $2,180 |
-| Stock Assets / Licensed Media (5020) | $190 |
-| **Total cost of services** | **$13,000** |
+| Cost of services                     |  April 2026 |
+| ------------------------------------ | ----------: |
+| Contractor Costs – Direct (5010)     |      $9,400 |
+| Stripe Processing Fees (5030)        |        $850 |
+| PayPal Processing Fees (5040)        |        $380 |
+| eBay Final Value Fees (5050)         |      $2,180 |
+| Stock Assets / Licensed Media (5020) |        $190 |
+| **Total cost of services**           | **$13,000** |
 
 Gross profit is $46,380 − $13,000 = $33,380. Gross margin is $33,380 ÷ $46,380 = 72.0%.
 
@@ -107,13 +107,13 @@ questionIds:
 
 **Worked example.** April operating expenses came to $10,750.
 
-| Operating expense group | April 2026 |
-|---|---:|
-| Software and subscriptions | $286 |
-| Marketing and advertising | $2,245 |
-| Professional services | $1,050 |
-| General and administrative | $588 |
-| Other operating costs | $6,581 |
+| Operating expense group      |  April 2026 |
+| ---------------------------- | ----------: |
+| Software and subscriptions   |        $286 |
+| Marketing and advertising    |      $2,245 |
+| Professional services        |      $1,050 |
+| General and administrative   |        $588 |
+| Other operating costs        |      $6,581 |
 | **Total operating expenses** | **$10,750** |
 
 Operating income is $33,380 − $10,750 = $22,630, an operating margin of 48.8%. Adding $35 of interest income gives net income of $22,665, a net margin of 48.9%. This model shows no income tax line because a single-member LLC's profit is taxed on the owner's own return.
@@ -131,14 +131,14 @@ Operating income is $33,380 − $10,750 = $22,630, an operating margin of 48.8%.
 
 **Worked example.** March against April through gross profit:
 
-| Line | March | April | $ change | % change |
-|---|---:|---:|---:|---:|
-| Gross revenue | $41,500 | $48,200 | +$6,700 | +16.1% |
-| Refunds | ($910) | ($1,820) | ($910) | doubled |
-| Net revenue | $40,590 | $46,380 | +$5,790 | +14.3% |
-| Contractor cost | $7,200 | $9,400 | +$2,200 | +30.6% |
-| Gross profit | $29,790 | $33,380 | +$3,590 | +12.1% |
-| Gross margin | 73.4% | 72.0% | −1.4 points | — |
+| Line            |   March |    April |    $ change | % change |
+| --------------- | ------: | -------: | ----------: | -------: |
+| Gross revenue   | $41,500 |  $48,200 |     +$6,700 |   +16.1% |
+| Refunds         |  ($910) | ($1,820) |      ($910) |  doubled |
+| Net revenue     | $40,590 |  $46,380 |     +$5,790 |   +14.3% |
+| Contractor cost |  $7,200 |   $9,400 |     +$2,200 |   +30.6% |
+| Gross profit    | $29,790 |  $33,380 |     +$3,590 |   +12.1% |
+| Gross margin    |   73.4% |    72.0% | −1.4 points |        — |
 
 A narrative a controller would accept: "Net revenue rose 14.3% but gross profit rose only 12.1%. Gross margin slipped from 73.4% to 72.0% because direct contractor cost grew 30.6% on two large subcontracted jobs."
 
@@ -165,15 +165,15 @@ questionIds:
 
 **Worked example.** BoBo's April closing, simplified to totals:
 
-| Entry | Debit | Credit |
-|---|---:|---:|
-| Revenue accounts (4010–4040) | $48,200 | |
-| Interest income | $35 | |
-| Income Summary | | $48,235 |
-| Income Summary | $25,570 | |
-| Refunds, cost of services, operating expenses | | $25,570 |
-| Income Summary | $22,665 | |
-| Retained Earnings (3090) | | $22,665 |
+| Entry                                         |   Debit |  Credit |
+| --------------------------------------------- | ------: | ------: |
+| Revenue accounts (4010–4040)                  | $48,200 |         |
+| Interest income                               |     $35 |         |
+| Income Summary                                |         | $48,235 |
+| Income Summary                                | $25,570 |         |
+| Refunds, cost of services, operating expenses |         | $25,570 |
+| Income Summary                                | $22,665 |         |
+| Retained Earnings (3090)                      |         | $22,665 |
 
 The expense total is $1,820 + $13,000 + $10,750 = $25,570, and $48,235 − $25,570 = $22,665.
 
@@ -195,6 +195,7 @@ questionIds:
 BoBo's May figures are: gross revenue $52,300, refunds $2,440, cost of services $14,970, operating expenses $10,250 and interest income $42. Build a short multi-step statement, compute the three margins, and write two variance sentences comparing May with April.
 
 > [!example]- Sample solution
+>
 > - Net revenue: $52,300 − $2,440 = $49,860
 > - Gross profit: $49,860 − $14,970 = $34,890; gross margin 34,890 ÷ 49,860 = 70.0%
 > - Operating income: $34,890 − $10,250 = $24,640; operating margin 49.4%

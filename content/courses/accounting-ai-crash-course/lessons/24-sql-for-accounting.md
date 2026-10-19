@@ -43,7 +43,7 @@ The examples use the fictional BoBo Digital Services LLC schema and PostgreSQL s
 
 **Analogy.** Think of a paper filing room. The customer folder has a unique folder number, and every invoice slip carries that number so you can find its folder.
 
-**The rule.** A *primary key* uniquely identifies each row in its own table. A *foreign key* is a column that holds another table's primary key. A *JOIN* combines two tables on that matching key.
+**The rule.** A _primary key_ uniquely identifies each row in its own table. A _foreign key_ is a column that holds another table's primary key. A _JOIN_ combines two tables on that matching key.
 
 **Worked example.** BoBo's schema has seven tables: customers, vendors, chart_of_accounts, transactions, invoices, bills and payments. Here is the link between invoices and customers:
 
@@ -236,6 +236,7 @@ questionIds:
 Marcus asks: "List each customer with open invoices more than 90 days past due, with the total they owe, biggest first." Write the query using the BoBo schema, then say what you would do before sending the result.
 
 > [!example]- Sample solution
+>
 > ```sql
 > SELECT cu.customer_name,
 >        SUM(i.total - i.amount_paid) AS open_balance
@@ -247,6 +248,7 @@ Marcus asks: "List each customer with open invoices more than 90 days past due, 
 > GROUP BY cu.customer_name
 > ORDER BY open_balance DESC;
 > ```
+>
 > The JOIN brings in names, WHERE keeps only open balances more than 90 days past due, GROUP BY and SUM total each customer, and ORDER BY puts the largest first. Before sending, dry-run with LIMIT, spot-check a few customers against their invoices, and note the schema version you used.
 
 ## Key takeaways

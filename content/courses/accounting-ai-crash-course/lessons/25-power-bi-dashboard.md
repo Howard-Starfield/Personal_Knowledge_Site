@@ -182,6 +182,7 @@ You are given a star schema with `Fact_Transactions` (Amount, AccountKey and oth
 3. Sketch the page: which visual shows the trend, and where does the 60% line go?
 
 > [!example]- Sample solution
+>
 > ```DAX
 > Total Revenue =
 > CALCULATE (

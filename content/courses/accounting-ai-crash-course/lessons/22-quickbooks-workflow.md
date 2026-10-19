@@ -186,6 +186,7 @@ Classify these three April feed lines for BoBo, giving the action (match, add, t
 3. `CHASE INK PMT -1,840.00`
 
 > [!example]- Sample solution
+>
 > 1. Add. a software expense account. It reduces profit, and a banking rule for Adobe is reasonable once it recurs.
 > 2. Transfer. Savings to Checking. Both are balance-sheet accounts, so there is no P&L effect and it is not income.
 > 3. Transfer through Pay Down Credit Card. It debits Credit Card Payable and credits Checking, so there is no P&L effect. It is not an expense.

@@ -67,14 +67,14 @@ Allowlist beats denylist because anything you forgot to forbid stays forbidden b
 
 The **tool catalog** is the agent's blast radius. If it is not a tool, the agent cannot do it. The v1 design has six tools:
 
-| Tool | What it does | Side effect |
-|---|---|---|
-| `read_invoice` | Extracts fields and confidence scores from a PDF | None |
-| `classify_transaction` | Maps a line to a chart of accounts code with confidence | None |
-| `check_duplicate` | Searches the last 90 days for the same vendor, amount and invoice number | None |
-| `draft_journal_entry` | Stages a draft in the approval queue | Writes to the queue table only |
-| `query_policy` | Looks up the chart of accounts or business rules | None |
-| `request_human_review` | Escalates an item with a reason | Writes to the review queue |
+| Tool                   | What it does                                                             | Side effect                    |
+| ---------------------- | ------------------------------------------------------------------------ | ------------------------------ |
+| `read_invoice`         | Extracts fields and confidence scores from a PDF                         | None                           |
+| `classify_transaction` | Maps a line to a chart of accounts code with confidence                  | None                           |
+| `check_duplicate`      | Searches the last 90 days for the same vendor, amount and invoice number | None                           |
+| `draft_journal_entry`  | Stages a draft in the approval queue                                     | Writes to the queue table only |
+| `query_policy`         | Looks up the chart of accounts or business rules                         | None                           |
+| `request_human_review` | Escalates an item with a reason                                          | Writes to the review queue     |
 
 **The precise rule: guardrails belong in the tool, not the prompt.** A prompt rule is a request that a model can be talked around. A rule in the tool's code simply fails the call. The `draft_journal_entry` tool, for example, enforces in code that debits equal credits to the cent, that every account code exists and is active, and that the cited source document is a real file.
 
@@ -115,11 +115,11 @@ Think of a restaurant: the waiter writes the order, the manager approves a large
 
 The model attaches a confidence score from 0.00 to 1.00 to every extraction and classification. A **confidence threshold** is a cutoff below which the agent must escalate to a human rather than act. The design uses three buckets:
 
-| Confidence | Routing |
-|---|---|
+| Confidence     | Routing                                                    |
+| -------------- | ---------------------------------------------------------- |
 | 0.95 or higher | Draft to the queue, fast lane, a single approver is enough |
-| 0.85 to 0.94 | Draft to the queue, reviewer comment required |
-| Below 0.85 | Forced escalation with a reason, no draft created |
+| 0.85 to 0.94   | Draft to the queue, reviewer comment required              |
+| Below 0.85     | Forced escalation with a reason, no draft created          |
 
 These numbers are a starting point, not a law. After the first 30 days you compare scores with outcomes. Scores should be **calibrated**: of the items scored 0.90, about 90% should be correct on review. If they are not, adjust the prompt or the cutoff, and sign off on changes with the senior accountant.
 

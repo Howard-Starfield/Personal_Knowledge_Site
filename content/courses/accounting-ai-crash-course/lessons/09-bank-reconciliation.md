@@ -96,15 +96,15 @@ questionIds:
 
 **Worked example.** BoBo's April 30 workpaper:
 
-| Bank side | Amount | Book side | Amount |
-|---|---:|---|---:|
-| Balance per bank | $46,820 | Balance per books | $48,500 |
-| Add deposit in transit | 2,400 | Less bank service fee | (30) |
-| Less check #1042 | (800) | Less Stripe fees | (450) |
-| Less check #1045 | (400) | Less NSF return | (100) |
-| Less check #1046 | (300) | Less wire fee | (100) |
-| | | Less check #1039 error | (100) |
-| **Adjusted bank** | **$47,720** | **Adjusted book** | **$47,720** |
+| Bank side              |      Amount | Book side              |      Amount |
+| ---------------------- | ----------: | ---------------------- | ----------: |
+| Balance per bank       |     $46,820 | Balance per books      |     $48,500 |
+| Add deposit in transit |       2,400 | Less bank service fee  |        (30) |
+| Less check #1042       |       (800) | Less Stripe fees       |       (450) |
+| Less check #1045       |       (400) | Less NSF return        |       (100) |
+| Less check #1046       |       (300) | Less wire fee          |       (100) |
+|                        |             | Less check #1039 error |       (100) |
+| **Adjusted bank**      | **$47,720** | **Adjusted book**      | **$47,720** |
 
 Bank: 46,820 + 2,400 - 800 - 400 - 300 = 47,720. Books: 48,500 - 30 - 450 - 100 - 100 - 100 = 47,720. The gap is $0, so the rec ties, and $47,720 is April's cash.
 

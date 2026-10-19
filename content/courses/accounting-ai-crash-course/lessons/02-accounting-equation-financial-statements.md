@@ -55,13 +55,13 @@ Assets are resources the business owns or controls that are expected to provide 
 
 **In plain language.** Every item a business tracks falls into one of five elements. Three live on the Balance Sheet and two on the Income Statement, with Revenue and Expenses ultimately feeding equity.
 
-| Element | What it is | BoBo example | Statement |
-|---|---|---|---|
-| Asset | Owned resource | PayPal balance, MacBook, unpaid customer invoices (accounts receivable) | Balance Sheet |
-| Liability | Amount owed | Balance owed to Adobe | Balance Sheet |
-| Equity | Owner's residual share | Owner's capital, retained earnings | Balance Sheet |
-| Revenue | Income earned from the business's main activity | Digital service sales | Income Statement |
-| Expense | Cost of operating during the period | Marketing, contractor pay | Income Statement |
+| Element   | What it is                                      | BoBo example                                                            | Statement        |
+| --------- | ----------------------------------------------- | ----------------------------------------------------------------------- | ---------------- |
+| Asset     | Owned resource                                  | PayPal balance, MacBook, unpaid customer invoices (accounts receivable) | Balance Sheet    |
+| Liability | Amount owed                                     | Balance owed to Adobe                                                   | Balance Sheet    |
+| Equity    | Owner's residual share                          | Owner's capital, retained earnings                                      | Balance Sheet    |
+| Revenue   | Income earned from the business's main activity | Digital service sales                                                   | Income Statement |
+| Expense   | Cost of operating during the period             | Marketing, contractor pay                                               | Income Statement |
 
 **The rule.** Revenue is recognized when it is earned, not when cash arrives. A customer refund reduces revenue, so it is recorded in a contra-revenue account such as Sales Refunds. A customer prepayment for work not yet delivered is a liability (unearned revenue) until the work is done.
 
@@ -93,19 +93,19 @@ questionIds:
 
 **Worked example.** BoBo's May figures:
 
-| Line | Amount |
-|---|---|
-| Service revenue | $14,500 |
-| Less: refunds | ($450) |
-| Net revenue | $14,050 |
-| Processing fees | ($1,200) |
-| Marketing | ($850) |
-| Contractor pay | ($3,000) |
-| Software subscriptions | ($400) |
-| Platform fees | ($500) |
-| Miscellaneous | ($1,000) |
-| Total expenses | ($6,950) |
-| **Net income** | **$7,100** |
+| Line                   | Amount     |
+| ---------------------- | ---------- |
+| Service revenue        | $14,500    |
+| Less: refunds          | ($450)     |
+| Net revenue            | $14,050    |
+| Processing fees        | ($1,200)   |
+| Marketing              | ($850)     |
+| Contractor pay         | ($3,000)   |
+| Software subscriptions | ($400)     |
+| Platform fees          | ($500)     |
+| Miscellaneous          | ($1,000)   |
+| Total expenses         | ($6,950)   |
+| **Net income**         | **$7,100** |
 
 Check the arithmetic: $1,200 + $850 + $3,000 + $400 + $500 + $1,000 = $6,950, and $14,050 − $6,950 = $7,100.
 
@@ -124,12 +124,12 @@ Check the arithmetic: $1,200 + $850 + $3,000 + $400 + $500 + $1,000 = $6,950, an
 
 **Worked example.** BoBo's May 31 balance sheet:
 
-| Assets | Amount | Liabilities and equity | Amount |
-|---|---|---|---|
-| Checking, PayPal and Stripe cash | $15,400 | Accounts payable | $5,950 |
-| Accounts receivable | $3,200 | Equity (required) | $14,450 |
-| Laptop | $1,800 | | |
-| **Total assets** | **$20,400** | **Total** | **$20,400** |
+| Assets                           | Amount      | Liabilities and equity | Amount      |
+| -------------------------------- | ----------- | ---------------------- | ----------- |
+| Checking, PayPal and Stripe cash | $15,400     | Accounts payable       | $5,950      |
+| Accounts receivable              | $3,200      | Equity (required)      | $14,450     |
+| Laptop                           | $1,800      |                        |             |
+| **Total assets**                 | **$20,400** | **Total**              | **$20,400** |
 
 Cash is $4,800 + $7,200 + $3,400 = $15,400. If the owner's file lists capital of $5,000, prior retained earnings of $8,300 and May net income of $7,100, those equity pieces add to $20,400, not $14,450. That is a $5,950 discrepancy to flag and trace, not to force away.
 
@@ -158,6 +158,7 @@ Greenleaf Goods LLC, a fictional online retailer, gives you its April figures:
 Calculate net income, ending retained earnings, total equity and total assets and liabilities. Does the balance sheet balance? If not, name one thing you would check.
 
 > [!example]- Sample solution
+>
 > - Net income = $12,800 − $6,400 = $6,400.
 > - Ending retained earnings = $3,800 + $6,400 = $10,200.
 > - Total equity = $4,000 + $10,200 = $14,200.

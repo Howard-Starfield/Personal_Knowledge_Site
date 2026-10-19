@@ -53,11 +53,11 @@ Every cleanup script follows the same recipe: read the raw file, standardize col
 
 **Worked example.** BoBo has three March exports:
 
-| Source | Date column | Date style | Amount column |
-|---|---|---|---|
-| Stripe | `created_at` | `2026-03-15 14:22:08 UTC` | `net` |
-| PayPal | `Date` | `03/15/2026` | `Net` |
-| Bank debit | `Posting Date` | `15-Mar-26` | `Amount` |
+| Source     | Date column    | Date style                | Amount column |
+| ---------- | -------------- | ------------------------- | ------------- |
+| Stripe     | `created_at`   | `2026-03-15 14:22:08 UTC` | `net`         |
+| PayPal     | `Date`         | `03/15/2026`              | `Net`         |
+| Bank debit | `Posting Date` | `15-Mar-26`               | `Amount`      |
 
 The goal is one table with the columns `date`, `vendor`, `amount` and `source`.
 

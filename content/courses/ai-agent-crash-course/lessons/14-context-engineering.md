@@ -160,13 +160,13 @@ questionIds:
 
 Do this on paper. The budget is 6,000 tokens with a 5% reserve for the compaction note. The caller's scope is `user:U1`.
 
-| Item | Kind | Score | Tokens | Permission |
-|---|---|---|---|---|
-| A refund policy | doc | 0.91 | 2,000 | public |
-| B user preference note | memory | 0.84 | 1,500 | user:U1 |
-| C vendor guide | doc | 0.66 | 1,800 | public |
-| D shipping policy | doc | 0.60 | 1,200 | public |
-| E another tenant's order data | tool | 0.88 | 900 | tenant:T9 |
+| Item                          | Kind   | Score | Tokens | Permission |
+| ----------------------------- | ------ | ----- | ------ | ---------- |
+| A refund policy               | doc    | 0.91  | 2,000  | public     |
+| B user preference note        | memory | 0.84  | 1,500  | user:U1    |
+| C vendor guide                | doc    | 0.66  | 1,800  | public     |
+| D shipping policy             | doc    | 0.60  | 1,200  | public     |
+| E another tenant's order data | tool   | 0.88  | 900    | tenant:T9  |
 
 1. Apply the gate, then compute the cap.
 2. Pack greedily and list what is kept and what is left over.
@@ -174,6 +174,7 @@ Do this on paper. The budget is 6,000 tokens with a 5% reserve for the compactio
 4. Write the compaction note in one sentence.
 
 > [!example]- Sample solution
+>
 > 1. Item E is denied by the permission gate (tenant:T9 does not match user:U1), so it never reaches the packer even though its score is high. The reserve is 5% of 6,000 = 300, so the cap is 5,700.
 > 2. Ranked: A (2,000), B (1,500), C (1,800), D (1,200). Running totals: 2,000, 3,500, 5,300; adding D would reach 6,500, which exceeds 5,700. Kept: A, B, C. Left over: D.
 > 3. E: reason "permission denied". D: reason "compacted into note". Log id, source, reason, tokens and score, not the text.
