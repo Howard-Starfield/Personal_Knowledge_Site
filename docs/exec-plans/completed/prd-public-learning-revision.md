@@ -1,17 +1,17 @@
 # Execution Plan: PRD Public Learning Revision
 
-| Field | Value |
-|---|---|
-| Status | Complete |
-| Owner | Product owner with Codex documentation support |
-| Created | 2026-08-22 |
-| Updated | 2026-08-22 |
-| Completed | 2026-08-22 |
-| Baseline commit | `c01f387` |
-| Target branch | `v5` |
-| PR | Not created |
-| PRD phase | Pre-implementation product-contract correction |
-| Related ADRs | None approved; this revision precedes implementation |
+| Field           | Value                                                |
+| --------------- | ---------------------------------------------------- |
+| Status          | Complete                                             |
+| Owner           | Product owner with Codex documentation support       |
+| Created         | 2026-08-22                                           |
+| Updated         | 2026-08-22                                           |
+| Completed       | 2026-08-22                                           |
+| Baseline commit | `c01f387`                                            |
+| Target branch   | `v5`                                                 |
+| PR              | Not created                                          |
+| PRD phase       | Pre-implementation product-contract correction       |
+| Related ADRs    | None approved; this revision precedes implementation |
 
 ## 1. Objective
 
@@ -40,31 +40,31 @@ Correct the product contract so it describes a public knowledge and course site 
 
 ## 4. Instruction sources
 
-| Scope/path | Instruction file | Relevant rules |
-|---|---|---|
-| Repository | `AGENTS.md` | PRD authority, plan before change, source verification, no invented Quartz APIs, preserve dirty work |
-| `docs/` | No nested `AGENTS.md` present | Root instructions apply |
+| Scope/path | Instruction file              | Relevant rules                                                                                       |
+| ---------- | ----------------------------- | ---------------------------------------------------------------------------------------------------- |
+| Repository | `AGENTS.md`                   | PRD authority, plan before change, source verification, no invented Quartz APIs, preserve dirty work |
+| `docs/`    | No nested `AGENTS.md` present | Root instructions apply                                                                              |
 
 Verification: `rg --files -g "AGENTS.md"` returned only the repository-root file.
 
 ## 5. Version and environment matrix
 
-| Component | Exact version/commit | Source of truth | Notes |
-|---|---|---|---|
-| Repository baseline | `c01f387` | `git log` | Initial Quartz 5 commit on `v5` |
-| Quartz | `5.0.0` at baseline | `git show HEAD:package.json` | Current working-tree `package.json` is deleted |
-| Node | `v22.16.0` at baseline | `git show HEAD:.node-version` | Current working-tree file is deleted |
-| Comments plugin | `@quartz-community/comments` `0.1.0` | installed `package.json` | Supports Giscus only |
-| Cloudflare runtime | Unpinned | Current repository | Not selected by this documentation revision |
+| Component           | Exact version/commit                 | Source of truth               | Notes                                          |
+| ------------------- | ------------------------------------ | ----------------------------- | ---------------------------------------------- |
+| Repository baseline | `c01f387`                            | `git log`                     | Initial Quartz 5 commit on `v5`                |
+| Quartz              | `5.0.0` at baseline                  | `git show HEAD:package.json`  | Current working-tree `package.json` is deleted |
+| Node                | `v22.16.0` at baseline               | `git show HEAD:.node-version` | Current working-tree file is deleted           |
+| Comments plugin     | `@quartz-community/comments` `0.1.0` | installed `package.json`      | Supports Giscus only                           |
+| Cloudflare runtime  | Unpinned                             | Current repository            | Not selected by this documentation revision    |
 
 ## 6. Official source verification
 
-| Claim/assumption | Official URL | Verified date | Installed source file/symbol | Finding |
-|---|---|---|---|---|
-| Quartz comments provider | `https://quartz.jzhao.xyz/plugins/comments` | 2026-08-22 | `node_modules/@quartz-community/comments/dist/index.d.ts` | Current plugin supports Giscus and GitHub repository/discussion configuration |
-| Comments runtime behavior | `https://quartz.jzhao.xyz/plugins/comments` | 2026-08-22 | `node_modules/@quartz-community/comments/dist/index.js` | Loads `https://giscus.app/client.js`; it is an external runtime dependency |
-| Custom plugin surface | `https://quartz.jzhao.xyz/advanced/making-plugins` | 2026-08-22 | `node_modules/@quartz-community/types/dist/index.d.ts` | Quartz exposes transformer, filter, emitter, and page-type/component extension surfaces |
-| Quiz availability | Quartz docs and installed plugin search | 2026-08-22 | `docs/`, `node_modules/@quartz-community/` | No installed or documented first-party/community quiz plugin was located; implementation must be a verified local extension or separately reviewed plugin |
+| Claim/assumption          | Official URL                                       | Verified date | Installed source file/symbol                              | Finding                                                                                                                                                   |
+| ------------------------- | -------------------------------------------------- | ------------- | --------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Quartz comments provider  | `https://quartz.jzhao.xyz/plugins/comments`        | 2026-08-22    | `node_modules/@quartz-community/comments/dist/index.d.ts` | Current plugin supports Giscus and GitHub repository/discussion configuration                                                                             |
+| Comments runtime behavior | `https://quartz.jzhao.xyz/plugins/comments`        | 2026-08-22    | `node_modules/@quartz-community/comments/dist/index.js`   | Loads `https://giscus.app/client.js`; it is an external runtime dependency                                                                                |
+| Custom plugin surface     | `https://quartz.jzhao.xyz/advanced/making-plugins` | 2026-08-22    | `node_modules/@quartz-community/types/dist/index.d.ts`    | Quartz exposes transformer, filter, emitter, and page-type/component extension surfaces                                                                   |
+| Quiz availability         | Quartz docs and installed plugin search            | 2026-08-22    | `docs/`, `node_modules/@quartz-community/`                | No installed or documented first-party/community quiz plugin was located; implementation must be a verified local extension or separately reviewed plugin |
 
 ## 7. Repository reconnaissance
 
@@ -78,11 +78,11 @@ Verification: `rg --files -g "AGENTS.md"` returned only the repository-root file
 
 ### Relevant code map
 
-| Area | File/symbol | Current responsibility | Expected change |
-|---|---|---|---|
-| Product contract | `docs/product/prd.md` | Private-note-heavy platform contract | Revise to public learning/course contract and correct phase sequence |
-| Content contract | `docs/contracts/FRONTMATTER_EXAMPLES.md` | Frontmatter examples | Move/expand as `CONTENT_MODEL.md`, including course, lesson, and quiz authoring contracts |
-| Repository instructions | `AGENTS.md` | Enforces obsolete private-data baseline | Align terminology and product invariants with revised PRD |
+| Area                    | File/symbol                              | Current responsibility                  | Expected change                                                                           |
+| ----------------------- | ---------------------------------------- | --------------------------------------- | ----------------------------------------------------------------------------------------- |
+| Product contract        | `docs/product/prd.md`                    | Private-note-heavy platform contract    | Revise to public learning/course contract and correct phase sequence                      |
+| Content contract        | `docs/contracts/FRONTMATTER_EXAMPLES.md` | Frontmatter examples                    | Move/expand as `CONTENT_MODEL.md`, including course, lesson, and quiz authoring contracts |
+| Repository instructions | `AGENTS.md`                              | Enforces obsolete private-data baseline | Align terminology and product invariants with revised PRD                                 |
 
 ## 8. Contracts and invariants
 
@@ -106,12 +106,12 @@ Owner-authored durable reminders and follow-up questions should default to Git-a
 
 ### Alternatives considered
 
-| Alternative | Benefit | Problem | Decision |
-|---|---|---|---|
-| Put all annotations in public D1 | Immediate browser writes | Adds API/auth/moderation/backup complexity and duplicates Git-authored learning content | Not baseline |
-| Treat Giscus comments as canonical notes | Existing UI and GitHub moderation | External runtime, GitHub dependency, mutable mapping risk, weak structured quiz/reminder contract | Optional discussion only |
-| Put large quiz arrays in frontmatter | One schema location | Makes metadata unwieldy and poor to author/read | Use validated fenced blocks in the Markdown body |
-| Git-authored quiz blocks with client enhancement | Durable, reviewable, static, portable | Answers are visible in source/static output | Baseline; not exam-secure by design |
+| Alternative                                      | Benefit                               | Problem                                                                                           | Decision                                         |
+| ------------------------------------------------ | ------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
+| Put all annotations in public D1                 | Immediate browser writes              | Adds API/auth/moderation/backup complexity and duplicates Git-authored learning content           | Not baseline                                     |
+| Treat Giscus comments as canonical notes         | Existing UI and GitHub moderation     | External runtime, GitHub dependency, mutable mapping risk, weak structured quiz/reminder contract | Optional discussion only                         |
+| Put large quiz arrays in frontmatter             | One schema location                   | Makes metadata unwieldy and poor to author/read                                                   | Use validated fenced blocks in the Markdown body |
+| Git-authored quiz blocks with client enhancement | Durable, reviewable, static, portable | Answers are visible in source/static output                                                       | Baseline; not exam-secure by design              |
 
 No ADR is required for a pre-implementation correction to the unimplemented baseline. Implementation of a new public mutation store or custom comment identity mapping will require its own decision record if it adds a production service/dependency.
 
@@ -128,13 +128,13 @@ D1 migrations, APIs, and media changes are not applicable to this documentation-
 
 ## 11. File touch plan
 
-| Order | File/path | Change | Reason | Risk |
-|---:|---|---|---|---|
-| 1 | `docs/product/prd.md` -> `docs/product/PRD.md` | Correct case and revise product contract | Match root authority and clarified product | High: broad contract change |
-| 2 | `docs/contracts/FRONTMATTER_EXAMPLES.md` -> `docs/contracts/CONTENT_MODEL.md` | Establish canonical content contract and examples | Match intended repository structure | Medium |
-| 3 | `AGENTS.md` | Align enforced invariants with revised product | Prevent agents implementing obsolete private architecture | Medium |
-| 4 | `content/AGENTS.md` | Add the required nested content-authoring rules | Remove the existing governance bootstrap blocker | Low |
-| 5 | This plan | Record evidence and completion | Required governance | Low |
+| Order | File/path                                                                     | Change                                            | Reason                                                    | Risk                        |
+| ----: | ----------------------------------------------------------------------------- | ------------------------------------------------- | --------------------------------------------------------- | --------------------------- |
+|     1 | `docs/product/prd.md` -> `docs/product/PRD.md`                                | Correct case and revise product contract          | Match root authority and clarified product                | High: broad contract change |
+|     2 | `docs/contracts/FRONTMATTER_EXAMPLES.md` -> `docs/contracts/CONTENT_MODEL.md` | Establish canonical content contract and examples | Match intended repository structure                       | Medium                      |
+|     3 | `AGENTS.md`                                                                   | Align enforced invariants with revised product    | Prevent agents implementing obsolete private architecture | Medium                      |
+|     4 | `content/AGENTS.md`                                                           | Add the required nested content-authoring rules   | Remove the existing governance bootstrap blocker          | Low                         |
+|     5 | This plan                                                                     | Record evidence and completion                    | Required governance                                       | Low                         |
 
 ## 12. Incremental implementation steps
 
@@ -167,13 +167,13 @@ This documentation revision can be reverted as a file-level change. No database,
 
 ## 17. Risks, unknowns, and stop conditions
 
-| Risk/unknown | Impact | Resolution | Stop condition? |
-|---|---|---|---|
-| Who may post public comments | Moderation and identity requirements | Ask owner after consolidation | Blocks comment implementation, not PRD revision |
-| Whether quiz progress persists | Could add browser storage or D1/auth | Ask owner after consolidation | Blocks progress implementation |
-| Stable Giscus mapping by content ID | Moves can detach discussions | Spike local override/provider behavior | Blocks relying on comments as durable records |
-| Course sequencing model | Affects navigation and prerequisites | Use ordered lessons as provisional contract; confirm with owner | Blocks implementation if rejected |
-| Existing dirty checkout | Build remains unavailable | Preserve and resolve separately | Blocks implementation, not documentation revision |
+| Risk/unknown                        | Impact                               | Resolution                                                      | Stop condition?                                   |
+| ----------------------------------- | ------------------------------------ | --------------------------------------------------------------- | ------------------------------------------------- |
+| Who may post public comments        | Moderation and identity requirements | Ask owner after consolidation                                   | Blocks comment implementation, not PRD revision   |
+| Whether quiz progress persists      | Could add browser storage or D1/auth | Ask owner after consolidation                                   | Blocks progress implementation                    |
+| Stable Giscus mapping by content ID | Moves can detach discussions         | Spike local override/provider behavior                          | Blocks relying on comments as durable records     |
+| Course sequencing model             | Affects navigation and prerequisites | Use ordered lessons as provisional contract; confirm with owner | Blocks implementation if rejected                 |
+| Existing dirty checkout             | Build remains unavailable            | Preserve and resolve separately                                 | Blocks implementation, not documentation revision |
 
 ## 18. Adversarial review
 
@@ -213,6 +213,6 @@ This documentation revision can be reverted as a file-level change. No database,
 
 ## 21. Completion log
 
-| Date | Commit | Work completed | Evidence | Remaining |
-|---|---|---|---|---|
+| Date       | Commit        | Work completed                                                                   | Evidence                                                  | Remaining                                                          |
+| ---------- | ------------- | -------------------------------------------------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------ |
 | 2026-08-22 | Not committed | Revised and adversarially reviewed the product, content, and authoring contracts | Static source/path/requirement/fence scans recorded above | Product-owner answers to PRD open questions before affected phases |
