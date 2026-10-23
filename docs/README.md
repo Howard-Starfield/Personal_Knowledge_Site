@@ -15,6 +15,7 @@ Do not treat every Markdown file under `docs/` as equal authority. Root
 | --------------------------------- | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
 | `product/PRD.md`                  | Product outcomes, requirements, phases, open decisions                                              | Planning or changing product behavior                                   |
 | `architecture/ARCHITECTURE.md`    | System boundaries and data flow                                                                     | Changing components, storage, hosting, or integration boundaries        |
+| `architecture/HOSTING_TARGETS.md` | The deployment targets, what they share, and what `baseUrl` makes impossible to share               | Choosing, adding, or changing where the site is hosted                  |
 | `architecture/VERSION_MATRIX.md`  | Exact versions and current runtime evidence                                                         | Dependency, build, hosting, or reproducibility work                     |
 | `contracts/CONTENT_MODEL.md`      | Frontmatter, content, course, quiz, and capture contracts                                           | Authoring or validating public content                                  |
 | `TESTING_STRATEGY.md`             | Project-wide proof philosophy and test layers                                                       | Planning or reviewing any implementation                                |
