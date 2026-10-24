@@ -1,16 +1,16 @@
 # Execution Plan: Phase X — A Practice tab for the assessment material
 
-| Field           | Value                                                                 |
-| --------------- | --------------------------------------------------------------------- |
-| Status          | Complete                                                              |
-| Owner           | Site maintainer (agent)                                               |
-| Created         | 2026-10-24                                                            |
-| Updated         | 2026-10-24                                                            |
-| Baseline commit | `9a9ebbb139f70f5fcab7065eb27e2b305f8dd019`                            |
-| Target branch   | `fix/practice-tab`                                                    |
-| PR              | _filled after the pull request is opened_                             |
-| PRD phase       | Public-learning baseline; discoverability of published study material |
-| Related ADRs    | None required (see §9)                                                |
+| Field           | Value                                                                                            |
+| --------------- | ------------------------------------------------------------------------------------------------ |
+| Status          | Complete                                                                                         |
+| Owner           | Site maintainer (agent)                                                                          |
+| Created         | 2026-10-24                                                                                       |
+| Updated         | 2026-10-24                                                                                       |
+| Baseline commit | `9a9ebbb139f70f5fcab7065eb27e2b305f8dd019`                                                       |
+| Target branch   | `fix/practice-tab`                                                                               |
+| PR              | [#26](https://github.com/Howard-Starfield/Personal_Knowledge_Site/pull/26) (merged as `7b3868c`) |
+| PRD phase       | Public-learning baseline; discoverability of published study material                            |
+| Related ADRs    | None required (see §9)                                                                           |
 
 ## 1. Objective
 
@@ -279,8 +279,17 @@ Revert the merge commit; Vercel rebuilds. No user data is involved.
 ### 19.1 Commands and results
 
 ```text
-<pending>
+npx prettier --check <the touched files>   All matched files use Prettier code style!
+npx tsc --noEmit                            clean
+npm test                                    tests 242 | pass 242 | fail 0
+npm run validate:content                    358 entities, 358 unique IDs
+npm run validate:graph                      358 pages, 394 tags, 1898 relationships
+npx quartz build --concurrency=1            exit 0, no "✗" plugin-load lines
+npx wrangler deploy --dry-run               exit 0
 ```
+
+Link resolution was checked against `git ls-files`, not against the local
+tree, after the first CI run exposed the difference (§19.4).
 
 ### 19.2 Generated artifacts inspected
 
@@ -291,7 +300,23 @@ Revert the merge commit; Vercel rebuilds. No user data is involved.
 
 ### 19.3 UI evidence
 
-<pending>
+Against the deployed site, `https://blog.howardlab.dev`:
+
+```text
+desktop menu: [{'text': 'Courses', 'tag': 'div', 'href': None},
+               {'text': 'Learning Log', 'tag': 'div', 'href': None},
+               {'text': 'Practice', 'tag': 'a', 'href': '/practice'}]
+  tapped Practice -> https://blog.howardlab.dev/practice
+  heading: Practice
+
+phone menu:   the same three entries
+  tapped Practice -> https://blog.howardlab.dev/practice
+  heading: Practice
+```
+
+Screenshots: `scratch/cc-scope/live-menu-practice.png` (the live phone drawer
+with the new tab) and `scratch/cc-scope/live-phone-practice.png` (the live
+Practice page on a phone).
 
 ### 19.4 Deviations from plan
 
@@ -323,6 +348,6 @@ Revert the merge commit; Vercel rebuilds. No user data is involved.
 
 ## 21. Completion log
 
-| Date | Commit | Work completed | Evidence | Remaining |
-| ---- | ------ | -------------- | -------- | --------- |
-|      |        |                |          |           |
+| Date       | Commit                                   | Work completed                                                           | Evidence                                                                                   | Remaining                                                                                            |
+| ---------- | ---------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- |
+| 2026-10-24 | `e6e1350` → merged as `7b3868c` (PR #26) | A Practice tab, a featured-course row, and 52 lessons linking their bank | §19 (live menu on desktop and phone, 358 entities, 1898 relationships, 242/242 unit tests) | The Learning Log is still unreachable from the menu; `folderClickBehavior: link` is the owner's call |
