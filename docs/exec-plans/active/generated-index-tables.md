@@ -1,16 +1,16 @@
 # Execution Plan: Phase X — Generated index tables (every course, and every course with practice)
 
-| Field           | Value                                                            |
-| --------------- | ---------------------------------------------------------------- |
-| Status          | In progress                                                      |
-| Owner           | Site maintainer (agent)                                          |
-| Created         | 2026-10-25                                                       |
-| Updated         | 2026-10-25                                                       |
-| Baseline commit | `f6bf758` (merge of PR #36)                                      |
-| Target branch   | `feat/generated-index-tables`                                    |
-| PR              | _filled after the pull request is opened_                        |
-| PRD phase       | Public-learning baseline; navigation of published study material |
-| Related ADRs    | None required (see §9)                                           |
+| Field           | Value                                                                      |
+| --------------- | -------------------------------------------------------------------------- |
+| Status          | In progress                                                                |
+| Owner           | Site maintainer (agent)                                                    |
+| Created         | 2026-10-25                                                                 |
+| Updated         | 2026-10-25                                                                 |
+| Baseline commit | `f6bf758` (merge of PR #36)                                                |
+| Target branch   | `feat/generated-index-tables`                                              |
+| PR              | [#37](https://github.com/Howard-Starfield/Personal_Knowledge_Site/pull/37) |
+| PRD phase       | Public-learning baseline; navigation of published study material           |
+| Related ADRs    | None required (see §9)                                                     |
 
 ## 1. Objective
 
@@ -451,6 +451,17 @@ Screenshots: `scratch/cc-scope/index-home-table.png`,
 
 ## 21. Completion log
 
-| Date | Commit | Work completed | Evidence | Remaining |
-| ---- | ------ | -------------- | -------- | --------- |
-|      |        |                |          |           |
+| Date       | Commit    | Work completed                                                                                              | Evidence                                                                           | Remaining                                       |
+| ---------- | --------- | ----------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ----------------------------------------------- |
+| 2026-10-25 | `48ceb28` | The plugin `plugins/generated-index`, the two markers, the config line, the unit tests, and this plan       | §19                                                                                | —                                               |
+| 2026-10-25 | `d146889` | The curated paragraph on the Practice page restored, so no authored link is lost                            | The graph is 1897 relationships before and after, with none added and none removed | —                                               |
+| 2026-10-25 | `1928bb5` | The evidence recorded in §19                                                                                | §19                                                                                | —                                               |
+| 2026-10-25 | —         | Pull request [#37](https://github.com/Howard-Starfield/Personal_Knowledge_Site/pull/37) opened against `v5` | The pull request body carries the same evidence                                    | The CI run, then the merge, then the live check |
+
+### Known follow-ups (not part of this change)
+
+- The owner's open items are unchanged: delete the leftover Vercel preview of the
+  `backup/wip-2026-10-19` branch, and decide whether Mermaid's two remaining cdnjs
+  imports are vendored or replaced.
+- The thirteen courses that publish no question banks have no row in the practice
+  index. Whether they should get practice material is the owner's call.
