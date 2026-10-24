@@ -29,22 +29,31 @@ the output as both the canonical URL and the social metadata.
 1. **One canonical URL.** The site is published at a single canonical
    hostname. Every build uses that hostname as `baseUrl`, so the canonical
    links, the social metadata and the sitemap all agree.
-2. **GitHub Pages is a supported alternative target**, not a co-hosted
-   mirror. Switching to it means changing `baseUrl`, adding the Pages
-   workflow, and enabling Pages on the repository. It does not require a
-   content, plugin or schema change.
-3. **Cloudflare Workers Static Assets remains a supported target.** The two
-   are independent, so a failure of one does not take the other down, and a
-   copy may be served on a second hostname as a noindex mirror — never as a
-   second canonical URL.
-4. **The Pages workflow's default trigger is `workflow_dispatch`.** A
+2. **Vercel is the deployment target.** The owner chose Vercel on 2026-10-23.
+   It needs `vercel.json` at the root - `cleanUrls`, `trailingSlash`,
+   `buildCommand` and `outputDirectory` - and a `baseUrl` set to the Vercel
+   hostname or the custom domain. Vercel serves at the apex, so there is no
+   path prefix, and its caching is automatic, so hashed assets need no
+   configuration.
+3. **Cloudflare Workers Static Assets and GitHub Pages remain supported
+   alternatives.** The target is a deploy step, not a property of the
+   content, so switching means changing `baseUrl` and the deploy step. It
+   does not require a content, plugin or schema change. The targets are
+   independent, so a failure of one does not take the other down, and a copy
+   may be served on a second hostname as a noindex mirror - never as a second
+   canonical URL.
+4. **The GitHub Pages workflow's default trigger is `workflow_dispatch`.** A
    push-triggered Pages workflow fails on every run while the repository
    reports `has_pages: false`, which would turn the pull-request gate red for
    unrelated work. The push trigger is added when Pages is enabled and the
    canonical hostname is confirmed.
-5. **`baseUrl` must be set before any target goes live.** The 397 built files
+5. **`baseUrl` must be set before any target goes live.** The 770 built files
    that carry `https://undefined/` are a content defect, not a hosting one,
    and they are fixed by setting `baseUrl`.
+6. **The remote-runtime decision is unchanged by the choice of host.** Every
+   built page loads KaTeX from `cdn.jsdelivr.net` and carries a `cdnjs`
+   preconnect. Vendoring KaTeX means editing Quartz core, which needs its own
+   ADR. Choosing a host does not settle it; it only makes it live.
 
 ## Consequences
 

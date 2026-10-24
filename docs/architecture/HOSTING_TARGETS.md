@@ -148,7 +148,64 @@ site is a GitHub _project_ site, so `baseUrl` needs the path prefix:
 `howard-starfield.github.io/Personal_Knowledge_Site`. With a custom domain
 attached, `baseUrl` is the bare hostname.
 
-## 5. What choosing Pages would mean
+## 5. Vercel — the target the owner chose
+
+Vercel is the chosen deployment target. The owner decided this on 2026-10-23.
+
+**What it needs in the repository.** `vercel.json` at the root, which is now
+committed:
+
+```json
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "buildCommand": "npx quartz plugin install && npx quartz build",
+  "outputDirectory": "public"
+}
+```
+
+- **`cleanUrls: true`** is the load-bearing one. Quartz emits extensionless
+  links, and Vercel serves `about.html` at `/about` only when this is set.
+  Vercel's own documentation still lists it as current, and it is not
+  deprecated.
+- **`trailingSlash: false`** normalises `/about/` to `/about` with a 308,
+  matching the links Quartz emits and keeping one URL per page. Leaving it
+  undefined lets both forms serve the same content, which invites duplicate
+  indexing.
+- **`buildCommand`** is `npx quartz plugin install && npx quartz build`, and
+  it must be that. There is no `build` script in `package.json` - only a
+  `prebuild` that runs `install-plugins` - so `npm run build` would run the
+  hook and then fail on the missing script.
+- **`outputDirectory: public`** is where Quartz writes the site.
+
+**What it needs in the dashboard.** Import the repository, then set Framework
+Preset `Other`, Root Directory `./`, and the build command and output
+directory above. Vercel issues two `*.vercel.app` URLs and a fresh preview URL
+per deployment.
+
+**What it needs in the configuration.** `baseUrl` becomes the Vercel hostname
+or the custom domain - `personal-knowledge-site.vercel.app`, or the domain
+once connected. Unlike the GitHub Pages project site, there is **no path
+prefix**: Vercel serves at the apex, so `baseUrl` is a bare hostname. This is
+the same line that removes the `https://undefined/` social metadata from all
+770 built pages.
+
+**What Vercel handles for free.** Caching: the pinned Quartz documentation
+states that Cloudflare Pages, Vercel and Netlify handle caching
+automatically, so hashed assets get the right cache headers and the HTML
+stays fresh, with no configuration. TLS, the preview URL per deployment and
+the `*.vercel.app` names are also included.
+
+**What it does not fix.** The remote-runtime policy. Every one of the 770
+built pages loads `katex@0.16.11/dist/katex.min.css` and
+`katex@0.16.11/dist/contrib/copy-tex.min.js` from `cdn.jsdelivr.net`, and
+carries a `<link rel="preconnect" href="https://cdnjs.cloudflare.com">`.
+Vendoring KaTeX means editing `quartz/components/Head.tsx`, which is Quartz
+core and needs an ADR before any core change. Vercel does not change that
+decision; it only makes it live.
+
+## 6. What choosing Pages would mean
 
 - Cloudflare Workers stays the target named in `ARCHITECTURE.md` unless an ADR
   says otherwise. Adding a second target is a deployment-architecture change
