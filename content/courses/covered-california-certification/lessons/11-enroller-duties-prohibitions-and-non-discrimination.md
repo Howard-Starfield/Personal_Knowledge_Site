@@ -127,6 +127,8 @@ questionIds:
   - "349d7930-140a-4eed-8e69-040cd17cfbab"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/11-enroller-duties-prohibitions-and-non-discrimination|Enroller Duties, Prohibitions, and Non-Discrimination: Question Bank]].
+
 ## Stage 4: Non-discrimination
 
 An enroller must never discriminate against a consumer on the basis of any characteristic in the table below.

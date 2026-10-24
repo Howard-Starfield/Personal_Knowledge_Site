@@ -99,6 +99,8 @@ questionIds:
   - "3acaaa66-66c0-4d51-8bee-fed784d1488e"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/10-open-enrollment-and-special-enrollment|Open Enrollment and Special Enrollment: Question Bank]].
+
 ## Stage 4: The one exception to the calendar
 
 This one was not in the training. It is in the official record, and it is exactly the sort of exception worth knowing.

@@ -16,7 +16,7 @@ comments: false
 
 # Carry Forward, Soft Pause, and Negative Action: Question Bank
 
-> Study notes based on a Covered California enroller training programme. These questions practise the lesson 'Carry Forward, Soft Pause, and Negative Action'.
+> Study notes based on a Covered California enroller training programme. These questions practise the lesson [[courses/covered-california-certification/lessons/23-case-review-statuses|Carry Forward, Soft Pause, and Negative Action]].
 
 ```knowledge-question-bank
 schemaVersion: 1

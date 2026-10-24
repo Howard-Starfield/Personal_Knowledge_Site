@@ -159,6 +159,8 @@ questionIds:
   - "392439af-32d0-44ce-a726-abdcddf64bd4"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/36-mixed-households|Mixed Households: Two Programmes, One Family: Question Bank]].
+
 ## Review
 
 Close the lesson and write down, from memory:

@@ -349,6 +349,8 @@ questionIds:
   - "bf3ee36f-ac9e-4211-b537-7df9e62c816a"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/24-call-flow-and-voice|Call Flow, Your Voice, and Staying Calm: Question Bank]].
+
 ## Review
 
 Close the lesson and write the answer to each of these from memory:

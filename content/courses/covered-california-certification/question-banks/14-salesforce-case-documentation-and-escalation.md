@@ -15,7 +15,7 @@ courseId: "6e01a17c-f82f-4614-8f77-11b78d55fa81"
 
 # Salesforce: Case Documentation, Quick Sort, and Escalation: Question Bank
 
-> Study notes based on a Covered California enroller training programme. These questions practise the lesson "Salesforce: Case Documentation, Quick Sort, and Escalation".
+> Study notes based on a Covered California enroller training programme. These questions practise the lesson [[courses/covered-california-certification/lessons/14-salesforce-case-documentation-and-escalation|Salesforce: Case Documentation, Quick Sort, and Escalation]].
 
 ```knowledge-question-bank
 schemaVersion: 1

@@ -16,7 +16,7 @@ comments: false
 
 # Authenticating a Caller: Question Bank
 
-> Study notes based on a Covered California enroller training programme. These questions practise the lesson "Authenticating a Caller".
+> Study notes based on a Covered California enroller training programme. These questions practise the lesson [[courses/covered-california-certification/lessons/17-authenticating-a-caller|Authenticating a Caller]].
 
 ```knowledge-question-bank
 schemaVersion: 1

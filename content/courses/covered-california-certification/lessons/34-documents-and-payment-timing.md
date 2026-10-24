@@ -126,6 +126,8 @@ questionIds:
   - "ae97c99b-65f2-4a32-ad15-3aac7233e1fc"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/34-documents-and-payment-timing|Income Documents and Payment Timing: Question Bank]].
+
 ## Review
 
 Close the lesson and write down, from memory:

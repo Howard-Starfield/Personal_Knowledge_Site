@@ -153,6 +153,8 @@ questionIds:
   - "c74f93a1-3929-4b7a-8c13-836647781837"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/43-tax-forms-and-proof-of-coverage|Tax Forms and Proof of Coverage: Question Bank]].
+
 ## Review
 
 Close the lesson and write down, from memory:

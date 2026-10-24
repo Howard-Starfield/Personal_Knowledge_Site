@@ -362,6 +362,8 @@ questionIds:
   - "9b64d829-3a27-410c-b60f-19f2185565d2"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/23-case-review-statuses|Carry Forward, Soft Pause, and Negative Action: Question Bank]].
+
 ## Review
 
 Close the lesson and write the answer to each of these from memory:

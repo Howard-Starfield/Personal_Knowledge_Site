@@ -178,6 +178,8 @@ questionIds:
   - "69c10ad5-c580-4fa9-86e1-e9826ffe8705"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/46-escalation-handling|Escalation Handling: Question Bank]].
+
 ## Review
 
 Close the lesson and write down, from memory:

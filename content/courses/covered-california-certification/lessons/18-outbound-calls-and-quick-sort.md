@@ -285,6 +285,8 @@ questionIds:
   - "cd96bb46-f0b0-4916-879a-f4e3e97ffd32"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/18-outbound-calls-and-quick-sort|Outbound Calls, Recorded Consent, and Quick Sort: Question Bank]].
+
 ## Review
 
 Close the lesson and write the answer to each of these from memory:

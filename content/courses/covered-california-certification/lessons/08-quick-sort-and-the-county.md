@@ -154,6 +154,8 @@ questionIds:
   - "79c7694a-f0fb-469b-8eea-b5fd36811639"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/08-quick-sort-and-the-county|Quick Sort and the County: When to Refer: Question Bank]].
+
 ## Review
 
 Close the lesson and write down, from memory:

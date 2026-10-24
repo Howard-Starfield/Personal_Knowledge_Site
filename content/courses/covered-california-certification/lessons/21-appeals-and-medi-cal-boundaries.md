@@ -186,6 +186,8 @@ questionIds:
   - "2b1950f7-221d-439a-935c-99b508a0759a"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/21-appeals-and-medi-cal-boundaries|Appeals and Medi-Cal Boundaries: Question Bank]].
+
 ## Review
 
 Close the lesson and write down, from memory:

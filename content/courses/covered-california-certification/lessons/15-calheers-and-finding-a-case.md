@@ -229,6 +229,8 @@ questionIds:
   - "bce4969e-2523-4b0e-ae8b-cb581baf93d1"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/15-calheers-and-finding-a-case|CalHEERS and Finding a Case: Question Bank]].
+
 ## Review
 
 Close the lesson and write the answer to each of these from memory:

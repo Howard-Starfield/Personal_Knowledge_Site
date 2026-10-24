@@ -16,7 +16,7 @@ comments: false
 
 # The Reasonable Opportunity Period, and Reinstatement After It: Question Bank
 
-> Study notes based on a Covered California enroller training programme. These questions practise the lesson 'The Reasonable Opportunity Period, and Reinstatement After It'.
+> Study notes based on a Covered California enroller training programme. These questions practise the lesson [[courses/covered-california-certification/lessons/53-the-reasonable-opportunity-period|The Reasonable Opportunity Period, and Reinstatement After It]].
 
 ```knowledge-question-bank
 schemaVersion: 1

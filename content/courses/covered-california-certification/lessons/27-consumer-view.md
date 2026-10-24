@@ -178,6 +178,8 @@ questionIds:
   - "1aaad149-8532-433a-8ae0-28b4c7e71626"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/27-consumer-view|Consumer View: Opening, Sending, and Reviewing an Application: Question Bank]].
+
 ## Review
 
 Close the lesson and write down, from memory:

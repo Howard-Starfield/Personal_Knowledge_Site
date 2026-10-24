@@ -122,6 +122,8 @@ questionIds:
   - "946d23ac-9457-41d8-a4d4-d985cb743873"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/40-onboarding-and-troubleshooting|Onboarding Help and Technical Troubleshooting: Question Bank]].
+
 ## Review
 
 Close the lesson and write down, from memory:

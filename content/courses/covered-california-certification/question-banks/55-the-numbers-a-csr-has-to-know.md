@@ -16,7 +16,7 @@ comments: false
 
 # The Numbers a CSR Has to Know: Question Bank
 
-> Study notes based on a Covered California enroller training programme. These questions practise the lesson 'The Numbers a CSR Has to Know'.
+> Study notes based on a Covered California enroller training programme. These questions practise the lesson [[courses/covered-california-certification/lessons/55-the-numbers-a-csr-has-to-know|The Numbers a CSR Has to Know]].
 
 ```knowledge-question-bank
 schemaVersion: 1

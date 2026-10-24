@@ -162,6 +162,8 @@ questionIds:
   - "0caf1397-34a5-4703-b8c0-1e0965ed74ad"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/35-finding-an-existing-application|Finding an Existing Application and Changing Income: Question Bank]].
+
 ## Review
 
 Close the lesson and write down, from memory:

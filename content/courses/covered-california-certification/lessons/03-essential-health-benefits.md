@@ -79,6 +79,8 @@ questionIds:
   - "0ff5123a-2232-4558-a948-1feae4c526b3"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/03-essential-health-benefits|Essential Health Benefits and Preventive Care: Question Bank]].
+
 ## Step 3: Preventive care carries no cost sharing
 
 Inside all of this there is one carve-out, and it is the part a consumer notices first, because it is the part where money does not change hands.

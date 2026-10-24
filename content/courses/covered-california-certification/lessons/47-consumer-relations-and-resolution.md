@@ -165,6 +165,8 @@ questionIds:
   - "a41be2d9-d3bc-4e6a-ae65-6a74f5de2943"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/47-consumer-relations-and-resolution|Consumer Relations and Resolution: Question Bank]].
+
 ## Review
 
 Close the lesson and write down, from memory:

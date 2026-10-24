@@ -16,7 +16,7 @@ comments: false
 
 # The Final Assessment: How It Works, and Twenty-Five Questions with Their Answers: Question Bank
 
-> Study notes based on the owner's Covered California training recordings. These questions practise the lesson 'The Final Assessment: How It Works, and Twenty-Five Questions with Their Answers'.
+> Study notes based on the owner's Covered California training recordings. These questions practise the lesson [[courses/covered-california-certification/lessons/56-final-exam|The Final Assessment: How It Works, and Twenty-Five Questions with Their Answers]].
 
 ```knowledge-question-bank
 schemaVersion: 1

@@ -187,6 +187,8 @@ questionIds:
   - "edd8a322-8472-475e-8f6a-a044c14ad9cf"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/13-the-shopping-tool-and-plan-types|The Shopping Tool, Eligibility, and Plan Types: Question Bank]].
+
 ## Review
 
 Close the lesson and write the answer to each of these from memory:

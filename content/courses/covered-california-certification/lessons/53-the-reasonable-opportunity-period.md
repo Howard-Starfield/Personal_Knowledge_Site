@@ -271,6 +271,8 @@ questionIds:
   - "d5a873c8-2f15-4d13-b35c-6e8c03845a19"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/53-the-reasonable-opportunity-period|The Reasonable Opportunity Period, and Reinstatement After It: Question Bank]].
+
 ## Review
 
 Close the lesson and write the answer to each of these from memory:

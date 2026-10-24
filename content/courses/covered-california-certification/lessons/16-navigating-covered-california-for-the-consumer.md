@@ -278,6 +278,8 @@ questionIds:
   - "387738ce-4965-497e-93ea-0a920af58aa6"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/16-navigating-covered-california-for-the-consumer|Navigating Covered California for the Consumer: Question Bank]].
+
 ## Review
 
 Close the lesson and write the answer to each of these from memory:

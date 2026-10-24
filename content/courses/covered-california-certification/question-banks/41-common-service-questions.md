@@ -14,7 +14,7 @@ courseId: "6e01a17c-f82f-4614-8f77-11b78d55fa81"
 comments: false
 ---
 
-These questions practise the material in the lesson Common Service Questions Before the Midterm. They follow the order set out in the package manifest, from open recall through to the multiple-select item.
+These questions practise the material in the lesson [[courses/covered-california-certification/lessons/41-common-service-questions|Common Service Questions Before the Midterm]]. They follow the order set out in the package manifest, from open recall through to the multiple-select item.
 
 ```knowledge-question-bank
 schemaVersion: 1

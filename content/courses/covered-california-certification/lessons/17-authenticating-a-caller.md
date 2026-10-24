@@ -267,6 +267,8 @@ questionIds:
   - "a74385f8-b58b-4503-9d31-bcd8969c3909"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/17-authenticating-a-caller|Authenticating a Caller: Question Bank]].
+
 ## Review
 
 Close the lesson and write the answer to each of these from memory:

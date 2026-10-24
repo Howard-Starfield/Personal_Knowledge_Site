@@ -94,6 +94,8 @@ questionIds:
   - "4a62835b-6caa-4ad7-abad-5e859762c1c8"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/04-covered-california-and-the-individual-mandate|Covered California, the Individual Mandate, and the Obamacare Call: Question Bank]].
+
 ## Step 5: Handling the Obamacare call
 
 Some consumers will not engage with the name. They say they want nothing to do with the Affordable Care Act, or nothing to do with Obamacare, and that they want Covered California instead.

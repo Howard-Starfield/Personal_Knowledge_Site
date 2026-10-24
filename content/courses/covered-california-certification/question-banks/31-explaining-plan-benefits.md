@@ -16,6 +16,8 @@ comments: false
 
 These questions practise the cost-sharing terms and the boundary around them, as taught in the training session on plan benefits. Answer them without looking back at the lesson.
 
+The lesson these questions belong to is [[courses/covered-california-certification/lessons/31-explaining-plan-benefits|Explaining Plan Benefits to a Consumer]].
+
 ```knowledge-question-bank
 schemaVersion: 1
 questions:

@@ -163,6 +163,8 @@ questionIds:
   - "926ae594-b0ad-493e-8811-08978da5dced"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/49-when-two-systems-disagree|When Two Systems Disagree: Question Bank]].
+
 ## Review
 
 Close the lesson and write down, from memory:

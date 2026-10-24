@@ -176,6 +176,8 @@ questionIds:
   - "598946a5-cc7d-4de9-af72-cc8cb142d5a0"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/30-documenting-a-case-and-adding-plans|Documenting a Case and Adding Plans: Question Bank]].
+
 ## Review
 
 Close the lesson and write down, from memory:

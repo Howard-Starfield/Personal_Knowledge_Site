@@ -14,7 +14,7 @@ courseId: "6e01a17c-f82f-4614-8f77-11b78d55fa81"
 comments: false
 ---
 
-Study notes based on a Covered California enroller training programme. These questions practise the chapter "Tax Forms and Proof of Coverage".
+Study notes based on a Covered California enroller training programme. These questions practise the chapter [[courses/covered-california-certification/lessons/43-tax-forms-and-proof-of-coverage|Tax Forms and Proof of Coverage]].
 
 ```knowledge-question-bank
 schemaVersion: 1

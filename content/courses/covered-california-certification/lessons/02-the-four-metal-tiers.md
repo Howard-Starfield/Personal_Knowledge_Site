@@ -89,6 +89,8 @@ questionIds:
   - "de242258-b788-4e6c-8727-c8ed135b9bbe"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/02-the-four-metal-tiers|The Four Metal Tiers: Comparing Without Recommending: Question Bank]].
+
 ## Step 4: Ask, do not recommend
 
 This is the conduct rule that gets broken most often in practice, and the training flagged it repeatedly.

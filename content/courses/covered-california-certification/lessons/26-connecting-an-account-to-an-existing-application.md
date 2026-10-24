@@ -120,6 +120,8 @@ questionIds:
   - "1cd350a3-7ea2-4746-9f6e-f04d1545d69e"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/26-connecting-an-account-to-an-existing-application|Connecting an Account to an Existing Application: Question Bank]].
+
 ## Review
 
 Close this lesson and write down, from memory:

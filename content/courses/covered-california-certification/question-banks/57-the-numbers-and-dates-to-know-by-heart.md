@@ -16,7 +16,7 @@ comments: false
 
 # The Numbers and Dates to Know by Heart: Question Bank
 
-> Study notes based on the owner's Covered California training recordings. These questions practise the lesson 'The Numbers and Dates to Know by Heart'.
+> Study notes based on the owner's Covered California training recordings. These questions practise the lesson [[courses/covered-california-certification/lessons/57-the-numbers-and-dates-to-know-by-heart|The Numbers and Dates to Know by Heart]].
 
 ```knowledge-question-bank
 schemaVersion: 1

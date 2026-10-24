@@ -147,6 +147,8 @@ questionIds:
   - "93c6d5ee-2430-4cd1-857b-03e7548064b1"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/25-registering-an-account|Registering an Account and Using an Access Code: Question Bank]].
+
 ## Review
 
 Close this lesson and write down, from memory:

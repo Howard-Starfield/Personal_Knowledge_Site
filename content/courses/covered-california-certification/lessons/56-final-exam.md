@@ -335,6 +335,8 @@ questionIds:
   - "d274d2fd-6575-4e95-9965-ac77971cd375"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/56-final-exam|The Final Assessment: How It Works, and Twenty-Five Questions with Their Answers: Question Bank]].
+
 ## Review
 
 Close the lesson and write down, from memory:

@@ -204,6 +204,8 @@ questionIds:
   - "e0c869d6-8bdd-4cb8-ae4a-3f53503450f3"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/50-service-center-conduct|Service Center Conduct and Consumer Safety: Question Bank]].
+
 ## Review
 
 Close the lesson and write down, from memory:
