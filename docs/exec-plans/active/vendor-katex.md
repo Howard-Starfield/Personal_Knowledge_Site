@@ -269,20 +269,54 @@ Revert the merge commit; Vercel rebuilds and the site goes back to the CDN.
 ### 19.1 Commands and results
 
 ```text
-<pending>
+npx tsc --noEmit                  clean
+npm test                          tests 252 | pass 252 | fail 0
+npm run validate:content          358 entities, 358 unique IDs
+npm run validate:graph            358 pages, 394 tags, 1897 relationships
+npx quartz build --concurrency=1  exit 0, no "✗" plugin-load lines
+npx wrangler deploy --dry-run     exit 0
 ```
+
+The first CI run failed on Prettier, which wanted to reformat the vendored
+minified files; `quartz/static/katex/` is now in `.prettierignore`, because
+those files are byte-identical to upstream and their checksums are recorded.
 
 ### 19.2 Generated artifacts inspected
 
-<pending>
+- The built maths page references `/static/katex/katex.min.css` and
+  `/static/katex/copy-tex.min.js`, and nothing else.
+- The built site has no `cdn.jsdelivr.net` or `unpkg.com` reference.
 
 ### 19.3 UI evidence
 
-<pending>
+Against the deployed site:
+
+```text
+katex.min.css -> 200 23335 bytes
+/static/katex/copy-tex.min.js -> 200 (1673 bytes)
+/static/katex/fonts/KaTeX_Main-Regular.woff2 -> 200 (26272 bytes)
+
+CDN references on the maths page: none
+local katex references: ['/static/katex/copy-tex.min.js', '/static/katex/katex.min.css']
+
+the homepage's external URLs:
+['http://www.w3.org/2000/svg', 'https://blog.howardlab.dev/index',
+ 'https://blog.howardlab.dev/static/og-image.png',
+ 'https://github.com/Howard-Starfield/Personal_Knowledge_Site',
+ 'https://quartz.jzhao.xyz/']
+```
+
+Only the site's own URLs, the SVG namespace, the GitHub footer link and the
+Quartz credit remain. No third-party runtime is loaded.
 
 ### 19.4 Deviations from plan
 
-<pending>
+1. The ADR's original step 3 asked the runtime gate to ban
+   `cdnjs.cloudflare.com` as well. It cannot: Mermaid is imported from there
+   by `@quartz-community/obsidian-flavored-markdown`, and vendoring Mermaid
+   means shipping its whole chunk tree. The gate therefore bans the npm CDNs,
+   and the Mermaid runtime is recorded as the remaining item in ADR-0006 §6 and
+   §17 of this plan.
 
 ## 20. Final acceptance checklist
 
@@ -298,6 +332,6 @@ Revert the merge commit; Vercel rebuilds and the site goes back to the CDN.
 
 ## 21. Completion log
 
-| Date | Commit | Work completed | Evidence | Remaining |
-| ---- | ------ | -------------- | -------- | --------- |
-|      |        |                |          |           |
+| Date       | Commit                                               | Work completed                                                                                    | Evidence                                                                         | Remaining                                                                |
+| ---------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| 2026-10-24 | `dfa50b1` + `90592b7` → merged as `ec93c09` (PR #31) | KaTeX vendored, the CDN URLs swapped, the preconnect removed, the gate widened, ADR-0006 accepted | §19 (no npm CDN reference in the built site, the assets serve 200 from the site) | Mermaid still imports from cdnjs on the two lessons that carry a diagram |

@@ -270,20 +270,39 @@ user data is involved.
 ### 19.1 Commands and results
 
 ```text
-<pending>
+npm run validate:content    358 entities, 358 unique IDs
+npm run validate:graph      358 pages, 394 tags, 1897 relationships
+npm test                    tests 252 | pass 252 | fail 0
+npx quartz build            exit 0
+npx wrangler deploy --dry-run   exit 0
 ```
+
+The private package's own gates pass as well, including the two that the FTB
+citation touched: "every canonical figure and label is consistent" and "every
+number claimed in the prose appears in a source".
 
 ### 19.2 Generated artifacts inspected
 
-<pending>
+- The published catalogue lists fourteen course links (was three).
+- The Covered California course table carries 57 linked lesson rows.
+- Lesson 57 cites the FTB page.
 
 ### 19.3 UI evidence
 
-<pending>
+```text
+catalogue: 14 course links
+FTB cited on lesson 57: True
+lesson links in the course table: 57
+practice page neighbours: ['← Previous: Courses', 'Next: The Final Assessment →']
+```
 
 ### 19.4 Deviations from plan
 
-<pending>
+1. The FTB citation rode along in the same pull request, because the owner
+   asked for both in the same message. The plan's §2 and §9.1 say so.
+2. The package's checker needed one change: `check_canonical_figures.py` now
+   recognises "the Franchise Tax Board publishes" as a source. The package is
+   not tracked by Git, so that change is local to the owner.
 
 ## 20. Final acceptance checklist
 
@@ -299,6 +318,6 @@ user data is involved.
 
 ## 21. Completion log
 
-| Date | Commit | Work completed | Evidence | Remaining |
-| ---- | ------ | -------------- | -------- | --------- |
-|      |        |                |          |           |
+| Date       | Commit                                   | Work completed                                                      | Evidence                                                                   | Remaining                                                                         |
+| ---------- | ---------------------------------------- | ------------------------------------------------------------------- | -------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| 2026-10-24 | `c304057` → merged as `6ad7709` (PR #30) | Eleven courses published, and the FTB cited for the 7.28% threshold | §19 (fourteen courses live, 57 linked lesson rows, the package gates pass) | Three courses still held; the homepage's featured table is still curated to three |
