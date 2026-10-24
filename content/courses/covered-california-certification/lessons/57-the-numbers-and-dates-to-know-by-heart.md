@@ -234,12 +234,12 @@ not to the amounts. The amounts themselves carry no year at all. That is the
 detail that catches people out, because the 8.05% sits right next to the $950
 on the same page and the two look like they belong together.
 
-The Franchise Tax Board column is **the training's account** of what that body
-publishes. This package holds no Franchise Tax Board publication of its own,
-and its own verification pass could not reach one, so the figures are
-internally consistent - $950 and $475 for two adults and two children is
-$2,850 - but they are the training's statement rather than a record anyone can
-check. Say which column you are quoting.
+The Franchise Tax Board column is what that body publishes itself. Its [health care
+mandate page](https://www.ftb.ca.gov/file/personal/filing-situations/health-care-mandate/personal.html) states **$950 per adult and $475 per dependent child for
+tax year 2025**, and treats coverage as unaffordable above **7.28% of household
+income for the 2025 taxable year**. The figures are internally consistent -
+$950 and $475 for two adults and two children is $2,850 - and they are what the
+FTB publishes.
 
 And the rule that outranks every number in the table: **name the body and the
 year, never quote a flat number, and point the consumer at the Franchise Tax
@@ -362,26 +362,26 @@ worthless, because the digits are not what fails.
 
 And the sheet itself, in one place. This is the page to revise from:
 
-| what you are asked                      | the figure                                                                         | the kind                                           |
-| --------------------------------------- | ---------------------------------------------------------------------------------- | -------------------------------------------------- |
-| Special enrolment after a life event    | 60 days from the event                                                             | published                                          |
-| Special enrolment after losing Medi-Cal | 90 days from the loss                                                              | published                                          |
-| Filing an appeal                        | 90 days from the mailing                                                           | published                                          |
-| Reporting a change                      | 30 days for Covered California, 10 for Medi-Cal                                    | published                                          |
-| Ending cover                            | 14 days' notice                                                                    | published, and advice rather than a rule           |
-| A complaint                             | 30 business days                                                                   | published                                          |
-| A document request                      | 95 days, and 155 for proof of income                                               | the training's own                                 |
-| An extension                            | only while the item is still open; the length is the training's and is not settled | the training's own                                 |
-| Reinstatement                           | 30 calendar days from the end date                                                 | the training's own                                 |
-| The resend wait                         | 10 business days from the last feed                                                | the training's own                                 |
-| An escalation                           | 1 to 10 business days to first contact, 1 to 30 to resolve                         | the training's own                                 |
-| The case review                         | 45 days at most, and sometimes longer                                              | the training's own                                 |
-| Medi-Cal                                | 138% for adults, 266% for children, 213% and 322% in a pregnancy                   | published                                          |
-| The tribal route                        | 100% to 300%                                                                       | the training's own                                 |
-| No financial help                       | above 400%                                                                         | published                                          |
-| The tiers                               | 60, 70 rising to 94, 80, 90                                                        | published                                          |
-| Premium spent on care                   | 80% to 85%                                                                         | federal law the site does not publish              |
-| The penalty                             | a body, a year and the estimator                                                   | published and the training's account, side by side |
+| what you are asked                      | the figure                                                                         | the kind                                 |
+| --------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------- |
+| Special enrolment after a life event    | 60 days from the event                                                             | published                                |
+| Special enrolment after losing Medi-Cal | 90 days from the loss                                                              | published                                |
+| Filing an appeal                        | 90 days from the mailing                                                           | published                                |
+| Reporting a change                      | 30 days for Covered California, 10 for Medi-Cal                                    | published                                |
+| Ending cover                            | 14 days' notice                                                                    | published, and advice rather than a rule |
+| A complaint                             | 30 business days                                                                   | published                                |
+| A document request                      | 95 days, and 155 for proof of income                                               | the training's own                       |
+| An extension                            | only while the item is still open; the length is the training's and is not settled | the training's own                       |
+| Reinstatement                           | 30 calendar days from the end date                                                 | the training's own                       |
+| The resend wait                         | 10 business days from the last feed                                                | the training's own                       |
+| An escalation                           | 1 to 10 business days to first contact, 1 to 30 to resolve                         | the training's own                       |
+| The case review                         | 45 days at most, and sometimes longer                                              | the training's own                       |
+| Medi-Cal                                | 138% for adults, 266% for children, 213% and 322% in a pregnancy                   | published                                |
+| The tribal route                        | 100% to 300%                                                                       | the training's own                       |
+| No financial help                       | above 400%                                                                         | published                                |
+| The tiers                               | 60, 70 rising to 94, 80, 90                                                        | published                                |
+| Premium spent on care                   | 80% to 85%                                                                         | federal law the site does not publish    |
+| The penalty                             | a body, a year and the estimator                                                   | published                                |
 
 ### Check yourself
 
