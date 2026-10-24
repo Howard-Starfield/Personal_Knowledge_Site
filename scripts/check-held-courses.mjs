@@ -1,13 +1,10 @@
 #!/usr/bin/env node
-// Guard: no branch may carry the courses that are still waiting for a rights
-// review.
+// Guard: no branch may carry a course that is waiting for a rights review.
 //
-// Three LinkedIn-derived courses are held local by owner decision (the owner
-// cleared eleven of the fourteen; these three have no rights review yet).
-// They live in the working tree, they are excluded from Git by
-// `.git/info/exclude`, and they must never reach the remote repository — the
-// repository is public, and Vercel builds a preview deployment for every
-// pushed branch.
+// The owner cleared all fourteen ingested courses on 2026-10-24, so the list
+// below is empty. Add a slug here when a course is held back again: the
+// repository is public and Vercel builds a preview deployment for every
+// pushed branch, so a stray push would publish it.
 //
 //   node scripts/check-held-courses.mjs [ref ...]     # default: HEAD
 //
@@ -16,9 +13,7 @@
 import { execFileSync } from "node:child_process"
 
 export const HELD_COURSES = [
-  "ai-agents-in-depth",
-  "ai-solutions-and-techniques-for-help-desk-operations",
-  "how-to-be-an-agent-boss",
+  // "some-course-slug",
 ]
 
 function listTree(ref) {

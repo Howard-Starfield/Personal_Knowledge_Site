@@ -78,7 +78,7 @@ When docs and installed source disagree, stop, document the conflict, and resolv
 - Giscus/GitHub Discussions may be evaluated as optional community discussion; it is not the owner-only Learning Inbox and comments are never canonical learning content.
 - Git branches and pull requests remain the publishing boundary.
 - No direct agent push or deploy to protected production.
-- Some ingested courses are held local until the owner clears their rights. No branch may carry them: the repository is public and Vercel previews every pushed branch. `scripts/check-held-courses.mjs` names them and fails on a branch that contains one.
+- Some ingested courses may be held local until the owner clears their rights. No branch may carry a held course: the repository is public and Vercel previews every pushed branch. `scripts/check-held-courses.mjs` names them and fails on a branch that contains one.
 - No custom password/session system.
 - No semantic/vector graph in the baseline phases.
 - No second frontend framework or SSG without an approved ADR.
