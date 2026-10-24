@@ -243,6 +243,57 @@
   }
 }
 
+/* ─── Free-Recall Question ───
+   A free-recall question sits in the same fieldset as an objective one, so
+   its prompt carries the same weight and the same spacing. The only thing
+   that differs is the field the reader writes in. */
+.knowledge-quiz__recall {
+  display: grid;
+  gap: 0.55rem;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.knowledge-quiz__recall-field {
+  display: block;
+  min-width: 0;
+}
+
+/* The name of the answer field, for a reader who cannot see the label. */
+.knowledge-quiz__sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ─── The Sample Answer ───
+   A model answer is prose, so it is set as a block: the panel and the type of
+   a multiple-choice option, with the answer as one continuous sentence rather
+   than a lettered list. */
+.knowledge-quiz__answer--code {
+  margin: 0 0 0.85rem;
+  padding: 0.95rem 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 11px;
+  background: color-mix(in srgb, var(--lightgray) 42%, var(--notebook-panel-raised));
+  color: inherit;
+  font-family: inherit;
+  font-size: 1.02rem;
+  font-weight: 500;
+  line-height: 1.42;
+  letter-spacing: normal;
+  text-align: left;
+  white-space: pre-wrap;
+  overflow-x: auto;
+}
+
 .knowledge-quiz__reveal-btn {
   display: inline-flex;
   align-items: center;
@@ -419,6 +470,16 @@
     font-weight: 700;
     cursor: pointer;
   }
+}
+
+/* The question on the public answer key carries the same weight and the same
+   spacing as the question in the quiz, so the two read alike. */
+.knowledge-question-bank__prompt {
+  color: inherit;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
 }
 
 @media (max-width: 600px) {

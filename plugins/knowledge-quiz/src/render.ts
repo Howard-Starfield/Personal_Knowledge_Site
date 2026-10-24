@@ -33,15 +33,46 @@ function fallbackDetails(question: KnowledgeQuestion): Element {
     element("summary", {}, [
       text(question.type === "free-recall" ? "Sample answer" : "Answer and explanation"),
     ]),
-    element("p", { className: ["knowledge-quiz__answer"] }, [
-      element("strong", {}, [text("Answer: ")]),
-      text(optionAnswer(question)),
-    ]),
+    answerElement(question),
     element("p", {}, [text(question.explanation)]),
   ])
 }
 
+/**
+ * The answer, in the shape the reader should meet it.
+ *
+ * A free-recall answer is prose, so it is set as a block: the same font and
+ * the same panel as a multiple-choice option, with the answer as one
+ * continuous sentence rather than a lettered list.
+ */
+function answerElement(question: KnowledgeQuestion): Element {
+  if (question.type === "free-recall") {
+    return element(
+      "pre",
+      { className: ["knowledge-quiz__answer", "knowledge-quiz__answer--code"] },
+      [text(optionAnswer(question))],
+    )
+  }
+  return element("p", { className: ["knowledge-quiz__answer"] }, [
+    element("strong", {}, [text("Answer: ")]),
+    text(optionAnswer(question)),
+  ])
+}
+
 const OPTION_LETTERS = ["A", "B", "C", "D", "E", "F", "G", "H"]
+
+/**
+ * The question, set the same way for every question type.
+ *
+ * A legend inside the fieldset is what gives an objective question its
+ * weight and its spacing, so a free-recall question uses the same element and
+ * the same class rather than a look of its own.
+ */
+function promptElement(index: number, prompt: string): Element {
+  return element("legend", { className: ["knowledge-quiz__prompt"] }, [
+    text(`${index + 1}. ${prompt}`),
+  ])
+}
 
 function choiceInput(
   quizId: string,
@@ -81,9 +112,7 @@ function objectiveFieldset(quizId: string, question: KnowledgeQuestion, index: n
       { id: "false", text: "False" },
     ]
     return element("fieldset", { className: ["knowledge-quiz__fieldset"] }, [
-      element("legend", { className: ["knowledge-quiz__prompt"] }, [
-        text(`${index + 1}. ${question.prompt}`),
-      ]),
+      promptElement(index, question.prompt),
       ...options.map((option, idx) => choiceInput(quizId, question, option, "radio", idx)),
     ])
   }
@@ -92,9 +121,7 @@ function objectiveFieldset(quizId: string, question: KnowledgeQuestion, index: n
   }
   const inputType = question.type === "single-choice" ? "radio" : "checkbox"
   return element("fieldset", { className: ["knowledge-quiz__fieldset"] }, [
-    element("legend", { className: ["knowledge-quiz__prompt"] }, [
-      text(`${index + 1}. ${question.prompt}`),
-    ]),
+    promptElement(index, question.prompt),
     ...question.options.map((option, idx) => choiceInput(quizId, question, option, inputType, idx)),
   ])
 }
@@ -108,26 +135,29 @@ function questionElement(quizId: string, question: KnowledgeQuestion, index: num
         : ""
   const response =
     question.type === "free-recall"
-      ? element("div", { className: ["knowledge-quiz__recall"] }, [
-          element("label", {}, [
-            element("span", { className: ["knowledge-quiz__prompt"] }, [
-              text(`${index + 1}. ${question.prompt}`),
+      ? element("fieldset", { className: ["knowledge-quiz__fieldset"] }, [
+          promptElement(index, question.prompt),
+          element("div", { className: ["knowledge-quiz__recall"] }, [
+            element("label", { className: ["knowledge-quiz__recall-field"] }, [
+              element("span", { className: ["knowledge-quiz__sr-only"] }, [
+                text(`Your answer to question ${index + 1}`),
+              ]),
+              element("textarea", {
+                id: `quiz-${quizId}-${question.id}-recall`,
+                rows: 4,
+                placeholder: "Write what you remember before revealing the sample answer.",
+              }),
             ]),
-            element("textarea", {
-              id: `quiz-${quizId}-${question.id}-recall`,
-              rows: 4,
-              placeholder: "Write what you remember before revealing the sample answer.",
-            }),
+            element(
+              "button",
+              {
+                className: ["knowledge-quiz__reveal-btn"],
+                type: "button",
+                "data-quiz-reveal": "",
+              },
+              [text("Reveal sample answer")],
+            ),
           ]),
-          element(
-            "button",
-            {
-              className: ["knowledge-quiz__reveal-btn"],
-              type: "button",
-              "data-quiz-reveal": "",
-            },
-            [text("Reveal sample answer")],
-          ),
         ])
       : objectiveFieldset(quizId, question, index)
 
@@ -263,8 +293,10 @@ export function renderQuestionBank(bank: QuestionBankDefinition): Element {
     ]),
     ...bank.questions.map((question, index) =>
       element("details", { className: ["knowledge-question-bank__item"] }, [
-        element("summary", {}, [text(`${index + 1}. ${question.prompt}`)]),
-        element("p", {}, [element("strong", {}, [text("Answer: ")]), text(optionAnswer(question))]),
+        element("summary", { className: ["knowledge-question-bank__prompt"] }, [
+          text(`${index + 1}. ${question.prompt}`),
+        ]),
+        answerElement(question),
         element("p", {}, [text(question.explanation)]),
         element("p", { className: ["knowledge-question-bank__identity"] }, [
           text(`Question ID: ${question.id} · revision ${question.revision} · ${question.status}`),
