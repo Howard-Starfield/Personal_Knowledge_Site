@@ -99,7 +99,7 @@ plugins:
   - source: "@quartz-community/description"
     enabled: true
     order: 70
-  - source: "@quartz-community/latex"
+  - source: "./plugins/local-latex"
     enabled: true
     options:
       renderEngine: katex

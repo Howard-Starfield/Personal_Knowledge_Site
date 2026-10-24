@@ -118,6 +118,10 @@ const forbiddenRuntimeSignatures = [
   "cdn.jsdelivr.net/npm/pixi",
   "unpkg.com/d3",
   "unpkg.com/pixi",
+  // ADR-0006: KaTeX is vendored in quartz/static/katex, so no page may pull
+  // its stylesheet or its script from an npm CDN.
+  "cdn.jsdelivr.net",
+  "unpkg.com",
 ]
 const rejectedRendererSignatures = [
   "knowledge-graph__global-canvas",

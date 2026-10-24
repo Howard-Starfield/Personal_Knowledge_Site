@@ -2,7 +2,7 @@
 
 | Field    | Value                                                                                                   |
 | -------- | ------------------------------------------------------------------------------------------------------- |
-| Status   | Proposed — awaiting owner approval                                                                      |
+| Status   | Accepted — 2026-10-24                                                                                   |
 | Date     | 2026-10-23                                                                                              |
 | Deciders | Product owner                                                                                           |
 | Related  | ADR-0005, `docs/architecture/HOSTING_TARGETS.md`, `docs/exec-plans/active/phase-0-online-foundation.md` |
@@ -97,15 +97,43 @@ the maths, so the assets are vendored rather than the feature dropped.
 
 Implementation, all inside this repository:
 
-1. `public/static/katex/katex.min.css` and `public/static/katex/copy-tex.min.js`,
-   vendored at the version the plugin pins, with their checksums recorded.
-2. A build step that rewrites the two jsdelivr URLs to the local paths and
-   removes the cdnjs preconnect line from every emitted page.
-3. `scripts/validate-graph-output.mjs` gains `cdn.jsdelivr.net` and
-   `cdnjs.cloudflare.com` in `forbiddenRuntimeSignatures`, so the build fails
-   if a third-party runtime reappears anywhere in the output.
-4. A test that asserts no built page references a third-party script or
-   stylesheet.
+1. `quartz/static/katex/` holds the vendored assets at the version the plugin
+   pins: `katex.min.css` (23,335 bytes), `copy-tex.min.js` (1,673 bytes),
+   KaTeX's 60 font files, KaTeX's `LICENSE`, and `CHECKSUMS.txt` recording the
+   SHA-256 of every vendored file. The build copies them to
+   `public/static/katex/`.
+2. `plugins/local-latex/` wraps `@quartz-community/latex`, reuses its transform
+   unchanged, and swaps the two jsdelivr URLs for `/static/katex/…`. The
+   wrapper is registered in `quartz.config.yaml` in place of the package
+   plugin, so the site does not fork the package.
+3. The `cdnjs` preconnect is removed from `quartz/components/Head.tsx`, which
+   is this repository's own copy of that file.
+4. `scripts/validate-graph-output.mjs` gains `cdn.jsdelivr.net` and
+   `unpkg.com` in `forbiddenRuntimeSignatures`, so the build fails if the
+   maths is ever pulled from an npm CDN again.
+
+The owner chose **option A** on 2026-10-24: vendor KaTeX into the repository
+rather than keep the CDN.
+
+### Still outstanding: Mermaid
+
+The Phase 0 plan's stop condition — _"Quartz head and Mermaid support
+reference cdnjs"_ — is only half closed. The preconnect is gone and KaTeX is
+vendored, but the Obsidian-flavoured markdown plugin imports Mermaid from
+`https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs`
+at runtime, so the two lessons that carry a diagram
+(`advanced-prompt-engineering-techniques/lessons/02-chain-of-thought-and-step-by-step`
+and `agentic-ai-build-your-first-agentic-ai-system/lessons/00-introduction-and-autonomy-levels`)
+still reach a CDN.
+
+That URL is a constant inside
+`@quartz-community/obsidian-flavored-markdown`, and the plugin also provides
+the wiki-links and callouts the site depends on, so the plugin cannot simply
+be switched off. Vendoring Mermaid means shipping its whole chunk tree
+(the entry file imports a dozen sibling chunks) and replacing the import, which
+is the "find a supported override or approve an ADR before any core change"
+work the Phase 0 plan asked for. It is therefore a separate slice, and the
+runtime gate deliberately bans the npm CDNs rather than all of cdnjs.
 
 ## Consequences
 
@@ -113,8 +141,11 @@ Implementation, all inside this repository:
   the same origin as the page, from the same deployment.
 - A maths page renders identically offline and behind a firewall, and the
   content is not exposed to a third party by a page view.
-- The repository carries 25 KB of third-party code. It is pinned by version and
-  checksum, and the licence travels with it.
+- The repository carries 1.05 MB of third-party code: the 25 KB of KaTeX's
+  stylesheet and script, and KaTeX's 60 font files, which the stylesheet
+  references in woff2, woff and ttf. It is pinned by version and checksum
+  (`quartz/static/katex/CHECKSUMS.txt`), and the MIT licence travels with it
+  as `quartz/static/katex/LICENSE`.
 - If the plugin is upgraded and changes its URLs, the rewrite stops matching and
   the new gate fails the build rather than silently going back to the CDN.
 - The `cdnjs` preconnect is removed by the same build step, so the site stops
