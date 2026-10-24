@@ -338,6 +338,19 @@ body {
     text-decoration: none;
   }
 
+  // The tree can be very long: one course folder holds fifty-odd lessons, so
+  // collapsing it again means scrolling all the way back to the top. A folder
+  // header sticks while its children scroll, so the folder you are inside is
+  // always one click away, and the folder above it reappears as you scroll
+  // back up. Applies to the desktop sidebar and to the mobile drawer, which
+  // share the same tree markup.
+  .explorer-content li > .folder-container {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: var(--light);
+  }
+
   // Left panel Explorer & folder expand/collapse animations
   @media all and not ($mobile) {
     .explorer {
