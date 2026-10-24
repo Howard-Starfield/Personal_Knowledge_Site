@@ -109,15 +109,15 @@ _The consumer asks what they will be penalised._ The training's own rough figure
 | penalty       | $950 for each adult and $450 for each child under 18                    | $950 for each adult and $475 for each dependent child |
 | affordability | 8.05% of projected household income                                     | 7.28% of household income                             |
 
-**One caveat on the right-hand column, because it changes what you promise.** The
-left-hand column is the official record's own: coveredca.com publishes those
-amounts, and it labels the 8.05% threshold for tax year 2026. The right-hand
-column is what the Franchise Tax Board publishes itself: its [health care
-mandate page](https://www.ftb.ca.gov/file/personal/filing-situations/health-care-mandate/personal.html) states **$950 per adult and $475 per dependent child for
-tax year 2025**, and treats coverage as unaffordable above **7.28% of household
-income for the 2025 taxable year**. The right-hand figures are internally
-consistent ($950 and $475 for two adults and two children is $2,850), and they
-are what the FTB publishes.
+> **One caveat on the right-hand column, because it changes what you promise.** The
+> left-hand column is the official record's own: coveredca.com publishes those
+> amounts, and it labels the 8.05% threshold for tax year 2026. The right-hand
+> column is what the Franchise Tax Board publishes itself: its [health care
+> mandate page](https://www.ftb.ca.gov/file/personal/filing-situations/health-care-mandate/personal.html) states **$950 per adult and $475 per dependent child for
+> tax year 2025**, and treats coverage as unaffordable above **7.28% of household
+> income for the 2025 taxable year**. The right-hand figures are internally
+> consistent ($950 and $475 for two adults and two children is $2,850), and they
+> are what the FTB publishes.
 
 The line to use with a consumer: I can tell you what the form says and how to get hold of it. What it means for your tax return, and what the state may charge you, is a question for a tax professional.
 
