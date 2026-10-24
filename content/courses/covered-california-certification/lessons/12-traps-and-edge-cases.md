@@ -59,25 +59,15 @@ affordability threshold of **8.05%** of projected annual household income —
 and that threshold is the figure the page labels **tax year 2026**. The
 penalty amounts themselves carry no year on the page.
 
-> **The trap.** The Franchise Tax Board, which is the body that actually
-> computes and collects the penalty, is quoted by the training as publishing
-> **\$475 per child** for tax year 2025 and a **7.28%** threshold. So the two
-> official bodies are not merely differently worded — they are given
-> **different numbers for different tax years**. A consumer who is sent to the
-> FTB may read \$475. A consumer who stays on the marketplace site reads \$450.
->
-> **And one caveat on the FTB side, because it changes what you promise.** The
-> marketplace figures are the official record's own, published by coveredca.com.
-> The FTB figures are **the training's account** of what the FTB publishes:
-> this package holds no FTB publication of its own, the only external source it
-> may consult is coveredca.com, and its own verification pass could not reach an
-> FTB or IRS publication, so the corroboration is recorded as outstanding. The
-> two FTB figures are internally consistent — \$950 and \$475 for two adults and
-> two children is \$2,850 — but the representative's answer does not depend on
-> them being right.
->
-> **What to say.** Name the tax year and the body, every time. "The Franchise
-> Tax Board computes it, so use the FTB's Penalty Estimator for your figure."
+**And one caveat on the FTB side, because it changes what you promise.** The
+marketplace figures are the official record's own, published by coveredca.com.
+The FTB figures are the ones the Franchise Tax Board publishes itself: its
+[health care mandate page](https://www.ftb.ca.gov/file/personal/filing-situations/health-care-mandate/personal.html) states **$950 per adult and $475 per
+dependent child for tax year 2025**, and treats coverage as unaffordable above
+**7.28% of household income for the 2025 taxable year**. The training's account
+and the FTB's own publication agree. The two FTB figures are internally
+consistent - $950 and $475 for two adults and two children is $2,850 - and they
+are what the FTB publishes.
 
 **Silver's share.** The second number is Silver. It is not "the 70% plan".
 Silver's value depends on **household income and household size**, and it

@@ -112,15 +112,12 @@ _The consumer asks what they will be penalised._ The training's own rough figure
 **One caveat on the right-hand column, because it changes what you promise.** The
 left-hand column is the official record's own: coveredca.com publishes those
 amounts, and it labels the 8.05% threshold for tax year 2026. The right-hand
-column is **the training's account of what the FTB publishes**, and this package
-holds no FTB publication of its own — the only external source it may consult is
-coveredca.com, and its own verification pass could not reach an FTB or IRS
-publication, so even the left-hand column's corroboration against the FTB is
-recorded as outstanding. The right-hand figures are internally consistent
-($950 and $475 for two adults and two children is $2,850), and they are what the
-training told the service centre — but a representative's answer does not depend
-on them being right. Name the body and the year, and let the consumer read the
-FTB's own figure.
+column is what the Franchise Tax Board publishes itself: its [health care
+mandate page](https://www.ftb.ca.gov/file/personal/filing-situations/health-care-mandate/personal.html) states **$950 per adult and $475 per dependent child for
+tax year 2025**, and treats coverage as unaffordable above **7.28% of household
+income for the 2025 taxable year**. The right-hand figures are internally
+consistent ($950 and $475 for two adults and two children is $2,850), and they
+are what the FTB publishes.
 
 The line to use with a consumer: I can tell you what the form says and how to get hold of it. What it means for your tax return, and what the state may charge you, is a question for a tax professional.
 

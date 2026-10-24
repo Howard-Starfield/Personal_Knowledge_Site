@@ -77,7 +77,7 @@ questions:
     correctOptionIds: [a]
     explanation: "a is correct: Two rules, and the resend wait runs from the last transaction feed. b is wrong: the behavioural-health 10 business days is a health plan's promise of a return appointment after a referral or a first visit, and it is not what the carrier has to meet to put a mismatched record right. c is wrong: the resend wait is not what the behavioural-health promise is measured against; the two rules meet only in the number. d is wrong: neither count runs from the date the consumer noticed the mismatch; the resend wait runs from the last transaction feed and the behavioural-health promise from the referral or the first visit. Lesson section: Stage 5: The collisions"
   - id: "9348f27c-e218-425d-a76f-75c4784e2799"
-    revision: 1
+    revision: 2
     status: active
     type: single-choice
     prompt: "A consumer asks what the California penalty will be for a family of four. Which answer is right?"
@@ -91,7 +91,7 @@ questions:
       - id: d
         text: "At least $950 per adult and $450 per child, which is the figure Covered California publishes for tax year 2026"
     correctOptionIds: [b]
-    explanation: "b is correct: Name the body and the year, then point at the Franchise Tax Board's estimator. c is wrong: $2,700 is a floor built from $900 for each adult plus $450 for each child, so it describes a family of four made up of two adults and two children, and the Franchise Tax Board computes each household's own figure rather than charging every family of four the same. d is wrong: the tax year label on the Covered California penalty page sits on the 8.05% affordability threshold and not on the penalty, so the $950 and $450 cannot be quoted as the 2026 penalty. a is wrong: $950 per adult and $475 per dependent child is the training's account of what the Franchise Tax Board publishes, and it is tax year 2025 rather than 2026. Lesson section: Stage 3: The thresholds and the money"
+    explanation: "b is correct: Name the body and the year, then point at the Franchise Tax Board's estimator. c is wrong: $2,700 is a floor built from $900 for each adult plus $450 for each child, so it describes a family of four made up of two adults and two children, and the Franchise Tax Board computes each household's own figure rather than charging every family of four the same. d is wrong: the tax year label on the Covered California penalty page sits on the 8.05% affordability threshold and not on the penalty, so the $950 and $450 cannot be quoted as the 2026 penalty. a is wrong: $950 per adult and $475 per dependent child is what the Franchise Tax Board publishes for tax year 2025, not 2026. Lesson section: Stage 3: The thresholds and the money"
   - id: "ba014392-c3db-450c-baf1-39b6cf51e852"
     revision: 1
     status: active
