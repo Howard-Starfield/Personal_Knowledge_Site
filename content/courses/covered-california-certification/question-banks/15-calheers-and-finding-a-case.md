@@ -15,7 +15,7 @@ courseId: "6e01a17c-f82f-4614-8f77-11b78d55fa81"
 
 # CalHEERS and Finding a Case: Question Bank
 
-> Study notes based on a Covered California enroller training programme. These questions practise the lesson "CalHEERS and Finding a Case".
+> Study notes based on a Covered California enroller training programme. These questions practise the lesson [[courses/covered-california-certification/lessons/15-calheers-and-finding-a-case|CalHEERS and Finding a Case]].
 
 ```knowledge-question-bank
 schemaVersion: 1

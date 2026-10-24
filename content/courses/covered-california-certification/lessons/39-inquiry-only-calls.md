@@ -107,6 +107,8 @@ questionIds:
   - "b7a92a62-b256-4e59-bb4e-75d93fdc0474"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/39-inquiry-only-calls|Inquiry-Only Calls: Question Bank]].
+
 ## Review
 
 Close the lesson and write down, from memory:

@@ -16,6 +16,8 @@ comments: false
 
 These questions practise the lesson on how the application decides eligibility: what it weighs, how the household and the income figure are worked out, and how the employer-coverage test is applied. Work them before reading the lesson again.
 
+The lesson these questions belong to is [[courses/covered-california-certification/lessons/19-the-application-decides-eligibility|The Application Decides: Citizenship, Household, Income, and Employer Coverage]].
+
 ```knowledge-question-bank
 schemaVersion: 1
 questions:

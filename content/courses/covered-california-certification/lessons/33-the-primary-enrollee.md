@@ -134,6 +134,8 @@ questionIds:
   - "cca1ee9d-735b-41e0-af2a-0ab72e9ffaea"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/33-the-primary-enrollee|The Primary Enrollee and the Rest of the Household: Question Bank]].
+
 ## Review
 
 Close the lesson and write down, from memory:

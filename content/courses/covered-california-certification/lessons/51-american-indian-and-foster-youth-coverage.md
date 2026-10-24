@@ -150,6 +150,8 @@ questionIds:
   - "15fcc590-9c82-4b2f-936c-0cee85c438f7"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/51-american-indian-and-foster-youth-coverage|American Indian and Alaska Native Coverage, and Former Foster Youth: Question Bank]].
+
 ## Review
 
 Close the lesson and write down, from memory:

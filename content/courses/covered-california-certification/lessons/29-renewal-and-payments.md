@@ -155,6 +155,8 @@ questionIds:
   - "b64aff35-7b4c-4f5b-af6b-ef834fa4f362"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/29-renewal-and-payments|Renewal, Consent, Binder Payments, and Grace Periods: Question Bank]].
+
 ## Review
 
 Close the lesson and write down, from memory:

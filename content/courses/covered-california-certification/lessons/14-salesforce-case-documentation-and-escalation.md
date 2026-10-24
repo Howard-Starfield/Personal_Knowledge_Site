@@ -178,6 +178,8 @@ questionIds:
   - "4244c4c8-801a-40b3-a81f-83f34fefbf51"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/14-salesforce-case-documentation-and-escalation|Salesforce: Case Documentation, Quick Sort, and Escalation: Question Bank]].
+
 ## Review
 
 Close the lesson and write the answer to each of these from memory:

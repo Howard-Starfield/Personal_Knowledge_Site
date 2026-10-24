@@ -98,6 +98,8 @@ questionIds:
   - "c1d21515-c012-4a5f-a2a1-565ceba9ee83"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/05-employer-coverage-and-small-business|Employer Coverage and Covered California for Small Business: Question Bank]].
+
 ## Review
 
 Close the lesson and write down, from memory:

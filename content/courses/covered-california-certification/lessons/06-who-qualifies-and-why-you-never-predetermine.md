@@ -114,6 +114,8 @@ questionIds:
   - "a1f5c15c-cc28-4443-a925-3a6a693f1cbc"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/06-who-qualifies-and-why-you-never-predetermine|Who Qualifies, and Why You Never Predetermine: Question Bank]].
+
 ## Review
 
 Close the lesson and write down, from memory:

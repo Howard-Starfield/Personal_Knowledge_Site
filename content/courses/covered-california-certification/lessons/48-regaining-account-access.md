@@ -159,6 +159,8 @@ questionIds:
   - "cd2406fd-2d7f-4eb5-ad97-998f13b03901"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/48-regaining-account-access|Regaining Account Access: Question Bank]].
+
 ## Review
 
 Close the lesson and write down, from memory:

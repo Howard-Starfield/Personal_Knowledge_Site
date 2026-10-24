@@ -159,6 +159,8 @@ questionIds:
   - "501013ce-4e9e-451f-aba0-c6126f99f15a"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/41-common-service-questions|Common Service Questions Before the Midterm: Question Bank]].
+
 ## Review
 
 Pull these back from memory without looking:

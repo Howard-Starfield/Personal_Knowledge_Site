@@ -16,7 +16,7 @@ comments: false
 
 # Outbound Calls, Recorded Consent, and Quick Sort: Question Bank
 
-> Study notes based on a Covered California enroller training programme. These questions practise the lesson "Outbound Calls, Recorded Consent, and Quick Sort".
+> Study notes based on a Covered California enroller training programme. These questions practise the lesson [[courses/covered-california-certification/lessons/18-outbound-calls-and-quick-sort|Outbound Calls, Recorded Consent, and Quick Sort]].
 
 ```knowledge-question-bank
 schemaVersion: 1

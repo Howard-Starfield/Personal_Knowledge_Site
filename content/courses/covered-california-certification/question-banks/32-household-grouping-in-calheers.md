@@ -16,6 +16,8 @@ comments: false
 
 These questions practise how CalHEERS groups a household for enrollment, as taught in the training session on household grouping. Answer them without looking back at the lesson.
 
+The lesson these questions belong to is [[courses/covered-california-certification/lessons/32-household-grouping-in-calheers|How a Household Is Grouped in CalHEERS]].
+
 ```knowledge-question-bank
 schemaVersion: 1
 questions:

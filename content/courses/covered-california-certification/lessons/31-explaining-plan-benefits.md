@@ -141,6 +141,8 @@ questionIds:
   - "6348009c-0ddb-4064-b43e-bfb807070541"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/31-explaining-plan-benefits|Explaining Plan Benefits to a Consumer: Question Bank]].
+
 ## Review
 
 Close the lesson and write down, from memory:

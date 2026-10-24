@@ -150,6 +150,8 @@ questionIds:
   - "23ff190b-b6b1-4688-a88a-9e7980476c0f"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/38-ending-coverage|Ending Coverage: Voluntary and Involuntary Termination: Question Bank]].
+
 ## Review
 
 Close the lesson and write down, from memory:

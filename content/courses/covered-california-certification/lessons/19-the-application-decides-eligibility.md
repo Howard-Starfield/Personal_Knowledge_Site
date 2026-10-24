@@ -165,6 +165,8 @@ questionIds:
   - "5c4c56f4-0d82-4f4f-ae5c-56a1b0b50573"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/19-the-application-decides-eligibility|The Application Decides: Citizenship, Household, Income, and Employer Coverage: Question Bank]].
+
 ## Review
 
 Close the lesson and write down, from memory:

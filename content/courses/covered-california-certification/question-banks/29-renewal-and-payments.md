@@ -14,7 +14,7 @@ courseId: "6e01a17c-f82f-4614-8f77-11b78d55fa81"
 comments: false
 ---
 
-Study notes based on a Covered California enroller training programme. These questions practise the chapter "Renewal, Consent, Binder Payments, and Grace Periods".
+Study notes based on a Covered California enroller training programme. These questions practise the chapter [[courses/covered-california-certification/lessons/29-renewal-and-payments|Renewal, Consent, Binder Payments, and Grace Periods]].
 
 ```knowledge-question-bank
 schemaVersion: 1

@@ -108,6 +108,8 @@ questionIds:
   - "7a1a76d1-2857-471f-ae7c-83cf2d146dc8"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/07-one-application-many-doors|One Application, Many Doors: Question Bank]].
+
 ## Review
 
 Close the lesson and write down, from memory:

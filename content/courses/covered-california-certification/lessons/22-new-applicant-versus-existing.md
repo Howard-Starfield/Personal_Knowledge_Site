@@ -162,6 +162,8 @@ questionIds:
   - "6edfd8c9-60b4-4b92-a8f8-7025e1a311b5"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/22-new-applicant-versus-existing|New Applicant or Existing Consumer: Question Bank]].
+
 ## Review
 
 Close the lesson and write down, from memory:

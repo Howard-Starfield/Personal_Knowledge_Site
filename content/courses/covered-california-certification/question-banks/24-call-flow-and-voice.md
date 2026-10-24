@@ -16,7 +16,7 @@ comments: false
 
 # Call Flow, Your Voice, and Staying Calm: Question Bank
 
-> Study notes based on a Covered California enroller training programme. These questions practise the lesson 'Call Flow, Your Voice, and Staying Calm'.
+> Study notes based on a Covered California enroller training programme. These questions practise the lesson [[courses/covered-california-certification/lessons/24-call-flow-and-voice|Call Flow, Your Voice, and Staying Calm]].
 
 ```knowledge-question-bank
 schemaVersion: 1

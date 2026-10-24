@@ -131,6 +131,8 @@ questionIds:
   - "e2212bfc-1686-44ad-a3b6-6bbd32323a69"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/54-duplicate-cases|Duplicate Cases: Finding Them and Handing Them On: Question Bank]].
+
 ## Review
 
 Close the lesson and write down, from memory:

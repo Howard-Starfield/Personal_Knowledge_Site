@@ -189,6 +189,8 @@ questionIds:
   - "917d449d-95f4-4318-9f33-b6a443a4cafa"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/28-vision-dental-and-other-coverage|Vision, Dental, Cost-Sharing Reductions, and Minimum Coverage: Question Bank]].
+
 ## Review
 
 Close the lesson and write down, from memory:

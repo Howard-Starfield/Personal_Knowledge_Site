@@ -15,7 +15,7 @@ courseId: "6e01a17c-f82f-4614-8f77-11b78d55fa81"
 
 # Navigating Covered California for the Consumer: Question Bank
 
-> Study notes based on a Covered California enroller training programme. These questions practise the lesson "Navigating Covered California for the Consumer".
+> Study notes based on a Covered California enroller training programme. These questions practise the lesson [[courses/covered-california-certification/lessons/16-navigating-covered-california-for-the-consumer|Navigating Covered California for the Consumer]].
 
 ```knowledge-question-bank
 schemaVersion: 1

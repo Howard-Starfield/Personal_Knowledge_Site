@@ -134,6 +134,8 @@ questionIds:
   - "83e6a5da-5456-41cd-81d2-bb8b709a78b0"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/52-c-chip-and-mcap|C-CHIP and MCAP: Question Bank]].
+
 ## Review
 
 Close the lesson and write down, from memory:

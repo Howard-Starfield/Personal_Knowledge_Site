@@ -71,6 +71,8 @@ questionIds:
   - "aaf5a6b1-2f36-4d65-a89b-5c7eb2367d2a"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/01-what-the-aca-is-and-what-it-created|What the ACA Is and What It Created: Question Bank]].
+
 ## Step 3: The cost rules
 
 The access protections say a consumer can get a plan. The cost rules say what that plan may charge, and what the insurer must do with the money.

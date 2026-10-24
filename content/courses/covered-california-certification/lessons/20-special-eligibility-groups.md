@@ -143,6 +143,8 @@ questionIds:
   - "5294ae4d-0cdf-4d30-9aa3-c934865bf51c"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/20-special-eligibility-groups|Special Eligibility Groups: Question Bank]].
+
 ## Review
 
 Close the lesson and write down, from memory:

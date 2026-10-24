@@ -390,6 +390,8 @@ questionIds:
   - "b6a12899-f5d1-4e01-92aa-15986ac81c03"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/55-the-numbers-a-csr-has-to-know|The Numbers a CSR Has to Know: Question Bank]].
+
 ## Review
 
 Close the lesson and write the answer to each of these from memory:

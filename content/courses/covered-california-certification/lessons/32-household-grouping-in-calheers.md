@@ -138,6 +138,8 @@ questionIds:
   - "a9441d32-90b9-42e1-a054-5224d26da763"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/32-household-grouping-in-calheers|How a Household Is Grouped in CalHEERS: Question Bank]].
+
 ## Review
 
 Close the lesson and write down, from memory:

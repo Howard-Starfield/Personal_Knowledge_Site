@@ -16,6 +16,8 @@ comments: false
 
 These questions practise the lesson on special eligibility groups: the age-26 rule, tribal cost sharing, student plans, veterans, and Medicare. Work them before reading the lesson again.
 
+The lesson these questions belong to is [[courses/covered-california-certification/lessons/20-special-eligibility-groups|Special Eligibility Groups]].
+
 ```knowledge-question-bank
 schemaVersion: 1
 questions:

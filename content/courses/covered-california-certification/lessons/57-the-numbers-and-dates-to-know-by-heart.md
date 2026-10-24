@@ -406,6 +406,8 @@ questionIds:
   - "c7c6a4eb-9c3b-48db-939c-5ce4cdd5de39"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/57-the-numbers-and-dates-to-know-by-heart|The Numbers and Dates to Know by Heart: Question Bank]].
+
 ## Review
 
 Close the lesson and write the answer to each of these from memory:

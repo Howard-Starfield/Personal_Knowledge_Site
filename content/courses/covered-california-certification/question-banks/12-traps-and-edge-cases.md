@@ -16,6 +16,8 @@ comments: false
 
 Study notes based on the owner's Covered California training recordings, cross-checked against the official site. These questions practise the chapter "Traps and Edge Cases".
 
+The lesson these questions belong to is [[courses/covered-california-certification/lessons/12-traps-and-edge-cases|Traps and Edge Cases: Where the Obvious Answer Is Wrong]].
+
 ```knowledge-question-bank
 schemaVersion: 1
 questions:

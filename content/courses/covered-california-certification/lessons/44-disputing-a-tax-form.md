@@ -161,6 +161,8 @@ questionIds:
   - "dbf2835c-323b-4a72-945a-e6c20c7b6910"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/44-disputing-a-tax-form|Disputing a Tax Form: Question Bank]].
+
 ## Review
 
 Close the lesson and write down, from memory:

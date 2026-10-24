@@ -138,6 +138,8 @@ questionIds:
   - "90ed2871-0813-45cb-a97b-415491e7e75f"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/42-controlling-the-conversation|Controlling the Conversation: Question Bank]].
+
 ## Review
 
 Pull these back from memory without looking:

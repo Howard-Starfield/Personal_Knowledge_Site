@@ -151,6 +151,8 @@ questionIds:
   - "6f3011f2-98af-4cfe-9945-f63e4900404d"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/37-the-required-case-review|The Required Case Review: Question Bank]].
+
 ## Review
 
 Close the lesson and write down, from memory:

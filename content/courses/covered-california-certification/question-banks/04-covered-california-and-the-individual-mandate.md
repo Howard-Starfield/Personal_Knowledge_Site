@@ -14,7 +14,7 @@ courseId: "6e01a17c-f82f-4614-8f77-11b78d55fa81"
 comments: false
 ---
 
-Study notes based on a Covered California enroller training programme. These questions practise the chapter "Covered California, the Individual Mandate, and the Obamacare Call".
+Study notes based on a Covered California enroller training programme. These questions practise the chapter [[courses/covered-california-certification/lessons/04-covered-california-and-the-individual-mandate|Covered California, the Individual Mandate, and the Obamacare Call]].
 
 ```knowledge-question-bank
 schemaVersion: 1

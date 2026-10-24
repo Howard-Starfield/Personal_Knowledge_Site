@@ -90,6 +90,8 @@ questionIds:
   - "973e01c8-bafa-430b-8b5c-934c273b9e2c"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/09-enrolling-on-the-site|Enrolling on the Site: Disclaimers, PIN, and the First Payment: Question Bank]].
+
 ## Stage 4: The estimate and the decision
 
 Two different things on the same website produce two different outputs, and the training was careful about the difference.

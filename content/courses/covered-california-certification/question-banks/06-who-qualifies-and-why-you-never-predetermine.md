@@ -14,7 +14,7 @@ courseId: "6e01a17c-f82f-4614-8f77-11b78d55fa81"
 comments: false
 ---
 
-Study notes based on a Covered California enroller training programme. These questions practise the chapter "Who Qualifies, and Why You Never Predetermine".
+Study notes based on a Covered California enroller training programme. These questions practise the chapter [[courses/covered-california-certification/lessons/06-who-qualifies-and-why-you-never-predetermine|Who Qualifies, and Why You Never Predetermine]].
 
 ```knowledge-question-bank
 schemaVersion: 1

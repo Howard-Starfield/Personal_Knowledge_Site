@@ -243,6 +243,8 @@ questionIds:
   - "6a21cb8f-19d8-44ba-82a5-56b403444eb5"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/12-traps-and-edge-cases|Traps and Edge Cases: Question Bank]].
+
 ## Review
 
 Close the lesson and write, from memory, the answer to each of these:

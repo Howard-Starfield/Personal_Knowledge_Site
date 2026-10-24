@@ -201,6 +201,8 @@ questionIds:
   - "dabbb965-3609-4b00-b7cc-6382c9f5bc2d"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/covered-california-certification/question-banks/45-the-renewal-call|The Renewal Call: Question Bank]].
+
 ## Review
 
 Close the lesson and write down, from memory:
