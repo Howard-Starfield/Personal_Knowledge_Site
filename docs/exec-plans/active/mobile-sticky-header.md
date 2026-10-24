@@ -1,16 +1,16 @@
 # Execution Plan: Phase X — Opaque mobile sticky header
 
-| Field           | Value                                               |
-| --------------- | --------------------------------------------------- |
-| Status          | Complete                                            |
-| Owner           | Site maintainer (agent)                             |
-| Created         | 2026-10-24                                          |
-| Updated         | 2026-10-24                                          |
-| Baseline commit | `f5ead2762c1fcf1b267d6386f29f86f2cf46a339`          |
-| Target branch   | `fix/mobile-sticky-header`                          |
-| PR              | _filled after the pull request is opened_           |
-| PRD phase       | Public-learning baseline; mobile reading experience |
-| Related ADRs    | None required                                       |
+| Field           | Value                                                                                            |
+| --------------- | ------------------------------------------------------------------------------------------------ |
+| Status          | Complete                                                                                         |
+| Owner           | Site maintainer (agent)                                                                          |
+| Created         | 2026-10-24                                                                                       |
+| Updated         | 2026-10-24                                                                                       |
+| Baseline commit | `f5ead2762c1fcf1b267d6386f29f86f2cf46a339`                                                       |
+| Target branch   | `fix/mobile-sticky-header`                                                                       |
+| PR              | [#22](https://github.com/Howard-Starfield/Personal_Knowledge_Site/pull/22) (merged as `3959969`) |
+| PRD phase       | Public-learning baseline; mobile reading experience                                              |
+| Related ADRs    | None required                                                                                    |
 
 ## 1. Objective
 
@@ -228,6 +228,7 @@ npm test                                         tests 242 | pass 242 | fail 0
 npm run validate:content                         357 entities, 357 unique IDs
 npm run validate:graph                           1719 relationships
 npx quartz build --concurrency=1                 exit 0
+npx wrangler deploy --dry-run                    exit 0
 ```
 
 ### 19.2 Generated artifacts inspected
@@ -239,9 +240,13 @@ npx quartz build --concurrency=1                 exit 0
 ### 19.3 UI evidence
 
 Before: `scratch/cc-scope/live-course-table-linked.png` — the site title
-printed over row 56 of the course table.
+printed over row 56 of the course table, and the computed background of the
+strip was `rgba(0, 0, 0, 0)`.
+
 After: `scratch/cc-scope/local-sticky-header.png` — the strip paints over the
-content cleanly, and the computed background is `rgb(250, 248, 248)`.
+content cleanly, with the computed background `rgb(250, 248, 248)`. The live
+site reports the same value after the deployment, and the drawer's own
+acceptance suite still passes 28/28 against production.
 
 ### 19.4 Deviations from plan
 
@@ -258,9 +263,10 @@ None.
 - [x] Migration/rollback documented.
 - [x] Known limitations documented.
 - [x] Plan completion log updated.
+- [x] Plan ready to move from `active/` to `completed/`.
 
 ## 21. Completion log
 
-| Date       | Commit                 | Work completed              | Evidence                                                       | Remaining |
-| ---------- | ---------------------- | --------------------------- | -------------------------------------------------------------- | --------- |
-| 2026-10-24 | _see the pull request_ | Opaque mobile sticky header | §19 (computed background, before/after screenshots, all gates) | None      |
+| Date       | Commit                                   | Work completed              | Evidence                                                       | Remaining |
+| ---------- | ---------------------------------------- | --------------------------- | -------------------------------------------------------------- | --------- |
+| 2026-10-24 | `9e21634` → merged as `3959969` (PR #22) | Opaque mobile sticky header | §19 (computed background, before/after screenshots, all gates) | None      |

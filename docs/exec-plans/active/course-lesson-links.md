@@ -1,16 +1,16 @@
 # Execution Plan: Phase X — Link the course lesson table
 
-| Field           | Value                                                                 |
-| --------------- | --------------------------------------------------------------------- |
-| Status          | Complete                                                              |
-| Owner           | Site maintainer (agent)                                               |
-| Created         | 2026-10-24                                                            |
-| Updated         | 2026-10-24                                                            |
-| Baseline commit | `e5ff542bbbcc1a44c18e959f47339e564cec77e9`                            |
-| Target branch   | `fix/course-lesson-links`                                             |
-| PR              | _filled after the pull request is opened_                             |
-| PRD phase       | Public-learning baseline; discoverability of published course content |
-| Related ADRs    | None required (see §9)                                                |
+| Field           | Value                                                                                            |
+| --------------- | ------------------------------------------------------------------------------------------------ |
+| Status          | Complete                                                                                         |
+| Owner           | Site maintainer (agent)                                                                          |
+| Created         | 2026-10-24                                                                                       |
+| Updated         | 2026-10-24                                                                                       |
+| Baseline commit | `e5ff542bbbcc1a44c18e959f47339e564cec77e9`                                                       |
+| Target branch   | `fix/course-lesson-links`                                                                        |
+| PR              | [#21](https://github.com/Howard-Starfield/Personal_Knowledge_Site/pull/21) (merged as `f5ead27`) |
+| PRD phase       | Public-learning baseline; discoverability of published course content                            |
+| Related ADRs    | None required (see §9)                                                                           |
 
 ## 1. Objective
 
@@ -312,7 +312,21 @@ Not applicable — no new script, no new request, no storage write.
 ### 19.1 Commands and results
 
 ```text
-<pending>
+npx prettier --check <the touched files>   All matched files use Prettier code style!
+npx tsc --noEmit                           clean
+npm test                                   tests 242 | pass 242 | fail 0
+npm run validate:content                   357 entities, 357 unique IDs
+npm run validate:graph                     357 pages, 394 tags, 1719 relationships, 773 graph-enabled HTML pages
+npx quartz build --concurrency=1           exit 0, no "✗" plugin-load lines
+npx wrangler deploy --dry-run              exit 0
+```
+
+Built-output check:
+
+```text
+table rows: 58
+lesson links: 58
+table rows that are linked: 57
 ```
 
 ### 19.2 Generated artifacts inspected
@@ -320,31 +334,47 @@ Not applicable — no new script, no new request, no storage write.
 - content manifest: 357 entities, 357 unique IDs, unchanged.
 - graph manifest: 1719 relationships (was 1662; +57 authored course-to-lesson edges).
 - course HTML: 58 table rows, 57 of them linked to a lesson.
-- Worker dry-run/build: see §19.1.
+- Worker dry-run/build: exit 0.
 
 ### 19.3 UI evidence
 
-<pending>
+After deployment, on a phone (390 x 844) against
+`https://blog.howardlab.dev/courses/covered-california-certification`:
+
+```text
+table rows: 58
+'The Numbers and Dates to Know by Heart' -> ../../courses/covered-california-certification/lessons/57-the-numbers-and-dates-to-know-by-heart
+'The Numbers a CSR Has to Know'           -> ../../courses/covered-california-certification/lessons/55-the-numbers-a-csr-has-to-know
+landed on: https://blog.howardlab.dev/courses/covered-california-certification/lessons/57-the-numbers-and-dates-to-know-by-heart
+page heading: The Numbers and Dates to Know by Heart
+```
+
+Screenshots: `scratch/cc-scope/live-course-table-linked.png` (the linked table
+on a phone) and `scratch/cc-scope/live-lesson57.png` (the lesson reached by
+clicking the table).
 
 ### 19.4 Deviations from plan
 
-<pending>
+None. The rewrite was scripted and aborted rather than guessing if any table
+row could not be matched to a lesson; all 57 matched on the first run.
 
 ## 20. Final acceptance checklist
 
-- [ ] Objective achieved.
-- [ ] Non-goals not implemented accidentally.
-- [ ] All PRD acceptance gates pass.
-- [ ] Contracts/docs updated.
-- [ ] Tests/evidence attached.
-- [ ] Security/privacy review complete.
-- [ ] Migration/rollback documented.
-- [ ] Known limitations documented.
-- [ ] Plan completion log updated.
-- [ ] Plan ready to move from `active/` to `completed/`.
+- [x] Objective achieved.
+- [x] Non-goals not implemented accidentally.
+- [x] All PRD acceptance gates pass.
+- [x] Contracts/docs updated.
+- [x] Tests/evidence attached.
+- [x] Security/privacy review complete.
+- [x] Migration/rollback documented.
+- [x] Known limitations documented.
+- [x] Plan completion log updated.
+- [x] Plan stays in `active/` until the other sixteen course tables are linked
+      too, so the plan's own path stays valid for the code comment and the
+      regression guard.
 
 ## 21. Completion log
 
-| Date | Commit | Work completed | Evidence | Remaining |
-| ---- | ------ | -------------- | -------- | --------- |
-|      |        |                |          |           |
+| Date       | Commit                                   | Work completed                           | Evidence                                                                                  | Remaining                                                                                                           |
+| ---------- | ---------------------------------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| 2026-10-24 | `77cda25` → merged as `f5ead27` (PR #21) | 57 lesson titles linked to their lessons | §19 (58 rows, 57 linked, live click-through on a phone, 242/242 unit tests, all CI gates) | The other sixteen course tables are still unlinked; a graph-neutral course listing would need a generated component |
