@@ -2,6 +2,10 @@
 configuration:
   pageTitle: Knowledge Fieldbook
   pageTitleSuffix: ""
+  # The canonical hostname. The domain is already attached to the Vercel
+  # project; without this the build emits https://undefined/ in the social
+  # metadata of every page.
+  baseUrl: blog.howardlab.dev
   enableSPA: true
   enablePopovers: true
   analytics: null
