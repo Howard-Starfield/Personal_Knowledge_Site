@@ -320,20 +320,122 @@ prose, which is what they carried before.
 ### 19.1 Commands and results
 
 ```text
-<pending>
+npx quartz build --concurrency=1
+  Found 359 input files from `content`
+  Parsed 359 Markdown files in 29s
+  Emitted 1013 files to `public` in 7s
+  Done processing 359 files in 37s
+
+npm run validate:content
+  Content validation passed: 358 entities, 358 unique IDs
+
+npm run validate:graph
+  Graph output valid: 358 pages, 394 tags, 1897 relationships, 774 graph-enabled HTML pages.
+
+npm test
+  tests 264  pass 264  fail 0        (252 before this change, 12 added)
+
+npx tsc --noEmit
+  (no output)
+
+npx prettier --check <the changed files>
+  All matched files use Prettier code style!
 ```
 
 ### 19.2 Generated artifacts inspected
 
-<pending>
+The graph manifest was built from `origin/v5` (`f6bf758`) and from this branch, and
+the two were compared edge by edge:
+
+```text
+baseline edges: 1897  branch edges: 1897
+removed (0):
+added (0):
+```
+
+The edges of the two pages that carry a listing, read from the manifest:
+
+```text
+index -> Knowledge Fieldbook
+  outgoing authored edges: 6
+    -> practice
+    -> courses/covered-california-certification/index
+    -> learning-log/index
+    -> courses/accounting-ai-crash-course/index
+    -> courses/ai-agent-crash-course/index
+    -> courses/index (x2)
+practice -> Practice
+  outgoing authored edges: 9
+    -> the three assessments and their three banks
+    -> courses/covered-california-certification/index
+    -> courses/ai-agent-crash-course/index
+    -> courses/accounting-ai-crash-course/index
+```
+
+Every one of those is an authored link in the curated prose. The fourteen courses
+that appear only in the generated table, and the 109 lessons and 109 answer keys that
+appear only in the generated index, are not edges.
+
+The emitted HTML was counted:
+
+```text
+practice generated tables: 4
+   32 rows, 32 lesson links, 32 bank links   (Accounting + AI)
+   19 rows, 19 lesson links, 19 bank links   (AI Agent)
+    1 row,   1 lesson link,   1 bank link    (AI Basics)
+   57 rows, 57 lesson links, 57 bank links   (Covered California)
+total rows: 109
+homepage generated rows: 17, course links: 17
+```
 
 ### 19.3 UI evidence
 
-<pending>
+Driven with Playwright against the local build on `http://127.0.0.1:8099`:
+
+```text
+=== homepage ===
+homepage generated tables: 1
+homepage generated rows: 17
+homepage headers: ['COURSE', 'LESSONS', 'WITH QUIZZES']
+first course link: Account Management: Maintaining Relationships -> /courses/account-management-maintaining-relationships
+last course link: How to Be an Agent Boss: Leading AI Agents at Work -> /courses/how-to-be-an-agent-boss
+marker text visible: False
+first row cells: ['Account Management: Maintaining Relationships', '7', '0']
+after click, url: http://127.0.0.1:8099/courses/account-management-maintaining-relationships
+course page title: Account Management: Maintaining Relationships
+
+=== practice ===
+practice generated tables: 4
+practice generated rows: 109
+practice course headings: ['Accounting + AI Crash Course', 'AI Agent Crash Course',
+                           'AI Basics: What Every Professional Needs to Know',
+                           'Covered California: Core Programme for Enrollers']
+marker text visible: False
+first lesson link: What Accounting Is Actually For -> /courses/accounting-ai-crash-course/lessons/01-what-accounting-is-for
+after click, url: http://127.0.0.1:8099/courses/accounting-ai-crash-course/lessons/01-what-accounting-is-for
+lesson page title: What Accounting Is Actually For
+
+=== mobile (390x844) ===
+mobile: {'bodyScrollW': 390, 'innerW': 390, 'tableContainer': True,
+         'tableOverflowX': 'auto', 'tableWidth': 576, 'containerWidth': 358}
+```
+
+The page does not scroll sideways on a phone; the table scrolls inside the site's own
+`.table-container`, which is the treatment every table on the site already has.
+
+Screenshots: `scratch/cc-scope/index-home-table.png`,
+`scratch/cc-scope/index-home-desktop.png`, `scratch/cc-scope/index-practice-phone.png`.
 
 ### 19.4 Deviations from plan
 
-<pending>
+1. **The tables were not committed to Markdown.** The plan already recorded this as
+   the rejected alternative; the implementation followed the chosen design, and the
+   rejection is described in §7.
+2. **A curated paragraph was restored.** The first draft of the Practice page had
+   dropped the paragraph naming the AI Agent and Accounting crash courses. It was
+   restored in `d146889` so that no authored content, and no graph edge, was lost.
+3. **The generated listings carry no `data-slug`,** as designed; the graph is
+   unchanged, which is the acceptance gate G3.
 
 ## 20. Final acceptance checklist
 
