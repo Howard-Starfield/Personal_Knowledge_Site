@@ -234,12 +234,12 @@ not to the amounts. The amounts themselves carry no year at all. That is the
 detail that catches people out, because the 8.05% sits right next to the $950
 on the same page and the two look like they belong together.
 
-The Franchise Tax Board column is what that body publishes itself. Its [health care
-mandate page](https://www.ftb.ca.gov/file/personal/filing-situations/health-care-mandate/personal.html) states **$950 per adult and $475 per dependent child for
-tax year 2025**, and treats coverage as unaffordable above **7.28% of household
-income for the 2025 taxable year**. The figures are internally consistent -
-$950 and $475 for two adults and two children is $2,850 - and they are what the
-FTB publishes.
+> The Franchise Tax Board column is what that body publishes itself. Its [health care
+> mandate page](https://www.ftb.ca.gov/file/personal/filing-situations/health-care-mandate/personal.html) states **$950 per adult and $475 per dependent child for
+> tax year 2025**, and treats coverage as unaffordable above **7.28% of household
+> income for the 2025 taxable year**. The figures are internally consistent -
+> $950 and $475 for two adults and two children is $2,850 - and they are what the
+> FTB publishes.
 
 And the rule that outranks every number in the table: **name the body and the
 year, never quote a flat number, and point the consumer at the Franchise Tax

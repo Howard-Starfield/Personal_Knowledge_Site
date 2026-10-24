@@ -59,15 +59,15 @@ affordability threshold of **8.05%** of projected annual household income —
 and that threshold is the figure the page labels **tax year 2026**. The
 penalty amounts themselves carry no year on the page.
 
-**And one caveat on the FTB side, because it changes what you promise.** The
-marketplace figures are the official record's own, published by coveredca.com.
-The FTB figures are the ones the Franchise Tax Board publishes itself: its
-[health care mandate page](https://www.ftb.ca.gov/file/personal/filing-situations/health-care-mandate/personal.html) states **$950 per adult and $475 per
-dependent child for tax year 2025**, and treats coverage as unaffordable above
-**7.28% of household income for the 2025 taxable year**. The training's account
-and the FTB's own publication agree. The two FTB figures are internally
-consistent - $950 and $475 for two adults and two children is $2,850 - and they
-are what the FTB publishes.
+> **And one caveat on the FTB side, because it changes what you promise.** The
+> marketplace figures are the official record's own, published by coveredca.com.
+> The FTB figures are the ones the Franchise Tax Board publishes itself: its
+> [health care mandate page](https://www.ftb.ca.gov/file/personal/filing-situations/health-care-mandate/personal.html) states **$950 per adult and $475 per
+> dependent child for tax year 2025**, and treats coverage as unaffordable above
+> **7.28% of household income for the 2025 taxable year**. The training's account
+> and the FTB's own publication agree. The two FTB figures are internally
+> consistent - $950 and $475 for two adults and two children is $2,850 - and they
+> are what the FTB publishes.
 
 **Silver's share.** The second number is Silver. It is not "the 70% plan".
 Silver's value depends on **household income and household size**, and it
