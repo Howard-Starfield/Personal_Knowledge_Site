@@ -37,6 +37,11 @@ secure or proctored test.
 
 Each of the fifty-seven lessons in **[[courses/covered-california-certification/index|Covered California: Core Programme for Enrollers]]** carries its own quiz and links its own answer key, so any topic in that course can be drilled from the course page.
 
+Other courses publish question banks alongside their lessons, and each of their quiz-bearing lessons links its own key:
+
+- [[courses/ai-agent-crash-course/index|AI Agent Crash Course]] — nineteen question banks.
+- [[courses/accounting-ai-crash-course/index|Accounting + AI Crash Course]] — thirty-two question banks.
+
 ## Every course with practice
 
 Every lesson below carries a quiz, and every quiz has an answer key with the sample answer and the reasoning behind it.
