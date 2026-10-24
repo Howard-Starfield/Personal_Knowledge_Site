@@ -109,6 +109,8 @@ questionIds:
   - "67abe793-2581-4cf7-80ea-4ec911baf4aa"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-agent-crash-course/question-banks/13-capstone-business-agent-os|Capstone Business Agent OS Question Bank]].
+
 ## Step 3 — Build the MVP around an approval queue
 
 **In plain language.** The smallest credible product answers from documents with citations and refuses to act on its own. Anything that leaves the building waits for a human.

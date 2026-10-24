@@ -68,6 +68,8 @@ questionIds:
   - "3c999911-ed0d-402b-b49e-abe985d10835"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/accounting-ai-crash-course/question-banks/01-what-accounting-is-for|What Accounting Is Actually For Question Bank]].
+
 ## Step 2 — Record sales gross, fees separately
 
 **In plain language.** When a customer pays through a platform, the platform keeps a fee and sends you the rest. The bank shows only the rest. Accounting must show both what customers paid and what the platform cost you.

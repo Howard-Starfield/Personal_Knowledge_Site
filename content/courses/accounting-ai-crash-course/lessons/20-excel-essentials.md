@@ -101,6 +101,8 @@ questionIds:
   - "d6cefd15-010e-4ac5-bbda-9c30a6b51a67"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/accounting-ai-crash-course/question-banks/20-excel-essentials|Excel Essentials for Accounting Work Question Bank]].
+
 ## Step 3 — Look up and sort with XLOOKUP and IFS
 
 **In plain language.** A lookup finds a key in one list and returns a related value from another. IFS tests conditions in order and returns the answer for the first true one.

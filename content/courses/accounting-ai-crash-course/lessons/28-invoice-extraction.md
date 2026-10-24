@@ -87,6 +87,8 @@ questionIds:
   - "8dd1a893-b987-4dfb-af0b-bb7f3eab2cf2"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/accounting-ai-crash-course/question-banks/28-invoice-extraction|Invoice Extraction and AP Automation Question Bank]].
+
 ## Step 3 — Suggest the GL code and score confidence
 
 **Plain language.** The system proposes which general ledger (GL) account the expense belongs to, usually from what that vendor was coded to before. It then combines field confidences into one overall score so the queue can be sorted.

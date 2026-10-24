@@ -64,6 +64,8 @@ questionIds:
   - "47658cb0-ca25-4f35-8b4d-b8c1301e9ba4"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-agent-crash-course/question-banks/04-embeddings-semantic-search|Embeddings and Semantic Search Question Bank]].
+
 ## Step 2 — Split documents into chunks
 
 **In plain words.** One vector can only describe one coherent topic. If you embed a 10-page PDF as one vector, you get a vague average of everything in it, like blending ten different soups and trying to taste the carrot. Cut the document into smaller passages so each vector represents one idea.

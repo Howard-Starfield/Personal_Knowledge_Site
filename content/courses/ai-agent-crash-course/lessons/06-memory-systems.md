@@ -115,6 +115,8 @@ questionIds:
   - "2622f6ed-a45b-4520-95f4-db4670596ab7"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-agent-crash-course/question-banks/06-memory-systems|Memory Systems for AI Agents Question Bank]].
+
 ## Step 3 — Retrieve with filters and cite what you used
 
 **In plain language.** Before answering, the assistant flips open the notebook to the relevant page, not to every page. Then they tell you where the answer came from: "per the policy manual" for company facts, "you told me earlier" for personal ones.

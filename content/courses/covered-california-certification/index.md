@@ -35,7 +35,7 @@ prerequisiteIds: []
 
 This course turns the owner's training recordings into durable study material. It has two halves. The first is organised the way the curriculum is organised: the law that created the marketplace, then the products it sells, then who can buy them, then when, and finally the conduct rules that govern the help you give. The second half is the operational material — how a case is worked, what the portal does, and what to say on a call — and it is where most of the traps live.
 
-Every lesson follows the same shape. A short explanation of the idea in plain language, a worked example, a checkpoint you answer from memory, and a set of questions that make you retrieve rather than reread. The course ends with a page of things that are easy to get wrong, because that is where the marks are.
+Every lesson follows the same shape. A short explanation of the idea in plain language, a worked example, a checkpoint you answer from memory, and a set of questions that make you retrieve rather than reread. The course ends with a page of things that are easy to get wrong, because that is where the marks are. The assessments, the memorisation lessons and every answer key are gathered on the **[[practice|Practice]]** page.
 
 The two halves are rehearsed differently, and `content-draft/study-guide.md` §21 explains why: the first half is a set of facts to recall, the second half is a set of sequences to perform in the right order.
 

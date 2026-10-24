@@ -74,6 +74,8 @@ questionIds:
   - "5b6b94d5-00bd-4623-ab8a-2a073f610892"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/accounting-ai-crash-course/question-banks/10-credit-card-reconciliation|Credit Card Reconciliation and Expense Coding Question Bank]].
+
 ## Step 2 — Code every line to a specific account
 
 **In plain language.** The statement is the company's diary of what it spent. Your job is to translate each diary entry into the right bucket, with proof. Merchant names are often cryptic, such as a Square prefix or an Amazon Marketplace code, so you look at the merchant, the memo and the receipt together.

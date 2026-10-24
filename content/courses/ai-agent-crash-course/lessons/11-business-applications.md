@@ -87,6 +87,8 @@ questionIds:
   - "4417a702-c150-442d-b644-2de186666d30"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-agent-crash-course/question-banks/11-business-applications|AI for Business Applications Question Bank]].
+
 ## Step 3 — Build the front half: classify, retrieve, draft
 
 **Plain language.** The lab runs ten sample tickets through a pipeline. You create a tickets file, three short policy files (refund, shipping and product specifications), and three small modules.

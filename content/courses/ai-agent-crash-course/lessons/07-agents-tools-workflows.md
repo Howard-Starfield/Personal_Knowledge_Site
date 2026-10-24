@@ -120,6 +120,8 @@ questionIds:
   - "63126c54-fd6e-42f4-a982-5e3fe88a1dc7"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-agent-crash-course/question-banks/07-agents-tools-workflows|Agents, Tools, and Workflows Question Bank]].
+
 ## Step 3 — Approval gates and the safety rules
 
 **In plain language.** A tool that only reads is cheap to get wrong. A tool that writes, sends, or spends is not. The junior assistant walks to your desk before anything leaves the building, and your agent must do the same.

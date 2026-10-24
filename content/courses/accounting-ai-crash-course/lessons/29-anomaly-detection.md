@@ -104,6 +104,8 @@ questionIds:
   - "6e4be0d2-48bc-4fff-a0f3-7eddac806648"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/accounting-ai-crash-course/question-banks/29-anomaly-detection|Accounting Anomaly Detection Question Bank]].
+
 ## Step 3 — Triage: dismiss, document or escalate
 
 **In plain language.** Think of an emergency-room nurse. The nurse does not perform surgery; the nurse checks each arrival, handles the minor ones with the paperwork at hand, and calls the doctor for the serious ones. In anomaly work you are the triage nurse, not the detective.

@@ -75,6 +75,8 @@ questionIds:
   - "51b8f902-d1a0-45f9-9071-addc1231301a"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-agent-crash-course/question-banks/19-career-and-packaging|Career Proof, Consulting Offers, and Safe Packaging Question Bank]].
+
 ## Step 3 — Run discovery and design the approval-gated MVP
 
 **Plain language.** A discovery call is a diagnostic, not a pitch. Listen for these signals: a painful, repetitive, measurable workflow, clean enough data, and a willing human in the loop. If any is missing, the project will likely fail and damage your reputation.

@@ -71,6 +71,8 @@ questionIds:
   - "11492e93-cf24-459c-a298-7c683e2b0ba0"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/accounting-ai-crash-course/question-banks/08-accounts-receivable|Accounts Receivable Workflow Question Bank]].
+
 ## Step 2 — Apply payments and credit memos
 
 **In plain language.** Applying a payment means matching cash to the exact invoice it pays. A credit memo is different: it lowers what a customer owes without moving any cash.

@@ -89,6 +89,8 @@ questionIds:
   - "4e67e768-566e-4fd5-9e76-ca85ae7ec57d"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-agent-crash-course/question-banks/14-context-engineering|Context Engineering: Budget, Rank, Compact, Cache, Defend Question Bank]].
+
 ## Step 3 — Compact the runners-up and keep records
 
 **Plain language.** When items do not fit, do not simply delete them. Write one short note saying what was left out, so the model knows more exists. Then keep two records: what went in, and what stayed out and why.

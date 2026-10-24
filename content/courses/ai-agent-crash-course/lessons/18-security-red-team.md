@@ -106,6 +106,8 @@ questionIds:
   - "2b68250b-5df8-4ca9-b499-7233b90c27dc"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-agent-crash-course/question-banks/18-security-red-team|AI Security Threat Modeling and Red-Team Lab Question Bank]].
+
 ## Step 3 — Write cases and a harness that grades itself
 
 **Plain language.** Each attack becomes a stored test case. A small harness replays every case through your guarded gateway and checks the audit log, so security becomes a repeatable check rather than a one-off audit.

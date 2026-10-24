@@ -93,6 +93,8 @@ questionIds:
   - "1b03c61f-2ee5-4148-adee-15e55c3eea0f"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/accounting-ai-crash-course/question-banks/07-accounts-payable|Accounts Payable Workflow Question Bank]].
+
 ## Step 3 — Early-payment discounts (2/10 Net 30)
 
 **In plain language.** Some vendors reward fast payment. The terms 2/10 Net 30 read: take 2% off if you pay within 10 days; otherwise pay the full amount within 30.

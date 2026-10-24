@@ -96,6 +96,8 @@ questionIds:
   - "f070ff85-4b9d-4426-afd4-45a261aa4953"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-agent-crash-course/question-banks/08-guardrails-mcp-safety|Guardrails, MCP, and Agent Safety Question Bank]].
+
 ## Step 3 — Permissions, least privilege, and out-of-band approval
 
 **Plain language.** Give each tool a label saying how dangerous it is, and check that label before every call. Reading is easy to allow; deleting or sending needs a human.

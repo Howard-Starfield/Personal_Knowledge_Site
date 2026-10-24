@@ -59,6 +59,8 @@ questionIds:
   - "e99fc863-6a2a-4323-b0e1-0f3bd79b252a"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/accounting-ai-crash-course/question-banks/17-internal-controls|Internal Controls for Entry-Level Accounting Question Bank]].
+
 ## Step 2 — Segregation of duties
 
 **In plain language.** Segregation of duties (SoD) means no single person controls a whole transaction from start to finish. The idea is to break the chain so that one person alone cannot steal money and hide it.

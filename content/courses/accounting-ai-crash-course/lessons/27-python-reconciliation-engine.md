@@ -102,6 +102,8 @@ questionIds:
   - "497c698e-28c8-4c6a-8220-23d9a3929dbe"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/accounting-ai-crash-course/question-banks/27-python-reconciliation-engine|Python Reconciliation Engine Question Bank]].
+
 ## Step 3 — Split matches: one bank row, many book rows
 
 **In plain language.** Payment processors often pay out one net deposit for many sales. The bank sees one line, while the books hold many. No single-row rule can match that, so the last tier searches for a small group of book rows that adds up to the bank amount.

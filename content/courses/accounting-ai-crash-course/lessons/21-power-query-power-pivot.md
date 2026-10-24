@@ -75,6 +75,8 @@ questionIds:
   - "bac1a09d-696f-4a13-93da-92541d63c127"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/accounting-ai-crash-course/question-banks/21-power-query-power-pivot|Power Query and Power Pivot for Accounting Question Bank]].
+
 ## Step 3 — Combine: standardize, append and deduplicate
 
 **In plain language.** Each source has different column names. Before stacking them, make them look the same.

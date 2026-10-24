@@ -71,6 +71,8 @@ questionIds:
   - "f667dbf6-7c2b-4439-b4fd-7efe0fd9d06d"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/accounting-ai-crash-course/question-banks/25-power-bi-dashboard|Power BI Accounting Dashboard Question Bank]].
+
 ## Step 3 — Measures versus calculated columns
 
 **Plain language.** A **calculated column** is worked out row by row when the data refreshes and then stored. A **measure** is worked out at the moment you look, using whatever rows the current filters leave in view.

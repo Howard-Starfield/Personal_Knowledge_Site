@@ -125,6 +125,8 @@ questionIds:
   - "90fd2f53-a0f7-46d4-a70e-c7b0f24b48a3"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/accounting-ai-crash-course/question-banks/16-ratios-and-analysis|Ratios and Business Analysis Question Bank]].
+
 ## Step 3 — Efficiency and the average-balance rule
 
 Efficiency ratios measure how quickly cash cycles through receivables and payables. Here is the trap: the income statement covers a **period** ("revenue from May 1 to May 31") while the balance sheet is a **snapshot** ("receivables on May 31"). Dividing a month of revenue by one day's balance mixes the two. The fix is a simple average of the beginning and ending balance:
