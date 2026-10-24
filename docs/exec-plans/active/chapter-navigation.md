@@ -1,16 +1,16 @@
 # Execution Plan: Phase X — Generated chapter navigation, and a full inventory of what is published
 
-| Field           | Value                                                                 |
-| --------------- | --------------------------------------------------------------------- |
-| Status          | Complete                                                              |
-| Owner           | Site maintainer (agent)                                               |
-| Created         | 2026-10-24                                                            |
-| Updated         | 2026-10-24                                                            |
-| Baseline commit | `c0eb0704fb55c9b99125e8a46e10e15b4487a0ce`                            |
-| Target branch   | `fix/chapter-navigation`                                              |
-| PR              | _filled after the pull request is opened_                             |
-| PRD phase       | Public-learning baseline; navigation between published study material |
-| Related ADRs    | ADR-0003 (the study branch and the rights gate) — see §7              |
+| Field           | Value                                                                                            |
+| --------------- | ------------------------------------------------------------------------------------------------ |
+| Status          | Complete                                                                                         |
+| Owner           | Site maintainer (agent)                                                                          |
+| Created         | 2026-10-24                                                                                       |
+| Updated         | 2026-10-24                                                                                       |
+| Baseline commit | `c0eb0704fb55c9b99125e8a46e10e15b4487a0ce`                                                       |
+| Target branch   | `fix/chapter-navigation`                                                                         |
+| PR              | [#28](https://github.com/Howard-Starfield/Personal_Knowledge_Site/pull/28) (merged as `c5fd783`) |
+| PRD phase       | Public-learning baseline; navigation between published study material                            |
+| Related ADRs    | ADR-0003 (the study branch and the rights gate) — see §7                                         |
 
 ## 1. Objective
 
@@ -306,17 +306,55 @@ Revert the merge commit; Vercel rebuilds. No user data is involved.
 ### 19.1 Commands and results
 
 ```text
-<pending>
+npx tsx --test plugins/chapter-navigation/src/nav.test.ts   10 tests, 10 pass, 0 fail
+npx tsc --noEmit                             clean
+npx prettier --check <the touched files>      All matched files use Prettier code style!
+npm test                                     tests 252 | pass 252 | fail 0
+npm run validate:content                     358 entities, 358 unique IDs
+npm run validate:graph                       358 pages, 394 tags, 1897 relationships
+npx quartz build --concurrency=1             exit 0, no "✗" plugin-load lines
+npx wrangler deploy --dry-run                exit 0
 ```
+
+The repository-wide Prettier check still fails locally on 18 files, all of
+them inside `.claude/worktrees/` and excluded from Git by
+`.git/info/exclude`; CI never sees them.
 
 ### 19.2 Generated artifacts inspected
 
 - content manifest: 358 entities, 358 unique IDs.
-- built HTML: the navigation block on 337 pages, one block per page.
+- built HTML:
+
+  ```text
+  pages with a navigation: 337
+  navigation blocks per page: {1: 337}
+  doubled: none
+  ```
+
+  Every page carries exactly one navigation block, and the twelve
+  LinkedIn-derived courses keep their own hand-written buttons.
 
 ### 19.3 UI evidence
 
-<pending>
+Against the deployed site, `https://blog.howardlab.dev`:
+
+```text
+lesson 56: 1 navigation block(s)
+    ← Previous: The Numbers a CSR Has to Know
+    Next: The Numbers and Dates to Know by Heart →
+bank 57: 1 navigation block(s)
+    ← Previous: The Final Assessment: How It Works, and Twenty-Five Questions with Their Answers: Question Bank
+practice: 1 navigation block(s)
+    ← Previous: Courses
+    Next: The Final Assessment →
+
+after clicking Next on lesson 56 -> https://blog.howardlab.dev/courses/covered-california-certification/lessons/57-the-numbers-and-dates-to-know-by-heart
+heading: The Numbers and Dates to Know by Heart
+```
+
+Screenshots: `scratch/cc-scope/live-lesson-nav.png` (the pair at the end of a
+lesson on a phone) and `scratch/cc-scope/live-practice-nav.png` (the Practice
+page's pair).
 
 ### 19.4 Deviations from plan
 
@@ -340,6 +378,6 @@ Revert the merge commit; Vercel rebuilds. No user data is involved.
 
 ## 21. Completion log
 
-| Date | Commit | Work completed | Evidence | Remaining |
-| ---- | ------ | -------------- | -------- | --------- |
-|      |        |                |          |           |
+| Date       | Commit                                   | Work completed                                               | Evidence                                                                                            | Remaining                                                                                    |
+| ---------- | ---------------------------------------- | ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| 2026-10-24 | `41a3d9a` → merged as `c5fd783` (PR #28) | Generated previous/next for 337 pages, and the Practice pair | §19 (live click-through from lesson 56 to 57, 337 pages with exactly one block, 252/252 unit tests) | The fourteen local-only courses remain unpublished; that is the owner's rights decision (§7) |
