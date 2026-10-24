@@ -1,16 +1,16 @@
 # Execution Plan: Phase X — Mobile Explorer as a left-hand panel
 
-| Field           | Value                                                               |
-| --------------- | ------------------------------------------------------------------- |
-| Status          | In progress                                                         |
-| Owner           | Site maintainer (agent)                                             |
-| Created         | 2026-10-24                                                          |
-| Updated         | 2026-10-24                                                          |
-| Baseline commit | `8260445e3918778e8ff146cfeb860f98bbf105ed`                          |
-| Target branch   | `fix/mobile-explorer-left-panel`                                    |
-| PR              | _filled after the pull request is opened_                           |
-| PRD phase       | Public-learning baseline; presentation defect on the published site |
-| Related ADRs    | None required (see §9)                                              |
+| Field           | Value                                                                                            |
+| --------------- | ------------------------------------------------------------------------------------------------ |
+| Status          | Complete — merged as `e993e39`; two follow-ups remain (§17), so the plan stays in `active/`      |
+| Owner           | Site maintainer (agent)                                                                          |
+| Created         | 2026-10-24                                                                                       |
+| Updated         | 2026-10-24                                                                                       |
+| Baseline commit | `8260445e3918778e8ff146cfeb860f98bbf105ed`                                                       |
+| Target branch   | `fix/mobile-explorer-left-panel`                                                                 |
+| PR              | [#19](https://github.com/Howard-Starfield/Personal_Knowledge_Site/pull/19) (merged as `e993e39`) |
+| PRD phase       | Public-learning baseline; presentation defect on the published site                              |
+| Related ADRs    | None required (see §9)                                                                           |
 
 ## 1. Objective
 
@@ -485,6 +485,12 @@ correctly still passes).
 Driven with Playwright (Chrome) against the local build served on
 `http://127.0.0.1:8099`. **28/28 checks pass.**
 
+The same suite was re-run against the deployed site
+`https://blog.howardlab.dev/` after PR #19 merged: **28/28 checks pass**, with
+the open panel measuring `x=0, w=304, h=844` at 390 px and the tree link
+navigating to
+`/courses/accounting-ai-crash-course/lessons/29-anomaly-detection`.
+
 | Flow                         | Viewport / input              | Result                                                                         |
 | ---------------------------- | ----------------------------- | ------------------------------------------------------------------------------ |
 | Open the drawer              | 390x844 touch, 768x1024 touch | Panel at `x=0`, `w=304`, `h=844`, `visibility: visible`, `position: fixed`     |
@@ -541,10 +547,11 @@ committed guard asserts against the compiled CSS.
 - [x] Known limitations documented (`Escape`, the menu glyph, no committed
       Playwright harness).
 - [x] Plan completion log updated.
-- [x] Plan ready to move from `active/` to `completed/`.
+- [x] Plan stays in `active/` until the §17 follow-ups land, so the plan's own
+      path stays valid for the code comment and the regression guard.
 
 ## 21. Completion log
 
-| Date       | Commit          | Work completed                                                          | Evidence                                                        | Remaining                                                                                    |
-| ---------- | --------------- | ----------------------------------------------------------------------- | --------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| 2026-10-24 | _branch commit_ | Root cause found, mobile drawer override, regression guard, screenshots | §19 (28/28 Playwright checks, 242/242 unit tests, all CI gates) | `Escape` dismissal, a close glyph, and a committed Playwright harness remain open follow-ups |
+| Date       | Commit                                   | Work completed                                                          | Evidence                                                                                         | Remaining                                                                                    |
+| ---------- | ---------------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- |
+| 2026-10-24 | `2a094d2` → merged as `e993e39` (PR #19) | Root cause found, mobile drawer override, regression guard, screenshots | §19 (28/28 Playwright checks locally and on the deployed site, 242/242 unit tests, all CI gates) | `Escape` dismissal, a close glyph, and a committed Playwright harness remain open follow-ups |
