@@ -1,16 +1,16 @@
 # Execution Plan: Phase X — Link every lesson to its question bank, and back
 
-| Field           | Value                                                              |
-| --------------- | ------------------------------------------------------------------ |
-| Status          | Complete                                                           |
-| Owner           | Site maintainer (agent)                                            |
-| Created         | 2026-10-24                                                         |
-| Updated         | 2026-10-24                                                         |
-| Baseline commit | `1e80acc387288b91247e4f277f8d23e9efa8bc76`                         |
-| Target branch   | `fix/lesson-bank-links`                                            |
-| PR              | _filled after the pull request is opened_                          |
-| PRD phase       | Public-learning baseline; reachability of published study material |
-| Related ADRs    | None required (see §9)                                             |
+| Field           | Value                                                                                            |
+| --------------- | ------------------------------------------------------------------------------------------------ |
+| Status          | Complete                                                                                         |
+| Owner           | Site maintainer (agent)                                                                          |
+| Created         | 2026-10-24                                                                                       |
+| Updated         | 2026-10-24                                                                                       |
+| Baseline commit | `1e80acc387288b91247e4f277f8d23e9efa8bc76`                                                       |
+| Target branch   | `fix/lesson-bank-links`                                                                          |
+| PR              | [#24](https://github.com/Howard-Starfield/Personal_Knowledge_Site/pull/24) (merged as `4ff2297`) |
+| PRD phase       | Public-learning baseline; reachability of published study material                               |
+| Related ADRs    | None required (see §9)                                                                           |
 
 ## 1. Objective
 
@@ -266,23 +266,53 @@ Revert the merge commit; Vercel rebuilds. No user data is involved.
 ### 19.1 Commands and results
 
 ```text
-<pending>
+npx prettier --check content/courses/covered-california-certification   clean
+npx tsc --noEmit                              clean
+npm test                                      tests 242 | pass 242 | fail 0
+npm run validate:content                      357 entities, 357 unique IDs
+npm run validate:graph                        357 pages, 394 tags, 1833 relationships
+npx quartz build --concurrency=1              exit 0, no "✗" plugin-load lines
 ```
 
 ### 19.2 Generated artifacts inspected
 
 - content manifest: 357 entities, 357 unique IDs, unchanged.
 - graph manifest: 1833 relationships (was 1719; +114 authored edges).
-- built HTML: every one of the 57 lesson pages links its bank, and every one
-  of the 57 bank pages links its lesson.
+- built HTML across all 114 pages:
+
+  ```text
+  lesson pages: 58  bank pages: 58
+  pages missing the cross-link: ['lesson index', 'bank index']
+  ```
+
+  The two entries are the generated folder index pages, which have no partner
+  by design.
 
 ### 19.3 UI evidence
 
-<pending>
+On a phone (390 x 844), against the deployed site:
+
+```text
+lesson->bank: 2   bank->lesson: 2
+lesson page link text: The Numbers and Dates to Know by Heart: Question Bank
+landed on: https://blog.howardlab.dev/courses/covered-california-certification/question-banks/57-the-numbers-and-dates-to-know-by-heart
+heading: The Numbers and Dates to Know by Heart: Question Bank
+```
+
+The lesson page's **Backlinks** panel now lists "The Numbers and Dates to
+Know by Heart: Question Bank", which is the bank's link back to the lesson
+rendered from the other side.
+
+Screenshots: `scratch/cc-scope/live-lesson57-bank-link.png` (the lesson page,
+with the bank's backlink visible) and `scratch/cc-scope/live-bank57.png` (the
+bank reached by clicking through from the lesson).
 
 ### 19.4 Deviations from plan
 
-<pending>
+None. The script refused to write on the first two runs because the banks'
+intro sentences use three different forms — quoted with double quotes, quoted
+with single quotes, and paraphrased — so the rule was widened to find the
+paragraph first and then decide how to link it.
 
 ## 20. Final acceptance checklist
 
@@ -298,6 +328,6 @@ Revert the merge commit; Vercel rebuilds. No user data is involved.
 
 ## 21. Completion log
 
-| Date | Commit | Work completed | Evidence | Remaining |
-| ---- | ------ | -------------- | -------- | --------- |
-|      |        |                |          |           |
+| Date       | Commit                                   | Work completed                          | Evidence                                                                           | Remaining                                                      |
+| ---------- | ---------------------------------------- | --------------------------------------- | ---------------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| 2026-10-24 | `d1f0274` → merged as `4ff2297` (PR #24) | 57 lesson→bank and 57 bank→lesson links | §19 (57/57 pairs, live click-through on a phone, 242/242 unit tests, all CI gates) | The other sixteen courses still have unlinked tables and pairs |
