@@ -18,10 +18,12 @@ Welcome to the **Knowledge Fieldbook**, a public learning site focused on AI sys
 | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | -------- |
 | **[[courses/ai-agent-crash-course/index\|AI Agent Crash Course]]**             | A hands-on path from everyday LLM use to building guarded, evaluated, and deployable AI agent systems. | Beginner |
 | **[[courses/accounting-ai-crash-course/index\|Accounting + AI Crash Course]]** | A practical accounting refresher for AP, AR and junior staff roles, ending with guarded AI workflows.  | Beginner |
+| **[[courses/covered-california-certification/index\|Covered California]]**     | The enroller core curriculum: the law, the products, who may buy them, when, and the conduct rules.    | Beginner |
 
 Browse every learning path in the **[[courses/index|Courses catalog]]**.
 
 ## Active learning and field notes
 
 - **[[courses/index|Courses]]**: in-depth, sequenced learning paths.
+- **[[practice|Practice]]**: the assessments, the memorisation lessons, and every answer key.
 - **[[learning-log/index|Learning Log]]**: public questions, reminders, and study notes.

@@ -93,6 +93,8 @@ questionIds:
   - "a9019872-128b-448a-8f7c-e12db1b509a9"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/accounting-ai-crash-course/question-banks/31-ledgerguard-ai-agent|Designing a Safe Accounting AI Agent (LedgerGuard) Question Bank]].
+
 ## Step 3 — The approval queue and separate identities
 
 Every draft passes through an approval queue before anything reaches the ledger. The lifecycle runs: drafted, pending review, approved, posted. A rejected entry can be returned to the agent with notes for a re-draft.

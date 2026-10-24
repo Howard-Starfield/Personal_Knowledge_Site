@@ -91,6 +91,8 @@ questionIds:
   - "39d19966-6b99-41f9-9d0b-137729ba0f4c"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/accounting-ai-crash-course/question-banks/12-month-end-close|Month-End Close Checklist Question Bank]].
+
 ## Step 3 — Adjusting entries (Day 4)
 
 **In plain language.** After the reconciliations, you record the economic events nobody else booked: expenses incurred but not billed, the monthly use of prepaid items, wear on equipment, revenue earned from advance payments, and wages earned but unpaid.

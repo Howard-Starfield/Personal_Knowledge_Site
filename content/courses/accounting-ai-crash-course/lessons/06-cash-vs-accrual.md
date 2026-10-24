@@ -98,6 +98,8 @@ questionIds:
   - "68bc64e0-c7bf-4ebd-88b6-a2036610bb83"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/accounting-ai-crash-course/question-banks/06-cash-vs-accrual|Cash vs Accrual Accounting Question Bank]].
+
 ## Step 3 — Prepaid and accrued expenses
 
 **In plain language.** Expenses have the same timing problem in two directions. A prepaid expense is cash you paid before you use the benefit. An accrued expense is a cost you have already incurred but have not been billed for or paid.

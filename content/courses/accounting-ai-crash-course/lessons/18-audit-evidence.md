@@ -91,6 +91,8 @@ questionIds:
   - "c4058790-b39a-44ad-b2e4-051085b05719"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/accounting-ai-crash-course/question-banks/18-audit-evidence|Audit Evidence and Documentation Question Bank]].
+
 ## Step 3 — Tickmarks, vouching and tracing
 
 **In plain language.** A tickmark is a small symbol next to a number that says what work you did on it. It works like a stamp on a passport, showing which checks the number has passed. Different teams use different symbols, so every workpaper must carry a legend that defines them.

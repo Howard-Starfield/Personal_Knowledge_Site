@@ -142,6 +142,8 @@ questionIds:
   - "7e6e8616-ce42-4c2a-a34f-900a16e0ce27"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-agent-crash-course/question-banks/01-ai-learning-os|Build Your AI Learning Operating System Question Bank]].
+
 ## Step 3 — Run models locally with Ollama and llama.cpp
 
 **In plain language.** A local model runs on your own hardware, so there are no per-token charges and your prompts stay on your machine. Ollama is a small friendly oven: one command and you are cooking. llama.cpp is the same kind of oven with the cover off: more knobs, more responsibility.

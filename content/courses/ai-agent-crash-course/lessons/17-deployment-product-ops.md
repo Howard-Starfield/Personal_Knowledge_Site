@@ -104,6 +104,8 @@ questionIds:
   - "f7c17cc2-dc84-43eb-8f5f-614195c19773"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-agent-crash-course/question-banks/17-deployment-product-ops|Deployment, Cost Controls, and AI Product Operations Question Bank]].
+
 ## Step 3 — Route between models with a fallback chain
 
 **Plain language.** One provider is a single point of failure. A router tries a primary model, then a secondary model from another vendor, then a local model, so an outage becomes lower quality instead of a blank page.

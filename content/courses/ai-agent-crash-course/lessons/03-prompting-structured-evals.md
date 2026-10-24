@@ -105,6 +105,8 @@ questionIds:
   - "92c220ae-ec07-4dbd-a3ea-95483cd89161"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-agent-crash-course/question-banks/03-prompting-structured-evals|Prompting, Structured Output, and Evals Question Bank]].
+
 ## Step 3 — Evals: unit tests for AI
 
 How do you know your last prompt "improvement" actually helped? You cannot tell by trying three examples by hand. An eval set is a collection of input and expected-output pairs, plus a grader function that decides pass or fail for each case. You run it on every prompt or model change, just as you run unit tests when code changes.

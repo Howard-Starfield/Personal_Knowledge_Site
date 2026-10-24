@@ -117,6 +117,8 @@ questionIds:
   - "3211a7fe-020e-4517-9537-cf49d5ac1521"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/accounting-ai-crash-course/question-banks/26-python-transaction-cleanup|Python for Transaction Cleanup Question Bank]].
+
 ## Step 3 — Normalize vendors, then categorize
 
 **In plain language.** Real vendor strings are messy: `AMZN MKTP US*2H3K9 AMZN.COM/BIL WA`, `Amazon.com*M14B2` and `AMAZON MKTPLACE PMTS` are all Amazon. First collapse each spelling to one canonical name. Then look the canonical name up in a dictionary to get its category.

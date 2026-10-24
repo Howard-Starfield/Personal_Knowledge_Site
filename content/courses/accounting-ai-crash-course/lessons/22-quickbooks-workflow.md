@@ -97,6 +97,8 @@ questionIds:
   - "529d075c-8ecd-4780-9f93-e40676065a7a"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/accounting-ai-crash-course/question-banks/22-quickbooks-workflow|The QuickBooks-Style Bookkeeping Workflow Question Bank]].
+
 ## Step 3 — Bills, expenses, and paying the credit card
 
 **Plain language.** A Bill is a vendor invoice you will pay later, so it credits Accounts Payable. An Expense is something you have already paid, so it credits cash or the card. Paying down a credit card is neither, because it only moves value between two balance-sheet accounts.

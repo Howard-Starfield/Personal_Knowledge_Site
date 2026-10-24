@@ -85,6 +85,8 @@ questionIds:
   - "8d6e16ba-ec35-4055-94fb-8839cc24ea39"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/accounting-ai-crash-course/question-banks/03-debits-and-credits|Debits and Credits Without Fear Question Bank]].
+
 ## Step 3 — Record a sale, then record the payment
 
 **In plain language.** A sale and the cash for that sale are two different events. When BoBo delivers work and sends an invoice, revenue is earned today even though the money comes later. Accounts Receivable is the bridge between those two events.

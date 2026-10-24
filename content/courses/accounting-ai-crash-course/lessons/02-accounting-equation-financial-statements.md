@@ -85,6 +85,8 @@ questionIds:
   - "973e7142-16c0-4324-836c-66f7069f7fd3"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/accounting-ai-crash-course/question-banks/02-accounting-equation-financial-statements|The Accounting Equation and Financial Statements Question Bank]].
+
 ## Step 3 — The Income Statement and net income
 
 **In plain language.** The Income Statement is a video of a period, such as one month. It shows what the business earned and what it spent, and ends with the bottom line.

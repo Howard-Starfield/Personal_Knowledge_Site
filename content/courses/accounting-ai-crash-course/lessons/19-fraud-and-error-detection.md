@@ -77,6 +77,8 @@ questionIds:
   - "a96fc76d-41b4-4623-b170-a0fc63f79e06"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/accounting-ai-crash-course/question-banks/19-fraud-and-error-detection|Fraud and Error Detection Basics Question Bank]].
+
 ## Step 3 — Common schemes and their fingerprints
 
 **Plain language.** Each scheme leaves a different fingerprint, so you learn to look for the fingerprint rather than the crime.

@@ -102,6 +102,8 @@ questionIds:
   - "7521b3db-94da-4de2-b0bb-359dac851439"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-agent-crash-course/question-banks/15-evals-observability|Evals, Observability, and Improvement Loops Question Bank]].
+
 ## Step 3 — Control judge bias
 
 **Plain language.** An LLM judge is useful but not neutral. It has three known failure modes.

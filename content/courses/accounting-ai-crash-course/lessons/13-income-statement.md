@@ -92,6 +92,8 @@ questionIds:
   - "ae305af7-b90e-42ad-9bd8-4c1c103d4455"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/accounting-ai-crash-course/question-banks/13-income-statement|Income Statement Deep Dive Question Bank]].
+
 ## Step 3 — Operating expenses, other income and net income
 
 **In plain English.** Operating expenses are the cost of keeping the doors open. You pay them whether or not you sold anything that day. Below them sits a small area for things that are not core operations, such as interest earned on the bank account.

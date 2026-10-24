@@ -112,6 +112,8 @@ questionIds:
   - "c5ef6d29-f83a-4890-a2b7-86e469e36d17"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/accounting-ai-crash-course/question-banks/05-accounting-cycle|The Accounting Cycle Question Bank]].
+
 ## Step 3 — Adjust and report (cycle steps 5 to 7)
 
 **In plain language.** Raw cash records do not always show which month a cost or sale belongs to. Adjusting entries fix the timing at period-end (step 5). The adjusted trial balance (step 6) then feeds the financial statements (step 7).

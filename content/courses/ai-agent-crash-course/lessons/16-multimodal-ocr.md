@@ -71,6 +71,8 @@ questionIds:
   - "aa5fd7a6-724e-4d7d-98f5-ff752f937bb5"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-agent-crash-course/question-banks/16-multimodal-ocr|Multimodal AI, OCR, Audio, and Document Intelligence Question Bank]].
+
 ## Step 3 — Transcribe audio with timestamps, then add speakers
 
 **In plain language.** A voice memo needs two separate jobs. Transcription turns sound into words. Diarization works out who spoke when. You also want a time for each word so a citation can play the eight seconds around a quote.

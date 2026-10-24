@@ -77,6 +77,8 @@ questionIds:
   - "cfe5fa22-4d05-48cb-8805-f672a9683ca8"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-agent-crash-course/question-banks/10-enterprise-llm|Enterprise LLM Systems Question Bank]].
+
 ## Step 3 — Keep three logs and a cost meter
 
 **In plain language.** A hospital help desk keeps a logbook: who asked, what file was handed over, and what the look-up cost. Without it nobody can explain Tuesday afternoon.

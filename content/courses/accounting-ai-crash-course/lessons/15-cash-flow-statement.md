@@ -93,6 +93,8 @@ questionIds:
   - "65f5ee68-108b-4246-b63a-c1bd93e83db0"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/accounting-ai-crash-course/question-banks/15-cash-flow-statement|Cash Flow Statement Basics Question Bank]].
+
 ## Step 3 — Investing and financing
 
 **In plain words.** After operating activities, the statement lists what BoBo did with long-term assets and how it was funded.

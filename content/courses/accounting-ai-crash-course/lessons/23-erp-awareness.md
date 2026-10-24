@@ -80,6 +80,8 @@ questionIds:
   - "6fc73876-29a5-48e8-9d7b-383d1901a596"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/accounting-ai-crash-course/question-banks/23-erp-awareness|ERP Awareness Question Bank]].
+
 ## Step 3 — Controls: workflow, roles and configuration
 
 **Plain language.** An ERP enforces rules about who can do what. A workflow is a configured path a transaction must follow, such as a bill over a threshold routing to a manager. Role-based access ties permissions to a job role rather than a person, which supports segregation of duties. An audit log records who entered, edited and approved each item.

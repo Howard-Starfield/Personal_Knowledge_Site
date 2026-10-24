@@ -89,6 +89,8 @@ questionIds:
   - "e18cbf95-1e81-4afe-be4b-c12caef86c59"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/accounting-ai-crash-course/question-banks/11-adjusting-entries|Adjusting Entries Question Bank]].
+
 ## Step 3 — Spreading and estimating: depreciation and the bad debt allowance
 
 **Plain language.** A computer keeps being "used up" even though no cash moves after you buy it, so its cost is spread over its useful life. Likewise, some customers will probably never pay, so you estimate that loss now instead of waiting to be surprised.

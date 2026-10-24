@@ -98,6 +98,8 @@ questionIds:
   - "cbb75348-c00c-4282-8892-7eb196164044"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/accounting-ai-crash-course/question-banks/04-chart-of-accounts|Chart of Accounts and Account Classification Question Bank]].
+
 ## Step 3 — Contra accounts and recording gross before net
 
 **In plain language.** Sometimes you want a statement to show a net number while the books remember the gross one. A contra account makes that possible: it sits beside a "parent" account and subtracts from it.

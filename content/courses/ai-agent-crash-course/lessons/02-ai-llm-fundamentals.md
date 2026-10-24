@@ -71,6 +71,8 @@ questionIds:
   - "084cf868-b813-4907-bfac-26cf5f0f5016"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-agent-crash-course/question-banks/02-ai-llm-fundamentals|AI and LLM Fundamentals Question Bank]].
+
 ## Step 3 — How a base model becomes an assistant, and why it hallucinates
 
 **Plain language.** **Pretraining** teaches a base model to predict the next token across a huge amount of text. The result completes text but is not yet a polite, instruction-following assistant. **Post-training** turns it into one.

@@ -66,6 +66,8 @@ questionIds:
   - "a0af94f3-1b06-441b-81cb-0dce2f53e432"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/accounting-ai-crash-course/question-banks/30-ai-in-accounting|AI in Accounting: Useful vs Dangerous Question Bank]].
+
 ## Step 2 — Why AI cannot be the system of record
 
 **In plain language.** An Excel formula gives the same answer every time you feed it the same inputs. An AI model gives answers that are similar but not guaranteed identical. Books of record must be reproducible, so an auditor can re-perform the work and get the same result.

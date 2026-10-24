@@ -86,6 +86,8 @@ questionIds:
   - "99918e1c-9d31-4f67-b2fd-c36a0941bf75"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-agent-crash-course/question-banks/09-fine-tuning-decision|Choosing Prompting, RAG, or Fine-Tuning Question Bank]].
+
 ## Step 3 — LoRA and QLoRA make training affordable
 
 Updating every weight of a large model needs a lot of GPU memory. LoRA (Low-Rank Adaptation) avoids that by freezing the base model and training two small low-rank matrices on selected layers. Think of it as a sticky-note patch placed on a textbook instead of reprinting the book. The patch is called an adapter, and trainable parameters drop by roughly 100 to 1000 times.

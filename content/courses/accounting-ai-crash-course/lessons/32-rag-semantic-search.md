@@ -77,6 +77,8 @@ questionIds:
   - "8b05f200-1ed4-4d19-a487-b0e521c94fa3"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/accounting-ai-crash-course/question-banks/32-rag-semantic-search|RAG and Semantic Search for Accounting Documents Question Bank]].
+
 ## Step 3 — Build the grounded prompt, cite, and verify
 
 **Idea.** After retrieval, the system builds a prompt with three parts: a system instruction that enforces source-only answering, the retrieved chunks each labeled with document and page, and the user's question. The LLM then writes an answer that tags each claim with its source.

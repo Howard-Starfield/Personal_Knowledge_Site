@@ -91,6 +91,8 @@ questionIds:
   - "3d69ebbe-3fc4-4c46-930a-e56acc979adf"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/accounting-ai-crash-course/question-banks/14-balance-sheet|Balance Sheet Deep Dive Question Bank]].
+
 ## Step 3 — Build the balance sheet from a trial balance
 
 **In plain language.** You start from the adjusted trial balance, group every account into its class, work out net income and what it does to equity, then list everything in order and check that both sides agree.

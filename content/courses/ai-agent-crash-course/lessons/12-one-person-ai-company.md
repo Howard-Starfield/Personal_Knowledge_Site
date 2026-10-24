@@ -74,6 +74,8 @@ questionIds:
   - "81b44ddc-d2e6-4a83-8d69-e5a5813b1f0c"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-agent-crash-course/question-banks/12-one-person-ai-company|One-Person AI Company Control Plane Question Bank]].
+
 ## Step 2 — Build the approval queue
 
 **Plain language.** When an agent wants to do something external, such as send an email, publish a post, charge a card, issue a refund, merge to main or deploy, it does not do it. It writes a row with the state pending and waits for you.

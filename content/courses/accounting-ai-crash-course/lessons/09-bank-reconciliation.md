@@ -86,6 +86,8 @@ questionIds:
   - "488443c5-3e33-45fd-88ca-1d39bcbcf08a"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/accounting-ai-crash-course/question-banks/09-bank-reconciliation|Bank Reconciliation Question Bank]].
+
 ## Step 3 — Build the two-sided worksheet
 
 **Plain language.** Put the bank on the left and the books on the right. Adjust each side for its own reconciling items. If you did it right, both sides land on the same number.

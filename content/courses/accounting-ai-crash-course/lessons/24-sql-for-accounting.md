@@ -95,6 +95,8 @@ questionIds:
   - "6458a848-e052-4023-86b7-5d9254979a30"
 ```
 
+The full question bank — every question with its sample answer and its explanation — is at [[courses/accounting-ai-crash-course/question-banks/24-sql-for-accounting|SQL for Accounting Data Question Bank]].
+
 ## Step 3 — Handle NULL and LEFT JOIN
 
 **Plain language.** NULL means unknown or no value. It is not zero and it is not an empty string. Because NULL is unknown, asking whether it equals anything gives an unknown answer, not true.
