@@ -8,6 +8,12 @@ status: active
 created: "2026-10-24"
 tags: []
 comments: false
+navPrev:
+  title: "Courses"
+  slug: "courses/index"
+navNext:
+  title: "The Final Assessment"
+  slug: "courses/covered-california-certification/lessons/56-final-exam"
 ---
 
 Every lesson in this fieldbook that carries a quiz links its own answer key,

@@ -107,6 +107,12 @@ plugins:
   - source: "./plugins/knowledge-quiz"
     enabled: true
     order: 80
+  - source: "./plugins/chapter-navigation"
+    enabled: true
+    order: 85
+    layout:
+      position: afterBody
+      priority: 1
   - source: "@quartz-community/explicit-publish"
     enabled: true
     order: 50
