@@ -1124,6 +1124,11 @@ body[data-slug="index"] {
       border-right: 0;
       border-bottom: 1px solid var(--notebook-border);
       padding-bottom: 0.65rem;
+      // On mobile the left sidebar is the sticky strip that holds the menu
+      // toggle and the site title. It has to stay reachable while the page
+      // scrolls, so it cannot be transparent: otherwise the page scrolls
+      // under it and the two collide.
+      background-color: var(--light);
     }
 
     .center,
