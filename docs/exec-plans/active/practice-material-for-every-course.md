@@ -318,20 +318,89 @@ before.
 ### 19.1 Commands and results
 
 ```text
-<pending>
-````
+npx quartz build --concurrency=1
+  Found 378 input files from `content`
+  Parsed 378 Markdown files in 38s
+  Emitted 1102 files to `public` in 8s
+
+npm run validate:content
+  Content validation passed: 377 entities, 377 unique IDs
+
+npm run validate:graph
+  Graph output valid: 377 pages, 394 tags, 2126 relationships, 797 graph-enabled HTML pages.
+
+npm test
+  tests 268  pass 268  fail 0
+
+npm run check:questions
+  Summary: 377 file(s), 1177 scored item(s), 92 file(s) with failures, 192 failure(s), 458 warning(s)
+  (the baseline was 358 files, 1044 items, 92 files with failures, 192 failures, 458
+   warnings - the failure and warning totals are unchanged, and no finding is raised
+   against any of the new banks or the lessons they touch)
+
+npx tsc --noEmit
+  (no output)
+
+npx prettier --check <the changed files>
+  All matched files use Prettier code style!
+
+npx wrangler deploy --dry-run
+  --dry-run: exiting now.
+```
 
 ### 19.2 Generated artifacts inspected
 
-<pending>
+The new banks were checked for structure: 19 banks, 12 questions each, every bank with
+the same mix of 7 single-choice, 2 multiple-select, 1 true-false and 2 free-recall,
+every quiz naming its bank, every question id a quiz asks present in that bank, every
+lesson linking its bank and every bank linking its lesson, and no id used twice.
 
 ### 19.3 UI evidence
 
-<pending>
+Driven with Playwright against the live site after the merge:
+
+```text
+practice tables: 8 rows: 128
+courses: ['Accounting + AI Crash Course', 'Advanced LLMs with RAG', 'Advanced Prompt
+          Engineering Techniques', 'Agentic AI', 'AI Agent Crash Course', 'AI Basics',
+          'AI for Project Management', 'Covered California']
+
+lesson quiz panels: 1
+lesson quiz questions: 6
+lesson -> bank link: .../question-banks/00-foundations-of-prompt-engineering
+after click: https://blog.howardlab.dev/courses/advanced-prompt-engineering-techniques/question-banks/00-foundations-of-prompt-engineering
+bank prompts: 12
+
+glossary chapter link: .../lessons/01-mechanics-of-machine-learning
+after click: https://blog.howardlab.dev/courses/ai-basics-.../lessons/01-mechanics-of-machine-learning | How Machines Learn: Rules, Data, Filters, and Bias
+
+live graph edges: 2126 pages: 771
+```
+
+The Practice page's generated index grew from four courses and 109 rows to eight
+courses and 128 rows, with no change to the plugin: it finds the new banks by itself.
 
 ### 19.4 Deviations from plan
 
-<pending>
+1. **A link defect was found and fixed on the way.** A link written as
+   `[Chapter 0](./00-foundations-of-prompt-engineering)` is resolved by matching its
+   last segment against every page on the site. When two pages share that name - a
+   lesson and its question bank, or the glossary of two courses - the match is
+   ambiguous and the link falls back to a path from the site root, which does not
+   exist. This was already true on the live site, and adding a bank for every lesson
+   would have made it true of four more courses. Ninety-five links in twenty-seven
+   pages now name the page they mean, and the number of anchors pointing at a page
+   that does not exist falls from forty-two to two. The two that remain are a
+   different thing: a hashtag in a worked example that the Markdown parser reads as a
+   tag link.
+2. **A wiki-link inside a table cell needs its alias separator escaped,** because the
+   pipe that separates the target from the alias is also the table's column
+   separator. The repair followed the repository's own convention, and it repaired
+   twelve course tables that had been showing their lesson titles as plain text
+   since they were published.
+3. **The glossary and final-assessment lessons of each course are left alone,** as
+   the plan says. A glossary has nothing to practise, and a final assessment already
+   carries its own fifteen inline scenarios with answers.
 
 ## 20. Final acceptance checklist
 
@@ -349,4 +418,26 @@ before.
 
 | Date | Commit | Work completed | Evidence | Remaining |
 | ---- | ------ | -------------- | -------- | --------- |
-|      |        |                |          |           |
+| 2026-10-25 | `bd58848` | This plan | - | - |
+| 2026-10-25 | `77af545` | The repair of ninety-five course-contents links that resolved to the wrong page | §19.4 | - |
+| 2026-10-25 | `671fc53` | Tranche 1: nineteen question banks and nineteen checkpoints for four courses, 228 questions | §19 | - |
+| 2026-10-25 | `71506ad` | The deployment runbook | - | - |
+| 2026-10-25 | `0abc85b` | The escaping of the alias separator in table cells, which also repaired twelve course tables | §19.4 | - |
+| 2026-10-25 | `5b33069` | Pull request [#40](https://github.com/Howard-Starfield/Personal_Knowledge_Site/pull/40) merged into `v5` after a green CI run | §19.3 | Tranches 2 to 4 |
+
+### Tranche 1 acceptance gates
+
+| Gate | Result |
+| ---- | ------ |
+| G1 - every teaching lesson of the four courses carries a quiz that names a bank that exists | Pass - 19 lessons, 19 banks |
+| G2 - every bank holds 12 questions of the same kinds as the existing banks | Pass - the mix is 7/2/1/2 in all 19 |
+| G3 - every question is answerable from its own lesson | Pass - the questions use each lesson's own figures and worked cases; reviewed against the lessons |
+| G4 - `npm run check:questions` passes with no new finding | Pass - the failure and warning totals are identical to the baseline |
+| G5 - the lesson links its bank and the bank links its lesson | Pass - both directions, every pair |
+| G6 - the Practice index picks the new courses up and the graph is unchanged in shape | Pass - four courses and 109 rows became eight courses and 128 rows, with no change to the plugin |
+
+### Still to come
+
+Tranches 2 to 4 cover the remaining nine courses: 71 teaching lessons and 852
+questions.
+````
