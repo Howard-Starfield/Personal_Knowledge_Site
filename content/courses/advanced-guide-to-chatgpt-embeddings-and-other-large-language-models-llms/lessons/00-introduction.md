@@ -402,6 +402,22 @@ Let us begin with the theoretical engine behind the modern AI revolution: **Chap
 
 ---
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "e9e8a00a-da24-40cf-8584-415df96f6bc7"
+title: "Checkpoint: Course Orientation & The LLM Revolution"
+questionBankId: "cf51c8b4-19ad-4d61-8f4a-aad4b1884c02"
+questionIds:
+  - "6cbcfd9c-af18-401e-90f1-cba9c82c583c"
+  - "0f7678cd-f029-4f40-a066-267418ff7312"
+  - "657ca362-8943-4173-8583-0d5704990724"
+  - "f92d3f40-3143-4b41-9200-7fc830e141e9"
+  - "8e9db959-e62c-46f2-a5cd-0364cf232f34"
+  - "efb61c62-7caa-444f-83ac-a17189b93a52"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/question-banks/00-introduction|Chapter 0: Course Orientation & The LLM Revolution: Question Bank]].
+
 <div class="chapter-navigation">
   <a href="/courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms" class="chapter-nav-btn prev">← Course Overview & Syllabus</a>
   <a href="/courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/lessons/01-llm-foundations-and-transformers" class="chapter-nav-btn next">Next: Chapter 1 — LLM Foundations & The Transformer →</a>

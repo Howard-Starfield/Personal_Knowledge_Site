@@ -813,6 +813,22 @@ In **Chapter 2**, we will transition from token-level attention mechanics to con
 
 ---
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "24ffe934-6fc5-450e-ab60-135fa7c04025"
+title: "Checkpoint: LLM Foundations & The Transformer Architecture"
+questionBankId: "0cf9c5e1-9db7-4168-b844-5495b5e61ff5"
+questionIds:
+  - "f30f58fc-32f4-4ee6-95a9-fed9a3015024"
+  - "fe77d5ef-b591-4182-a26c-acded14f2f44"
+  - "cb8aa4f7-7ad2-4751-9c55-827a684a4135"
+  - "55a4595a-2505-48a3-b7d8-b39b8503ab38"
+  - "12b8073c-2e48-421c-b2ac-824807bba8d3"
+  - "83554f6e-44e1-455f-ad48-d5ca8bab7c26"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/question-banks/01-llm-foundations-and-transformers|Chapter 1: LLM Foundations & The Transformer Architecture: Question Bank]].
+
 <div class="chapter-navigation">
   <a href="/courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/lessons/00-introduction" class="chapter-nav-btn prev">← Previous: Chapter 0 — Course Orientation</a>
   <a href="/courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/lessons/02-semantic-search-and-embeddings" class="chapter-nav-btn next">Next: Chapter 2 — Semantic Search & Embeddings →</a>

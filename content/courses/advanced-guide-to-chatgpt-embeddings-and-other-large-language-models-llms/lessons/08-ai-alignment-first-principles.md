@@ -1117,6 +1117,22 @@ In **Chapter 9**, we expand our architectural scope to multimodal frontiers and 
 
 ---
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "d7c0b539-4e28-4a61-9f83-2b6a5e1d0c74"
+title: "Checkpoint: AI Alignment: First Principles, Ethics & Red Teaming"
+questionBankId: "3a6d0f92-7c48-4e15-b830-5d91c7e2f4a6"
+questionIds:
+  - "8e4c7b20-5d93-4a16-b7f8-1c03d9a2e6b5"
+  - "2b7d4e08-6a35-4c97-8f21-0d93b5e7c4a1"
+  - "c3058b71-9f46-4e28-a0d7-6b1e4c9f2a83"
+  - "5b90d3e7-1c68-4f24-a9b6-0e7d3f1c8a42"
+  - "6f2a9c07-3b85-4d61-8e47-0a9c5b3d1e68"
+  - "9a5c3e18-4d72-4b06-8f95-1e7d0b6a3c54"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/question-banks/08-ai-alignment-first-principles|Chapter 8: AI Alignment: First Principles, Ethics & Red Teaming: Question Bank]].
+
 <div class="chapter-navigation">
   <a href="/courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/lessons/07-custom-embeddings-and-architectures" class="chapter-nav-btn prev">← Previous: Chapter 7 — Customizing Embeddings & Representation Engineering</a>
   <a href="/courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/lessons/09-multimodal-and-rlhf" class="chapter-nav-btn next">Next: Chapter 9 — Multimodal Models & RLHF Alignment →</a>

@@ -897,6 +897,22 @@ In **Chapter 4**, we will connect retrieval vector spaces and prompt alignment t
 
 ---
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "c85b0d37-6a2f-4e19-b7c4-9d3e5f81a042"
+title: "Checkpoint: Prompt Engineering Foundations & Few-Shot Alignment"
+questionBankId: "b1f7d0c4-6a3e-4f52-9b08-2e7c5d41a936"
+questionIds:
+  - "1e4b9c07-52d8-4a61-b3f9-7c02e6a5d814"
+  - "c60f4d8b-0a92-4e77-b3c5-8d1e7a9f2b60"
+  - "5f27e0b4-8c93-4d16-b7a2-0e9c3f6d1a58"
+  - "f0a37d19-2e64-4c85-b907-5b1f8a3c6d24"
+  - "b9e63a52-0d47-4f8b-b3c1-6e08d5a27f39"
+  - "42d8f0c7-7b35-4ea6-9c17-80b5d2f4e6a3"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/question-banks/03-prompt-engineering-fundamentals|Chapter 3: Prompt Engineering Foundations & Few-Shot Alignment: Question Bank]].
+
 <div class="chapter-navigation">
   <a href="/courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/lessons/02-semantic-search-and-embeddings" class="chapter-nav-btn prev">← Previous: Chapter 2 — Semantic Search & Embeddings</a>
   <a href="/courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/lessons/04-rag-and-ai-agents" class="chapter-nav-btn next">Next: Chapter 4 — RAG Systems & Autonomous AI Agents →</a>

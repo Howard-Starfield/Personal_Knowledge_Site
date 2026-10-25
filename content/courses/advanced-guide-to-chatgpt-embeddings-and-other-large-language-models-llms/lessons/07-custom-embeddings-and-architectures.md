@@ -1020,6 +1020,22 @@ In **Chapter 8**, we will confront the existential challenge of foundation model
 
 ---
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "b8e4d1a6-7c35-4f08-9b62-3e05a8c7d1f4"
+title: "Checkpoint: Customizing Embeddings & Representation Engineering"
+questionBankId: "f5d2a681-9c47-4e30-8b15-72d0e6c4a9f3"
+questionIds:
+  - "0b47e9a3-6c15-4d82-9f60-3a8c5e1d7b24"
+  - "e83b5a20-7f46-4d09-b5c7-1a4e9d2c6f08"
+  - "c90a1e47-5b83-4d26-8f14-2e7c6b0d9a31"
+  - "1a7f4c60-8d93-4b25-9c07-6e3b8d1f4a27"
+  - "9c0a6e42-5d18-4b73-8f50-2e7b1a9d6c83"
+  - "5d31a86f-0b74-4e92-8c05-7e2f9b3d4a61"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/question-banks/07-custom-embeddings-and-architectures|Chapter 7: Customizing Embeddings & Representation Engineering: Question Bank]].
+
 <div class="chapter-navigation">
   <a href="/courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/lessons/06-advanced-prompt-engineering" class="chapter-nav-btn prev">← Previous: Chapter 6 — Advanced Prompt Engineering, Chains & Guardrails</a>
   <a href="/courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/lessons/08-ai-alignment-first-principles" class="chapter-nav-btn next">Next: Chapter 8 — AI Alignment: First Principles, Ethics & Red Teaming →</a>

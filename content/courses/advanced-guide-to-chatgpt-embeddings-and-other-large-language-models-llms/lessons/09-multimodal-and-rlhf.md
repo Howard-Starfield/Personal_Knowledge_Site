@@ -997,6 +997,22 @@ In **Chapter 10**, we dive into the open-source fine-tuning ecosystem: **Advance
 
 ---
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "7f2b6c08-3e51-4d94-a726-5c8e1b04d9a3"
+title: "Checkpoint: Multimodal Models & RLHF Alignment"
+questionBankId: "6f1b8d24-9e53-4a07-b6d8-40c5a7e19b2d"
+questionIds:
+  - "e0a4c793-5b26-4d18-9f47-3c6d0e8b2a15"
+  - "5f92a1c8-4d67-4b30-8e15-7c3b9f2a6d40"
+  - "3e08f5b6-9d41-4c72-b536-7a2e9c8d1f04"
+  - "a7c1b845-3f29-4d60-8e17-5b2d6c0a9f43"
+  - "9e5c7a20-1b46-4d83-a017-8f2b6c4d9e31"
+  - "4d8e1c57-6b03-4a72-9f25-0c7b8a3e5d19"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/question-banks/09-multimodal-and-rlhf|Chapter 9: Multimodal Models & RLHF Alignment: Question Bank]].
+
 <div class="chapter-navigation">
   <a href="/courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/lessons/08-ai-alignment-first-principles" class="chapter-nav-btn prev">← Previous: Chapter 8 — AI Alignment: First Principles, Ethics & Red Teaming</a>
   <a href="/courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/lessons/10-open-source-fine-tuning-and-peft" class="chapter-nav-btn next">Next: Chapter 10 — Advanced Open-Source Fine-Tuning & Parameter Efficiency →</a>

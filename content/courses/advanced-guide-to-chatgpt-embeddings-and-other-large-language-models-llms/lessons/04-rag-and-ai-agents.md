@@ -1093,6 +1093,22 @@ In **Chapter 5**, we will explore how to permanently adapt foundation models to 
 
 ---
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "d4e97b28-3c56-4a1f-9e83-5f2b6d0c7a91"
+title: "Checkpoint: Retrieval-Augmented Generation & Autonomous AI Agents"
+questionBankId: "c8f3a205-7d41-4e69-8b52-1a06c9d4f738"
+questionIds:
+  - "3a7c05e9-8b62-4d10-b4f8-92c6e5d731a8"
+  - "5c94e0b7-26d1-4f83-9a05-e7b3c82d6019"
+  - "b40d8c37-1a5e-4f92-9b76-3c05e8d24a1f"
+  - "0e8c47a2-95d6-4b13-8f50-c7261d3b9a84"
+  - "a63d9f18-72b0-4e5c-a4d7-8b12f5c36e09"
+  - "8b5d2e07-6c93-4f40-b1a8-37d9e5c8a204"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/question-banks/04-rag-and-ai-agents|Chapter 4: Retrieval-Augmented Generation & Autonomous AI Agents: Question Bank]].
+
 <div class="chapter-navigation">
   <a href="/courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/lessons/03-prompt-engineering-fundamentals" class="chapter-nav-btn prev">← Previous: Chapter 3 — Prompt Engineering Foundations</a>
   <a href="/courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/lessons/05-fine-tuning-foundations" class="chapter-nav-btn next">Next: Chapter 5 — Optimizing LLMs: Transfer Learning & Fine-Tuning →</a>
