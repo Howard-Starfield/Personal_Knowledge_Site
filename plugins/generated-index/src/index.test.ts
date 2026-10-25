@@ -1,6 +1,6 @@
 import assert from "node:assert/strict"
 import test from "node:test"
-import type { Element, Root } from "hast"
+import type { Element, ElementContent, Root } from "hast"
 import { buildCourseSummaries, buildPracticeIndex, pathForSlug, type IndexFile } from "./index.ts"
 import {
   COURSE_MARKER,
@@ -53,7 +53,8 @@ function collectAnchors(node: Element | Root): Element[] {
   return anchors
 }
 
-function textOf(node: Element | Root): string {
+function textOf(node: Element | Root | undefined): string {
+  if (!node) return ""
   let out = ""
   const walk = (current: Element | Root) => {
     for (const child of current.children) {
@@ -63,6 +64,10 @@ function textOf(node: Element | Root): string {
   }
   walk(node)
   return out
+}
+
+function isElement(node: ElementContent): node is Element {
+  return node.type === "element"
 }
 
 test("buildCourseSummaries counts the lessons and the quizzes of every course", () => {
@@ -203,14 +208,14 @@ test("the course table is a table: a row is a row of cells", () => {
     (child): child is Element => child.type === "element" && child.tagName === "tbody",
   )
   assert.ok(body)
-  const rows = body.children.filter((child) => child.type === "element")
+  const rows = body.children.filter(isElement)
   assert.equal(rows.length, 1)
-  const cells = rows[0]?.children.filter((child) => child.type === "element") ?? []
+  const cells = rows[0]?.children.filter(isElement) ?? []
   assert.deepEqual(
-    cells.map((cell) => (cell.type === "element" ? cell.tagName : "")),
+    cells.map((cell) => cell.tagName),
     ["td", "td", "td"],
   )
-  assert.equal(textOf(rows[0] as Element).includes("A"), true)
+  assert.equal(textOf(rows[0]).includes("A"), true)
 })
 
 test("generated links are navigation, not authored relationships", () => {
