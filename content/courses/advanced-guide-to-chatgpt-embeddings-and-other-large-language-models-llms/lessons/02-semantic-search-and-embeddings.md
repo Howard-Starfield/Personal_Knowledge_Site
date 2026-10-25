@@ -821,6 +821,22 @@ In **Chapter 3**, we will build upon these foundational retrieval mechanisms to 
 
 ---
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "ab2c6f31-0e5d-4b7a-8f92-3d4c1e7b5a06"
+title: "Checkpoint: Semantic Search, Vector Spaces & Bi/Cross-Encoders"
+questionBankId: "3ea14a3e-1b39-4d0e-9c4c-6d95e29b1c66"
+questionIds:
+  - "b70fd60d-bcb6-4f3a-96c5-4a4e0a2eaa18"
+  - "0c8d6a6d-9d4e-42f8-9c2a-1a1e3f4a7c62"
+  - "aa25f1e5-0f26-4c4b-9c8a-5d6e0a1b7f83"
+  - "b6d2f013-8e57-4c39-b0a4-6d1c9e4f8a21"
+  - "9f4c6b31-4f28-4c90-b5d7-8a1e3c604d72"
+  - "3a7e0c5b-8d92-4f61-9b47-0c5d8e2f1a86"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/question-banks/02-semantic-search-and-embeddings|Chapter 2: Semantic Search, Vector Spaces & Bi/Cross-Encoders: Question Bank]].
+
 <div class="chapter-navigation">
   <a href="/courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/lessons/01-llm-foundations-and-transformers" class="chapter-nav-btn prev">← Previous: Chapter 1 — LLM Foundations & The Transformer</a>
   <a href="/courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/lessons/03-prompt-engineering-fundamentals" class="chapter-nav-btn next">Next: Chapter 3 — Prompt Engineering Foundations →</a>

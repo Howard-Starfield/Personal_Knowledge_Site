@@ -1125,6 +1125,22 @@ In **Chapter 13**, we bring the entire conceptual architecture of large language
 
 ---
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "9c7b2e15-4f83-4a06-b5d9-3e1a8c470b62"
+title: "Checkpoint: LLM Evaluation, Benchmarking & World Model Probing"
+questionBankId: "e7b4c091-2f68-4a35-9d17-8c60b3a5e294"
+questionIds:
+  - "5a2c8e37-6d94-4b15-8f03-1e7c9b2d4a68"
+  - "9e6d0a48-3b71-4f52-8c96-2d7b0e4f1a53"
+  - "e5d8c914-6b37-4f02-9a86-1c3e7b4d0f52"
+  - "1a6f3d85-4c07-4b92-8e51-7d2c9b0e3a68"
+  - "6b0d4a72-9c18-4e35-8f07-3c5b9e1d8a46"
+  - "f70a5c3b-8e24-4d91-a6c8-2b5d9e3f0c46"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/question-banks/12-llm-evaluation-and-benchmarking|Chapter 12: LLM Evaluation, Benchmarking & World Model Probing: Question Bank]].
+
 <div class="chapter-navigation">
   <a href="/courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/lessons/11-production-llmops-and-distillation" class="chapter-nav-btn prev">← Previous: Chapter 11 — Production LLMOps, Cost Modeling & Knowledge Distillation</a>
   <a href="/courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/lessons/13-glossary" class="chapter-nav-btn next">Next: Chapter 13 — Architectural Taxonomy & Comprehensive Glossary →</a>

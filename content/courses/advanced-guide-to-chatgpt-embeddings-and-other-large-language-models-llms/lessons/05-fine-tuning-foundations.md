@@ -914,6 +914,22 @@ In **Chapter 6**, we will advance our prompt engineering architecture into produ
 
 ---
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "f1a70c58-3e94-4b26-8d07-5c93b2e64a1d"
+title: "Checkpoint: Optimizing LLMs: Transfer Learning & Fine-Tuning"
+questionBankId: "d92a6e05-4c38-4b71-9f83-5e17c0b24a6d"
+questionIds:
+  - "6c1a3f85-27b4-4d90-8e73-4f5b9c60d217"
+  - "e0b74d39-5c82-4a16-b4f7-3d9e6a25c108"
+  - "7b4e0a19-6d35-4c82-b5f0-93a7c2e85d64"
+  - "1f8a2d60-7c95-4d38-b6a0-3e74f5081c26"
+  - "4a7c1e83-9f50-4d26-b8c7-0e3d95b26a19"
+  - "0a5c9e37-4b81-4f60-8d27-91c6b30a5e84"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/question-banks/05-fine-tuning-foundations|Chapter 5: Optimizing LLMs: Transfer Learning & Fine-Tuning: Question Bank]].
+
 <div class="chapter-navigation">
   <a href="/courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/lessons/04-rag-and-ai-agents" class="chapter-nav-btn prev">← Previous: Chapter 4 — RAG Systems & Autonomous AI Agents</a>
   <a href="/courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/lessons/06-advanced-prompt-engineering" class="chapter-nav-btn next">Next: Chapter 6 — Advanced Prompt Engineering, Chains & Guardrails →</a>

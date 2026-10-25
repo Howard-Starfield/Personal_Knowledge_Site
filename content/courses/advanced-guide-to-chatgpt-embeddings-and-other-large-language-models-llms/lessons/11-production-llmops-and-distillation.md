@@ -1153,6 +1153,22 @@ In **Chapter 12**, we expand from deployment infrastructure into rigorous qualit
 
 ---
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "9b4e17d8-3c60-4a25-8f71-5d0c9e2b6a34"
+title: "Checkpoint: Production LLMOps, Cost Modeling & Knowledge Distillation"
+questionBankId: "b8f2d571-4c06-4a93-8e17-5d90c3a6e284"
+questionIds:
+  - "3d9b6e14-7a25-4f08-9c31-6e5a0d8b2f47"
+  - "c7a3d061-9e48-4b15-8f72-4d0b6e8c3a29"
+  - "6c07e4a9-3b58-4d26-9051-8f2a7c3b6e10"
+  - "7e35a0c8-1b94-4d27-8f63-5a9d2e7c4b06"
+  - "6a0d3f84-9b57-4c12-8e36-4b7d1f9c0a28"
+  - "5c93e7d6-8f41-4b05-9e72-0a3c6d8b5e37"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/question-banks/11-production-llmops-and-distillation|Chapter 11: Production LLMOps, Cost Modeling & Knowledge Distillation: Question Bank]].
+
 <div class="chapter-navigation">
   <a href="/courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/lessons/10-open-source-fine-tuning-and-peft" class="chapter-nav-btn prev">← Previous: Chapter 10 — Advanced Open-Source Fine-Tuning & Parameter Efficiency</a>
   <a href="/courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/lessons/12-llm-evaluation-and-benchmarking" class="chapter-nav-btn next">Next: Chapter 12 — LLM Evaluation, Benchmarking & World Model Probing →</a>

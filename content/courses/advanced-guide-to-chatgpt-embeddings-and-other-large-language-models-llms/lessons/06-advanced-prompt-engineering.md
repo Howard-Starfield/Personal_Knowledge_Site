@@ -851,6 +851,22 @@ In **Chapter 7**, we will explore representation learning from first principles:
 
 ---
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "a3d95e17-6b48-4c20-8f7e-1c5b0a4d8e62"
+title: "Checkpoint: Advanced Prompt Engineering: Chains, Guardrails & Reasoning"
+questionBankId: "8b40c7f2-6d15-4a93-b7e8-2c04f9a6d351"
+questionIds:
+  - "c51a8e37-9d42-4b06-8f75-2e3a9c05b1d6"
+  - "5e7b03d9-6a48-4c71-92f5-0b8d4e3a6c15"
+  - "3a7f60c9-8d24-4b51-9e07-6c2b5f1a8d43"
+  - "c1f9d47b-3a68-4e05-8d92-7b6c0a4f2d18"
+  - "0a6c9d31-4e87-4b52-9f13-7c8b2a05e6d4"
+  - "b7194f62-0d35-4a98-8e27-3f6c0b8a2d95"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/question-banks/06-advanced-prompt-engineering|Chapter 6: Advanced Prompt Engineering: Chains, Guardrails & Reasoning: Question Bank]].
+
 <div class="chapter-navigation">
   <a href="/courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/lessons/05-fine-tuning-foundations" class="chapter-nav-btn prev">← Previous: Chapter 5 — Optimizing LLMs: Transfer Learning & Fine-Tuning</a>
   <a href="/courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/lessons/07-custom-embeddings-and-architectures" class="chapter-nav-btn next">Next: Chapter 7 — Customizing Embeddings & Representation Engineering →</a>

@@ -966,6 +966,22 @@ In **Chapter 11**, we advance into enterprise deployment infrastructure: **Produ
 
 ---
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "c4f8a209-6e37-4b15-8d70-1a9b5e3c7d46"
+title: "Checkpoint: Advanced Open-Source Fine-Tuning & Parameter Efficiency"
+questionBankId: "0c4b9e37-5a28-4f61-83d0-7b26e1a5c904"
+questionIds:
+  - "7a1e4c60-9d35-4b82-8f17-2e5b9c03d681"
+  - "9f0d6a38-2c47-4e85-b190-7a3c5e8d2b61"
+  - "8c3a5e07-1b94-4f62-a018-6d7b0e9c3a52"
+  - "d70b8c46-3a19-4e53-b8f2-6c1a4d9e7b08"
+  - "3e6b0d85-1c47-4a92-b730-8f5d2e1a9b64"
+  - "a1f4c93b-6e27-4d58-90b7-3c8e5d0a2f16"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/question-banks/10-open-source-fine-tuning-and-peft|Chapter 10: Advanced Open-Source Fine-Tuning & Parameter Efficiency: Question Bank]].
+
 <div class="chapter-navigation">
   <a href="/courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/lessons/09-multimodal-and-rlhf" class="chapter-nav-btn prev">← Previous: Chapter 9 — Multimodal Models & RLHF Alignment</a>
   <a href="/courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/lessons/11-production-llmops-and-distillation" class="chapter-nav-btn next">Next: Chapter 11 — Production LLMOps, Cost Modeling & Knowledge Distillation →</a>
