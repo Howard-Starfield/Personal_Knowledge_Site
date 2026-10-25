@@ -22,7 +22,7 @@ comments: false
 
 # Chapter 12: LLM Evaluation, Benchmarking & World Model Probing
 
-In [Chapter 11: Production LLMOps, Cost Modeling & Knowledge Distillation](./11-production-llmops-and-distillation), we solved the serving economics and deployment challenges of foundation models. We proved how continuous iteration-level batching, virtual memory PagedAttention, and INT4 post-training weight quantization (AWQ and GPTQ) compress high-bandwidth memory footprints and accelerate autoregressive decode throughput. We also engineered teacher-student knowledge distillation pipelines to transfer dark knowledge from 70B parameter models into agile, low-latency 8B student architectures.
+In [[courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/lessons/11-production-llmops-and-distillation|Chapter 11: Production LLMOps, Cost Modeling & Knowledge Distillation]], we solved the serving economics and deployment challenges of foundation models. We proved how continuous iteration-level batching, virtual memory PagedAttention, and INT4 post-training weight quantization (AWQ and GPTQ) compress high-bandwidth memory footprints and accelerate autoregressive decode throughput. We also engineered teacher-student knowledge distillation pipelines to transfer dark knowledge from 70B parameter models into agile, low-latency 8B student architectures.
 
 Yet, after training, fine-tuning, distilling, or prompting a large language model, machine learning teams confront the most deceptive and consequential question in artificial intelligence: **How do we rigorously evaluate what the model actually knows?**
 

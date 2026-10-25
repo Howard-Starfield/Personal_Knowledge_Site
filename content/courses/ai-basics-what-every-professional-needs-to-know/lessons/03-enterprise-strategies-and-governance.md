@@ -20,7 +20,7 @@ comments: false
 
 # Putting AI to Work: The 20-Minute Rule, Vendor Audits & Algorithmic Fairness
 
-In [Chapter 2: Generative AI, Autoregressive LLMs & The Agentic Frontier](./02-generative-ai-llms-and-agents), we unpacked the computational machinery of modern generative models. We proved that autoregressive transformers operate as mathematical autocomplete engines, derived how temperature scaling calibrates sampling entropy, established why open-book Retrieval-Augmented Generation (RAG) binds fluent improvisation to verifiable truth, and traced the agentic shift from passive chatbots to goal-driven tool-executors.
+In [[courses/ai-basics-what-every-professional-needs-to-know/lessons/02-generative-ai-llms-and-agents|Chapter 2: Generative AI, Autoregressive LLMs & The Agentic Frontier]], we unpacked the computational machinery of modern generative models. We proved that autoregressive transformers operate as mathematical autocomplete engines, derived how temperature scaling calibrates sampling entropy, established why open-book Retrieval-Augmented Generation (RAG) binds fluent improvisation to verifiable truth, and traced the agentic shift from passive chatbots to goal-driven tool-executors.
 
 Yet in enterprise boardrooms, executive suites, and engineering standups, a profound disconnect persists between technological capability and operational reality.
 

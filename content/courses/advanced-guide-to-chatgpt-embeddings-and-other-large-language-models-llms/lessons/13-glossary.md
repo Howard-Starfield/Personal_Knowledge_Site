@@ -23,7 +23,7 @@ comments: false
 
 # Chapter 13: Architectural Taxonomy & Comprehensive Glossary
 
-In [Chapter 12: LLM Evaluation, Benchmarking & World Model Probing](./12-llm-evaluation-and-benchmarking), we established the mathematical, empirical, and mechanistic verification frameworks required to rigorously test generative language models. We analyzed n-gram lexical overlap metrics (BLEU and ROUGE), formulated dense contextual bipartite matching with BERTScore, dissected systemic evaluative distortions in LLM-as-a-Judge architectures, and verified internal linear representations using residual stream probing and causal activation patching.
+In [[courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/lessons/12-llm-evaluation-and-benchmarking|Chapter 12: LLM Evaluation, Benchmarking & World Model Probing]], we established the mathematical, empirical, and mechanistic verification frameworks required to rigorously test generative language models. We analyzed n-gram lexical overlap metrics (BLEU and ROUGE), formulated dense contextual bipartite matching with BERTScore, dissected systemic evaluative distortions in LLM-as-a-Judge architectures, and verified internal linear representations using residual stream probing and causal activation patching.
 
 As we prepare for the final active-recall scenario assessment in **Chapter 14: Comprehensive Final Assessment**, **Chapter 13** serves as the authoritative architectural blueprint and engineering reference dictionary for the entire curriculum.
 

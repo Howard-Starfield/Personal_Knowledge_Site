@@ -21,7 +21,7 @@ comments: false
 
 # Chapter 3: Prompt Engineering Foundations & Few-Shot Alignment
 
-In [Chapter 1: LLM Foundations & The Transformer](./01-llm-foundations-and-transformers), we examined how autoregressive language models predict the next token through multi-head self-attention and positional embeddings. In [Chapter 2: Semantic Search & Embeddings](./02-semantic-search-and-embeddings), we explored continuous vector manifolds, learning how bi-encoders and cross-encoders retrieve relevant knowledge from millions of candidate passages.
+In [[courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/lessons/01-llm-foundations-and-transformers|Chapter 1: LLM Foundations & The Transformer]], we examined how autoregressive language models predict the next token through multi-head self-attention and positional embeddings. In [[courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/lessons/02-semantic-search-and-embeddings|Chapter 2: Semantic Search & Embeddings]], we explored continuous vector manifolds, learning how bi-encoders and cross-encoders retrieve relevant knowledge from millions of candidate passages.
 
 Now, we arrive at the operational interface where human intention meets machine inference: **Prompt Engineering**.
 
@@ -314,7 +314,7 @@ Static few-shot prompting provides a hard-coded set of input-output demonstratio
 
 ### Paradigm 4: Dynamic Few-Shot Exemplar Selection (The Vector Search Bridge)
 
-In [Chapter 2: Semantic Search & Embeddings](./02-semantic-search-and-embeddings), we constructed vector similarity indices capable of retrieving semantically relevant passages in sub-10ms time. **Dynamic Few-Shot Prompting** combines Chapter 2's bi-encoder retrieval with Chapter 3's in-context learning mechanics.
+In [[courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/lessons/02-semantic-search-and-embeddings|Chapter 2: Semantic Search & Embeddings]], we constructed vector similarity indices capable of retrieving semantically relevant passages in sub-10ms time. **Dynamic Few-Shot Prompting** combines Chapter 2's bi-encoder retrieval with Chapter 3's in-context learning mechanics.
 
 ```
 ========================================================================================

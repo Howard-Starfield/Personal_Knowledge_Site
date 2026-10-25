@@ -23,7 +23,7 @@ comments: false
 
 # Chapter 10: Advanced Open-Source Fine-Tuning & Parameter Efficiency
 
-In [Chapter 5: Optimizing LLMs: Transfer Learning & Fine-Tuning](./05-fine-tuning-foundations), we established the foundational mechanics of Supervised Fine-Tuning (SFT), explored the tension between in-context prompting and parametric updates, and analyzed the risk of catastrophic forgetting. In [Chapter 9: Multimodal Models & RLHF Alignment](./09-multimodal-and-rlhf), we examined how post-training preference alignment (PPO and DPO) steers generative probability distributions toward human expectations.
+In [[courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/lessons/05-fine-tuning-foundations|Chapter 5: Optimizing LLMs: Transfer Learning & Fine-Tuning]], we established the foundational mechanics of Supervised Fine-Tuning (SFT), explored the tension between in-context prompting and parametric updates, and analyzed the risk of catastrophic forgetting. In [[courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/lessons/09-multimodal-and-rlhf|Chapter 9: Multimodal Models & RLHF Alignment]], we examined how post-training preference alignment (PPO and DPO) steers generative probability distributions toward human expectations.
 
 However, moving from closed-source commercial APIs (such as OpenAI or Anthropic fine-tuning endpoints) to the **open-source ecosystem** (BERT, RoBERTa, GPT-2, Llama, Mistral) exposes machine learning engineers to an uncompromising physical reality: **the GPU VRAM memory wall**.
 

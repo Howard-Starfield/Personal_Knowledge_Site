@@ -20,7 +20,7 @@ comments: false
 
 # The Future of AI: Cryptographic Provenance, Small Models & Strategic Learning
 
-In [Chapter 3: Putting AI to Work: The 20-Minute Rule, Vendor Audits & Algorithmic Fairness](./03-enterprise-strategies-and-governance), we transitioned from core transformer theory into organizational reality. We established the 20-Minute Task Rule to identify the economic Goldilocks zone for generative automation, mastered conversational data analysis under an unyielding "Trust but Verify" protocol, armed technical leaders with the 5-Question AI Lie Detector to expose thin SaaS wrappers, and derived the mathematical auditing framework necessary to eradicate the "White Shoes" bias trap under federal civil rights standards.
+In [[courses/ai-basics-what-every-professional-needs-to-know/lessons/03-enterprise-strategies-and-governance|Chapter 3: Putting AI to Work: The 20-Minute Rule, Vendor Audits & Algorithmic Fairness]], we transitioned from core transformer theory into organizational reality. We established the 20-Minute Task Rule to identify the economic Goldilocks zone for generative automation, mastered conversational data analysis under an unyielding "Trust but Verify" protocol, armed technical leaders with the 5-Question AI Lie Detector to expose thin SaaS wrappers, and derived the mathematical auditing framework necessary to eradicate the "White Shoes" bias trap under federal civil rights standards.
 
 Yet as artificial intelligence shifts from experimental enterprise pilots to planetary-scale infrastructure, two titanic tectonic forces are fundamentally reshaping the computing horizon:
 
