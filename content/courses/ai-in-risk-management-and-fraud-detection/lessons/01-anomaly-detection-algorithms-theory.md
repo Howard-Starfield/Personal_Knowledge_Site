@@ -1056,6 +1056,22 @@ In real-world transaction streams, fraudulent transactions represent less than $
 
 Proceed to [[courses/ai-in-risk-management-and-fraud-detection/lessons/02-imbalanced-data-engineering-modeling|Chapter 2: Imbalanced Learning & Feature Engineering]] to explore the Accuracy Paradox, SMOTE vector interpolation, cost-sensitive loss matrices, Precision-Recall curve optimization, and the domain-specific behavioral features that power Tier 2 scoring engines.
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "a0dd81fc-2a33-47f9-b659-e9576ded0095"
+title: "Checkpoint: Isolation Forest, LOF and ensemble trees"
+questionBankId: "4f6da57b-ee93-46f6-b2e4-c6b911136217"
+questionIds:
+  - "424eaaf3-6200-4df6-80e3-db05431f2a37"
+  - "953315f3-2284-4652-95cb-dcfa62b0e589"
+  - "70fc61ce-6698-4701-9c8c-bc2ee3403b07"
+  - "16fd9a58-7742-4750-aea8-e7a32df72172"
+  - "53ec672a-d534-440b-b355-c913a4307450"
+  - "810bf97f-f584-4675-a375-29026e09e0ba"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-in-risk-management-and-fraud-detection/question-banks/01-anomaly-detection-algorithms-theory|Algorithmic Anomaly Detection: Mathematical Mechanics of Isolation Forests, LOF & Ensemble Trees: Question Bank]].
+
 <div class="chapter-navigation">
   <a class="chapter-nav-btn prev" href="/courses/ai-in-risk-management-and-fraud-detection/lessons/00-foundations-of-ai-risk-management">← Chapter 0: Foundations of AI Risk Management</a>
   <a class="chapter-nav-btn next" href="/courses/ai-in-risk-management-and-fraud-detection/lessons/02-imbalanced-data-engineering-modeling">Chapter 2: Imbalanced Learning & Feature Engineering →</a>

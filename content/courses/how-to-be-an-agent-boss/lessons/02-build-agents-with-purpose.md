@@ -529,3 +529,18 @@ In **Chapter 3: Delegate and Manage — Autonomy Levels, Governance & Telemetry*
   <a href="/courses/how-to-be-an-agent-boss/lessons/01-discover-agents" class="chapter-nav-btn prev">← Previous: Chapter 1 — Discover Agents</a>
   <a href="/courses/how-to-be-an-agent-boss/lessons/03-delegate-and-manage-agents" class="chapter-nav-btn next">Next: Chapter 3 — Delegate & Manage →</a>
 </div>
+
+```knowledge-quiz
+schemaVersion: 1
+quizId: "5bb230e2-bb86-458d-a12a-85b8063485af"
+title: "Checkpoint: Build Agents with Purpose"
+questionBankId: "bca3709b-5c87-4949-9e1a-afe04734bb1e"
+questionIds:
+  - "4bb18cac-5b29-49bd-8785-f0875d3a3a5b"
+  - "104c6dee-9da1-4af3-bf10-e30cbbefafa5"
+  - "348b63e1-4b4c-490c-96a4-f9096c793dc7"
+  - "3b600de3-96fe-4e84-a7fb-8172442a8563"
+  - "91bace50-5f5f-40dc-a860-4f6eab1526f8"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/how-to-be-an-agent-boss/question-banks/02-build-agents-with-purpose|Chapter 2: Build Agents with Purpose — Defining Scope & Choosing Tools: Question Bank]].

@@ -1396,6 +1396,21 @@ When executed across 500 real-world software engineering and systems tasks, our 
 
 ---
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "47602952-08b5-466b-a382-5bf1b84ea6ff"
+title: "Checkpoint: contracts, judging, scoring and caching"
+questionBankId: "b79e3629-b49f-4c23-b291-6be987cd334a"
+questionIds:
+  - "b2ace5d9-7a86-4aed-b72c-601995912aa4"
+  - "13d1b6c5-bfab-4291-a884-e6b78c5eb72d"
+  - "7eb5fe0b-43f9-4544-bc41-253771fff0de"
+  - "4104b449-7613-4918-a2fb-55ea734e4516"
+  - "1f036bdf-1ea4-4bf0-aae6-b53d34c8ac9e"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-model-trends-the-latest-you-need-to-know/question-banks/05-hands-on-model-evaluation-agentic-lab|Hands-On Implementation Lab: Multi-Model Evaluation & Automated Contract Harness in Python: Question Bank]].
+
 <div class="chapter-navigation">
   <a class="chapter-nav-btn prev" href="/courses/ai-model-trends-the-latest-you-need-to-know/lessons/04-open-weight-frontier-glm-deepseek-mimo">← Chapter 4: Open-Weight Frontier</a>
   <a class="chapter-nav-btn next" href="/courses/ai-model-trends-the-latest-you-need-to-know/lessons/06-glossary">Chapter 6: Glossary & Architectural Taxonomy →</a>

@@ -547,3 +547,18 @@ In **Chapter 4: Optimize & Control Costs — Forecasting Consumption, Setting Li
   <a href="/courses/how-to-be-an-agent-boss/lessons/02-build-agents-with-purpose" class="chapter-nav-btn prev">← Previous: Chapter 2 — Build Agents with Purpose</a>
   <a href="/courses/how-to-be-an-agent-boss/lessons/04-optimize-and-control-costs" class="chapter-nav-btn next">Next: Chapter 4 — Optimize & Control Costs →</a>
 </div>
+
+```knowledge-quiz
+schemaVersion: 1
+quizId: "958740ff-96d2-466b-a7b3-f8ea91b1db62"
+title: "Checkpoint: Delegate and Manage Agents"
+questionBankId: "27557b17-c662-4a4d-a69b-aa1166b97c10"
+questionIds:
+  - "d1ebc7cd-c5d1-4783-958c-d86ecb17e437"
+  - "6b338b9b-876b-4a7c-8671-e42632b1a936"
+  - "aa58433d-d00f-4b83-a42f-15273994ea4d"
+  - "34096ff2-35a0-4ea1-8341-42cfbf33bc96"
+  - "546a6051-53d4-431f-a41a-0a87da63c78d"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/how-to-be-an-agent-boss/question-banks/03-delegate-and-manage-agents|Chapter 3: Delegate & Manage — Autonomy Calibration and Lifecycle Operations: Question Bank]].

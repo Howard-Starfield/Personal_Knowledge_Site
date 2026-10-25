@@ -762,6 +762,22 @@ With the econometric foundations and failure modes established, we turn to the f
 
 Proceed to [[courses/ai-in-financial-forecasting/lessons/01-financial-data-engineering-cleaning|Chapter 1: Financial Data Engineering: Ingestion, Imputation & Multimodal Feature Alignment]] to learn how to clean internal ERP ledgers, align macroeconomic telemetry, handle missing values without introducing statistical distortion, and perform Augmented Dickey-Fuller (ADF) stationarity tests.
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "822d74d8-285d-4eab-903a-596a3c0fe602"
+title: "Checkpoint: the failure of the static spreadsheet budget"
+questionBankId: "294eb99b-ba23-47d5-90bc-8f6f90941895"
+questionIds:
+  - "e93145a3-e07b-4ff8-b234-506c634fa151"
+  - "3c0aa112-e1d0-47a1-9cee-64eca261a52f"
+  - "326749ce-4c1f-4aa4-a452-d378f214cfbc"
+  - "8a7802fb-7750-453b-bcf6-ab593af1e35e"
+  - "4c772fc4-279d-4040-a946-856d032d56ca"
+  - "8342df50-93f4-4a71-aba1-1b57d1b59f6c"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-in-financial-forecasting/question-banks/00-foundations-of-ai-forecasting|Foundations of AI in Financial Forecasting: Beyond Linear Regression & Spreadsheet Fragility: Question Bank]].
+
 <div class="chapter-navigation">
   <a class="chapter-nav-btn prev" href="/courses/ai-in-financial-forecasting/">← Course Overview</a>
   <a class="chapter-nav-btn next" href="/courses/ai-in-financial-forecasting/lessons/01-financial-data-engineering-cleaning">Chapter 1: Financial Data Engineering →</a>

@@ -1229,6 +1229,22 @@ With data cleansed, normalized, and pruned down to genuine causal drivers, we mo
 
 Proceed to [[courses/ai-in-financial-forecasting/lessons/03-generative-scenario-modeling-what-if|Chapter 3: Dynamic Scenario Analysis & Generative What-If Modeling]] to explore Monte Carlo simulation mechanics, parameter shock propagation, and generative AI scenario synthesis.
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "2779b8e6-1507-4cad-b46b-01bf46ce6c52"
+title: "Checkpoint: separating signal from spurious drift"
+questionBankId: "f481e687-c590-4ae2-983b-140b0cebde69"
+questionIds:
+  - "d591bcf2-6cad-4bd5-8c61-487e92811012"
+  - "fd5e75ec-a1f4-4995-8b10-0e565b0e62c0"
+  - "f86a45a4-00f7-4e2e-8025-d08d0aa3e726"
+  - "35684605-a0f4-408e-bbc5-47cea8eb703f"
+  - "dc3407ac-b4d1-4eab-84d8-6ea45720fa87"
+  - "ddc88e2a-5a25-4b01-b85f-6fdd7241dbd5"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-in-financial-forecasting/question-banks/02-correlation-causation-feature-selection|Statistical Relationships & Causal Feature Selection: Separating Signal from Spurious Drift: Question Bank]].
+
 <div class="chapter-navigation">
   <a class="chapter-nav-btn prev" href="/courses/ai-in-financial-forecasting/lessons/01-financial-data-engineering-cleaning">← Chapter 1: Financial Data Engineering</a>
   <a class="chapter-nav-btn next" href="/courses/ai-in-financial-forecasting/lessons/03-generative-scenario-modeling-what-if">Chapter 3: Dynamic Scenario Analysis →</a>

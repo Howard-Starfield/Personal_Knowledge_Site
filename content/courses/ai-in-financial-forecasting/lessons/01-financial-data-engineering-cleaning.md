@@ -1030,6 +1030,22 @@ With our financial telemetry cleansed, imputed, and rendered covariance-stationa
 
 Proceed to [[courses/ai-in-financial-forecasting/lessons/02-correlation-causation-feature-selection|Chapter 2: Statistical Relationships & Causal Feature Selection]] to explore the distinction between correlation and causation, master Granger Causality and Cointegration tests, and eliminate multicollinearity using Variance Inflation Factors (VIF).
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "42d6006b-9247-4375-b795-5fe2b5caa2cb"
+title: "Checkpoint: from a raw ledger to a stationary feature tensor"
+questionBankId: "0a0203b3-9c57-4d3a-b423-1202a923be47"
+questionIds:
+  - "edacfabd-c371-4e6e-9af5-1adc0a3d0665"
+  - "eeaf326e-5f84-4b31-b4f6-dc8e2980063c"
+  - "85d84886-1ce3-4f7f-8c08-93349f318f70"
+  - "4dd750ed-9e93-46f1-8c2f-3191cda4e2c0"
+  - "473ee05b-d2c0-4fa5-b66e-ccf3915f3a6e"
+  - "4f86b9b1-c81f-43cf-924b-2018041cd86c"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-in-financial-forecasting/question-banks/01-financial-data-engineering-cleaning|Financial Data Engineering: Ingestion, Imputation & Multimodal Feature Alignment: Question Bank]].
+
 <div class="chapter-navigation">
   <a class="chapter-nav-btn prev" href="/courses/ai-in-financial-forecasting/lessons/00-foundations-of-ai-forecasting">← Chapter 0: Foundations & Regression Limits</a>
   <a class="chapter-nav-btn next" href="/courses/ai-in-financial-forecasting/lessons/02-correlation-causation-feature-selection">Chapter 2: Correlation vs Causation →</a>

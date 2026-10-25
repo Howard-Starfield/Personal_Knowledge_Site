@@ -498,6 +498,21 @@ In the subsequent chapters of this course, we will apply these empirical evaluat
 
 ---
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "238f1233-7196-4235-b0fc-fe59ba9a5f22"
+title: "Checkpoint: empirical evaluation and token economics"
+questionBankId: "ad2f70bf-5295-4eac-9530-5f53cd99736b"
+questionIds:
+  - "94f25923-4872-4c5b-baca-cea8cea1b490"
+  - "a7f1de6a-ce26-48f8-b05a-666443c2130b"
+  - "a4faff82-ce44-4adf-a8dd-8d43a8601860"
+  - "fd571eae-8b59-4cc4-9983-bbc2b35e8308"
+  - "0c1cbf64-b829-42ae-a74f-9f1c35a10c55"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-model-trends-the-latest-you-need-to-know/question-banks/00-frontier-model-landscape-evaluation-benchmarks|The Frontier Model Landscape: Empirical Evaluation Beyond Marketing Benchmarks: Question Bank]].
+
 <div class="chapter-navigation">
   <a class="chapter-nav-btn prev" href="/courses/ai-model-trends-the-latest-you-need-to-know/">← Course Overview</a>
   <a class="chapter-nav-btn next" href="/courses/ai-model-trends-the-latest-you-need-to-know/lessons/01-openai-frontier-gpt5-architecture-orchestration">Chapter 1: OpenAI Frontier Architecture →</a>

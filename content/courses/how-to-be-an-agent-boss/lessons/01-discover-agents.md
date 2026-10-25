@@ -442,3 +442,18 @@ In **Chapter 2: Build Agents with Purpose**, we roll up our sleeves to master th
   <a href="/courses/how-to-be-an-agent-boss/lessons/00-introduction" class="chapter-nav-btn prev">← Previous: Introduction</a>
   <a href="/courses/how-to-be-an-agent-boss/lessons/02-build-agents-with-purpose" class="chapter-nav-btn next">Next: Chapter 2 — Build Agents with Purpose →</a>
 </div>
+
+```knowledge-quiz
+schemaVersion: 1
+quizId: "4a83b249-2ecd-4b18-a5b8-06fc9e8c9e26"
+title: "Checkpoint: Discover Agents"
+questionBankId: "1433bfd1-8bf0-44e8-8704-b68594d34b89"
+questionIds:
+  - "7f04eab3-758b-46a5-a319-f2c3a7857eef"
+  - "dba95f36-646a-4ec3-9f63-8474f8dafc77"
+  - "033708da-ee8d-4e73-acf5-f059f2728ecb"
+  - "8a6bbb07-7359-43dc-ba53-901cd3c2b786"
+  - "3bded655-2af7-40b9-abc2-78c77432112e"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/how-to-be-an-agent-boss/question-banks/01-discover-agents|Chapter 1: Discover Agents — Finding High-Leverage Workflows: Question Bank]].

@@ -725,6 +725,21 @@ export class OpenWeightGateway {
 
 ---
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "3f5959c2-a9aa-4051-92b6-9b06b3f4368b"
+title: "Checkpoint: Index Share, speculative decoding and hosting economics"
+questionBankId: "fe0ecd1b-c281-4dfa-b120-dae9f3b74679"
+questionIds:
+  - "ba011af0-93df-495a-a496-f8bf57f5cceb"
+  - "b9df5063-4546-415a-935a-150b77e51a37"
+  - "f33362c3-46e8-495d-acef-db585547c1a4"
+  - "2b3875d9-8b30-420a-b90c-40b08cb298ea"
+  - "145117b8-de8b-41cb-a64f-419454850d99"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-model-trends-the-latest-you-need-to-know/question-banks/04-open-weight-frontier-glm-deepseek-mimo|Open-Weight Frontier: GLM 5.2 Index Share Caching, DeepSeek V4 & Speculative Decoding: Question Bank]].
+
 <div class="chapter-navigation">
   <a class="chapter-nav-btn prev" href="/courses/ai-model-trends-the-latest-you-need-to-know/lessons/03-google-gemini-diffusion-sovereign-gemma">← Chapter 3: Google Gemini & Sovereign Ecosystem</a>
   <a class="chapter-nav-btn next" href="/courses/ai-model-trends-the-latest-you-need-to-know/lessons/05-hands-on-model-evaluation-agentic-lab">Chapter 5: Hands-On Model Evaluation Lab →</a>

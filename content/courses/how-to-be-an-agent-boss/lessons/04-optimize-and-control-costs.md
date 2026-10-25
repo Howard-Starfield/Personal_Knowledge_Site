@@ -651,3 +651,18 @@ To solidify your mastery and prepare for enterprise leadership, proceed to the *
   <a href="/courses/how-to-be-an-agent-boss/lessons/03-delegate-and-manage-agents" class="chapter-nav-btn prev">← Previous: Chapter 3 — Delegate & Manage</a>
   <a href="/courses/how-to-be-an-agent-boss/lessons/05-glossary" class="chapter-nav-btn next">Next: Glossary →</a>
 </div>
+
+```knowledge-quiz
+schemaVersion: 1
+quizId: "b15ad913-4f76-436f-80a8-b9d935658efd"
+title: "Checkpoint: Optimize and Control Costs"
+questionBankId: "c9410c77-3122-483d-a500-188219ca3eeb"
+questionIds:
+  - "ba3b1460-1f16-4d14-98d6-a0e05524f1f6"
+  - "a6e0923c-6932-4e7e-ad08-793d2993be1d"
+  - "ec9c24e5-3db8-4e35-bed9-a25b24f10153"
+  - "0ddb3910-eaaf-4872-ad64-553132c9701c"
+  - "e6b5e468-24ca-4420-bbff-ab5f2e1a581f"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/how-to-be-an-agent-boss/question-banks/04-optimize-and-control-costs|Chapter 4: Optimize & Control Costs — Forecasting, Monitoring, and ROI: Question Bank]].

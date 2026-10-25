@@ -740,3 +740,18 @@ Now, test your comprehensive mastery in the **Final Assessment**.
   <a href="/courses/how-to-be-an-agent-boss/lessons/05-glossary" class="chapter-nav-btn prev">← Previous: Glossary</a>
   <a href="/courses/how-to-be-an-agent-boss/lessons/07-final-assessment" class="chapter-nav-btn next">Next: Final Assessment →</a>
 </div>
+
+```knowledge-quiz
+schemaVersion: 1
+quizId: "87d7ed39-882d-4560-b438-677c820591c6"
+title: "Checkpoint: The Expense Submission Agent Lab"
+questionBankId: "a7b09d1c-caec-4116-8288-d02021ab9b42"
+questionIds:
+  - "0b8f54f6-ed23-43a0-93c8-023fc02547a4"
+  - "0b5c5071-b063-4fd0-89e5-e54fd2cfb707"
+  - "e6339254-e764-42f6-8af7-3cd980fac231"
+  - "0db4dd6f-cacc-4510-b160-aa28b057c6b5"
+  - "6faa7bb7-2b3a-4516-b877-f7105ad28e64"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/how-to-be-an-agent-boss/question-banks/06-exercise-files|Exercise Files: Building an Expense Submission Agent in Copilot Studio: Question Bank]].

@@ -689,6 +689,21 @@ When using Claude Code with Opus 4.8, periodically audit your persistent memory 
 
 ---
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "27aee81e-ffa1-46d6-9420-5f3a7d007144"
+title: "Checkpoint: Fable 5 fences, Sonnet 5 taxes and Opus 4.8 memory"
+questionBankId: "f4734aeb-9e17-4741-9494-6fe11868277f"
+questionIds:
+  - "58b80b27-92be-443a-82bf-a544c09632fe"
+  - "1a2a590b-c3d9-4228-9b04-a4466f6aca0e"
+  - "b06b0eb3-d975-41e5-880a-1e1bbd13e48d"
+  - "07ab06ee-cfdf-4334-b667-94cb2301da39"
+  - "eedde642-abc2-4c37-b99d-d7145ddac8fb"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-model-trends-the-latest-you-need-to-know/question-banks/02-anthropic-frontier-fable-sonnet-opus-agents|Anthropic Frontier Architecture: Fable 5 Mythos Fences, Sonnet 5 Computer Use & Opus 4.8 Memory Nodes: Question Bank]].
+
 <div class="chapter-navigation">
   <a class="chapter-nav-btn prev" href="/courses/ai-model-trends-the-latest-you-need-to-know/lessons/01-openai-frontier-gpt5-architecture-orchestration">← Chapter 1: OpenAI Frontier Architecture</a>
   <a class="chapter-nav-btn next" href="/courses/ai-model-trends-the-latest-you-need-to-know/lessons/03-google-gemini-diffusion-sovereign-gemma">Chapter 3: Google Gemini & Sovereign Ecosystem →</a>

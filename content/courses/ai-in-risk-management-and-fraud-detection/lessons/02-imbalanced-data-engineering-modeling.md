@@ -1311,6 +1311,22 @@ However, when an automated model flags a sophisticated money laundering ring or 
 
 Proceed to [[courses/ai-in-risk-management-and-fraud-detection/lessons/03-generative-ai-alerts-audit-reporting|Chapter 3: Generative AI in Fraud Operations]] to master how Large Language Models, Retrieval-Augmented Generation (RAG), and knowledge graphs automate alert narratives, synthesize regulatory filings, and construct tamper-evident audit trails.
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "60476db6-a21d-4113-9347-d26985d8132d"
+title: "Checkpoint: the accuracy paradox, resampling and cost-sensitive thresholds"
+questionBankId: "721ce167-7e3e-4794-9a7d-04a0e85f07af"
+questionIds:
+  - "c9252dc0-3bef-4847-ae76-fe48cc5347b3"
+  - "44baeae2-e06d-44d8-a4a2-a51c0690d033"
+  - "2e9e9be1-2228-4c5a-be82-8f78ad8f4022"
+  - "510efb21-ebba-4e0a-a367-87550fd886b7"
+  - "697a02ad-56be-4937-b80b-a8323755ca07"
+  - "a6ec181f-1441-4881-ab2e-0ee7c844b5a7"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-in-risk-management-and-fraud-detection/question-banks/02-imbalanced-data-engineering-modeling|Imbalanced Learning & Feature Engineering: Defeating the Accuracy Paradox with SMOTE, PR Curves & Tuning: Question Bank]].
+
 <div class="chapter-navigation">
   <a class="chapter-nav-btn prev" href="/courses/ai-in-risk-management-and-fraud-detection/lessons/01-anomaly-detection-algorithms-theory">← Chapter 1: Anomaly Detection Algorithms</a>
   <a class="chapter-nav-btn next" href="/courses/ai-in-risk-management-and-fraud-detection/lessons/03-generative-ai-alerts-audit-reporting">Chapter 3: Generative AI in Fraud Operations →</a>
