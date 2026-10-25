@@ -895,3 +895,18 @@ In **Chapter 2**, we explore how documents are segmented prior to embedding: **C
   <a href="/courses/advanced-llms-with-retrieval-augmented-generation-rag-practical-projects-for-ai-applications/lessons/00-foundations-of-rag" class="chapter-nav-btn prev">← Chapter 0: Foundations of RAG</a>
   <a href="/courses/advanced-llms-with-retrieval-augmented-generation-rag-practical-projects-for-ai-applications/lessons/02-chunking-enrichment" class="chapter-nav-btn next">Chapter 2: Chunking & Contextual Enrichment →</a>
 </div>
+
+```knowledge-quiz
+schemaVersion: 1
+quizId: "3fc1be73-e733-4fa3-a8c6-cbb4404cb428"
+title: "Checkpoint: Text Encoding, Tokenization & Vector Embeddings"
+questionBankId: "35290d51-73c9-46cd-be64-e5d22f9bae24"
+questionIds:
+  - "67da2636-670c-47df-907e-d9637f450672"
+  - "9c72a505-28ef-4a12-a522-87069e50d334"
+  - "6b3e4878-354a-45bb-82a5-6aa90cf5aaf5"
+  - "fa0e0086-0404-4e2e-b286-93c2de3515e4"
+  - "6c208474-cb5f-461f-882a-a6a16a57095f"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/advanced-llms-with-retrieval-augmented-generation-rag-practical-projects-for-ai-applications/question-banks/01-text-encoding-embeddings|Text Encoding, Tokenization & Vector Embeddings: Question Bank]].

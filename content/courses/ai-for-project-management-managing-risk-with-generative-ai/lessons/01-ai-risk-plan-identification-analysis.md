@@ -909,6 +909,21 @@ To ensure project risk identification remains mathematically sound and behaviora
 6. **Vector Cosine Deduplication Prevents Register Bloat:** Autonomous agents will produce semantically redundant risks. Pairwise embedding cosine projections must cluster overlapping failure modes into canonical risks before human triage.
 7. **The Critical Path Vulnerability Index (CPVI) Directs Capital:** Calculate the proportion of total risk exposure ($EMV$) concentrated on the Critical Path. Prioritize hedging capital and architectural reviews on high-risk critical nodes.
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "9242c0ee-0e11-4328-9586-91870145d390"
+title: "Checkpoint: data analysis and threat identification"
+questionBankId: "19d21c06-0a12-4165-8229-1a3ec49d7fdc"
+questionIds:
+  - "b0f2aee6-d6a4-4956-a661-b52f7745769e"
+  - "f829541f-00b6-4ad1-b5f9-64dce60f0708"
+  - "0b5a2217-18e0-46aa-8ae2-912763192927"
+  - "a8b85ff0-054e-446e-8637-a13a8c1dcbce"
+  - "719ee75b-f519-42b3-80b5-b3f6ac96bfeb"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-for-project-management-managing-risk-with-generative-ai/question-banks/01-ai-risk-plan-identification-analysis|The AI RISK PLAN Framework: Data Analysis & Threat Identification: Question Bank]].
+
 ---
 
 <div class="chapter-navigation">

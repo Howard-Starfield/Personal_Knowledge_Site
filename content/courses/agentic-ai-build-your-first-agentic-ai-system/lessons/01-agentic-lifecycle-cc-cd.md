@@ -1245,6 +1245,21 @@ Before moving to Chapter 2 to construct the baseline ReAct agent architecture, c
 
 ---
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "1e3b9315-c0cf-4c5f-913d-da91c90e6931"
+title: "Checkpoint: the CC/CD lifecycle and drift detection"
+questionBankId: "337d98f4-d51e-4dba-972e-21819d88d843"
+questionIds:
+  - "7bb3fb69-38ec-4297-97f4-6b63350c3932"
+  - "5ae7ad22-5f01-4d66-9311-41d7f249cc84"
+  - "11faba9d-bbae-438e-9f3d-b81c97d07aed"
+  - "07e33ea5-373f-4578-a90e-dc59a7fb25bc"
+  - "69dd6830-40ab-472b-a74b-f69b11ddbb63"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/agentic-ai-build-your-first-agentic-ai-system/question-banks/01-agentic-lifecycle-cc-cd|The Agentic AI Lifecycle: Continuous Calibration & Development (CC/CD): Question Bank]].
+
 <div class="chapter-navigation">
   <a class="chapter-nav-btn prev" href="/courses/agentic-ai-build-your-first-agentic-ai-system/lessons/00-introduction-and-autonomy-levels">← Chapter 0: Foundations & Autonomy Levels</a>
   <a class="chapter-nav-btn next" href="/courses/agentic-ai-build-your-first-agentic-ai-system/lessons/02-building-the-baseline-agent">Chapter 2: Architecting the Baseline Agent →</a>

@@ -1088,3 +1088,18 @@ In **Chapter 3**, we examine how these enriched, multi-vector representations ar
   <a href="/courses/advanced-llms-with-retrieval-augmented-generation-rag-practical-projects-for-ai-applications/lessons/01-text-encoding-embeddings" class="chapter-nav-btn prev">← Chapter 1: Text Encoding & Vector Embeddings</a>
   <a href="/courses/advanced-llms-with-retrieval-augmented-generation-rag-practical-projects-for-ai-applications/lessons/03-hybrid-search-reranking" class="chapter-nav-btn next">Chapter 3: Hybrid Search & Reranking →</a>
 </div>
+
+```knowledge-quiz
+schemaVersion: 1
+quizId: "ad84f550-b547-477d-8d44-73f751013412"
+title: "Checkpoint: Semantic Chunking, Contextual Enrichment & Reverse HyDE"
+questionBankId: "52f7ee94-28b5-4fa9-9398-a57821a7a3d1"
+questionIds:
+  - "e343468d-b570-492c-9efe-c99b29b71cc6"
+  - "b6e80780-f7e0-4891-9cb5-062ebd71a943"
+  - "63eb9d8b-3017-4597-a1a7-157f2eb3ea37"
+  - "fd7c2c5d-4a47-4326-b3f6-b191a304d058"
+  - "1515e209-6ff0-4a6f-8520-30f5d31ccf32"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/advanced-llms-with-retrieval-augmented-generation-rag-practical-projects-for-ai-applications/question-banks/02-chunking-enrichment|Semantic Chunking, Contextual Enrichment & Reverse HyDE: Question Bank]].

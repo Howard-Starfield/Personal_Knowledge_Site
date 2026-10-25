@@ -816,6 +816,22 @@ In the next chapter, we expand from single queries into structured exemplars: **
 
 ---
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "ee36a119-f495-4d5b-b6b1-c2a0a9484860"
+title: "Checkpoint: Foundations of Prompt Engineering"
+questionBankId: "dbd74c37-41a3-45e2-a948-b6f1f67f5318"
+questionIds:
+  - "de9a974e-d919-4f87-b943-aafd1a5a8e4c"
+  - "ebcb0e90-45c8-4742-a9e2-876dd371af8b"
+  - "cb499a5f-ae61-4e15-bbd3-83aa597369fc"
+  - "0c60597e-0846-455d-9b6f-a27aedbd5c2d"
+  - "afcb7f63-0b6f-4de2-9bfd-fb7754cf8abc"
+  - "565394ba-11ec-4e67-8b42-cab69432b5b1"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/advanced-prompt-engineering-techniques/question-banks/00-foundations-of-prompt-engineering|Foundations of Prompt Engineering & In-Context Dynamics: Question Bank]].
+
 <div class="chapter-navigation">
   <a href="/courses/advanced-prompt-engineering-techniques" class="chapter-nav-btn prev">← Course Overview</a>
   <a href="/courses/advanced-prompt-engineering-techniques/lessons/01-zero-shot-and-few-shot-prompting" class="chapter-nav-btn next">Chapter 1: Zero-Shot & Few-Shot Prompting →</a>

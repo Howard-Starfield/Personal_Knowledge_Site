@@ -21,11 +21,11 @@ comments: false
 
 Across the first four chapters of this curriculum, we transitioned agentic software engineering from an ad-hoc scripting experiment into a formal, mathematically verified engineering discipline:
 
-1. In [Chapter 0: Introduction & Autonomy Levels](./00-introduction-and-autonomy-levels), we formalized the 6-level autonomy spectrum ($L_0$ to $L_5$) and proved the mathematical necessity of human-in-the-loop boundaries.
-2. In [Chapter 1: The Agentic Lifecycle (CC/CD)](./01-agentic-lifecycle-cc-cd), we established the Continuous Calibration and Continuous Development closed-loop lifecycle, deploying McNemar's test, Cohen's Kappa, and Expected Calibration Error (ECE).
-3. In [Chapter 2: Building the Baseline Agent](./02-building-the-baseline-agent), we constructed a deterministic ReAct state machine equipped with loop termination guards and structured JSON Schema tool calling.
-4. In [Chapter 3: Tool Integration, Dynamic Memory & Retrieval Augmentation](./03-tools-memory-and-retrieval), we architected dual-tier working and vector memory, proving that hybrid BM25 + dense vector retrieval with Reciprocal Rank Fusion (RRF) lifts SOP recall to $75.0\%$.
-5. In [Chapter 4: Production Governance & Economics](./04-production-governance-and-economics), we conquered the Cost-Complexity-Reliability Trilemma using 3-tier guardrails, PII redaction, Fly-by-Wire parameter clamping, and cryptographic idempotency keys.
+1. In [[courses/agentic-ai-build-your-first-agentic-ai-system/lessons/00-introduction-and-autonomy-levels|Chapter 0: Introduction & Autonomy Levels]], we formalized the 6-level autonomy spectrum ($L_0$ to $L_5$) and proved the mathematical necessity of human-in-the-loop boundaries.
+2. In [[courses/agentic-ai-build-your-first-agentic-ai-system/lessons/01-agentic-lifecycle-cc-cd|Chapter 1: The Agentic Lifecycle (CC/CD)]], we established the Continuous Calibration and Continuous Development closed-loop lifecycle, deploying McNemar's test, Cohen's Kappa, and Expected Calibration Error (ECE).
+3. In [[courses/agentic-ai-build-your-first-agentic-ai-system/lessons/02-building-the-baseline-agent|Chapter 2: Building the Baseline Agent]], we constructed a deterministic ReAct state machine equipped with loop termination guards and structured JSON Schema tool calling.
+4. In [[courses/agentic-ai-build-your-first-agentic-ai-system/lessons/03-tools-memory-and-retrieval|Chapter 3: Tool Integration, Dynamic Memory & Retrieval Augmentation]], we architected dual-tier working and vector memory, proving that hybrid BM25 + dense vector retrieval with Reciprocal Rank Fusion (RRF) lifts SOP recall to $75.0\%$.
+5. In [[courses/agentic-ai-build-your-first-agentic-ai-system/lessons/04-production-governance-and-economics|Chapter 4: Production Governance & Economics]], we conquered the Cost-Complexity-Reliability Trilemma using 3-tier guardrails, PII redaction, Fly-by-Wire parameter clamping, and cryptographic idempotency keys.
 
 When moving from research prototypes to mission-critical enterprise systems, teams frequently struggle not from model limitations, but from **semantic ambiguity and architectural fragmentation**. Without a shared taxonomy and precise operational invariants, one engineer's "agent" is another's unconstrained `while` loop, and one team's "memory" is another's unpruned, multi-megabyte context window.
 

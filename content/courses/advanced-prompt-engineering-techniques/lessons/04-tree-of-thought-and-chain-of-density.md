@@ -20,7 +20,7 @@ comments: false
 
 # Tree-of-Thought (ToT) Search & Chain-of-Density (CoD) Compression
 
-In [Chapter 3: Generated Knowledge & Directional Stimulus](./03-generated-knowledge-and-directional-stimulus), we resolved the parametric retrieval dilemma and tackled the black-box steerability deficit. By eliciting latent domain propositions onto the context window and steering generation trajectories with low-bandwidth stimulus tokens, we grounded the model's factual representations and locked inference into safe semantic channels.
+In [[courses/advanced-prompt-engineering-techniques/lessons/03-generated-knowledge-and-directional-stimulus|Chapter 3: Generated Knowledge & Directional Stimulus]], we resolved the parametric retrieval dilemma and tackled the black-box steerability deficit. By eliciting latent domain propositions onto the context window and steering generation trajectories with low-bandwidth stimulus tokens, we grounded the model's factual representations and locked inference into safe semantic channels.
 
 Yet, an overarching computational bottleneck remains entrenched in standard prompting architectures: **unidirectional autoregressive linearity**.
 
@@ -1277,9 +1277,25 @@ In this chapter, we broke through the barrier of unidirectional autoregressive g
 6. **The Human Sweet Spot:** Demonstrated that entity density peaks in human preference at Step 3 or 4 ($\sim 0.15\text{--}0.18$ entity ratio) before reaching density saturation and syntactic degradation at Step 5.
 7. **Production Discipline:** Guard against $b^d$ combinatorial cost explosion using small-model evaluators, state hashing, and dynamic beam widths; avoid single-prompt sycophancy via isolated adversarial verification sessions.
 
-In the next chapter, we formalize the entire system design discipline developed across this course: **[Chapter 5: Architectural Taxonomy & Glossary](./05-glossary)**.
+In the next chapter, we formalize the entire system design discipline developed across this course: **[[courses/advanced-prompt-engineering-techniques/lessons/05-glossary|Chapter 5: Architectural Taxonomy & Glossary]]**.
 
 ---
+
+```knowledge-quiz
+schemaVersion: 1
+quizId: "85db363b-abb2-4770-911b-77d4424b85a6"
+title: "Checkpoint: Tree-of-Thought and Chain-of-Density"
+questionBankId: "77242945-ba03-4e72-a894-45158c044c54"
+questionIds:
+  - "b46a57b2-0a2c-4c25-aede-2386f59e5bfe"
+  - "e6079845-b8f0-4125-80c7-f1f93ad6de32"
+  - "86eebea0-49e1-42d8-8068-2ddb414f56dc"
+  - "4ae3c96c-1de6-424a-91a5-7b08cd51cce3"
+  - "94bb20e3-2e91-400d-aa56-aab23f218d25"
+  - "758e7fcf-f914-44eb-866c-a2030d1b728b"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/advanced-prompt-engineering-techniques/question-banks/04-tree-of-thought-and-chain-of-density|Tree-of-Thought (ToT) Search & Chain-of-Density (CoD) Compression: Question Bank]].
 
 <div class="chapter-navigation">
   <a href="/courses/advanced-prompt-engineering-techniques/lessons/03-generated-knowledge-and-directional-stimulus" class="chapter-nav-btn prev">← Chapter 3: Generated Knowledge & Directional Stimulus</a>

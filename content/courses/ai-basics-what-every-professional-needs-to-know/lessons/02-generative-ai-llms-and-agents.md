@@ -20,7 +20,7 @@ comments: false
 
 # Generative AI, Autoregressive LLMs & The Agentic Frontier
 
-In [Chapter 1: The Mechanics of Machine Learning](./01-mechanics-of-machine-learning), we deconstructed the mathematical foundations of predictive artificial intelligence. We proved that classical machine learning is an exercise in high-dimensional geometric optimization: a system ingests an input vector $X$ (such as an array of 784 image pixels or a customer demographic profile), projects it through cascading matrix transformations, and maps it to a discrete categorical label or continuous scalar $Y$ ($X \to Y$).
+In [[courses/ai-basics-what-every-professional-needs-to-know/lessons/01-mechanics-of-machine-learning|Chapter 1: The Mechanics of Machine Learning]], we deconstructed the mathematical foundations of predictive artificial intelligence. We proved that classical machine learning is an exercise in high-dimensional geometric optimization: a system ingests an input vector $X$ (such as an array of 784 image pixels or a customer demographic profile), projects it through cascading matrix transformations, and maps it to a discrete categorical label or continuous scalar $Y$ ($X \to Y$).
 
 Predictive models are **discriminative sieves**. They categorize, score, filter, and sort the world into pre-existing buckets.
 

@@ -22,7 +22,7 @@ comments: false
 
 # Chapter 11: Production LLMOps, Cost Modeling & Knowledge Distillation
 
-In [Chapter 10: Advanced Open-Source Fine-Tuning & Parameter Efficiency](./10-open-source-fine-tuning-and-peft), we mastered the art of adapting open-source foundation models via Low-Rank Adaptation (LoRA) and 4-bit Quantized LoRA (QLoRA), overcoming the training memory wall. We proved that freezing base weights and training low-rank adapter projections produces task-specific models that match or exceed full fine-tuning performance while cutting optimizer VRAM by 95%.
+In [[courses/advanced-guide-to-chatgpt-embeddings-and-other-large-language-models-llms/lessons/10-open-source-fine-tuning-and-peft|Chapter 10: Advanced Open-Source Fine-Tuning & Parameter Efficiency]], we mastered the art of adapting open-source foundation models via Low-Rank Adaptation (LoRA) and 4-bit Quantized LoRA (QLoRA), overcoming the training memory wall. We proved that freezing base weights and training low-rank adapter projections produces task-specific models that match or exceed full fine-tuning performance while cutting optimizer VRAM by 95%.
 
 However, deploying fine-tuned models into enterprise production confronts machine learning teams with an entirely different engineering crisis: **the serving economics and latency triangle**.
 

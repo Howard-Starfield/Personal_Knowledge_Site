@@ -20,7 +20,7 @@ comments: false
 
 # Production Considerations: The Cost-Complexity-Reliability Trilemma & Guardrails
 
-In [Chapter 3: Tool Integration, Dynamic Memory & Retrieval Augmentation](./03-tools-memory-and-retrieval), we constructed an autonomous planning agent capable of decomposing multi-policy customer grievances, querying dual-tier vector and lexical memory, and formulating auditable resolution plans. We proved empirically that optimizing retrieval depth ($K=4$) and hybrid Reciprocal Rank Fusion (RRF) lifted standard operating procedure (SOP) recall from **53.0% to 75.0%**.
+In [[courses/agentic-ai-build-your-first-agentic-ai-system/lessons/03-tools-memory-and-retrieval|Chapter 3: Tool Integration, Dynamic Memory & Retrieval Augmentation]], we constructed an autonomous planning agent capable of decomposing multi-policy customer grievances, querying dual-tier vector and lexical memory, and formulating auditable resolution plans. We proved empirically that optimizing retrieval depth ($K=4$) and hybrid Reciprocal Rank Fusion (RRF) lifted standard operating procedure (SOP) recall from **53.0% to 75.0%**.
 
 Yet, in software engineering, a system that achieves high benchmark scores across 22 curated test cases in a Jupyter notebook is **not** an enterprise production system.
 
@@ -1192,6 +1192,21 @@ Before deploying any autonomous agent system to production, ensure your architec
 5. **Autonomy Is Earned, Not Granted:** Follow the 4-Phase Roadmap. Start with shadow mode (100% human-in-the-loop), quantify empirical alignment using Cohen's Kappa, and progressively grant autonomous execution rights only to high-confidence, low-risk intent classes.
 
 ---
+
+```knowledge-quiz
+schemaVersion: 1
+quizId: "9839b843-9d7d-4c9d-8c1e-711ee4f8a165"
+title: "Checkpoint: the trilemma and the guardrail architecture"
+questionBankId: "fc16ac92-5922-4b09-9dbf-1688fd2cb8ca"
+questionIds:
+  - "b84f5622-e1d3-4d5e-94ee-646dfdb0b862"
+  - "902f555f-17c0-4181-b05c-0999ddf57b92"
+  - "eaf72677-92e9-4761-aacb-29ddc920f482"
+  - "0f8e520b-25c8-4500-b303-e87735178a49"
+  - "b052c775-0e57-4016-b983-3ee11c4024fb"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/agentic-ai-build-your-first-agentic-ai-system/question-banks/04-production-governance-and-economics|Production Considerations: The Cost-Complexity-Reliability Trilemma & Guardrails: Question Bank]].
 
 <div class="chapter-navigation">
   <a class="chapter-nav-btn prev" href="/courses/agentic-ai-build-your-first-agentic-ai-system/lessons/03-tools-memory-and-retrieval">← Chapter 3: Tool Integration & Memory</a>
