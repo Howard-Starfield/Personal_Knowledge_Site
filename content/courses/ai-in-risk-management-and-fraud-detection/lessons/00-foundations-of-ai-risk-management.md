@@ -623,6 +623,22 @@ With the structural breakdown of legacy rules established and the 3-Tier AI life
 
 Proceed to [[courses/ai-in-risk-management-and-fraud-detection/lessons/01-anomaly-detection-algorithms-theory|Chapter 1: Algorithmic Anomaly Detection: Mathematical Mechanics of Isolation Forests, LOF & Ensemble Trees]] to explore harmonic path length normalizations, local density reachability quotients, and the mathematical mechanics of detecting zero-day financial fraud.
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "6de8c8d8-15eb-4883-837e-76fae5657113"
+title: "Checkpoint: static rules, alert fatigue and the three-tier lifecycle"
+questionBankId: "b610fb28-2f51-4a75-bf04-a89c556acbc2"
+questionIds:
+  - "02abf626-8e28-4ca1-b5d8-31d5abb67594"
+  - "a2871be3-a591-44ca-805e-9a53636a5fca"
+  - "08b16049-b844-4728-bb0a-0625094bcc89"
+  - "d85ec52a-15b6-4d1c-832d-46e268a3d060"
+  - "be4df9f5-0a6d-4a8e-bb61-bdcb1c41b582"
+  - "e2015f60-ff46-4b67-9593-b58c8fa81a4d"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-in-risk-management-and-fraud-detection/question-banks/00-foundations-of-ai-risk-management|Foundations of Modern Financial Risk Management: The Breakdown of Static Rules & Manual Triage: Question Bank]].
+
 <div class="chapter-navigation">
   <a class="chapter-nav-btn prev" href="/courses/ai-in-risk-management-and-fraud-detection/">← Course Overview</a>
   <a class="chapter-nav-btn next" href="/courses/ai-in-risk-management-and-fraud-detection/lessons/01-anomaly-detection-algorithms-theory">Chapter 1: Anomaly Detection Algorithms →</a>

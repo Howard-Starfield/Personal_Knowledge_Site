@@ -1614,6 +1614,22 @@ In this implementation lab, you built and verified an enterprise-grade fraud det
 
 In the final chapter, [[courses/ai-in-risk-management-and-fraud-detection/lessons/05-glossary|Chapter 5: 5-Pillar Architectural Taxonomy & Comprehensive A–Z Financial Risk Dictionary]], we synthesize the complete conceptual, mathematical, and regulatory vocabulary governing modern AI-driven financial risk operations.
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "bcf00b4a-96cf-4d73-9b1e-de60127e10e7"
+title: "Checkpoint: the production fraud detection lab end to end"
+questionBankId: "c3887912-fd81-413c-a615-878e7b40bd75"
+questionIds:
+  - "a198b315-8ca0-46dc-b0ac-ed88a1a7ad42"
+  - "04ef8138-58c2-497b-964a-f369e809a97b"
+  - "6348fe5e-d215-4e15-ba95-508f6f7fd0f1"
+  - "c72db02c-8bd8-4996-aa51-1934b0fa91d0"
+  - "75e8157c-41e8-4d52-87b9-ee38264f1e72"
+  - "ec2fb5c1-3be8-4cb1-9b8c-18972e9a0822"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-in-risk-management-and-fraud-detection/question-banks/04-hands-on-fraud-detection-lab|Hands-On Implementation Lab: Building a Production-Ready Credit Card Fraud Detection Engine: Question Bank]].
+
 ---
 
 <div class="chapter-navigation">

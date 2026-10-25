@@ -1203,6 +1203,22 @@ Having mastered macroeconomic scenario deconstruction and probabilistic stress-t
 
 Proceed to [[courses/ai-in-financial-forecasting/lessons/04-hands-on-deep-research-lab|Chapter 4: Hands-On Forecasting Lab: Deep Research & Agentic Scenario Synthesis]] to construct an end-to-end agentic workflow that extracts real-time central bank intelligence, synthesizes supply chain shock vectors, and executes live Monte Carlo financial statement simulations.
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "9c6df87b-ba99-4dd1-acf1-51f8dae70ac0"
+title: "Checkpoint: from a static budget to probabilistic stress-testing"
+questionBankId: "d2e1bf71-7f12-4cba-bb54-d62c63847e7a"
+questionIds:
+  - "a205db61-cdc1-4e84-adb5-d18febefb810"
+  - "7406ead2-7bfb-4bca-9879-36de1b8c181c"
+  - "e8377876-d213-4e46-80b3-05e5b7b4d491"
+  - "12ed70ea-abd7-447a-a3cd-26e35679c2b4"
+  - "b9914987-f188-4e69-8898-2a97cd1f84eb"
+  - "2cde66d2-6421-4a06-ad14-21b7633e9eb6"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-in-financial-forecasting/question-banks/03-generative-scenario-modeling-what-if|Dynamic Scenario Analysis: Probabilistic 'What-If' Projections & Deep Market Research: Question Bank]].
+
 <div class="chapter-navigation">
   <a class="chapter-nav-btn prev" href="/courses/ai-in-financial-forecasting/lessons/02-correlation-causation-feature-selection">← Chapter 2: Correlation vs Causation</a>
   <a class="chapter-nav-btn next" href="/courses/ai-in-financial-forecasting/lessons/04-hands-on-deep-research-lab">Chapter 4: Hands-On Forecasting Lab →</a>

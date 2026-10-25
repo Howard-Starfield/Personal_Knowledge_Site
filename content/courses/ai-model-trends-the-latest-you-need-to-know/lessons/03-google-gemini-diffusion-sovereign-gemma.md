@@ -763,6 +763,21 @@ export class HybridModelRouter {
 
 ---
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "1281a1a2-58fa-4d24-8a1a-87f16ddc3056"
+title: "Checkpoint: Gemini economics, diffusion mechanics and local VRAM"
+questionBankId: "3d1f9316-68ea-4a4e-977a-c290bddb85e1"
+questionIds:
+  - "39227c81-d671-4ca1-8e2d-4a716b3b5be9"
+  - "7d59e422-47d1-4ab2-b895-1f426b2839a2"
+  - "7e91b374-ee9a-4919-8045-ec067a65d557"
+  - "21e2070f-a923-4761-8763-7c271c888710"
+  - "054c137b-73ba-4b6e-9c6f-5a7b098d0a00"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-model-trends-the-latest-you-need-to-know/question-banks/03-google-gemini-diffusion-sovereign-gemma|Google Gemini & Sovereign Ecosystem: Gemini Diffusion, 3.5 Flash & On-Device Gemma 4 12B: Question Bank]].
+
 <div class="chapter-navigation">
   <a class="chapter-nav-btn prev" href="/courses/ai-model-trends-the-latest-you-need-to-know/lessons/02-anthropic-frontier-fable-sonnet-opus-agents">← Chapter 2: Anthropic Frontier Architecture</a>
   <a class="chapter-nav-btn next" href="/courses/ai-model-trends-the-latest-you-need-to-know/lessons/04-open-weight-frontier-glm-deepseek-mimo">Chapter 4: Open-Weight Frontier →</a>

@@ -201,3 +201,18 @@ Proceed to [[courses/how-to-be-an-agent-boss/lessons/01-discover-agents|Chapter 
   <a href="/courses/how-to-be-an-agent-boss" class="chapter-nav-btn prev">← Course Overview</a>
   <a href="/courses/how-to-be-an-agent-boss/lessons/01-discover-agents" class="chapter-nav-btn next">Next: Chapter 1 — Discover Agents →</a>
 </div>
+
+```knowledge-quiz
+schemaVersion: 1
+quizId: "a9b33ff4-4290-4920-a52a-4647f704607e"
+title: "Checkpoint: Introduction to Leading AI Agents"
+questionBankId: "0723727e-d8f7-427b-8367-f6b372bc61ac"
+questionIds:
+  - "68c5effd-4c2b-4576-a01f-5f18eb7e3ab9"
+  - "c43f337f-bc96-47c4-afc6-9c6e1e906887"
+  - "f8cfc902-d5bc-42dc-9b98-27f0f1420c2a"
+  - "a5abf53f-8203-45a4-aaf0-df3d171fb526"
+  - "d18338c0-4499-40f0-8d2d-95f7a3ced228"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/how-to-be-an-agent-boss/question-banks/00-introduction|Introduction: Leading AI Agents with Confidence: Question Bank]].

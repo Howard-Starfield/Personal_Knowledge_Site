@@ -1017,6 +1017,22 @@ Before promoting an LLM-powered fraud alert or narrative generation engine to pr
 
 In the next chapter, we transition from theoretical frameworks and architectural patterns to hands-on implementation. We will construct a complete end-to-end fraud detection lab: training high-precision classifiers, computing exact SHAP feature attributions, and deploying an automated incident response pipeline.
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "7ccc4cdc-fc88-40e7-8b62-e3bb2a71db83"
+title: "Checkpoint: generative alerting and fiduciary governance"
+questionBankId: "6a2d142a-5153-40a3-ac08-32c92cd4690f"
+questionIds:
+  - "7b76a5c3-2ab7-4e25-a644-b6ed3339cf3f"
+  - "cb663ffb-2839-451f-a4ac-524446f4824c"
+  - "71540f47-4994-4ff7-ae1e-1409e097bf05"
+  - "da374ed0-432d-4059-be8a-5d18ae026538"
+  - "858f72b6-1d8a-4f1a-b451-936fc5c3a0e7"
+  - "96697d25-e00d-43e3-a9fd-9f7fe6201a78"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-in-risk-management-and-fraud-detection/question-banks/03-generative-ai-alerts-audit-reporting|Generative AI in Fraud Operations: Automated Natural Language Alerts, Case Narratives & Fiduciary Governance: Question Bank]].
+
 ---
 
 <div class="chapter-navigation">

@@ -1073,6 +1073,22 @@ With the end-to-end Python forecasting engine constructed, validated, and stress
 
 Proceed to [[courses/ai-in-financial-forecasting/lessons/05-glossary|Chapter 5: Architectural Taxonomy & Comprehensive A–Z Financial Forecasting Dictionary]] to master the authoritative 5-pillar architectural taxonomy and exhaustive technical dictionary spanning econometrics, data engineering, and generative FP&A.
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "67e64497-4ea3-461e-9007-42649f0aec05"
+title: "Checkpoint: building and governing the end-to-end forecasting engine"
+questionBankId: "66d1eb8c-d609-4f3f-97ff-a0ecee82a534"
+questionIds:
+  - "1ca83879-0b42-45f8-b7a5-91e4ba9e5f4a"
+  - "6b4a0257-9e6a-4a0f-82bc-51e3f2ac6be8"
+  - "6fa4d606-5d38-4ee3-9d4e-7c6a11f0e9cb"
+  - "a68024b8-1d9c-4a76-9e22-96dd9e9a17f8"
+  - "561e7c1b-8a45-4e0f-9c2b-3d8ba5b0a9ee"
+  - "842e0d46-c6e1-4e3d-9b12-e59f1b0e5c7a"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-in-financial-forecasting/question-banks/04-hands-on-deep-research-lab|Hands-On Implementation Lab: Building an End-to-End Financial Forecasting & SARIMA Engine: Question Bank]].
+
 <div class="chapter-navigation">
   <a class="chapter-nav-btn prev" href="/courses/ai-in-financial-forecasting/lessons/03-generative-scenario-modeling-what-if">← Chapter 3: Dynamic Scenario Analysis</a>
   <a class="chapter-nav-btn next" href="/courses/ai-in-financial-forecasting/lessons/05-glossary">Chapter 5: Architectural Taxonomy & Glossary →</a>

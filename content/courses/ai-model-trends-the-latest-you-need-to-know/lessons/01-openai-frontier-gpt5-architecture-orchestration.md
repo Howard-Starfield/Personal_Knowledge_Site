@@ -483,6 +483,21 @@ By leveraging **GPT-5.6 Sol** for high-stakes orchestration, offloading high-vol
 
 ---
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "1712e8f6-fd10-43c4-8eed-5cc9c45502e8"
+title: "Checkpoint: the GPT-5.6 triad and the Codex sandbox"
+questionBankId: "5595b825-2083-4008-be06-b5c6c3d68a0f"
+questionIds:
+  - "3b49b96f-cd81-4caf-9933-29518e59423e"
+  - "8e0920c2-d3fa-4e91-8de2-6a1d6ab36dd3"
+  - "e0d5da70-83b8-4cf2-8249-60b4d20b2e1e"
+  - "13e04d40-ebbb-4cc8-af20-ceaa652cec68"
+  - "00c2cd6c-028f-4a25-ba50-ed7714169c98"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-model-trends-the-latest-you-need-to-know/question-banks/01-openai-frontier-gpt5-architecture-orchestration|OpenAI Frontier Architecture: GPT-5.6 Parallel Agents, Codex Sandboxes & Multi-Modal Engines: Question Bank]].
+
 <div class="chapter-navigation">
   <a class="chapter-nav-btn prev" href="/courses/ai-model-trends-the-latest-you-need-to-know/lessons/00-frontier-model-landscape-evaluation-benchmarks">← Chapter 0: The Frontier Model Landscape</a>
   <a class="chapter-nav-btn next" href="/courses/ai-model-trends-the-latest-you-need-to-know/lessons/02-anthropic-frontier-fable-sonnet-opus-agents">Chapter 2: Anthropic Frontier Architecture →</a>
