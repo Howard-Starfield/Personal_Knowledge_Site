@@ -1,16 +1,16 @@
 # Execution Plan: Phase X — Practice material for the courses that have none
 
-| Field           | Value                                                            |
-| --------------- | ---------------------------------------------------------------- |
-| Status          | In progress                                                      |
-| Owner           | Site maintainer (agent)                                          |
-| Created         | 2026-10-25                                                       |
-| Updated         | 2026-10-25                                                       |
-| Baseline commit | `3c4b232` (merge of PR #39)                                     |
-| Target branch   | `feat/practice-tranche-1`                                        |
-| PR              | _filled after the pull request is opened_                        |
+| Field           | Value                                                               |
+| --------------- | ------------------------------------------------------------------- |
+| Status          | In progress                                                         |
+| Owner           | Site maintainer (agent)                                             |
+| Created         | 2026-10-25                                                          |
+| Updated         | 2026-10-25                                                          |
+| Baseline commit | `3c4b232` (merge of PR #39)                                         |
+| Target branch   | `feat/practice-tranche-1`                                           |
+| PR              | _filled after the pull request is opened_                           |
 | PRD phase       | Public-learning baseline; every published course should be drilable |
-| Related ADRs    | None                                                             |
+| Related ADRs    | None                                                                |
 
 ## 1. Objective
 
@@ -19,9 +19,14 @@ drill any topic and check the reasoning. The other **thirteen** courses publish 
 question banks at all, so a reader of those 113 lessons has nothing to check their
 understanding against.
 
-Observable outcome: every lesson of every published course carries a quiz and links its
-own answer key, and the Practice page's generated index lists all seventeen courses
-rather than four.
+Observable outcome: every **teaching** lesson of every published course carries a quiz
+and links its own answer key, and the Practice page's generated index lists every
+course that has practice material, rather than only the four that do today.
+
+Two kinds of lesson are deliberately left alone. A **glossary** is a dictionary, with
+nothing to practise. A **final assessment** already carries its own fifteen inline
+scenarios with answer details, in the inline format the site has always used for
+those, so a second set of twelve would be duplication rather than coverage.
 
 ## 2. Non-goals
 
@@ -48,11 +53,11 @@ rather than four.
 
 ## 4. Instruction sources
 
-| Scope/path  | Instruction file    | Relevant rules                                                            |
-| ----------- | ------------------- | ------------------------------------------------------------------------- |
-| Repository  | `AGENTS.md`         | Plan-before-code; PR boundary; update tests and contracts with behaviour |
-| Nested path | `content/AGENTS.md` | IDs never change; controlled tags; a lesson belongs to one course          |
-| Question rules | `docs/exec-plans/active/question-quality-checker.md` | The thresholds a bank must satisfy |
+| Scope/path     | Instruction file                                     | Relevant rules                                                           |
+| -------------- | ---------------------------------------------------- | ------------------------------------------------------------------------ |
+| Repository     | `AGENTS.md`                                          | Plan-before-code; PR boundary; update tests and contracts with behaviour |
+| Nested path    | `content/AGENTS.md`                                  | IDs never change; controlled tags; a lesson belongs to one course        |
+| Question rules | `docs/exec-plans/active/question-quality-checker.md` | The thresholds a bank must satisfy                                       |
 
 ## 5. Version and environment matrix
 
@@ -64,13 +69,13 @@ rather than four.
 
 ## 6. Official source verification
 
-| Claim/assumption                                              | Official URL      | Verified date | Installed source file/symbol                 | Finding                                                                                                          |
-| ------------------------------------------------------------- | ----------------- | ------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| The house standard is 12 questions per bank                   | the repository    | 2026-10-25    | `content/courses/*/question-banks/*.md`        | accounting-ai 32/32 banks of 12; ai-agent 19/19 banks of 12; covered-california 57 banks averaging 12 (8–17).     |
-| A bank must satisfy the position and length rules             | the repository    | 2026-10-25    | `scripts/check-question-quality.ts`            | `maxCorrectIsLongestPercent` 35, `minItemsForPositionBalance` 8, each position within 60–140% of an even share, `maxSamePositionRun` 3, `lengthCuePercent` 125. |
-| A quiz block and its bank are joined by an immutable ID        | the repository    | 2026-10-25    | `plugins/knowledge-quiz/src/schema.ts`         | The block carries `quizId`, `questionBankId` and `questionIds`; the bank's frontmatter `id` is the bank ID.         |
-| The practice index finds the material on its own               | the repository    | 2026-10-25    | `plugins/generated-index/src/index.ts`         | The index is built from the parsed quiz selections, so new banks appear with no change to the plugin.              |
-| A bank must be parseable by the quiz plugin                     | the repository    | 2026-10-25    | `plugins/knowledge-quiz/src/schema.ts`         | Unknown keys are rejected, so a bank carries exactly the schema's keys.                                          |
+| Claim/assumption                                        | Official URL   | Verified date | Installed source file/symbol            | Finding                                                                                                                                                         |
+| ------------------------------------------------------- | -------------- | ------------- | --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| The house standard is 12 questions per bank             | the repository | 2026-10-25    | `content/courses/*/question-banks/*.md` | accounting-ai 32/32 banks of 12; ai-agent 19/19 banks of 12; covered-california 57 banks averaging 12 (8–17).                                                   |
+| A bank must satisfy the position and length rules       | the repository | 2026-10-25    | `scripts/check-question-quality.ts`     | `maxCorrectIsLongestPercent` 35, `minItemsForPositionBalance` 8, each position within 60–140% of an even share, `maxSamePositionRun` 3, `lengthCuePercent` 125. |
+| A quiz block and its bank are joined by an immutable ID | the repository | 2026-10-25    | `plugins/knowledge-quiz/src/schema.ts`  | The block carries `quizId`, `questionBankId` and `questionIds`; the bank's frontmatter `id` is the bank ID.                                                     |
+| The practice index finds the material on its own        | the repository | 2026-10-25    | `plugins/generated-index/src/index.ts`  | The index is built from the parsed quiz selections, so new banks appear with no change to the plugin.                                                           |
+| A bank must be parseable by the quiz plugin             | the repository | 2026-10-25    | `plugins/knowledge-quiz/src/schema.ts`  | Unknown keys are rejected, so a bank carries exactly the schema's keys.                                                                                         |
 
 ## 7. Repository reconnaissance
 
@@ -104,13 +109,13 @@ and 54 new links.
 
 ### Relevant code map
 
-| Area             | File/symbol                                        | Current responsibility                | Expected change            |
-| ---------------- | -------------------------------------------------- | ------------------------------------- | -------------------------- |
-| The lessons      | `content/courses/<course>/lessons/*.md`            | The teaching material                 | A quiz block at the end    |
-| The banks        | `content/courses/<course>/question-banks/*.md`     | Nothing for these courses yet         | One file per lesson        |
-| The quality gate | `scripts/check-question-quality.ts`                | Fails on a test-wise assessment       | Unchanged; the new material must pass it |
-| The index        | `plugins/generated-index/src/index.ts`             | Finds the practice material           | Unchanged; it discovers the new banks |
-| The links        | the lesson body and the bank body                  | Link each other                       | Both directions            |
+| Area             | File/symbol                                    | Current responsibility          | Expected change                          |
+| ---------------- | ---------------------------------------------- | ------------------------------- | ---------------------------------------- |
+| The lessons      | `content/courses/<course>/lessons/*.md`        | The teaching material           | A quiz block at the end                  |
+| The banks        | `content/courses/<course>/question-banks/*.md` | Nothing for these courses yet   | One file per lesson                      |
+| The quality gate | `scripts/check-question-quality.ts`            | Fails on a test-wise assessment | Unchanged; the new material must pass it |
+| The index        | `plugins/generated-index/src/index.ts`         | Finds the practice material     | Unchanged; it discovers the new banks    |
+| The links        | the lesson body and the bank body              | Link each other                 | Both directions                          |
 
 ### Existing tests and fixtures
 
@@ -146,14 +151,17 @@ a bank, links the two, and discovers them for the index. What is missing is the
 material.
 
 **Tranches.** 113 lessons is too much for one change, so the courses are taken in
-tranches of three to five courses, each tranche its own pull request:
+tranches of three to four courses, each tranche its own pull request. The glossary and
+final-assessment lessons of each course are excluded, which leaves **90 teaching
+lessons** across the thirteen courses — 1,080 questions at the house standard of
+twelve:
 
-| Tranche | Courses                                                  | Lessons |
-| ------- | -------------------------------------------------------- | ------- |
-| 1       | advanced-llms-with-rag, advanced-prompt-engineering, agentic-ai, ai-for-project-management | 27 |
-| 2       | ai-in-financial-forecasting, ai-in-risk-management, how-to-be-an-agent-boss, ai-model-trends | 29 |
-| 3       | accounting-foundations, account-management, ai-solutions-and-techniques | 28 |
-| 4       | ai-agents-in-depth, advanced-guide-to-chatgpt-embeddings | 28 |
+| Tranche | Courses                                                                                      | Teaching lessons | Questions |
+| ------- | -------------------------------------------------------------------------------------------- | ---------------- | --------- |
+| 1       | advanced-llms-with-rag, advanced-prompt-engineering, agentic-ai, ai-for-project-management   | 19               | 228       |
+| 2       | ai-in-financial-forecasting, ai-in-risk-management, how-to-be-an-agent-boss, ai-model-trends | 22               | 264       |
+| 3       | accounting-foundations, account-management, ai-solutions-and-techniques                      | 23               | 276       |
+| 4       | ai-agents-in-depth, advanced-guide-to-chatgpt-embeddings                                     | 26               | 312       |
 
 **Authoring.** Each course is authored by one worker that owns exactly that course's
 files, so no two writers touch the same file. A worker is given the format, the rules,
@@ -172,7 +180,7 @@ untouched apart from the quiz block and the link.
 
 **The shape of the quiz block**, at the end of the lesson:
 
-```text
+````text
 ```knowledge-quiz
 schemaVersion: 1
 quizId: "<fresh UUID>"
@@ -180,8 +188,9 @@ title: "Checkpoint: <the lesson's subject>"
 questionBankId: "<the bank's id>"
 questionIds:
   - "<the ids of the questions the checkpoint asks>"
-```
-```
+````
+
+````
 
 The lesson links its bank and the bank links its lesson, both ways, as the four
 existing courses already do.
@@ -310,7 +319,7 @@ before.
 
 ```text
 <pending>
-```
+````
 
 ### 19.2 Generated artifacts inspected
 
