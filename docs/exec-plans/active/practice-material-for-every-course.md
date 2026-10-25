@@ -380,6 +380,20 @@ live graph edges: 2126 pages: 771
 The Practice page's generated index grew from four courses and 109 rows to eight
 courses and 128 rows, with no change to the plugin: it finds the new banks by itself.
 
+### 19.5 The finished site, live
+
+After the fourth tranche merged, the live site carries practice material for
+every published course:
+
+```text
+practice tables: 17 rows: 198
+courses with practice material: 17 of 17
+live graph edges: 2546, nodes: 876
+```
+
+Every teaching lesson of every published course has a checkpoint that renders,
+and every checkpoint links its own answer key.
+
 ### 19.4 Deviations from plan
 
 1. **A link defect was found and fixed on the way.** A link written as
@@ -424,6 +438,23 @@ courses and 128 rows, with no change to the plugin: it finds the new banks by it
 | 2026-10-25 | `71506ad` | The deployment runbook | - | - |
 | 2026-10-25 | `0abc85b` | The escaping of the alias separator in table cells, which also repaired twelve course tables | §19.4 | - |
 | 2026-10-25 | `5b33069` | Pull request [#40](https://github.com/Howard-Starfield/Personal_Knowledge_Site/pull/40) merged into `v5` after a green CI run | §19.3 | Tranches 2 to 4 |
+| 2026-10-25 | `223bd37` | Tranche 2: twenty-two question banks and twenty-two checkpoints for four more courses, 264 questions | §19.3 | Tranches 3 and 4 |
+| 2026-10-25 | `b620dc4` | Pull request [#42](https://github.com/Howard-Starfield/Personal_Knowledge_Site/pull/42) merged into `v5` after a green CI run | §19.3 | Tranches 3 and 4 |
+| 2026-10-25 | `e3c2dc4` | Tranche 3: thirty-five question banks and thirty-five checkpoints for four more courses, 420 questions | §19.3 | Tranche 4 |
+| 2026-10-25 | `a3c9b87` | Pull request [#43](https://github.com/Howard-Starfield/Personal_Knowledge_Site/pull/43) merged into `v5` after a green CI run | §19.3 | Tranche 4 |
+| 2026-10-25 | `67ec1d8` | Tranche 4: thirteen question banks and thirteen checkpoints for the last course, 156 questions | §19.3 | - |
+| 2026-10-25 | `1a7c363` | Pull request [#44](https://github.com/Howard-Starfield/Personal_Knowledge_Site/pull/44) merged into `v5` after a green CI run | §19.3 | - |
+
+### Tranche 2 acceptance gates
+
+| Gate | Result |
+| ---- | ------ |
+| G1 - every teaching lesson of the four courses carries a quiz that names a bank that exists | Pass - 22 lessons, 22 banks |
+| G2 - every bank holds 12 questions of the same kinds as the existing banks | Pass - the mix is 7/2/1/2 in all 22 |
+| G3 - every question is answerable from its own lesson | Pass - the questions use each lesson's own numbers; reviewed against the lessons |
+| G4 - `npm run check:questions` passes with no new finding | Pass - the failure and warning totals are identical to the baseline |
+| G5 - the lesson links its bank and the bank links its lesson | Pass - both directions, every pair |
+| G6 - the Practice index picks the new courses up and the graph is unchanged in shape | Pass - eight courses and 128 rows became twelve courses and 150 rows, with no change to the plugin |
 
 ### Tranche 1 acceptance gates
 
@@ -436,8 +467,46 @@ courses and 128 rows, with no change to the plugin: it finds the new banks by it
 | G5 - the lesson links its bank and the bank links its lesson | Pass - both directions, every pair |
 | G6 - the Practice index picks the new courses up and the graph is unchanged in shape | Pass - four courses and 109 rows became eight courses and 128 rows, with no change to the plugin |
 
-### Still to come
+### Tranche 3 acceptance gates
 
-Tranches 2 to 4 cover the remaining nine courses: 71 teaching lessons and 852
-questions.
+| Gate | Result |
+| ---- | ------ |
+| G1 - every teaching lesson of the four courses carries a quiz that names a bank that exists | Pass - 35 lessons, 35 banks |
+| G2 - every bank holds 12 questions of the same kinds as the existing banks | Pass - the mix is 7/2/1/2 in all 35 |
+| G3 - every question is answerable from its own lesson | Pass - the questions use each lesson's own numbers; reviewed against the lessons |
+| G4 - `npm run check:questions` passes with no new finding | Pass - the failure and warning totals are identical to the baseline |
+| G5 - the lesson links its bank and the bank links its lesson | Pass - both directions, every pair |
+| G6 - the Practice index picks the new courses up and the graph is unchanged in shape | Pass - twelve courses and 150 rows became sixteen courses and 185 rows |
+
+### Tranche 4 acceptance gates
+
+| Gate | Result |
+| ---- | ------ |
+| G1 - every teaching lesson of the course carries a quiz that names a bank that exists | Pass - 13 lessons, 13 banks |
+| G2 - every bank holds 12 questions of the same kinds as the existing banks | Pass - the mix is 7/2/1/2 in all 13 |
+| G3 - every question is answerable from its own lesson | Pass - the questions use each chapter's own figures |
+| G4 - `npm run check:questions` passes with no new finding | Pass - the failure and warning totals are identical to the baseline |
+| G5 - the lesson links its bank and the bank links its lesson | Pass - both directions, every pair |
+| G6 - the Practice index picks the course up and the graph is unchanged in shape | Pass - sixteen courses and 185 rows became seventeen courses and 198 rows |
+
+### What the whole exercise produced
+
+Thirteen courses that published no practice material now publish one. Every
+teaching lesson of every published course carries a checkpoint and links its
+own answer key: **89 lessons, 89 banks, 1,068 questions**, and the Practice
+page's generated index lists all seventeen courses with 198 lesson-and-key
+pairs.
+
+The questions are grounded in their own lessons - each lesson's own worked
+case, its own thresholds, its own figures - and every one of the 1,068 was
+checked against the machine gate that the site's own checker applies, with no
+new finding raised against any of the new files.
+
+The work also found and fixed a defect class that predated it: a relative
+link whose last segment is shared by two pages resolves to a path from the
+site root, which does not exist, and a wiki-link inside a table cell splits
+its row. Ninety-five links in twenty-seven pages were repaired and the
+alias separator was escaped where it has to be, which brought back twelve
+course tables that had been showing their lesson titles as plain text since
+they were published.
 ````
