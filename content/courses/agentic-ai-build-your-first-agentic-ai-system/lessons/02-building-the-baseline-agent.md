@@ -20,7 +20,7 @@ comments: false
 
 # Architecting the Baseline Agent: ReAct Loops & Action Execution
 
-In [Chapter 1: The Agentic AI Lifecycle (CC/CD)](./01-agentic-lifecycle-cc-cd), we established the dual-loop governance framework required to calibrate stochastic agents against cumulative drift ($\Delta \mathbf{x} \sim \mathcal{O}(t^2)$). We proved that without continuous telemetry sampling and golden reference regressions, autonomous systems decay under production entropy.
+In [[courses/agentic-ai-build-your-first-agentic-ai-system/lessons/01-agentic-lifecycle-cc-cd|Chapter 1: The Agentic AI Lifecycle (CC/CD)]], we established the dual-loop governance framework required to calibrate stochastic agents against cumulative drift ($\Delta \mathbf{x} \sim \mathcal{O}(t^2)$). We proved that without continuous telemetry sampling and golden reference regressions, autonomous systems decay under production entropy.
 
 Now, we zoom in from operational topology to the **runtime kernel of agency**: the cognitive execution loop.
 
@@ -1417,7 +1417,7 @@ Sample Trace ID: trace-v1-TC-BIL-01
 
 ## Architectural Summary: The 5 Invariants of Baseline Agent Engineering
 
-Before advancing to [Chapter 3: Tool Integration & Memory](./03-tools-memory-and-retrieval) to engineer dynamic API integrations, vector retrieval, and persistent conversation memory, internalize these five architectural invariants:
+Before advancing to [[courses/agentic-ai-build-your-first-agentic-ai-system/lessons/03-tools-memory-and-retrieval|Chapter 3: Tool Integration & Memory]] to engineer dynamic API integrations, vector retrieval, and persistent conversation memory, internalize these five architectural invariants:
 
 1. **Reasoning Must Precede Action Execution:** An agent that emits actions without generating an explicit verbal thought trace ($\text{Thought}_t \to \text{Action}_t$) suffers from myopic parameter hallucination and cannot handle multi-step exception recovery.
 2. **Never Route on Positive Definitions Alone:** Models are natural keyword attractors. Calibrating an agent requires injecting explicit **negative boundary constraints** (what each department or tool is _prohibited_ from handling).
@@ -1426,6 +1426,21 @@ Before advancing to [Chapter 3: Tool Integration & Memory](./03-tools-memory-and
 5. **Prove Statistical Significance on Matched Pairs:** When comparing prompt and architecture iterations, accuracy scores alone are insufficient. Always evaluate Macro-F1 across balanced classes, monitor Expected Calibration Error (ECE) for confidence drift, and prove significance using McNemar's paired test ($\chi^2 > 3.8415$).
 
 ---
+
+```knowledge-quiz
+schemaVersion: 1
+quizId: "8ef65211-2773-4f7f-8a21-ec8cd4d38ad3"
+title: "Checkpoint: the ReAct loop, loop guards and statistical proof"
+questionBankId: "39b5fe19-a179-44c2-850c-c32dcb7d50a5"
+questionIds:
+  - "7f19b13d-5b27-448b-a2ef-a156dea26f95"
+  - "0f7dbcb8-49a9-4741-a2fc-85f5cdd3c601"
+  - "b8e9b52c-6127-4d41-a05b-b0e605ea95ae"
+  - "62a34a7e-fc17-4a23-937a-dc345fab76c7"
+  - "58fe226d-cfc0-4c71-b122-44390a392f4a"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/agentic-ai-build-your-first-agentic-ai-system/question-banks/02-building-the-baseline-agent|Architecting the Baseline Agent: ReAct Loops & Action Execution: Question Bank]].
 
 <div class="chapter-navigation">
   <a class="chapter-nav-btn prev" href="/courses/agentic-ai-build-your-first-agentic-ai-system/lessons/01-agentic-lifecycle-cc-cd">← Chapter 1: The Agentic AI Lifecycle (CC/CD)</a>

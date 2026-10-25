@@ -700,3 +700,18 @@ In **Chapter 1**, we dive into the mathematical machinery that underpins modern 
   <a href="/courses/advanced-llms-with-retrieval-augmented-generation-rag-practical-projects-for-ai-applications" class="chapter-nav-btn prev">← Course Overview</a>
   <a href="/courses/advanced-llms-with-retrieval-augmented-generation-rag-practical-projects-for-ai-applications/lessons/01-text-encoding-embeddings" class="chapter-nav-btn next">Chapter 1: Text Encoding & Vector Embeddings →</a>
 </div>
+
+```knowledge-quiz
+schemaVersion: 1
+quizId: "772038f5-11ae-46c0-9806-d9fba99b4ff8"
+title: "Checkpoint: Foundations of RAG & Naive Failure Modes"
+questionBankId: "d8e6557c-9908-45dd-bf4d-cf48c268da2f"
+questionIds:
+  - "877ba218-81d2-4a87-9c0c-4ce6c63a8178"
+  - "bdadad6c-7b29-4b28-a3ab-6a5c01c65919"
+  - "7adc1855-9f4a-4540-bf43-a2eb9d685436"
+  - "a4ebb71b-9a78-4bba-9a57-f4efa3ee48b9"
+  - "d8e82425-87c8-4bdf-b163-63b9a8ca3466"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/advanced-llms-with-retrieval-augmented-generation-rag-practical-projects-for-ai-applications/question-banks/00-foundations-of-rag|Foundations of RAG & Naive Failure Modes: Question Bank]].

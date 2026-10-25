@@ -894,6 +894,21 @@ Before advancing to Chapter 1 to master data analysis and automated threat ident
 6. **Active Systems Defeat Institutional Amnesia:** Retrospective post-mortems stored in static PDF documents guarantee that future projects will repeat historical failures. Historical post-mortems must be embedded in vector knowledge graphs to power real-time risk retrieval during planning.
 7. **Human-in-the-Loop Escalation is Non-Negotiable:** Algorithmic systems detect signals, calculate Bayesian posteriors, and formulate mitigation playbooks; human project leaders retain decision authority for capital allocation and strategic supplier intervention.
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "bb36d4c7-1efc-4a83-8aa2-37cdabae3d7d"
+title: "Checkpoint: the failure of the static risk register"
+questionBankId: "caf6a331-3a4e-4f61-9cca-83a3444fe259"
+questionIds:
+  - "59d215d3-46b1-42bc-b7f2-b23fb4c3fef3"
+  - "76a64620-722d-4139-98c1-84f4ff307f39"
+  - "4412683b-5d7f-4176-9894-0c4234a0aa7e"
+  - "cff03195-3829-41f6-a98b-f18fe79a2372"
+  - "8f6063d4-0a6a-47c5-a125-4160e039619a"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-for-project-management-managing-risk-with-generative-ai/question-banks/00-foundations-of-ai-project-risk|Foundations of AI in Project Risk Management & The Failure of Static Registers: Question Bank]].
+
 ---
 
 <div class="chapter-navigation">

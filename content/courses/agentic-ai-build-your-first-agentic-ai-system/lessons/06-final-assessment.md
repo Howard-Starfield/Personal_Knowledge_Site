@@ -23,12 +23,12 @@ Welcome to the **Capstone Diagnostic Evaluation** for _Agentic AI: Build Your Fi
 
 Across the preceding five chapters, you transitioned from ad-hoc prompting and unconstrained execution scripts to a formal, mathematically verified systems engineering discipline:
 
-1. In [Chapter 0: Introduction & Autonomy Levels](./00-introduction-and-autonomy-levels), you formalized the 6-tier autonomy taxonomy ($L_0$ to $L_5$), mapped the Opportunity Viability Index, and established asymmetric Human-in-the-Loop (HITL) escalation boundaries.
-2. In [Chapter 1: The Agentic Lifecycle (CC/CD)](./01-agentic-lifecycle-cc-cd), you engineered the Continuous Calibration and Continuous Development lifecycle, validating agent regressions with McNemar's test, measuring Expected Calibration Error (ECE), and tracking inter-rater reliability with Cohen's Kappa ($\kappa$).
-3. In [Chapter 2: Building the Baseline Agent](./02-building-the-baseline-agent), you implemented a deterministic ReAct state machine with strict JSON Schema tool definitions, cyclic state oscillation detection, and hard loop termination circuit breakers ($N \le 6$).
-4. In [Chapter 3: Tool Integration, Dynamic Memory & Retrieval Augmentation](./03-tools-memory-and-retrieval), you constructed dual-tier working and vector memory, deployed Reciprocal Rank Fusion ($k=60$) hybrid search to overcome semantic-sparse blindspots, and built an automated LLM-as-a-Judge evaluation harness resilient to verbosity and position biases.
-5. In [Chapter 4: Production Governance & Economics](./04-production-governance-and-economics), you resolved the Cost-Complexity-Reliability Trilemma using a 3-tier defense-in-depth perimeter, cryptographic idempotency keys, Fly-by-Wire parameter clamping, and observation trajectory compression.
-6. In [Chapter 5: Architectural Taxonomy & Comprehensive A–Z Agentic Dictionary](./05-glossary), you codified the 5-Pillar Architectural Taxonomy and the cross-pillar failure mode matrix.
+1. In [[courses/agentic-ai-build-your-first-agentic-ai-system/lessons/00-introduction-and-autonomy-levels|Chapter 0: Introduction & Autonomy Levels]], you formalized the 6-tier autonomy taxonomy ($L_0$ to $L_5$), mapped the Opportunity Viability Index, and established asymmetric Human-in-the-Loop (HITL) escalation boundaries.
+2. In [[courses/agentic-ai-build-your-first-agentic-ai-system/lessons/01-agentic-lifecycle-cc-cd|Chapter 1: The Agentic Lifecycle (CC/CD)]], you engineered the Continuous Calibration and Continuous Development lifecycle, validating agent regressions with McNemar's test, measuring Expected Calibration Error (ECE), and tracking inter-rater reliability with Cohen's Kappa ($\kappa$).
+3. In [[courses/agentic-ai-build-your-first-agentic-ai-system/lessons/02-building-the-baseline-agent|Chapter 2: Building the Baseline Agent]], you implemented a deterministic ReAct state machine with strict JSON Schema tool definitions, cyclic state oscillation detection, and hard loop termination circuit breakers ($N \le 6$).
+4. In [[courses/agentic-ai-build-your-first-agentic-ai-system/lessons/03-tools-memory-and-retrieval|Chapter 3: Tool Integration, Dynamic Memory & Retrieval Augmentation]], you constructed dual-tier working and vector memory, deployed Reciprocal Rank Fusion ($k=60$) hybrid search to overcome semantic-sparse blindspots, and built an automated LLM-as-a-Judge evaluation harness resilient to verbosity and position biases.
+5. In [[courses/agentic-ai-build-your-first-agentic-ai-system/lessons/04-production-governance-and-economics|Chapter 4: Production Governance & Economics]], you resolved the Cost-Complexity-Reliability Trilemma using a 3-tier defense-in-depth perimeter, cryptographic idempotency keys, Fly-by-Wire parameter clamping, and observation trajectory compression.
+6. In [[courses/agentic-ai-build-your-first-agentic-ai-system/lessons/05-glossary|Chapter 5: Architectural Taxonomy & Comprehensive A–Z Agentic Dictionary]], you codified the 5-Pillar Architectural Taxonomy and the cross-pillar failure mode matrix.
 
 Now, you step into the role of **Principal AI Systems Architect**. The following 15 enterprise scenarios test your ability to diagnose latent architectural failure modes, evaluate high-stakes tradeoffs, and enforce deterministic reliability invariants across complex, production-grade agent fleets.
 
@@ -889,12 +889,12 @@ Whether your score placed you in the _Principal Architect_ tier or revealed area
 
 To review key concepts, navigate back through the curriculum:
 
-- Review [Chapter 0: Introduction & Autonomy Levels](./00-introduction-and-autonomy-levels) to master Opportunity Scoping, Task Entropy, and the 6 Autonomy Levels.
-- Review [Chapter 1: The Agentic Lifecycle (CC/CD)](./01-agentic-lifecycle-cc-cd) to master McNemar's test, ECE calibration, Cohen's Kappa, and Golden Benchmarks.
-- Review [Chapter 2: Building the Baseline Agent](./02-building-the-baseline-agent) to master ReAct state machines, FSM state guards, and loop circuit breakers.
-- Review [Chapter 3: Tool Integration, Dynamic Memory & Retrieval Augmentation](./03-tools-memory-and-retrieval) to master Hybrid RAG (BM25 + Dense RRF), Dual-Tier Memory, and LLM-as-a-Judge harnesses.
-- Review [Chapter 4: Production Governance & Economics](./04-production-governance-and-economics) to master the 3-Tier Guardrail Perimeter, Cryptographic Idempotency, and Quadratic Cost Optimization.
-- Consult [Chapter 5: Architectural Taxonomy & Comprehensive A–Z Agentic Dictionary](./05-glossary) as your enduring reference manual for enterprise definitions and failure mode defenses.
+- Review [[courses/agentic-ai-build-your-first-agentic-ai-system/lessons/00-introduction-and-autonomy-levels|Chapter 0: Introduction & Autonomy Levels]] to master Opportunity Scoping, Task Entropy, and the 6 Autonomy Levels.
+- Review [[courses/agentic-ai-build-your-first-agentic-ai-system/lessons/01-agentic-lifecycle-cc-cd|Chapter 1: The Agentic Lifecycle (CC/CD)]] to master McNemar's test, ECE calibration, Cohen's Kappa, and Golden Benchmarks.
+- Review [[courses/agentic-ai-build-your-first-agentic-ai-system/lessons/02-building-the-baseline-agent|Chapter 2: Building the Baseline Agent]] to master ReAct state machines, FSM state guards, and loop circuit breakers.
+- Review [[courses/agentic-ai-build-your-first-agentic-ai-system/lessons/03-tools-memory-and-retrieval|Chapter 3: Tool Integration, Dynamic Memory & Retrieval Augmentation]] to master Hybrid RAG (BM25 + Dense RRF), Dual-Tier Memory, and LLM-as-a-Judge harnesses.
+- Review [[courses/agentic-ai-build-your-first-agentic-ai-system/lessons/04-production-governance-and-economics|Chapter 4: Production Governance & Economics]] to master the 3-Tier Guardrail Perimeter, Cryptographic Idempotency, and Quadratic Cost Optimization.
+- Consult [[courses/agentic-ai-build-your-first-agentic-ai-system/lessons/05-glossary|Chapter 5: Architectural Taxonomy & Comprehensive A–Z Agentic Dictionary]] as your enduring reference manual for enterprise definitions and failure mode defenses.
 
 ---
 

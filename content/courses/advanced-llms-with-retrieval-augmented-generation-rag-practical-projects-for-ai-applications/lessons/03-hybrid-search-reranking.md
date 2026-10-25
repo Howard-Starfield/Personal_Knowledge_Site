@@ -1300,3 +1300,18 @@ In **Chapter 4**, we establish the formal system architecture and terminology ca
   <a href="/courses/advanced-llms-with-retrieval-augmented-generation-rag-practical-projects-for-ai-applications/lessons/02-chunking-enrichment" class="chapter-nav-btn prev">← Chapter 2: Chunking & Contextual Enrichment</a>
   <a href="/courses/advanced-llms-with-retrieval-augmented-generation-rag-practical-projects-for-ai-applications/lessons/04-glossary" class="chapter-nav-btn next">Chapter 4: Architectural Taxonomy & Glossary →</a>
 </div>
+
+```knowledge-quiz
+schemaVersion: 1
+quizId: "b5d28f82-615e-402d-9d56-978478e6e8d8"
+title: "Checkpoint: Hybrid Search, Cross-Encoder Reranking & Multimodal Retrieval"
+questionBankId: "ac02a79c-fa2c-4229-9de6-c598dfc14d87"
+questionIds:
+  - "896d38dc-edce-49b7-9b4a-78d2e2bb24ab"
+  - "ead79749-7a5c-4046-9617-772e506ed55c"
+  - "84232a08-17d7-455b-b27f-33f040a3443d"
+  - "8cb9e855-d4ca-49fd-845c-1fec887a3d36"
+  - "62366222-7026-447e-bb51-3cab545ea782"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/advanced-llms-with-retrieval-augmented-generation-rag-practical-projects-for-ai-applications/question-banks/03-hybrid-search-reranking|Hybrid Search, Cross-Encoder Reranking & Multimodal Retrieval: Question Bank]].

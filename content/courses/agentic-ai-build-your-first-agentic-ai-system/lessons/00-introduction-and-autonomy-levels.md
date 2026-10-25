@@ -887,6 +887,21 @@ Before advancing to the Continuous Calibration and Continuous Development (**CC/
 
 ---
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "e4defa6a-2271-40e6-872b-8c04b1daab55"
+title: "Checkpoint: autonomy levels and the escalation envelope"
+questionBankId: "4fb24403-7f1a-4e44-966e-9c51fc689597"
+questionIds:
+  - "f79de588-b64c-4777-94bb-5add6258bc2b"
+  - "94b40107-f0d5-4d4f-a0bf-6bccb2c42c30"
+  - "58b08524-ee56-4e71-8699-d91be9b701ab"
+  - "8e8cfa2f-ffe6-4eab-b692-7f0ef6909451"
+  - "96f7523d-9e0a-4e20-bc76-e2c56361a5fd"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/agentic-ai-build-your-first-agentic-ai-system/question-banks/00-introduction-and-autonomy-levels|Foundations of Agentic AI & The 5 Levels of Autonomy: Question Bank]].
+
 <div class="chapter-navigation">
   <a class="chapter-nav-btn prev" href="/courses/agentic-ai-build-your-first-agentic-ai-system/">← Course Overview</a>
   <a class="chapter-nav-btn next" href="/courses/agentic-ai-build-your-first-agentic-ai-system/lessons/01-agentic-lifecycle-cc-cd">Chapter 1: The Agentic AI Lifecycle (CC/CD) →</a>

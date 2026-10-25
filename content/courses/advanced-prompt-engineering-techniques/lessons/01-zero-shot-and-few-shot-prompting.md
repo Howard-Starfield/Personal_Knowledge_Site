@@ -20,7 +20,7 @@ comments: false
 
 # Zero-Shot, Few-Shot Exemplars & In-Context Pattern Induction
 
-In [Chapter 0: Foundations of Prompt Engineering & In-Context Dynamics](./00-foundations-of-prompt-engineering), we established that a prompt is not a natural language instruction to a conscious agent; it is a sequence of discrete tokens conditioning an autoregressive probability distribution:
+In [[courses/advanced-prompt-engineering-techniques/lessons/00-foundations-of-prompt-engineering|Chapter 0: Foundations of Prompt Engineering & In-Context Dynamics]], we established that a prompt is not a natural language instruction to a conscious agent; it is a sequence of discrete tokens conditioning an autoregressive probability distribution:
 
 $$P(w_t \mid w_1, w_2, \dots, w_{t-1}; \theta)$$
 
@@ -1062,9 +1062,25 @@ In this chapter, we unpacked the foundational mechanics of few-shot prompting an
 5. **Production Pathologies:** Few-shot pipelines are vulnerable to majority label bias, recency bias, order sensitivity (up to 35% accuracy swings), and common token bias.
 6. **Production Calibration:** Robust systems enforce balanced class sampling ($k/N$), neutralize bias via Contextual Calibration ($\mathbf{W} \cdot \mathbf{p}_{\text{raw}}$), and employ Dynamic k-NN retrieval for domain coverage.
 
-In the next chapter, we transition from direct input-output classification to multi-step deliberative reasoning: **[Chapter 2: Chain-of-Thought (CoT), Step-by-Step Optimization & OPRO](./02-chain-of-thought-and-step-by-step)**, where we explore intermediate token scratchpads, compute allocation theory, and automated prompt optimization.
+In the next chapter, we transition from direct input-output classification to multi-step deliberative reasoning: **[[courses/advanced-prompt-engineering-techniques/lessons/02-chain-of-thought-and-step-by-step|Chapter 2: Chain-of-Thought (CoT), Step-by-Step Optimization & OPRO]]**, where we explore intermediate token scratchpads, compute allocation theory, and automated prompt optimization.
 
 ---
+
+```knowledge-quiz
+schemaVersion: 1
+quizId: "4c26edf5-942c-49f7-8e97-4d01f165fdff"
+title: "Checkpoint: Zero-Shot and Few-Shot Prompting"
+questionBankId: "5b5e2349-51c1-43dc-8fcc-68a2a8a02b28"
+questionIds:
+  - "ac1aa803-9a3a-46a2-a9db-630b29606cbe"
+  - "8534a8c9-38e3-4190-bc9c-1683b11f5160"
+  - "d2ea3bcb-521d-466c-91e3-5869f56f1bd3"
+  - "001894b1-870d-4858-87e8-5909ed28a80a"
+  - "717015ce-1b0a-48a2-a934-4f9ea49f2ebb"
+  - "bca20cbe-7ea5-4f0a-a7d1-61d24d1ac363"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/advanced-prompt-engineering-techniques/question-banks/01-zero-shot-and-few-shot-prompting|Zero-Shot, Few-Shot Exemplars & In-Context Pattern Induction: Question Bank]].
 
 <div class="chapter-navigation">
   <a href="/courses/advanced-prompt-engineering-techniques/lessons/00-foundations-of-prompt-engineering" class="chapter-nav-btn prev">← Chapter 0: Foundations of Prompt Engineering</a>

@@ -1313,6 +1313,21 @@ To ensure risk management platforms operate with mathematical rigor, operational
 6. **Non-Delegable Human Authority**: AI models propose, simulate, and synthesize; only verified, authenticated human leaders hold the authority to approve contingency drawdowns, authorize baseline shifts, or declare Go/No-Go milestones.
 7. **Prohibition of the Moral Crumple Zone**: Project managers cannot use algorithmic outputs as liability shields for failure, nor can organizations hold managers liable for automated system behavior without granting them continuous telemetry visibility and full veto power.
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "025889f4-af6e-4aab-bb85-0784691ada9b"
+title: "Checkpoint: governance, decision support and ethics"
+questionBankId: "c7ae74a8-7e56-44bf-bd76-ef97b4b5ac49"
+questionIds:
+  - "81f6feea-61eb-4e35-9d6e-d68a34bc8ddb"
+  - "6ef216d0-3998-4a43-976d-b39cd5b665f1"
+  - "1d5800a0-eeae-4ac7-8a25-2806fd864aad"
+  - "cb72e7df-20ef-41cd-91cc-72d34035d1d4"
+  - "5f9a5388-18cb-4deb-8d76-738a40ebeb49"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-for-project-management-managing-risk-with-generative-ai/question-banks/03-ai-risk-plan-governance-decision-support|The AI RISK PLAN Framework: Contingency Planning, Decision Support & Ethical Guardrails: Question Bank]].
+
 ---
 
 <div class="chapter-navigation">

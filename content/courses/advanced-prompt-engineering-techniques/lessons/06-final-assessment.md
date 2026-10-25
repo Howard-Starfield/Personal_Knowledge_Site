@@ -1219,10 +1219,10 @@ Score your diagnostic performance across all 15 scenarios. Count the exact numbe
 
 - **Competency Profile:** You have a robust, highly capable grasp of modern prompt engineering paradigms and in-context architectures. You readily diagnose common production anti-patterns and understand the differences between linear CoT, deliberative tree search, and knowledge elicitation. However, you may have minor blind spots in low-level tensor attention distributions, extreme search budgeting, or null-input prior calibration.
 - **Targeted Remediation Matrix:**
-  - If you missed **Scenario 8 (Contextual Calibration):** Revisit [Chapter 1: Zero-Shot and Few-Shot Prompting](./01-zero-shot-and-few-shot-prompting) to master the mathematical derivation of Zhao et al.'s affine transformation and null-input estimation.
-  - If you missed **Scenario 11 (Directional Stimulus Policy-LM):** Review [Chapter 3: Generated Knowledge & Directional Stimulus](./03-generated-knowledge-and-directional-stimulus) to study how small 7B policy models are trained with RL to steer frozen 70B foundation models.
-  - If you missed **Scenario 12 (ToT Search Budgeting):** Re-read [Chapter 4: Tree-of-Thought Search](./04-tree-of-thought-and-chain-of-density) to formalize the computational complexity differences between unpruned DFS ($k^d$) and BFS beam pruning ($d \cdot b \cdot k$).
-  - If you missed **Scenario 14 (Lost-in-the-Middle & TTFT):** Review [Chapter 0: Foundations of Prompt Engineering](./00-foundations-of-prompt-engineering) and Chapter 5's glossary entries on KV-cache prefix caching and attention sinks.
+  - If you missed **Scenario 8 (Contextual Calibration):** Revisit [[courses/advanced-prompt-engineering-techniques/lessons/01-zero-shot-and-few-shot-prompting|Chapter 1: Zero-Shot and Few-Shot Prompting]] to master the mathematical derivation of Zhao et al.'s affine transformation and null-input estimation.
+  - If you missed **Scenario 11 (Directional Stimulus Policy-LM):** Review [[courses/advanced-prompt-engineering-techniques/lessons/03-generated-knowledge-and-directional-stimulus|Chapter 3: Generated Knowledge & Directional Stimulus]] to study how small 7B policy models are trained with RL to steer frozen 70B foundation models.
+  - If you missed **Scenario 12 (ToT Search Budgeting):** Re-read [[courses/advanced-prompt-engineering-techniques/lessons/04-tree-of-thought-and-chain-of-density|Chapter 4: Tree-of-Thought Search]] to formalize the computational complexity differences between unpruned DFS ($k^d$) and BFS beam pruning ($d \cdot b \cdot k$).
+  - If you missed **Scenario 14 (Lost-in-the-Middle & TTFT):** Review [[courses/advanced-prompt-engineering-techniques/lessons/00-foundations-of-prompt-engineering|Chapter 0: Foundations of Prompt Engineering]] and Chapter 5's glossary entries on KV-cache prefix caching and attention sinks.
 
 ---
 
@@ -1230,10 +1230,10 @@ Score your diagnostic performance across all 15 scenarios. Count the exact numbe
 
 - **Competency Profile:** You understand high-level prompt techniques and can construct working prototypes using popular framework wrappers (e.g., LangChain, LlamaIndex, Instructor). However, in high-scale enterprise deployments, your systems remain vulnerable to subtle production landmines: majority label skew, format drift in multi-turn dialogues, runaway token costs during search, and indirect prompt injections.
 - **Targeted Remediation Matrix:**
-  - Re-read **[Chapter 0: Foundations of Prompt Engineering](./00-foundations-of-prompt-engineering)** to ground your understanding of transformer prefill, KV-cache dynamics, and the U-shaped attention curve.
-  - Re-study **[Chapter 2: Chain-of-Thought & Step-by-Step Optimization](./02-chain-of-thought-and-step-by-step)** to master Least-to-Most decomposition and Self-Consistency majority voting mechanics.
-  - Re-examine **[Chapter 4: Tree-of-Thought & Chain-of-Density](./04-tree-of-thought-and-chain-of-density)** to understand why linear generation cannot solve combinatorial state-space exploration problems.
-  - Audit your production prompts against the **20-Point Go-Live Verification Checklist** in [Chapter 5: Architectural Taxonomy & Glossary](./05-glossary).
+  - Re-read **[[courses/advanced-prompt-engineering-techniques/lessons/00-foundations-of-prompt-engineering|Chapter 0: Foundations of Prompt Engineering]]** to ground your understanding of transformer prefill, KV-cache dynamics, and the U-shaped attention curve.
+  - Re-study **[[courses/advanced-prompt-engineering-techniques/lessons/02-chain-of-thought-and-step-by-step|Chapter 2: Chain-of-Thought & Step-by-Step Optimization]]** to master Least-to-Most decomposition and Self-Consistency majority voting mechanics.
+  - Re-examine **[[courses/advanced-prompt-engineering-techniques/lessons/04-tree-of-thought-and-chain-of-density|Chapter 4: Tree-of-Thought & Chain-of-Density]]** to understand why linear generation cannot solve combinatorial state-space exploration problems.
+  - Audit your production prompts against the **20-Point Go-Live Verification Checklist** in [[courses/advanced-prompt-engineering-techniques/lessons/05-glossary|Chapter 5: Architectural Taxonomy & Glossary]].
 
 ---
 

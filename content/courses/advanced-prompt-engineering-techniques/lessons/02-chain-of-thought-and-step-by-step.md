@@ -20,7 +20,7 @@ comments: false
 
 # Chain-of-Thought (CoT), Step-by-Step Optimization & OPRO
 
-In [Chapter 1: Zero-Shot, Few-Shot Exemplars & In-Context Pattern Induction](./01-zero-shot-and-few-shot-prompting), we analyzed how providing demonstrations $(x_i, y_i)$ conditions an autoregressive transformer to lock into formatting, task semantics, and label spaces without updating weights ($\nabla_\theta = 0$). While few-shot prompting dramatically stabilizes classification, entity extraction, and translation, it encounters a catastrophic performance cliff when applied to tasks requiring multi-step symbolic deduction: arithmetic reasoning, symbolic logic, spatial planning, and code synthesis.
+In [[courses/advanced-prompt-engineering-techniques/lessons/01-zero-shot-and-few-shot-prompting|Chapter 1: Zero-Shot, Few-Shot Exemplars & In-Context Pattern Induction]], we analyzed how providing demonstrations $(x_i, y_i)$ conditions an autoregressive transformer to lock into formatting, task semantics, and label spaces without updating weights ($\nabla_\theta = 0$). While few-shot prompting dramatically stabilizes classification, entity extraction, and translation, it encounters a catastrophic performance cliff when applied to tasks requiring multi-step symbolic deduction: arithmetic reasoning, symbolic logic, spatial planning, and code synthesis.
 
 When an LLM is asked to output a direct answer to a complex puzzle, it frequently outputs confident nonsense. This failure is not a defect in training data or language comprehension; it is an inescapable mathematical consequence of the **Constant Compute Bottleneck** inherent to the transformer architecture.
 
@@ -1057,9 +1057,25 @@ In this chapter, we investigated the mechanics of Chain-of-Thought reasoning and
 6. **Self-Consistency Decoding:** Sampling $N$ paths at $T > 0$ and taking the plurality vote marginalizes over reasoning noise and converges on the true solution attractor basin.
 7. **Production Discipline:** Guard against hallucinatory calculation cascading, audit the latency/token cost tax, avoid CoT on simple classification, and enforce two-stage schema extraction.
 
-In the next chapter, we expand our prompt engineering toolkit from internal scratchpads to external knowledge synthesis: **[Chapter 3: Generated Knowledge & Directional Stimulus](./03-generated-knowledge-and-directional-stimulus)**, where we explore how to instruct models to generate domain knowledge prior to answering, and how directional stimulus signals guide generation toward target objectives.
+In the next chapter, we expand our prompt engineering toolkit from internal scratchpads to external knowledge synthesis: **[[courses/advanced-prompt-engineering-techniques/lessons/03-generated-knowledge-and-directional-stimulus|Chapter 3: Generated Knowledge & Directional Stimulus]]**, where we explore how to instruct models to generate domain knowledge prior to answering, and how directional stimulus signals guide generation toward target objectives.
 
 ---
+
+```knowledge-quiz
+schemaVersion: 1
+quizId: "45c97b28-6021-465d-9709-0feef87c7591"
+title: "Checkpoint: Chain-of-Thought and OPRO"
+questionBankId: "7bed80dd-d22a-43e2-be6b-a2673142eee5"
+questionIds:
+  - "0db2f036-1517-4ada-8521-7c97da1e4bee"
+  - "5fd72dc6-472c-47fc-a072-d27a3c6a2151"
+  - "8672af9b-da2a-4ee6-bfcd-e7a27a8c40a9"
+  - "2dba42f7-79c2-440c-a945-bf8313c17677"
+  - "945d24e1-3529-4b68-bf46-3c0f39dd8f76"
+  - "3399ed31-be9f-4d36-8bf0-b1991823805d"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/advanced-prompt-engineering-techniques/question-banks/02-chain-of-thought-and-step-by-step|Chain-of-Thought (CoT), Step-by-Step Optimization & OPRO: Question Bank]].
 
 <div class="chapter-navigation">
   <a href="/courses/advanced-prompt-engineering-techniques/lessons/01-zero-shot-and-few-shot-prompting" class="chapter-nav-btn prev">← Chapter 1: Zero-Shot & Few-Shot Prompting</a>

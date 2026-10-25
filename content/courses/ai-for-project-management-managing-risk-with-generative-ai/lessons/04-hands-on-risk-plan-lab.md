@@ -1855,6 +1855,21 @@ When deploying an AI-assisted risk quantification platform into enterprise produ
 6. **Non-Delegable Human Governance**: Enforce an impermeable governance interceptor between AI recommendations and corporate ledgers. AI models propose and simulate; authenticated human leaders with verified organizational roles sign off on financial drawdowns.
 7. **Idempotency & Deterministic Reproducibility**: Control pseudo-random generator seeds (`seed=42`) across all Monte Carlo routines to guarantee that simulation vectors and risk audits remain fully reproducible under regulatory scrutiny.
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "11cb6b6d-14fb-410c-b918-8f3063f639cc"
+title: "Checkpoint: the enterprise risk engine in practice"
+questionBankId: "4220fb1a-856b-4d04-8778-da9f8302bd41"
+questionIds:
+  - "c6a854d4-c3d3-4267-ad33-9dfe962a2bf4"
+  - "e8daefa2-08c2-480a-b92c-909828b82f75"
+  - "58cab5a7-f5ef-47e7-9219-e50b7a77429f"
+  - "93e94d7a-bf96-4c31-8023-d73d3356d33b"
+  - "055e0d33-042c-4a0c-8c06-67105d41042e"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-for-project-management-managing-risk-with-generative-ai/question-banks/04-hands-on-risk-plan-lab|Hands-On Implementation Lab: Constructing an Enterprise AI Risk Management Engine: Question Bank]].
+
 ---
 
 <div class="chapter-navigation">

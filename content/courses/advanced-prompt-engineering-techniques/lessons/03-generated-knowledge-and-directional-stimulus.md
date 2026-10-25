@@ -19,7 +19,7 @@ comments: false
 
 # Generated Knowledge Prompting & Directional Stimulus Guidance
 
-In [Chapter 2: Chain-of-Thought & OPRO](./02-chain-of-thought-and-step-by-step), we proved how intermediate reasoning tokens expand a transformer's computational depth, unrolling complex multi-step symbolic deduction into an autoregressive state machine. Chain-of-Thought (CoT) provides an internal scratchpad for algorithmic logic, arithmetic derivation, and causal deduction.
+In [[courses/advanced-prompt-engineering-techniques/lessons/02-chain-of-thought-and-step-by-step|Chapter 2: Chain-of-Thought & OPRO]], we proved how intermediate reasoning tokens expand a transformer's computational depth, unrolling complex multi-step symbolic deduction into an autoregressive state machine. Chain-of-Thought (CoT) provides an internal scratchpad for algorithmic logic, arithmetic derivation, and causal deduction.
 
 However, computational depth alone cannot solve the **Parametric Retrieval Dilemma**. When a large language model is asked a question that demands specific factual background, domain-specific mechanics, or subtle commonsense knowledge, reasoning through an empty scratchpad frequently produces hallucinated rationalizations. If the latent factual propositions are not actively recalled and materialized in the prompt context, downstream inference operates over ungrounded priors.
 
@@ -1001,9 +1001,25 @@ In this chapter, we investigated how to unlock latent model knowledge and steer 
 6. **Attention Dynamics & KV Cache Anchors:** Directional stimuli elevate target key-query dot products ($q_t \cdot k_{d^*}$), shifting softmax probability mass and remaining permanently accessible in the KV cache across autoregressive decoding.
 7. **Production Discipline:** Guard against hallucination compounding via proposition quality filters, prevent over-steering with negative constraints, and mitigate double-call API latency via prompt caching and SLM-to-LLM cascading.
 
-In the next chapter, we push prompt engineering into non-linear, multi-branch exploration and maximum-density distillation: **[Chapter 4: Tree-of-Thought (ToT) & Chain-of-Density (CoD)](./04-tree-of-thought-and-chain-of-density)**.
+In the next chapter, we push prompt engineering into non-linear, multi-branch exploration and maximum-density distillation: **[[courses/advanced-prompt-engineering-techniques/lessons/04-tree-of-thought-and-chain-of-density|Chapter 4: Tree-of-Thought (ToT) & Chain-of-Density (CoD)]]**.
 
 ---
+
+```knowledge-quiz
+schemaVersion: 1
+quizId: "d5ecbcc3-9cff-4730-86b5-2ff317a5fd82"
+title: "Checkpoint: Generated Knowledge and Directional Stimulus"
+questionBankId: "1e55e157-f96f-4050-98d1-20baca93a1ac"
+questionIds:
+  - "73ed5454-d92e-48d2-8ac7-19927b551faa"
+  - "eab4908a-e32c-4a96-a214-16e9260247ef"
+  - "a73d567e-84a2-49f5-956d-125169bf9300"
+  - "3204c2f0-003d-4086-8732-7e21fe9aa721"
+  - "3a8d5949-b086-4d48-8e8a-ce3fd5e14714"
+  - "3811d80d-ccd2-4744-8bd9-11efdba7887c"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/advanced-prompt-engineering-techniques/question-banks/03-generated-knowledge-and-directional-stimulus|Generated Knowledge Prompting & Directional Stimulus Guidance: Question Bank]].
 
 <div class="chapter-navigation">
   <a href="/courses/advanced-prompt-engineering-techniques/lessons/02-chain-of-thought-and-step-by-step" class="chapter-nav-btn prev">← Chapter 2: Chain-of-Thought & OPRO</a>

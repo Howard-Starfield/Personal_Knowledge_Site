@@ -1118,6 +1118,21 @@ To ensure enterprise project risk management remains mathematically defensible a
 6. **Path Criticality is Dynamic, Not Static:** An activity's float is a stochastic random variable. Measure each task's Criticality Index across 10,000 iterations to monitor activities that frequently become critical despite having initial positive float.
 7. **Simulation Models Require Streaming Telemetry Binding:** A static Monte Carlo simulation decays rapidly. Ingest real-time operational streams (Git PR dwell time, WIP saturation, build failure rates). Use CUSUM anomaly detection to trigger autonomous re-simulation when velocity drifts outside PERT bounds.
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "f72cca8c-28c8-4236-a7b6-986b4c0e41d4"
+title: "Checkpoint: risk ranking, simulation and telemetry"
+questionBankId: "54e28b80-9ed5-45fd-9d47-ecf786a18a0f"
+questionIds:
+  - "3ea79ada-d010-4f64-b794-62f89cc74ad1"
+  - "64aea83b-8448-454e-a7d7-de70b323cb35"
+  - "4b082f0d-294b-488a-bc7a-813e0dd0a472"
+  - "d9c9883e-6ea7-4bea-9f9b-d9116a364ff8"
+  - "d1296589-4eeb-4c66-9ce3-59a4abc31732"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-for-project-management-managing-risk-with-generative-ai/question-banks/02-ai-risk-plan-quantification-simulation|The AI RISK PLAN Framework: Risk Ranking, Generative Simulation & Real-Time Telemetry: Question Bank]].
+
 ---
 
 <div class="chapter-navigation">

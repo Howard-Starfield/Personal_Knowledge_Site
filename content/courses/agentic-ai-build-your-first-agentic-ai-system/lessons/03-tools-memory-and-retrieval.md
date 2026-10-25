@@ -20,7 +20,7 @@ comments: false
 
 # Tool Integration, Dynamic Memory & Retrieval Augmentation
 
-In [Chapter 2: Architecting the Baseline Agent](./02-building-the-baseline-agent), we formalized the ReAct (Reason + Act) cognitive loop and engineered an isolated triage kernel capable of classifying multi-intent customer requests across discrete enterprise departments. We proved that by combining explicit verbal reasoning traces with bounded state machines and negative routing boundaries, an agent can achieve certified operational reliability under strict statistical significance ($\chi^2 > 3.8415$).
+In [[courses/agentic-ai-build-your-first-agentic-ai-system/lessons/02-building-the-baseline-agent|Chapter 2: Architecting the Baseline Agent]], we formalized the ReAct (Reason + Act) cognitive loop and engineered an isolated triage kernel capable of classifying multi-intent customer requests across discrete enterprise departments. We proved that by combining explicit verbal reasoning traces with bounded state machines and negative routing boundaries, an agent can achieve certified operational reliability under strict statistical significance ($\chi^2 > 3.8415$).
 
 Yet, in production enterprise environments, **triage is merely the opening handshake**.
 
@@ -1259,7 +1259,7 @@ LLM-AS-A-JUDGE STATISTICAL CALIBRATION (Inter-Annotator Agreement):
 
 ## Architectural Summary: The 5 Invariants of Tools, Memory & Retrieval
 
-Before progressing to [Chapter 4: Production Governance & Economics](./04-production-governance-and-economics), commit these five operational invariants to memory:
+Before progressing to [[courses/agentic-ai-build-your-first-agentic-ai-system/lessons/04-production-governance-and-economics|Chapter 4: Production Governance & Economics]], commit these five operational invariants to memory:
 
 1. **Short-Term Context is Premium Working Real Estate:** The KV cache scales linearly with sequence length in memory and quadratically in self-attention compute. Treat context as an active forensic scratchpad, not a generic document dump.
 2. **Hybrid Search Outperforms Pure Modalities:** Dense semantic embeddings capture intent but stumble on specific alphanumeric codes; sparse BM25 matches exact identifiers but fails on synonyms. Combine them via **Reciprocal Rank Fusion (RRF)**.
@@ -1268,6 +1268,21 @@ Before progressing to [Chapter 4: Production Governance & Economics](./04-produc
 5. **Classify Failures Across the Authoritative Taxonomy:** When an agent errors, distinguish local JSON formatting (`TOOL_SYNTAX_ERROR`) from contract violations (`TOOL_SCHEMA_VIOLATION`) and semantic blindness (`RETRIEVAL_TRUNCATION`). Only granular telemetry enables automated self-correction.
 
 ---
+
+```knowledge-quiz
+schemaVersion: 1
+quizId: "e1ae341a-42cd-4634-80ee-4b899fcf7f92"
+title: "Checkpoint: memory, retrieval and judge calibration"
+questionBankId: "16c83732-0a60-4692-a26b-84b94a478c5f"
+questionIds:
+  - "4f7c19ea-040a-4df7-8aed-d72a6bbb4d06"
+  - "e184230b-41ea-4340-8204-c073d586058a"
+  - "7cd84632-47a3-41db-b386-a44b44ce5dc6"
+  - "d476b70d-6397-4b20-9715-6ba1a2dbee32"
+  - "149f75f6-ecb3-4bc3-b21b-f272d40c6d7b"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/agentic-ai-build-your-first-agentic-ai-system/question-banks/03-tools-memory-and-retrieval|Tool Integration, Dynamic Memory & Retrieval Augmentation: Question Bank]].
 
 <div class="chapter-navigation">
   <a class="chapter-nav-btn prev" href="/courses/agentic-ai-build-your-first-agentic-ai-system/lessons/02-building-the-baseline-agent">← Chapter 2: Architecting the Baseline Agent</a>
