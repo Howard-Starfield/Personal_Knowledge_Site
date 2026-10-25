@@ -1,0 +1,73 @@
+# Mermaid 11.4.0, vendored from cdnjs.cloudflare.com on 2026-10-25.
+# The upstream package is MIT licensed; its LICENSE file sits next to this one.
+# These are every module the browser can reach from the entry: the diagram
+# types and the KaTeX renderer it imports on demand.
+# The only change from upstream is the file extension: the modules are named
+# .js, and their import specifiers were rewritten to match, because a module
+# script must be served with a JavaScript MIME type and some static servers do
+# not know the .mjs extension. Every other byte is upstream's.
+# Format: <sha256>  <bytes>  <path relative to this directory>
+0b811e6c3f9b634c01286e13dd733c2a5135fac7369d92e30e7c00b7541860a2  252  chunks/mermaid.esm.min/architecture-I3QFYML2-BNJ4OOAP.js
+35bc7fcc71e744963250f2999491d89db8b8c4d2f9ce8f13ecb6c3c79ae9ea51  150705  chunks/mermaid.esm.min/architectureDiagram-QTIGHTN5.js
+3b515587be195f4bf673aca8eb4e224924d52b4bd822ff3ae7624a286b37cee6  71776  chunks/mermaid.esm.min/blockDiagram-MYUW6R5Q.js
+07548c4ea8258be3cb7ce1eee15b50218cdf7b0a18846372dcd352abe77a9be7  70484  chunks/mermaid.esm.min/c4Diagram-AKI3UION.js
+10e2b16c4f8d74d120b03bdefe0ffd0c1729e482f69776d8b4e329d93bb5a942  8853  chunks/mermaid.esm.min/chunk-2XY5F2HY.js
+9ef147902a7e2ee9f40301b44c169c66bc0d5944a0c56a63a4e011ccaa2d93d4  14420  chunks/mermaid.esm.min/chunk-4DJOK3GT.js
+88e1db85e2797ee1a397e811bbf179eed8d6f28b2416bf47d6373ba22481605f  220  chunks/mermaid.esm.min/chunk-4KE642ED.js
+14a1accba0347be27c4849eadd0061111f0692664a05d09c6f03cb091ae5dfc6  706  chunks/mermaid.esm.min/chunk-4YMK7POB.js
+4869fbc8f8e5138255a88cada05e90202c5b298221855357f2359fecb821280f  25318  chunks/mermaid.esm.min/chunk-5ZJXQJOJ.js
+c898b8cae13daadf50678485e4f72813027de6b04fd4dad5c0323475e2a03c72  31  chunks/mermaid.esm.min/chunk-67GG4VKH.js
+69055b228770d6b3662f617267ff5ba4b8ec94fef2c54f8beb8579246ac572d4  14233  chunks/mermaid.esm.min/chunk-6BY5RJGC.js
+c4c4c59a431be26f2ab550b6dbbd440b2592fadf270c9161d3cab3e6a07b23b6  33925  chunks/mermaid.esm.min/chunk-7H3BNXSV.js
+e2e33cff7f0c15be2e7fe43f668a897d9d15d7da84151565e34a34daf6459af4  42437  chunks/mermaid.esm.min/chunk-7LIB5WBN.js
+ac1bab772f4d188a61894818085e7e38684d33301ccf3a21dcd0b14b0230f6b8  111196  chunks/mermaid.esm.min/chunk-A7EQIZZO.js
+1b4f3f3128474761636f25696496ed7750d220ae112ebea1f50ccb689e2053ba  1503  chunks/mermaid.esm.min/chunk-BERL53GW.js
+823141330ea662cd596aef66889cf4313cecb39a687198d130ad291e2f32132f  281  chunks/mermaid.esm.min/chunk-BPW5ZDWE.js
+fc78eb9a26311a49475edd0c89c6e9a752e7fc1a2c4ea0c03fbb963ff9ecf623  555  chunks/mermaid.esm.min/chunk-EBEPM36I.js
+b6696009a886eec68e1b4fe4666edcc47a9bc4e910a1eaa55002f9ff6df8302e  45247  chunks/mermaid.esm.min/chunk-EXDBZKZY.js
+f3ad2cb407f38f4a6f39ccf101341d61318e0671bbf456c306788ad10aa56107  28452  chunks/mermaid.esm.min/chunk-FASC7IG4.js
+3a0a0d3d6036b6143c1641ecc8fad23d0e629b95845fbe9ad30da031e0a9d7b7  716  chunks/mermaid.esm.min/chunk-GTKDMUJJ.js
+e31083a52b5977735652ba1872a130e22c09a2dddc1716094ba020b4fcd4846e  735  chunks/mermaid.esm.min/chunk-GUUIKZ7L.js
+ff0051bee06c21367fecb6114c5d4c6dfe2f885d6e2bff1cbb15b1811de4a5f0  12631  chunks/mermaid.esm.min/chunk-HMDXFKD7.js
+0085ba3fde4ff75a3385db5b4e16f8cf51f9dbd7a8a3b19b448d2f07fe13a602  237022  chunks/mermaid.esm.min/chunk-ITX3UAHE.js
+ec36bbd3c90b73ee09c91bb098ca3fbf2ddf6fda8cd6ec4dd10a52b2cb325064  1116  chunks/mermaid.esm.min/chunk-LD4SFGBK.js
+3fdc72dad0615d978765f1dffb81dccd120884312f4e96c3326841f7f09a19a5  277  chunks/mermaid.esm.min/chunk-LM6QDVU5.js
+4e0bbc0adf4c12e9a6b29ac5809168d3e75964a9aa0efd5185af1deca730d7d1  400333  chunks/mermaid.esm.min/chunk-PWCSEZZ4.js
+510207550caccd94b68e0dd61c1c12f32dfb1e02fd142fab1e519a7027ea63a0  912  chunks/mermaid.esm.min/chunk-QJHISCT3.js
+43e1c58d83055b949629416067d7403b50534c37e8dbe37052f7dddc00e15ae7  1355  chunks/mermaid.esm.min/chunk-QTE35VYX.js
+ce745076fc28b7aa53d4ac798c79898ccfcb0c819e7358e046ef6865ab27d01f  1820  chunks/mermaid.esm.min/chunk-S67DUUA5.js
+f257a2c043d94ead3058057ea7e887d9211a318a40d67bb9ca1edf6cef150036  566  chunks/mermaid.esm.min/chunk-SDI2JJQM.js
+90d0635be65fe34bbcc2a2a1353f9cf44a88a369bd0fcc401020e6a592819ad0  568  chunks/mermaid.esm.min/chunk-SLI2Z62V.js
+82678686ecdfaed3826d746b2f49fa660fbfad986b5a7cdba8fb72d91f3b90ff  2040  chunks/mermaid.esm.min/chunk-TI4EEUUG.js
+d6df51456c22a294a46c0c399dc61a37d0518ebbae82e2a5c53fcb667b566139  43815  chunks/mermaid.esm.min/chunk-UBDM6ZOM.js
+a3c902f9b1eb279415bc9eb3437a758a6479590502c4b6904316e3a361a00499  188  chunks/mermaid.esm.min/chunk-VSLJSFIP.js
+b7f1a4010ebb57a85408a9f814c4c4b33a76909c7f20c617a70b51dee975d2bd  319672  chunks/mermaid.esm.min/chunk-XVEYI5JQ.js
+363b1d21152235887cd7d6472579ef46002a4b205d1eb889db82d3a49483fe6f  1315  chunks/mermaid.esm.min/chunk-YPUTD6PB.js
+e153ed957e69011aea1c4863a29f225a6d6a9d4c595fa43ee22ca17477f8e2a8  6097  chunks/mermaid.esm.min/chunk-ZN7TASNU.js
+81a2558edc24cccf592f1cc58004eed9cfc858a49e7717273184546c2abc216d  598  chunks/mermaid.esm.min/classDiagram-LGTRVITY.js
+81a2558edc24cccf592f1cc58004eed9cfc858a49e7717273184546c2abc216d  598  chunks/mermaid.esm.min/classDiagram-v2-UI22WKGF.js
+068c3f86eeb8ae0cc8a34c6372f757e41af74ef16650693dca429b5001d253ee  11130  chunks/mermaid.esm.min/dagre-2P6XN26F.js
+a7769da1f8a535716f0f12716aaa65ddea63c47f4d3eb179753953684ce13ced  3949  chunks/mermaid.esm.min/diagram-D2J2JSCM.js
+fcb47bc14d932a74ac25f7de604746bb06a36fc8098d83aed4568f1a725f091d  32053  chunks/mermaid.esm.min/erDiagram-SZV2UBQT.js
+b5904c401296e16225264c1da7958e38cd8e8c788060eee2302f2d972ca354e2  57740  chunks/mermaid.esm.min/flowDiagram-INP2BB3V.js
+795479048d29152db565c1e0b194ab69778eea1660ce99c3790f0984da3a4ba2  43075  chunks/mermaid.esm.min/ganttDiagram-547IIDY5.js
+5caac42057b1cf171c71b3f2af8c8e22e822e49c5fdc06e7a61c932826088e81  244  chunks/mermaid.esm.min/gitGraph-YCYPL57B-MEVJTYR7.js
+2b59c7bf5cabe360c541dc05ad2c66148fa848597bc67e6d8fe5ceb8701b0e5d  24050  chunks/mermaid.esm.min/gitGraphDiagram-6HF727YA.js
+22ee438c5a9be269526a1ce2389a2a16792a9d5b217918cd190755244510c160  236  chunks/mermaid.esm.min/info-46DW6VJ7-CQJS2HF5.js
+8ef4c7f5c9da1ce048764492a194f4568f74fb190a50f40a7d0863eb25c17613  894  chunks/mermaid.esm.min/infoDiagram-A4XEPD65.js
+930ec9b6ba2f44c9d50fe830b2bad1360559a909a4f39566ce95e099f3eea79f  22761  chunks/mermaid.esm.min/journeyDiagram-5ML6LF3B.js
+c9a40651d37472ee9c156ba6e9cbc77cb9ff44271243f9f9f2f6800e7d2a3e0f  20489  chunks/mermaid.esm.min/kanban-definition-EGOKAUOG.js
+c68a8a2ed83ba8e293c8c2de58096989e5339c0d04cf362573e2c6a36210a489  275006  chunks/mermaid.esm.min/katex-SWYD7GD6.js
+fe80970265d294cec575232bf784716f1c1d74e8b24335e6f6191d18acef0cdc  103725  chunks/mermaid.esm.min/mindmap-definition-PE66ZM2U.js
+cfb7643e1fb00cdca61ee3fbe0486d22c33711807aa916976e51968df6a1c4ab  240  chunks/mermaid.esm.min/packet-W2GHVCYJ-EO6UC2GD.js
+b028472a5f2cc174add0f5f60d39fa9ce27bc74c1aa372fec77aaede7cb29ff4  234  chunks/mermaid.esm.min/pie-BEWT4RHE-B6EMOCE6.js
+63f0d64cca712450e87c4114e44c54978dc0e7cd46796b7193ea4716d5d5a343  3940  chunks/mermaid.esm.min/pieDiagram-XPKEEGBI.js
+d39c405044e32e862d908fcefd8614a51e0d33d6c82e6a57005e81f0b3054c0c  33828  chunks/mermaid.esm.min/quadrantDiagram-QS23HHJP.js
+0fc7f9c379e07bd283c33b6b81f05c017562758eb2edab8d7636e1508d996881  25738  chunks/mermaid.esm.min/requirementDiagram-5WTT3577.js
+25eeeae5ac23a58eb303705b228694ab20740593be86da1b241342317cb37521  22889  chunks/mermaid.esm.min/sankeyDiagram-HGVHE3RK.js
+5584ddd3877e880e91e54d4f17657f553734de78204dcc26d5c8456c8ab13227  87717  chunks/mermaid.esm.min/sequenceDiagram-7SUASMRF.js
+0ce9f0c55d34c6fbc0e8bcf23b0cc422445ed9fa476b75fb35c2dfc3424c5463  10874  chunks/mermaid.esm.min/stateDiagram-SUF43ZVU.js
+736ea145c4b5d59262aae87d9fac97b9dc02165362bd0965f546961a3c45fcc3  598  chunks/mermaid.esm.min/stateDiagram-v2-DVB4EDRD.js
+55b16789d57fb5b36ed03c2a3924cc69ff68659bc2870a5e0b20be4fb0e671b7  23474  chunks/mermaid.esm.min/timeline-definition-QPOBMAB2.js
+13cb0970b185fee642a6640b138f7c791f6cec5df9d5650ffc7e76ab5a0c1846  37551  chunks/mermaid.esm.min/xychartDiagram-MWHWHLMU.js
+b82374ce1fe5a6fe5427730625edbeb7ffa440c87d871fd1caff837cee9abd1e  25524  mermaid.esm.min.js

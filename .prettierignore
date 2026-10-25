@@ -3,3 +3,4 @@ node_modules
 .quartz-cache
 # Vendored third-party assets, kept byte-identical to upstream (ADR-0006).
 quartz/static/katex/
+quartz/static/mermaid/

@@ -1,0 +1,22 @@
+{
+  "name": "@knowledge-fieldbook/local-obsidian",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./index.ts"
+  },
+  "quartz": {
+    "name": "local-obsidian",
+    "displayName": "Obsidian Markdown with vendored Mermaid",
+    "category": [
+      "transformer"
+    ],
+    "version": "0.1.0",
+    "quartzVersion": ">=5.0.0",
+    "dependencies": [],
+    "defaultOrder": 30,
+    "defaultEnabled": true,
+    "defaultOptions": {}
+  }
+}
