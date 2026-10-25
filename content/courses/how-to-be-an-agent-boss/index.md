@@ -44,16 +44,16 @@ This course teaches you how to step into the role of an **Agent Boss**: the lead
 
 ## Course Roadmap & Syllabus
 
-| #   | Chapter / Section                                         | Core Focus                                                                 | Type                                                               |
-| --- | --------------------------------------------------------- | -------------------------------------------------------------------------- | ------------------------------------------------------------------ |
-| 0   | [[courses/how-to-be-an-agent-boss/lessons/00-introduction | Introduction]]                                                             | Meet your new digital team; shifting from prompter to agent leader | Foundation |
-| 1   | Chapter 1: Discover Agents _(In preparation)_             | The BXT framework; build vs. buy; finding high-leverage workflows          | Strategy                                                           |
-| 2   | Chapter 2: Build with Purpose _(In preparation)_          | Scope definition, tool interfaces, preventing prompt bloat, Copilot Studio | Architecture                                                       |
-| 3   | Chapter 3: Delegate & Manage _(In preparation)_           | Calibrating autonomy, oversight models, telemetry, and lifecycle decisions | Operations                                                         |
-| 4   | Chapter 4: Optimize & Control Costs _(In preparation)_    | Forecasting credit burn, per-agent ceilings, and business ROI              | Finance                                                            |
-| 5   | Glossary _(In preparation)_                               | Canonical terminology, core concepts, and operational definitions          | Reference                                                          |
-| 6   | Exercise Files & Lab Guide _(In preparation)_             | Hands-on lab: building an Expense Submission Agent in Copilot Studio       | Practical Lab                                                      |
-| 7   | Final Assessment _(In preparation)_                       | 15-question reinforcement challenge with full explanations                 | Evaluation                                                         |
+| #   | Chapter / Section                                                           | Core Focus                                                                 | Type          |
+| --- | --------------------------------------------------------------------------- | -------------------------------------------------------------------------- | ------------- |
+| 0   | [[courses/how-to-be-an-agent-boss/lessons/00-introduction \| Introduction]] | Meet your new digital team; shifting from prompter to agent leader         | Foundation    |
+| 1   | Chapter 1: Discover Agents _(In preparation)_                               | The BXT framework; build vs. buy; finding high-leverage workflows          | Strategy      |
+| 2   | Chapter 2: Build with Purpose _(In preparation)_                            | Scope definition, tool interfaces, preventing prompt bloat, Copilot Studio | Architecture  |
+| 3   | Chapter 3: Delegate & Manage _(In preparation)_                             | Calibrating autonomy, oversight models, telemetry, and lifecycle decisions | Operations    |
+| 4   | Chapter 4: Optimize & Control Costs _(In preparation)_                      | Forecasting credit burn, per-agent ceilings, and business ROI              | Finance       |
+| 5   | Glossary _(In preparation)_                                                 | Canonical terminology, core concepts, and operational definitions          | Reference     |
+| 6   | Exercise Files & Lab Guide _(In preparation)_                               | Hands-on lab: building an Expense Submission Agent in Copilot Studio       | Practical Lab |
+| 7   | Final Assessment _(In preparation)_                                         | 15-question reinforcement challenge with full explanations                 | Evaluation    |
 
 ---
 
