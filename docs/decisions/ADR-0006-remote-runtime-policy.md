@@ -115,25 +115,52 @@ Implementation, all inside this repository:
 The owner chose **option A** on 2026-10-24: vendor KaTeX into the repository
 rather than keep the CDN.
 
-### Still outstanding: Mermaid
+### Mermaid: vendored, 2026-10-25
 
 The Phase 0 plan's stop condition — _"Quartz head and Mermaid support
-reference cdnjs"_ — is only half closed. The preconnect is gone and KaTeX is
-vendored, but the Obsidian-flavoured markdown plugin imports Mermaid from
+reference cdnjs"_ — is now closed. The preconnect is gone, KaTeX is vendored,
+and the Mermaid runtime is vendored too.
+
+The Obsidian-flavoured markdown plugin imported Mermaid from
 `https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs`
 at runtime, so the two lessons that carry a diagram
 (`advanced-prompt-engineering-techniques/lessons/02-chain-of-thought-and-step-by-step`
 and `agentic-ai-build-your-first-agentic-ai-system/lessons/00-introduction-and-autonomy-levels`)
-still reach a CDN.
+reached a CDN.
 
 That URL is a constant inside
 `@quartz-community/obsidian-flavored-markdown`, and the plugin also provides
 the wiki-links and callouts the site depends on, so the plugin cannot simply
-be switched off. Vendoring Mermaid means shipping its whole chunk tree
-(the entry file imports a dozen sibling chunks) and replacing the import, which
-is the "find a supported override or approve an ADR before any core change"
-work the Phase 0 plan asked for. It is therefore a separate slice, and the
-runtime gate deliberately bans the npm CDNs rather than all of cdnjs.
+be switched off. The same treatment as KaTeX applies: vendor the files and
+wrap the plugin, without forking the package.
+
+1. `quartz/static/mermaid/` holds the vendored runtime at version 11.4.0: the
+   ESM entry module, every chunk reachable from it (statically imported, or
+   imported on demand for a diagram type the site has not drawn yet), the
+   upstream MIT `LICENSE`, and `CHECKSUMS.txt` recording the SHA-256 of every
+   file. The upstream directory layout is preserved, because the entry module
+   imports its chunks with paths relative to itself. The whole reachable
+   closure is vendored — 64 modules, 2.4 MiB — so a future diagram of any
+   type will still draw.
+
+   The modules are named `.js` rather than `.mjs`, and their import
+   specifiers were rewritten to match. A module script must be served with a
+   JavaScript MIME type, and some static servers answer `text/plain` for the
+   `.mjs` extension, which the browser refuses to execute. `.js` is understood
+   everywhere, so the copy does not depend on a server's extension mapping.
+   That rewrite is the only change from the upstream bytes.
+
+2. `plugins/local-obsidian/` wraps
+   `@quartz-community/obsidian-flavored-markdown`, reuses its transform
+   unchanged, and rewrites the one cdnjs import inside the plugin's inline
+   client script to `/static/mermaid/mermaid.esm.min.js`. The wrapper is
+   registered in `quartz.config.yaml` in place of the package plugin.
+3. `scripts/validate-graph-output.mjs` gains `cdnjs.cloudflare.com` in
+   `forbiddenRuntimeSignatures`, so the build fails if any runtime comes back
+   from a CDN. The runtime gate now covers all three CDNs, not just the npm
+   ones.
+
+The owner approved this on 2026-10-25.
 
 ## Consequences
 
@@ -141,11 +168,12 @@ runtime gate deliberately bans the npm CDNs rather than all of cdnjs.
   the same origin as the page, from the same deployment.
 - A maths page renders identically offline and behind a firewall, and the
   content is not exposed to a third party by a page view.
-- The repository carries 1.05 MB of third-party code: the 25 KB of KaTeX's
-  stylesheet and script, and KaTeX's 60 font files, which the stylesheet
-  references in woff2, woff and ttf. It is pinned by version and checksum
-  (`quartz/static/katex/CHECKSUMS.txt`), and the MIT licence travels with it
-  as `quartz/static/katex/LICENSE`.
+- The repository carries 3.5 MB of third-party code: the 25 KB of KaTeX's
+  stylesheet and script, KaTeX's 60 font files, which the stylesheet
+  references in woff2, woff and ttf, and Mermaid's 64 modules (2.4 MiB). Both
+  are pinned by version and checksum (`quartz/static/katex/CHECKSUMS.txt` and
+  `quartz/static/mermaid/CHECKSUMS.txt`), and each MIT licence travels with it
+  as a `LICENSE` file beside the files.
 - If the plugin is upgraded and changes its URLs, the rewrite stops matching and
   the new gate fails the build rather than silently going back to the CDN.
 - The `cdnjs` preconnect is removed by the same build step, so the site stops
