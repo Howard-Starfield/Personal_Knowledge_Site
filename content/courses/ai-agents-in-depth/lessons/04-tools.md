@@ -875,6 +875,22 @@ An enterprise connects its agent to third-party MCP servers and community Skills
 
 </details>
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "060e93e1-db9e-4b68-97ee-2dcc62962497"
+title: "Checkpoint: Chapter 4 — Tools"
+questionBankId: "95d5461b-361b-4a59-a0b2-32a190ec7b34"
+questionIds:
+  - "95ebab95-9b26-4351-a713-d43a1052779d"
+  - "bc8e6217-9dca-4216-b8cb-764a4bf9dd68"
+  - "70cf267b-becd-42f4-b36d-0371028a6a04"
+  - "67a5fa48-0af6-4080-ac32-196538aa864c"
+  - "3f096a84-ba2c-4090-abad-a31ce7b8eeaf"
+  - "4064f4e7-5a70-4cea-b13f-f4ce97a7ad16"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-agents-in-depth/question-banks/04-tools|Chapter 4: Tools: Question Bank]].
+
 <div class="chapter-navigation">
   <a href="/courses/ai-agents-in-depth/lessons/03-user-memory-and-knowledge-bases" class="chapter-nav-btn prev">← Previous: Chapter 3 — User Memory & Knowledge Bases</a>
   <a href="/courses/ai-agents-in-depth/lessons/05-coding-agent-and-code-generation" class="chapter-nav-btn next">Next: Chapter 5 — Coding Agent & Code Generation →</a>

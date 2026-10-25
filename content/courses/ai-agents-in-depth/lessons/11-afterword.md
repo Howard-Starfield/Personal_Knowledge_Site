@@ -61,6 +61,22 @@ Agent technology is still evolving at full speed; no single book can keep up wit
 
 [^taalas]: The Taalas HC1 hardcodes the entire Llama 3.1 8B model onto a 6nm chip, achieving approximately 17000 token/s with a response time under 100 milliseconds; the trade-off is that the chip can only run the hardcoded model, and model updates require a new chip tape-out. See Karl Freund, "Taalas Launches Hardcore Chip With 'Insane' AI Inference Performance," Forbes, 2026. https://www.forbes.com/sites/karlfreund/2026/02/19/taalas-launches-hardcore-chip-with-insane-ai-inference-performance/
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "716f8df5-d4c4-40a6-aba2-f3efc1f9058a"
+title: "Checkpoint: Afterword — Back to Agent = LLM + Context + Tools"
+questionBankId: "fb2d24ac-aa14-4849-a92a-50db987185e9"
+questionIds:
+  - "2e4c26c4-50fc-4e1d-84c6-311a114ecc72"
+  - "9aa82902-6ccb-4d97-b5da-2c3329a26616"
+  - "3e1e314d-570d-493e-97f7-4ed7f9b09203"
+  - "29bf61bf-ed47-400e-b658-d09dc89b764a"
+  - "d2d59aa3-d981-40e4-9156-66fa8c230a1d"
+  - "bbb99389-15f8-4788-b0ea-1333eace876d"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-agents-in-depth/question-banks/11-afterword|Afterword: Back to Agent = LLM + Context + Tools: Question Bank]].
+
 <div class="chapter-navigation">
   <a href="/courses/ai-agents-in-depth/lessons/10-multi-agent-collaboration" class="chapter-nav-btn prev">← Previous: Chapter 10 — Multi-Agent Collaboration</a>
   <a href="/courses/ai-agents-in-depth/lessons/12-reference-answers" class="chapter-nav-btn next">Next: Reference Answers →</a>

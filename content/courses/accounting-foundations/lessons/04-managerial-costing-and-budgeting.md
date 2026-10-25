@@ -791,6 +791,21 @@ However, an audit of the underlying cash transactions reveals the following oper
 >    - If Project Sigma had liberated **\$180,000** in working capital inventory instead of \$150,000, its asset base would have dropped to \$520,000, yielding an ROI of $\frac{100{,}000}{520{,}000} = 19.23\%$. If it freed \$220,000, its ROI would surge to $20.83\%$, making the supply chain project mathematically superior to the robot installation!
 >    - **Managerial accounting proves that managing working capital velocity on the balance sheet is just as powerful as managing labor costs on the income statement.**
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "3378af5c-602c-4ea5-a29c-edd4b6bb29ad"
+title: "Checkpoint: managerial costing, overhead allocation and budgets"
+questionBankId: "d4d0de1a-ef7c-456c-abe9-412506da1bc8"
+questionIds:
+  - "e1743c1e-7cc4-4533-89f4-2cc15e4a1f19"
+  - "38418c9d-62f1-416a-98b9-b125ee0df5bb"
+  - "126af257-8490-4728-be2f-6185faa463bb"
+  - "51ca5488-15aa-4a5d-b11a-5071cb6f7ec1"
+  - "c70ec0bf-8141-4881-9bc5-07d3a351b7bd"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/accounting-foundations/question-banks/04-managerial-costing-and-budgeting|Chapter 4: Managerial Costing & Budgets: Allocating Overhead & Solving Problems in Advance: Question Bank]].
+
 ---
 
 ## What's Next?

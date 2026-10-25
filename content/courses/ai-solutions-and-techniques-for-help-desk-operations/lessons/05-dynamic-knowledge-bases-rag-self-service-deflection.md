@@ -1274,6 +1274,22 @@ Dynamic knowledge engineering transforms static, rotting help desk wikis into hi
     [ ] Measure True Deflection via endpoint telemetry pingbacks and 48-hour ticket surveillance.
 ```
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "bde9d27a-01f0-4626-b8af-44fd680807f5"
+title: "Checkpoint: structural chunking, hybrid retrieval and safe deflection"
+questionBankId: "9efc634d-1699-4bdf-93b0-4d3f73d5ceb9"
+questionIds:
+  - "80e7dd1a-9f61-43fa-91c2-52d4cb3d6028"
+  - "77360a3d-000b-41a4-bfc3-e373dbf8f999"
+  - "b0db2bc1-9928-415f-b382-d4ce7b01163c"
+  - "b4288990-e850-4632-8f44-c2b27a0e33e8"
+  - "90932077-6077-4882-8cd3-54faf1b0e127"
+  - "f426576d-827b-4bd7-9f5d-324e2640157b"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-solutions-and-techniques-for-help-desk-operations/question-banks/05-dynamic-knowledge-bases-rag-self-service-deflection|Dynamic Knowledge Engineering: Vector RAG, Semantic Caching & Autonomous Self-Service Deflection: Question Bank]].
+
 ---
 
 <div class="chapter-navigation">

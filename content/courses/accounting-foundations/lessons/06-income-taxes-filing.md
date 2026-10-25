@@ -779,6 +779,21 @@ Now that we understand the rules of the tax code, we advance from compliance to 
 
 Proceed to [[courses/accounting-foundations/lessons/07-tax-planning-strategies|Chapter 7: Strategic Tax Planning]] to master the three universal legal pillars of tax optimization: **shifting across time (deferral), shifting across entity pockets, and transforming ordinary income into preferential capital gains.**
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "7c9b79fa-6407-4531-9644-ef9025fda2d4"
+title: "Checkpoint: income taxes, marginal brackets and deductions"
+questionBankId: "bdaa8397-6ff4-4c64-bef6-5993dc90a636"
+questionIds:
+  - "79cd9c61-12c3-48a1-b397-7f52b1a65976"
+  - "8bc47191-5bb5-4b89-993e-cb3260ba8a97"
+  - "73c35e8f-5afc-4987-aa13-7cc954655b3d"
+  - "e17d8863-767d-4548-8f68-1cd259affdcc"
+  - "7d28eb0d-761f-4dc1-a5be-4e5962709755"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/accounting-foundations/question-banks/06-income-taxes-filing|Chapter 6: Income Taxes: Tax Filing, Marginal Brackets & Deductions: Question Bank]].
+
 ---
 
 <div class="chapter-navigation">

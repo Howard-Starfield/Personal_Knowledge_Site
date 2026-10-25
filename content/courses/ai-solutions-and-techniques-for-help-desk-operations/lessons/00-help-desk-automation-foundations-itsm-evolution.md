@@ -679,6 +679,22 @@ Transforming enterprise IT support from a chaotic bucket brigade into an automat
 
 In **Chapter 1: Conversational Support Architecture**, we dive deep into the technical design of dual-engine virtual assistants, examining how to combine the conversational fluency of large language models with the deterministic reliability of enterprise state machines while completely preventing hallucinations.
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "04baa30b-ba26-4e40-a44d-cd401e95d8d8"
+title: "Checkpoint: from static rule queues to a cognitive service desk"
+questionBankId: "8b63ceba-c2af-45a4-8a1f-c8e61bd82eba"
+questionIds:
+  - "2adfeb2b-721d-4559-b9ea-b166803ce4ce"
+  - "ba9e38b7-3db6-423c-b75a-f2e9522372e0"
+  - "97187dd2-7649-4d8b-aba9-9b1a733cc819"
+  - "b4a921ca-edb1-4e2d-b8ae-87d828996972"
+  - "bf41dd8a-597f-4908-ab5c-12e9457a511f"
+  - "4464f9c6-cddc-4d8f-93fc-ad2646e12a07"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-solutions-and-techniques-for-help-desk-operations/question-banks/00-help-desk-automation-foundations-itsm-evolution|Help Desk Automation Foundations: From Static Rule Queues to Cognitive Service Desks: Question Bank]].
+
 ---
 
 <div class="chapter-navigation">

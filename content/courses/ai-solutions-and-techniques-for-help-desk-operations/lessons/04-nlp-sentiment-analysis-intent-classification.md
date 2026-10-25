@@ -1127,6 +1127,22 @@ Natural language processing is the cognitive intake engine of modern autonomous 
     [ ] Deploy cross-lingual embeddings (Multilingual E5 / XLM-R) to support global staff without MT APIs.
 ```
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "cbf766e9-49e0-4249-8881-71fff60b292d"
+title: "Checkpoint: emotion intensity, entity extraction and intent vectors"
+questionBankId: "12375442-f21e-4a48-a4b4-f3854416c3c2"
+questionIds:
+  - "b4c18068-4a86-47cb-86a5-79001093c871"
+  - "62b93358-c33c-4913-8bcc-7c8dcbf9e16d"
+  - "4ff28c89-cb10-4301-b7e4-af801adad7a3"
+  - "ec995ee8-4579-4541-92d9-78b2b63a0c29"
+  - "78589b8c-be23-418f-af60-928e3cc2ac8b"
+  - "25b104a9-1187-4665-9d46-17d0930a864d"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-solutions-and-techniques-for-help-desk-operations/question-banks/04-nlp-sentiment-analysis-intent-classification|Natural Language Processing in Support: Emotion Intensity, Named Entity Extraction & Intent Vectors: Question Bank]].
+
 ---
 
 <div class="chapter-navigation">

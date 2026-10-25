@@ -435,6 +435,21 @@ Test your understanding of the four flavors by diagnosing the following three en
 > 2. **Asset Illiquidity:** Zenith's balance sheet showed \$12,000,000 in total assets, but \$11,500,000 was tied up in specialized lab hardware, illiquid patents, and slow-moving prototype inventory. You cannot pay employee payroll or cloud server hosting bills with specialized lab spectrometers.
 > 3. **The Lesson:** Bookkeeping records what occurred; **Managerial Cash Budgeting** and the **Financial Statement of Cash Flows** determine whether an organization has the liquid oxygen (cash) necessary to survive the coming month.
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "60ecd064-b985-4726-a3a0-eb4fffb4b3e4"
+title: "Checkpoint: the four flavors of accounting"
+questionBankId: "1391e957-2bff-45bf-9c8c-43808346c323"
+questionIds:
+  - "26183818-be84-43ee-96a7-4ed76ceebaf9"
+  - "c4a3ee93-f8b8-4bd8-87fe-d27575c2f12f"
+  - "a13e31be-2187-48c9-8931-dc6b28c5cbd7"
+  - "f8245749-5c9c-4821-95d0-e56916573169"
+  - "5fc8729d-f503-4ff7-91d8-a76d3f4e5e4c"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/accounting-foundations/question-banks/00-introduction|Introduction: The Language of Business & The 4 Flavors of Accounting: Question Bank]].
+
 ---
 
 ## What's Next?

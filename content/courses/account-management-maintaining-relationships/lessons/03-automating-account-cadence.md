@@ -742,6 +742,24 @@ No matter how sophisticated your automation, enterprise delivery will occasional
 
 Proceed to [[courses/account-management-maintaining-relationships/lessons/04-service-recovery-and-retention|Chapter 4: Service Recovery & Retention]] to master the art of radical accountability, discover why panic discounts accelerate the churn death spiral, and learn how to engineer high-leverage structural restitution that transforms angry clients into lifelong advocates.
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "fe33776a-1ef3-4a22-959a-f431a5925c05"
+title: "Checkpoint: Automating Account Cadence"
+questionBankId: "9e02ba14-8704-4c1c-8e82-5b86f3121d17"
+questionIds:
+  - "3feaf3e2-da24-4b06-b925-f4f1a781ff0b"
+  - "15098d6d-28ab-4055-823e-4c1c417fc60e"
+  - "8fdb1a3c-534b-45a8-9667-a1dbf28b8271"
+  - "f2ed4c58-8fd9-4aaf-8874-a09105143df6"
+  - "d69ef943-a2e6-402c-9626-0bcf8e6953ca"
+  - "6681edc7-2f79-4afd-94b6-85bcfd84ffec"
+  - "47a9cf2d-8e93-40fe-b8d8-ebff1d18cc52"
+  - "c9f59b2e-f998-4202-9404-928434a34da3"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/account-management-maintaining-relationships/question-banks/03-automating-account-cadence|Chapter 3: Automating Account Cadence — Reminders, Rotten Timers & CRM Hygiene: Question Bank]].
+
 <div class="chapter-navigation">
   <a href="/courses/account-management-maintaining-relationships/lessons/02-meeting-and-treating-clients" class="chapter-nav-btn prev">← Previous: Chapter 2 — Meeting and Treating Clients</a>
   <a href="/courses/account-management-maintaining-relationships/lessons/04-service-recovery-and-retention" class="chapter-nav-btn next">Next: Chapter 4 — Service Recovery & Retention →</a>

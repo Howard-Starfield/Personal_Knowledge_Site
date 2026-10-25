@@ -736,6 +736,24 @@ With the disciplines of personalized client hospitality, dining protocols, and a
 
 Proceed to [[courses/account-management-maintaining-relationships/lessons/03-automating-account-cadence|Chapter 3: Automating Account Cadence]] to learn how to engineer CRM "going rotten" decaying-deal timers, configure automated touchpoint workflows across Pipedrive, HubSpot, and Freshsales, and maintain flawless institutional memory across growing account management teams.
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "69817a0c-8557-4b54-bc47-98b00bdc46f3"
+title: "Checkpoint: Meeting and Treating Clients"
+questionBankId: "b9e5a161-2aa1-459a-99d1-8bf956313920"
+questionIds:
+  - "a3202afd-9b13-4e72-b10b-798d92fca691"
+  - "8fff717f-5047-43ac-9808-56f166db6f35"
+  - "f6b33561-1dda-4443-b3ad-2b25a13e7f64"
+  - "d8634359-2c7e-47b3-abef-6697c999e66e"
+  - "265fb2d6-4fe0-4afb-ad74-6425fa8ef88a"
+  - "26b0195e-1a19-4780-81f0-10ef73d55306"
+  - "bf35f94a-7173-4ce7-bd4b-63c5ab784b0f"
+  - "adefe8f0-4714-438e-9c45-c5f580ee50a0"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/account-management-maintaining-relationships/question-banks/02-meeting-and-treating-clients|Chapter 2: Meeting and Treating Clients — Professional Hospitality & Anti-Bribery Governance: Question Bank]].
+
 <div class="chapter-navigation">
   <a href="/courses/account-management-maintaining-relationships/lessons/01-relationship-selling" class="chapter-nav-btn prev">← Previous: Chapter 1 — Relationship Selling</a>
   <a href="/courses/account-management-maintaining-relationships/lessons/03-automating-account-cadence" class="chapter-nav-btn next">Next: Chapter 3 — Automating Account Cadence →</a>

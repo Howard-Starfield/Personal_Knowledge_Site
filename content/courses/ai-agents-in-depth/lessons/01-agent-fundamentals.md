@@ -984,6 +984,22 @@ Chapter 1 categorizes Agent capability updates into three levels: Contextual Ada
 
 </details>
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "b1702c27-c822-4f9e-bf39-d6ad1dcc1f30"
+title: "Checkpoint: Chapter 1 — Agent Fundamentals"
+questionBankId: "16c069d6-fe09-42b4-aef1-bdeef923f125"
+questionIds:
+  - "51a8516e-b98b-488e-a882-1499dbf19b87"
+  - "00dc107b-3472-42bb-b053-e90db96019c3"
+  - "ece42ed7-d596-41ed-8f20-88fa33075f96"
+  - "e549a2b3-4f17-496b-bb78-0f4a653c2114"
+  - "46ff9cdc-db0a-4915-bd30-4c3657276220"
+  - "fc383298-ad68-46a4-8893-e164a63f377a"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-agents-in-depth/question-banks/01-agent-fundamentals|Chapter 1: Agent Fundamentals: Question Bank]].
+
 <div class="chapter-navigation">
   <a href="/courses/ai-agents-in-depth/lessons/00-introduction" class="chapter-nav-btn prev">← Previous: Introduction</a>
   <a href="/courses/ai-agents-in-depth/lessons/02-context-engineering" class="chapter-nav-btn next">Next: Chapter 2 — Context Engineering →</a>

@@ -1219,6 +1219,22 @@ Experiment 5-9 evaluates the boundary between **Code Generation** (e.g., CadQuer
 
 </details>
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "5d4d1bda-4636-45df-8b63-1b505cca6bb6"
+title: "Checkpoint: Chapter 5 — Coding Agent and Code Generation"
+questionBankId: "ce3276cb-b9aa-4dee-9cbb-c8b40753a20c"
+questionIds:
+  - "420c4859-4a17-44bd-8c15-17633f374b59"
+  - "eac48cd2-9806-464a-a26c-ed2421dc6a6e"
+  - "bf20a443-89c5-4b19-8d77-5fdbc397ebe6"
+  - "2a48a2a8-d0f4-4ca0-9947-ef9e18d16cc2"
+  - "00246240-bc36-4b47-b10a-e6bb51d67027"
+  - "3b13cc26-600e-4009-add4-a0aed0261b1c"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-agents-in-depth/question-banks/05-coding-agent-and-code-generation|Chapter 5: Coding Agent and Code Generation: Question Bank]].
+
 <div class="chapter-navigation">
   <a href="/courses/ai-agents-in-depth/lessons/04-tools" class="chapter-nav-btn prev">← Previous: Chapter 4 — Tools</a>
   <a href="/courses/ai-agents-in-depth/lessons/06-interaction" class="chapter-nav-btn next">Next: Chapter 6 — Interaction →</a>

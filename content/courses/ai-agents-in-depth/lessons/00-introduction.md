@@ -126,6 +126,22 @@ I also want to thank many friends across the AI industry (I won't name them all 
 
 Most of all, I thank my family, especially my wife, Meng Jiaying. She supported me throughout the writing of this book and offered many valuable suggestions along the way.
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "1822ecb1-a21e-4f7b-8001-7a3a7986a63e"
+title: "Checkpoint: Introduction — Agent = LLM + Context + Tools"
+questionBankId: "717670be-3896-4def-b905-9c7325aad956"
+questionIds:
+  - "5061fc80-24e6-4bb7-90f0-0b7e31a48897"
+  - "6063ecb9-9c0d-46ed-8533-01c36c54730c"
+  - "85d0d756-db9e-49bd-9661-32fa144188b6"
+  - "af636f2d-6e2e-484d-9440-b6e7b9df6666"
+  - "5e37a1a8-9f7b-4dac-b604-8553d67708f2"
+  - "0c8d35b2-0920-4bb7-b3c2-6eb0b8586634"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-agents-in-depth/question-banks/00-introduction|Introduction: Agent = LLM + Context + Tools: Question Bank]].
+
 <div class="chapter-navigation">
   <a href="/courses/ai-agents-in-depth" class="chapter-nav-btn prev">← Course Overview</a>
   <a href="/courses/ai-agents-in-depth/lessons/01-agent-fundamentals" class="chapter-nav-btn next">Next: Chapter 1 — Agent Fundamentals →</a>
