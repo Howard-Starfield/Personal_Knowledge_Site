@@ -107,6 +107,9 @@ plugins:
   - source: "./plugins/knowledge-quiz"
     enabled: true
     order: 80
+  - source: "./plugins/generated-index"
+    enabled: true
+    order: 82
   - source: "./plugins/chapter-navigation"
     enabled: true
     order: 85

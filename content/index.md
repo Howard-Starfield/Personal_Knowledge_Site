@@ -22,6 +22,10 @@ Welcome to the **Knowledge Fieldbook**, a public learning site focused on AI sys
 
 Browse every learning path in the **[[courses/index|Courses catalog]]**.
 
+## Every course
+
+<!-- generated:courses -->
+
 ## Active learning and field notes
 
 - **[[courses/index|Courses]]**: in-depth, sequenced learning paths.
