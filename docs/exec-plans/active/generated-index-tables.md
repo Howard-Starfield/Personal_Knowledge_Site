@@ -437,6 +437,43 @@ Screenshots: `scratch/cc-scope/index-home-table.png`,
 3. **The generated listings carry no `data-slug`,** as designed; the graph is
    unchanged, which is the acceptance gate G3.
 
+### 19.5 Live verification, after the merge
+
+Pull request [#37](https://github.com/Howard-Starfield/Personal_Knowledge_Site/pull/37)
+merged into `v5` as `f118d32`. The live site was checked with Playwright against
+`https://blog.howardlab.dev`:
+
+```text
+=== live homepage ===
+generated tables: 1
+generated rows: 17
+headers: ['COURSE', 'LESSONS', 'WITH QUIZZES']
+first: Account Management: Maintaining Relationships -> /courses/account-management-maintaining-relationships
+last: How to Be an Agent Boss: Leading AI Agents at Work -> /courses/how-to-be-an-agent-boss
+marker visible: False
+after click: https://blog.howardlab.dev/courses/account-management-maintaining-relationships | Account Management: Maintaining Relationships
+
+=== live practice ===
+generated tables: 4
+generated rows: 109
+course headings: ['Accounting + AI Crash Course', 'AI Agent Crash Course',
+                  'AI Basics: What Every Professional Needs to Know',
+                  'Covered California: Core Programme for Enrollers']
+marker visible: False
+
+=== live phone (390x844) ===
+{'bodyScrollW': 390, 'innerW': 390, 'rows': 17}
+
+=== live graph manifest ===
+total edges: 1897 authored: 694
+```
+
+The live manifest carries 1897 edges, the same count as before the merge, so the
+listings reached the reader without touching the graph.
+
+Screenshots: `scratch/cc-scope/live-home-table.png`,
+`scratch/cc-scope/live-practice-phone.png`.
+
 ## 20. Final acceptance checklist
 
 - [ ] Objective achieved.
@@ -451,12 +488,25 @@ Screenshots: `scratch/cc-scope/index-home-table.png`,
 
 ## 21. Completion log
 
-| Date       | Commit    | Work completed                                                                                              | Evidence                                                                           | Remaining                                       |
-| ---------- | --------- | ----------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ----------------------------------------------- |
-| 2026-10-25 | `48ceb28` | The plugin `plugins/generated-index`, the two markers, the config line, the unit tests, and this plan       | §19                                                                                | —                                               |
-| 2026-10-25 | `d146889` | The curated paragraph on the Practice page restored, so no authored link is lost                            | The graph is 1897 relationships before and after, with none added and none removed | —                                               |
-| 2026-10-25 | `1928bb5` | The evidence recorded in §19                                                                                | §19                                                                                | —                                               |
-| 2026-10-25 | —         | Pull request [#37](https://github.com/Howard-Starfield/Personal_Knowledge_Site/pull/37) opened against `v5` | The pull request body carries the same evidence                                    | The CI run, then the merge, then the live check |
+| Date       | Commit    | Work completed                                                                                                                         | Evidence                                                                           | Remaining                                       |
+| ---------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ----------------------------------------------- |
+| 2026-10-25 | `48ceb28` | The plugin `plugins/generated-index`, the two markers, the config line, the unit tests, and this plan                                  | §19                                                                                | —                                               |
+| 2026-10-25 | `d146889` | The curated paragraph on the Practice page restored, so no authored link is lost                                                       | The graph is 1897 relationships before and after, with none added and none removed | —                                               |
+| 2026-10-25 | `1928bb5` | The evidence recorded in §19                                                                                                           | §19                                                                                | —                                               |
+| 2026-10-25 | —         | Pull request [#37](https://github.com/Howard-Starfield/Personal_Knowledge_Site/pull/37) opened against `v5`                            | The pull request body carries the same evidence                                    | The CI run, then the merge, then the live check |
+| 2026-10-25 | `3166a78` | The test file narrowed its element rows with a guard instead of a cast, so no assertion remains in the plugin                          | `npx tsc --noEmit` clean, 264 tests pass                                           | —                                               |
+| 2026-10-25 | `f118d32` | Pull request [#37](https://github.com/Howard-Starfield/Personal_Knowledge_Site/pull/37) merged into `v5` after a green CI run          | §19.5                                                                              | —                                               |
+| 2026-10-25 | —         | The live site checked after the deploy: 17 courses on the homepage, 109 lessons and answer keys on the Practice page, 1897 graph edges | §19.5                                                                              | —                                               |
+
+### Acceptance gates
+
+| Gate                                                                                           | Result                                                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| G1 — the homepage lists all seventeen courses, linked, with counts that match the content tree | Pass — 17 rows, 17 links, counts 7/0, 32/32, 10/0, 15/0, 6/0, 7/0, 7/0, 19/19, 13/0, 7/1, 7/0, 7/0, 8/0, 11/0, 57/57, 8/0 |
+| G2 — the Practice page lists every quiz-bearing lesson and its answer key                      | Pass — 4 courses, 109 rows, 109 lesson links, 109 bank links                                                              |
+| G3 — the listings create no authored graph edges                                               | Pass — 1897 relationships before and after, 0 added, 0 removed                                                            |
+| G4 — the listings are generated at build time, not committed to Markdown                       | Pass — `plugins/generated-index/`, two markers, no listing in `content/`                                                  |
+| G5 — the checks pass and the live pages show the tables                                        | Pass — §19.1 and §19.5                                                                                                    |
 
 ### Known follow-ups (not part of this change)
 
