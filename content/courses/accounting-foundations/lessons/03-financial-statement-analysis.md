@@ -717,6 +717,21 @@ However, when reviewing the common-size income statement, the Board of Directors
 >    - **Extend the 10-year senior loan to Borrower X.** Borrower X carries a conservative Debt Ratio (32%), an exceptional interest coverage cushion (9.5x EBIT over interest), and negative working capital float. It has the balance sheet strength to survive cyclical downturns.
 >    - Borrower Y's high Current Ratio of 2.20x is an illusion created by slow-moving, illiquid inventory. Its extreme debt load (84%) and razor-thin interest coverage make it an unacceptably high credit risk over a multi-year horizon.
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "38e6ef8f-2244-4643-88a8-9c8d3592898c"
+title: "Checkpoint: common size, ratios and the DuPont framework"
+questionBankId: "7cd989c4-513e-4f10-bc4a-af30135b2a00"
+questionIds:
+  - "634fdd12-32c7-4336-8b85-99cda26d00ab"
+  - "fffd7e1e-20ed-42c9-b302-7f402ebdfcf9"
+  - "00f95824-f137-4cbf-9daf-5844a524e1d5"
+  - "ab9c6c3d-2d87-4f49-8d09-77a17150c5fa"
+  - "fddf01e6-37f4-4d77-a3aa-4efe0ff2dcc3"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/accounting-foundations/question-banks/03-financial-statement-analysis|Chapter 3: Financial Statement Analysis: Common Size, Ratios & The DuPont Framework: Question Bank]].
+
 ---
 
 ## What's Next?

@@ -1198,6 +1198,22 @@ Chapter 6 unifies interaction safety across timescales—from event loops (secon
 
 </details>
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "e98a5c1c-afbe-4b33-ac64-ec42176cb48f"
+title: "Checkpoint: Chapter 6 — Interaction: Expanding the Observation and Action Spaces"
+questionBankId: "beeb52cd-a2fd-4d60-ad15-bc71f239b61c"
+questionIds:
+  - "0102df2f-7106-4901-9a2a-66942ca8db06"
+  - "83eab4ea-dd4b-48d2-ac00-8dd217c0b793"
+  - "8a0dd725-e225-49e9-a1f1-690f225e7442"
+  - "f89ca65b-86cd-4d33-a15a-7a9b0f6f32f6"
+  - "03a70e8f-65cf-4645-bcae-7af6d78fd717"
+  - "f3202968-9878-4b47-a198-941761b12b70"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-agents-in-depth/question-banks/06-interaction|Chapter 6: Interaction: Expanding the Observation and Action Spaces: Question Bank]].
+
 <div class="chapter-navigation">
   <a href="/courses/ai-agents-in-depth/lessons/05-coding-agent-and-code-generation" class="chapter-nav-btn prev">← Previous: Chapter 5 — Coding Agent & Code Generation</a>
   <a href="/courses/ai-agents-in-depth/lessons/07-agent-evaluation" class="chapter-nav-btn next">Next: Chapter 7 — Agent Evaluation →</a>

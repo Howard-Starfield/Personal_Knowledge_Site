@@ -1270,6 +1270,22 @@ In the AndroidWorld Wi-Fi iteration case study (Table 7-5), how did the progress
 **Explanation:** Section 7.8 ("From Benchmark Reports to System Improvements", Table 7-5) details this exact three-round closed-loop optimization on the AndroidWorld Wi-Fi slice: (1) **H1** tested the cheap prompt hypothesis by adding navigation instructions, but success remained at 25% (0.47× tokens)—proving the prompt was not the bottleneck. (2) **H5** targeted the observation space, replacing the incompatible accessibility feed with the full UIAutomator tree; success jumped from 25% to 100%, but token consumption surged to 2.498× the control. (3) **H5C** applied context pruning discipline by removing invisible, textless, non-actionable layout container nodes without losing semantic controls, preserving 100% success while reducing token consumption to 0.506× the control. This proves that harness context engineering can dramatically reduce cost and latency while preserving peak accuracy. Distractors B, C, and D misstate the experiments completely.
 </details>
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "bf033db4-351f-4041-9118-9253ce431d14"
+title: "Checkpoint: Chapter 7 — Agent Evaluation"
+questionBankId: "d7931be6-428e-44e7-8833-65ffba86436c"
+questionIds:
+  - "8f4b94e0-6eba-4f98-a551-f4f3e80a8f23"
+  - "396a09d4-62ed-46f6-a2df-edbbc89b58f8"
+  - "e9d5d424-c5f0-4d77-b687-d1bba08c8baa"
+  - "53121f3a-44bb-4ead-b6c1-cbe2e7c32a62"
+  - "81a2724c-83ca-4be7-a537-d69d9c47eb23"
+  - "418c79b0-565e-45b4-9b53-7b9a4afb3dd6"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-agents-in-depth/question-banks/07-agent-evaluation|Chapter 7: Agent Evaluation: Question Bank]].
+
 <div class="chapter-navigation">
   <a href="/courses/ai-agents-in-depth/lessons/06-interaction" class="chapter-nav-btn prev">← Previous: Chapter 6 — Interaction</a>
   <a href="/courses/ai-agents-in-depth/lessons/08-model-post-training" class="chapter-nav-btn next">Next: Chapter 8 — Model Post-Training →</a>

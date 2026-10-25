@@ -749,6 +749,24 @@ With your CRM telemetry architecture, SLA thresholds, platform workflows, daily 
 
 Proceed to the final capstone unit: [[courses/account-management-maintaining-relationships/lessons/06-final-assessment|Final Assessment]], where you will test your mastery of commercial farming, client hospitality compliance, cadence automation, and high-stakes service recovery through 15 rigorous, real-world enterprise scenarios.
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "281da1f6-bd1b-4062-8412-747b3ea4f311"
+title: "Checkpoint: CRM Rotten Timers and Pipeline SLAs"
+questionBankId: "d2135e07-d89e-4ebc-a9ce-a1db8e74660c"
+questionIds:
+  - "b6c57c97-b22c-4cee-b45a-bc67f4a8ab18"
+  - "cee4e1a5-fc7a-48ff-95f9-cd7279275dd9"
+  - "a8f3695b-342c-43f7-9433-ffd54c37c63a"
+  - "89155718-c171-493c-a107-faafb9031902"
+  - "d7463450-3ff4-4f86-8659-8328793a66b4"
+  - "74354ed7-180a-4b63-9b4c-2c739077bfa4"
+  - "1090b354-bf34-4fa6-8b21-40e7d44fcbda"
+  - "eb48558c-f4f1-4ee3-b889-bc8500859e1c"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/account-management-maintaining-relationships/question-banks/05-exercise-files|Exercise Files: Implementing CRM "Going Rotten" Timers & Pipeline SLAs: Question Bank]].
+
 <div class="chapter-navigation">
   <a href="/courses/account-management-maintaining-relationships/lessons/04-service-recovery-and-retention" class="chapter-nav-btn prev">← Previous: Chapter 4 — Service Recovery & Retention</a>
   <a href="/courses/account-management-maintaining-relationships/lessons/06-final-assessment" class="chapter-nav-btn next">Next: Final Assessment →</a>

@@ -850,6 +850,22 @@ Architecting enterprise conversational AI is an exercise in balance: combining t
 
 In **Chapter 2: Intelligent Ticket Triage**, we build upon this front-door conversational intake, exploring how machine learning classification models, multi-label routing algorithms, and urgency scoring engines direct tickets to specialized engineering queues with microsecond precision.
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "1cc32964-f8bc-4a74-adec-e92d65c66221"
+title: "Checkpoint: dual-engine conversational support"
+questionBankId: "ae82b37f-a2ab-4369-a14d-15d6c1a5077d"
+questionIds:
+  - "8c709692-97bc-42f5-b973-a868dbcca868"
+  - "5b0e06fc-3732-4bc1-b8fe-c32dea6a2a78"
+  - "0bef81c9-9f73-4d03-baae-4fa68bc1a236"
+  - "1e23563e-56ea-4e4c-9e51-8bf87dd383cd"
+  - "49ddf688-01ba-47ec-8ff5-2868e743c3aa"
+  - "4c9c16f6-adaf-4aad-9c96-34b2a6abb761"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-solutions-and-techniques-for-help-desk-operations/question-banks/01-conversational-ai-dual-engine-virtual-assistants|Conversational Support Architecture: Dual-Engine Rule Systems & Generative Virtual Assistants: Question Bank]].
+
 ---
 
 <div class="chapter-navigation">

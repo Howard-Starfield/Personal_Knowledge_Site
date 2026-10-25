@@ -868,6 +868,24 @@ Having mastered the foundational strategies, cadence automation systems, and hig
 
 Proceed to [[courses/account-management-maintaining-relationships/lessons/05-exercise-files|Exercise Files: CRM Lab Guide]] to access step-by-step technical blueprints for configuring decaying deal timers, custom contact dossiers, and cadence automation workflows across industry-standard CRM platforms including Pipedrive, HubSpot, and Freshsales.
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "ef7b07c9-566d-4393-b0ae-a5bff2c63103"
+title: "Checkpoint: Service Recovery and Retention"
+questionBankId: "3bcf2e44-1729-4a94-9495-acce6468e99c"
+questionIds:
+  - "3925c092-a468-496b-a750-582ba71eeb65"
+  - "2aad8749-1cc5-417e-9960-d6acff8ae27b"
+  - "8b575a20-2bd0-4756-9a02-3c9975b440bb"
+  - "86723df1-e078-41cc-b4d9-d16d49c23ec2"
+  - "087c4988-e198-47b2-a5c6-5ac6dce1ac48"
+  - "9726251f-744b-4c80-a303-c860444756ec"
+  - "1d47aa82-46c7-4780-a8ec-a09065b02933"
+  - "74fa20ba-6fdf-405c-9a67-58e8ac3fbe7e"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/account-management-maintaining-relationships/question-banks/04-service-recovery-and-retention|Chapter 4: Service Recovery & Retention — Owning Failures, Restitution & Preventing Recurrence: Question Bank]].
+
 <div class="chapter-navigation">
   <a href="/courses/account-management-maintaining-relationships/lessons/03-automating-account-cadence" class="chapter-nav-btn prev">← Previous: Chapter 3 — Automating Account Cadence</a>
   <a href="/courses/account-management-maintaining-relationships/lessons/05-exercise-files" class="chapter-nav-btn next">Next: Exercise Files — CRM Lab Guide →</a>

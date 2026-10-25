@@ -624,6 +624,21 @@ Test your mastery of balance sheet mechanics, the accounting equation, and struc
 >    $$\text{Quick Ratio} = \frac{\text{Cash} + \text{Marketable Securities} + \text{Receivables}}{\text{Current Liabilities}} = \frac{500,000 + 1,500,000}{10,000,000} = \frac{2,000,000}{10,000,000} = 0.20$$
 >    Spartan possesses only **\$0.20 of liquid funds for every \$1.00 of debt coming due**. Unless Spartan drastically slashes prices to liquidate its stale inventory—absorbing steep losses—it will face a severe liquidity shortfall when vendor invoices mature.
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "8092f563-7a36-41ad-8ac7-8a0dba8740f4"
+title: "Checkpoint: the balance sheet and the fundamental accounting equation"
+questionBankId: "3ca49fe7-2da6-4cd4-9869-d46530c1ba13"
+questionIds:
+  - "09818bc9-6685-4f15-bcd8-9edd7c95b2f8"
+  - "ec20a8bf-f6e7-4c7c-87cb-1e6f25a29cfd"
+  - "1950b42a-4749-4233-9be6-c6d9cca1d451"
+  - "4cb7995b-3d50-425a-8866-0abbf22a34b7"
+  - "27323768-b301-4f88-b91e-ea2dc228d3a5"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/accounting-foundations/question-banks/01-balance-sheet|Chapter 1: The Balance Sheet & Fundamental Accounting Equation: Question Bank]].
+
 ---
 
 ## What's Next?

@@ -1501,6 +1501,22 @@ Chapter 2 argues that "in-context learning is essentially retrieval, not reasoni
 **Explanation:** In Section "Isolation Over Compression: Sub-Agent Context Isolation", the author contrasts post-hoc compression with architectural isolation. When a main Agent performs open-ended exploration (e.g., scanning dozens of repository files), tens of thousands of tokens flood the context, diluting attention and requiring lossy, expensive compression. Delegating the task to a specialized sub-agent isolates that exploratory noise to an independent ephemeral context. The sub-agent returns only a concise distilled conclusion (e.g., 200 tokens) to the main Agent, preventing context rot and preserving the main Agent's KV Cache prefix completely.
 </details>
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "3cb5263c-bcce-4076-8bcc-3e1c48dd5e9e"
+title: "Checkpoint: Chapter 2 — Context Engineering"
+questionBankId: "d8b2f12c-ab3f-45d1-a4b8-63f6ed1a7626"
+questionIds:
+  - "2f84db5e-fe49-4e63-a5fd-b3ab62347b7c"
+  - "311c5fa8-5669-437e-86d3-986f70a7b50d"
+  - "78afcc9d-8ac9-4c0c-a837-6c08c6800c78"
+  - "a78a46ce-97b6-41e4-9685-da818f70133d"
+  - "8ed5a9ab-a759-4a01-918b-daf1f7b9e544"
+  - "8915ab47-7f9a-4c5d-829f-9998a1f89cbf"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-agents-in-depth/question-banks/02-context-engineering|Chapter 2: Context Engineering: Question Bank]].
+
 <div class="chapter-navigation">
   <a href="/courses/ai-agents-in-depth/lessons/01-agent-fundamentals" class="chapter-nav-btn prev">← Previous: Chapter 1 — Agent Fundamentals</a>
   <a href="/courses/ai-agents-in-depth/lessons/03-user-memory-and-knowledge-bases" class="chapter-nav-btn next">Next: Chapter 3 — User Memory & Knowledge Bases →</a>

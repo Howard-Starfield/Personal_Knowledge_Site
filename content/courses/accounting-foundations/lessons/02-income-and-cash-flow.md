@@ -636,6 +636,21 @@ However, a forensic audit of NexusCloud's commercial agreements reveals:
 >    - _Why OCF is Negative:_ For a mature manufacturing firm, negative OCF indicates that the core commercial engine has failed. The selling price of tractors and machinery no longer covers wholesale steel, labor, and plant overhead. Furthermore, customers may be delaying payments due to dissatisfaction, while unsold equipment piles up in warehouses.
 >    - _Strategic Viability:_ Beta cannot justify negative OCF as an "investment in growth." It has exhausted market expansion. If a mature company's daily operations consume cash, it must continuously borrow debt or sell assets to survive. This is an unsustainable trajectory leading directly to debt default or bankruptcy.
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "f7df91c6-5fbb-407e-9675-a14190bec993"
+title: "Checkpoint: profitability versus liquidity"
+questionBankId: "5f07eff4-834b-45fc-b032-9ed61748b00b"
+questionIds:
+  - "bb393cdb-ff26-4754-8b02-1abf36161d73"
+  - "ec7198c2-0484-4d76-8f69-53f81da01bb0"
+  - "a48a605b-3962-4a7e-b6f8-162ef63f67be"
+  - "211251d0-2afe-4328-ab77-1c71cec70cca"
+  - "03e04a1b-03f7-4d7b-8cd0-d3f0d5237541"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/accounting-foundations/question-banks/02-income-and-cash-flow|Chapter 2: Income Statement & Cash Flow Statement: Profitability vs. Liquidity: Question Bank]].
+
 ---
 
 ## What's Next?

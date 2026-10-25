@@ -1144,6 +1144,22 @@ An enterprise agent system retrieves external knowledge documents into its LLM c
 
 </details>
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "93b215bb-7612-49c3-adc5-fe4e08a84aae"
+title: "Checkpoint: Chapter 3 — User Memory and Knowledge Bases"
+questionBankId: "71d1e4b3-033f-4210-8e10-e95adcf96723"
+questionIds:
+  - "1e30aae6-9da8-412e-a58f-bd9669c37dc2"
+  - "6bc37c73-076c-42f6-9ebb-6a873016b169"
+  - "c2fd826d-63d8-4bc3-a034-b1729d17cfb9"
+  - "df989662-a0bb-433e-8267-a405214766dc"
+  - "e367e0b9-2574-42af-851e-1e15129265fc"
+  - "1cc5c6ca-d0b3-418f-90c0-215ed752c8be"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-agents-in-depth/question-banks/03-user-memory-and-knowledge-bases|Chapter 3: User Memory and Knowledge Bases: Question Bank]].
+
 <div class="chapter-navigation">
   <a href="/courses/ai-agents-in-depth/lessons/02-context-engineering" class="chapter-nav-btn prev">← Previous: Chapter 2 — Context Engineering</a>
   <a href="/courses/ai-agents-in-depth/lessons/04-tools" class="chapter-nav-btn next">Next: Chapter 4 — Tools →</a>

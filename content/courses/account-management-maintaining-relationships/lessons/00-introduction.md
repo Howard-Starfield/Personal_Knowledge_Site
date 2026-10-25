@@ -369,6 +369,24 @@ Now that you have grounded your commercial philosophy in compounding retention e
 
 Proceed to [[courses/account-management-maintaining-relationships/lessons/01-relationship-selling|Chapter 1: Relationship Selling]] to master the behavioral mechanics of deep client rapport, the three levels of active listening, and the art of engineering organic peer referrals.
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "e8c3dd79-6e03-40d1-beba-48747559c60c"
+title: "Checkpoint: Shifting from Hunting to Farming"
+questionBankId: "09326ae0-d9cb-4a76-bc60-7eb52ac297b6"
+questionIds:
+  - "0f6b33a5-38fa-4d0c-a080-89526134074a"
+  - "a8729b3c-9498-4ed5-a7e3-8d2c49d40c0c"
+  - "fd3332bf-e06c-49f0-b4c6-dca97faea334"
+  - "1c594ae4-0a27-4e50-9f4f-a67b3cd609bc"
+  - "bad217f2-a0db-4e53-a9bc-35e24ef7239a"
+  - "1b15f356-a8cc-456b-8f64-23cf4a022907"
+  - "5edef992-0503-46f3-a26b-155976293db7"
+  - "c59461b0-132c-4a87-a7b2-68fa9f52549c"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/account-management-maintaining-relationships/question-banks/00-introduction|Introduction: Shifting from Hunting to Farming — The Foundation of Account Management: Question Bank]].
+
 <div class="chapter-navigation">
   <a href="/courses/account-management-maintaining-relationships/lessons/01-relationship-selling" class="chapter-nav-btn next">Next: Chapter 1 — Relationship Selling →</a>
 </div>

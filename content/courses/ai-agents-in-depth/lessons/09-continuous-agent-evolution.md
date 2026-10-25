@@ -787,6 +787,22 @@ In Section 9.4, Table 9-3, and recent research (Lin et al., 2026), why is it cri
 **Explanation:** Section 9.4 ("Building a Continual-Evolution Closed Loop for Long-Term Operation", Table 9-3) and Lin et al. (2026) make a fundamental distinction: "Harness updating produces valuable persistent changes from trajectories; Harness benefit is the task Agent's ability to find, activate, and correctly use those changes later." If a developer evaluates evolution solely by end-to-end task pass rates, a flawed conclusion can occur: an updater might produce a brilliant, mathematically sound Skill, but if the downstream task agent fails to load the Skill or drifts off track during execution, the pass rate does not improve. Layered metrics (candidate validity, artifact activation rate, adherence rate, and retention-set gain) allow engineers to pinpoint whether the bottleneck lies in the evolution engine or the runtime execution model. Distractors A, C, and D misrepresent these concepts.
 </details>
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "182e9990-449e-46c5-b52a-7bd90afa19bf"
+title: "Checkpoint: Chapter 9 — Continuous Agent Evolution"
+questionBankId: "f8690f3d-3afe-41ff-b0af-d8c20e263801"
+questionIds:
+  - "982d3030-928c-4f13-b7e0-3d6eb79c5731"
+  - "bd057e30-e43f-4340-9f02-9a54a9b55a14"
+  - "5438ba41-66ff-4624-84cc-50be5f4031dc"
+  - "e6c8aaf5-d5db-424e-ad89-ce99cfd5ec92"
+  - "ddf70ab6-9c02-4046-a25b-3dd638b6ef95"
+  - "30096326-3263-478f-b598-71e048bcac10"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-agents-in-depth/question-banks/09-continuous-agent-evolution|Chapter 9: Continuous Agent Evolution: Question Bank]].
+
 <div class="chapter-navigation">
   <a href="/courses/ai-agents-in-depth/lessons/08-model-post-training" class="chapter-nav-btn prev">← Previous: Chapter 8 — Model Post-Training</a>
   <a href="/courses/ai-agents-in-depth/lessons/10-multi-agent-collaboration" class="chapter-nav-btn next">Next: Chapter 10 — Multi-Agent Collaboration →</a>

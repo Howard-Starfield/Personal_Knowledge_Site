@@ -1069,6 +1069,22 @@ Deploying artificial intelligence within enterprise help desk operations require
     [ ] Maintain an auditable golden regression test suite to validate safety before deployments.
 ```
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "91fbf4f3-fba9-4044-a061-ee9b845de229"
+title: "Checkpoint: delegation tiers, steering control and the economics"
+questionBankId: "e8df5815-d699-45d9-9844-bda0ade76d82"
+questionIds:
+  - "61f3a1c1-45b6-4754-8430-68d99c936780"
+  - "037e38cf-afd7-45be-a72b-2c9a1b891877"
+  - "e7dbb19b-8cc0-4ebc-89ea-a246a3b91fdc"
+  - "82b22592-e432-4e93-b6d5-99fd81fab837"
+  - "c4b38149-e6f0-459b-b738-d3b323bca48a"
+  - "bf5541fe-17db-4292-8b4e-f9ac91fd2b5f"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-solutions-and-techniques-for-help-desk-operations/question-banks/07-governance-security-change-management-roi|Enterprise Governance & Economics: Data Privacy, Human-in-the-Loop Safeguards & TCO/ROI Models: Question Bank]].
+
 ---
 
 <div class="chapter-navigation">

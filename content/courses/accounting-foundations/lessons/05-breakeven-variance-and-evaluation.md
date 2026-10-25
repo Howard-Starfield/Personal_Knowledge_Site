@@ -833,6 +833,21 @@ Customer satisfaction (CSAT) scores have crashed to an all-time low of 38%. Cust
 >    | **Pillar 3: Operational Pace**    | **Adjusted Handle Time (AHT)**     | Evaluated within a healthy band (e.g., 4 to 6 minutes), but **disqualified** if the agent's repeat-call rate spikes. | **20%** |
 >    - **The Anti-Gaming Circuit Breaker:** If an agent hangs up on a customer, the customer calls back within 10 minutes. That immediately destroys the agent's **First-Contact Resolution (FCR)** score (weighted at 50%) and triggers an abysmal CSAT score. Hanging up on callers becomes mathematically suicidal for the agent's monthly bonus.
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "d2fd5335-0a06-43bf-ab9a-5998493eb7ed"
+title: "Checkpoint: breakeven analysis, variance and performance evaluation"
+questionBankId: "5934f89e-c6d9-4fab-a881-aab26bd3a9c1"
+questionIds:
+  - "4c8b4aa9-7ff2-419a-b0ed-9631b70fc54e"
+  - "a03d9203-b05f-4c23-a047-a5b789387695"
+  - "1d90356b-45e5-4e15-bee8-841d101a173a"
+  - "b235d538-2027-41d3-a5f1-a32f07608e23"
+  - "4a19cdb2-06d9-44d4-af69-24ce9a25ae37"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/accounting-foundations/question-banks/05-breakeven-variance-and-evaluation|Chapter 5: Breakeven Analysis, Variance & Performance Evaluation: Question Bank]].
+
 ---
 
 ## What's Next?

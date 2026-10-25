@@ -766,6 +766,21 @@ You now view the business landscape through the multi-dimensional lens of **The 
 
 Proceed to [[courses/accounting-foundations/lessons/08-glossary|Chapter 8: Glossary & Conceptual Dictionary]] to review the definitive terminology, structural formulas, and conceptual reference guide for the entire course.
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "9a246d2d-b0d6-4cd2-8779-4df2b2927a0e"
+title: "Checkpoint: strategic tax planning"
+questionBankId: "4e7a3be2-0f93-4371-a3bd-d84e62dd2a3d"
+questionIds:
+  - "094bd9e5-fce6-4364-b8e5-3a919b3b7c43"
+  - "91239154-2ccc-4820-b16f-a75b10bd1ac8"
+  - "23a86dc8-726f-4273-9af9-242a71f30de1"
+  - "012be19c-edbe-42c2-a897-176296f8c5f7"
+  - "5047dca4-ddbc-462d-ae5e-7ffb09da6131"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/accounting-foundations/question-banks/07-tax-planning-strategies|Chapter 7: Strategic Tax Planning: Time Shifting, Pockets & Character Transformation: Question Bank]].
+
 ---
 
 <div class="chapter-navigation">

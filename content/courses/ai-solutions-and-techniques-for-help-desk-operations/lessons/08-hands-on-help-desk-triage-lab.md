@@ -1817,6 +1817,22 @@ Deploying this cognitive triage pipeline into an enterprise production environme
     [ ] Audit all redacted PII tokens in compliance with GDPR Right-to-be-Forgotten mandates.
 ```
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "f31ef424-4498-4cf6-a352-30830f600263"
+title: "Checkpoint: running the triage and deflection engine end to end"
+questionBankId: "221a5d26-95a1-453d-aaa1-4c5e498081ff"
+questionIds:
+  - "cbbdac10-32ff-42cc-ae90-55543d0e3f7c"
+  - "1efa6997-eda0-4c92-a344-2f2f79253093"
+  - "03bac17a-66dc-48a7-9799-5e440b959dc7"
+  - "d24ac238-ee00-48c6-82c4-283ff03915b0"
+  - "92431cd1-b31b-48ea-b26c-0ad118c320e3"
+  - "5b0600bd-5f49-4e2e-8b8a-10614cc4ade2"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-solutions-and-techniques-for-help-desk-operations/question-banks/08-hands-on-help-desk-triage-lab|Hands-On Implementation Lab: Production AI Help Desk Triage & Deflection Engine in Python: Question Bank]].
+
 ---
 
 <div class="chapter-navigation">

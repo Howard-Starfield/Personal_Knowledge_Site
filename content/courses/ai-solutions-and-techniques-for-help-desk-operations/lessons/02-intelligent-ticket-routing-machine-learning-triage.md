@@ -1195,6 +1195,22 @@ Intelligent ticket triage transforms the service desk from a reactive, chaotic c
     [ ] Automate active learning retraining pipelines on technician reassignments.
 ```
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "cea6e3cb-ae13-40f2-b8db-099c61e06688"
+title: "Checkpoint: multi-class triage, load balancing and SLA gates"
+questionBankId: "34e441b7-32d5-4c6a-ae6b-1f65e095ab09"
+questionIds:
+  - "6f8a491f-4492-4f74-a7b5-e1f01a3a06e1"
+  - "9ac83624-e7ad-4d51-9df4-d1fe21ed47b2"
+  - "ffcc0328-5c0c-4e38-9d1a-4880b3101808"
+  - "01160eb4-bcd1-4948-b4cd-92b97a491f7d"
+  - "e848bc08-9f8f-47e5-a67e-d7d62d24e4e1"
+  - "2ac34bec-b864-4c3e-bb58-32c70b8d90b3"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-solutions-and-techniques-for-help-desk-operations/question-banks/02-intelligent-ticket-routing-machine-learning-triage|Intelligent Ticket Triage: Multi-Class ML Routing, Load Balancing & Predictive SLA Gates: Question Bank]].
+
 ---
 
 <div class="chapter-navigation">

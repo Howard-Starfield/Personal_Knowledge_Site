@@ -1282,6 +1282,22 @@ Predictive analytics and endpoint telemetry shift IT service operations from an 
     [ ] Quantify dark friction reduction in monthly IT steering committee executive reporting.
 ```
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "ea9bd35b-0f10-4a42-86cd-f8677264de0f"
+title: "Checkpoint: forecasting demand, sizing the queue and catching silent failures"
+questionBankId: "74356d27-766f-4cf1-8cff-024c180de8b6"
+questionIds:
+  - "a3f55a07-0422-4507-9d71-0fa5e088131f"
+  - "c90a7643-2513-468f-b4e0-8c8c80f7c73e"
+  - "5a674160-9edb-4228-a9c9-88df52966b45"
+  - "bb5bc96e-3762-4101-9b73-a8f083bcb39f"
+  - "f7190fe7-310d-48b2-8cb7-78ed9e2fad2b"
+  - "b2c55d8a-9c00-464d-b3db-6a786c74d61d"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-solutions-and-techniques-for-help-desk-operations/question-banks/03-predictive-analytics-incident-forecasting-telemetry|Predictive Analytics & Telemetry: Time-Series Forecasting, Queuing Theory & Silent Failure Detection: Question Bank]].
+
 ---
 
 <div class="chapter-navigation">

@@ -505,6 +505,24 @@ With the foundations of relationship selling, multi-threading arithmetic, and ac
 
 Proceed to [[courses/account-management-maintaining-relationships/lessons/02-meeting-and-treating-clients|Chapter 2: Meeting and Treating Clients]] to master corporate entertainment, high-impact dining etiquette, gift-giving protocols, and strict anti-bribery governance under the UK Bribery Act and US FCPA.
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "736163de-9266-4da2-8705-f60f9756f599"
+title: "Checkpoint: Relationship Selling"
+questionBankId: "d836ee7f-195f-4d2c-b42d-ea327c065751"
+questionIds:
+  - "d49abb97-bf95-44d8-9669-0f7f9f732b67"
+  - "8aeb93ec-3fca-4adc-9c0b-af1567837703"
+  - "837b98c2-c2d5-4776-9794-e681234401a9"
+  - "883c65b7-a326-4c2c-935e-940b25145daa"
+  - "3d1415de-d0df-47cf-91d5-5e55ec2aac95"
+  - "434ed691-e8a3-4aa3-a050-1ef499e4bee9"
+  - "d27536e6-68e9-4fc4-9446-e52a90852073"
+  - "b0ece7a5-de7a-4baf-94b5-4de1929b11e5"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/account-management-maintaining-relationships/question-banks/01-relationship-selling|Chapter 1: Relationship Selling — Trust, Active Listening & Reciprocity: Question Bank]].
+
 <div class="chapter-navigation">
   <a href="/courses/account-management-maintaining-relationships/lessons/00-introduction" class="chapter-nav-btn prev">← Previous: Introduction</a>
   <a href="/courses/account-management-maintaining-relationships/lessons/02-meeting-and-treating-clients" class="chapter-nav-btn next">Next: Chapter 2 — Meeting and Treating Clients →</a>

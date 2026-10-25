@@ -1130,6 +1130,22 @@ In emerging agent economies where AI agents autonomously hire human contractors 
 **Explanation:** As articulated in Thought Question 7, the RentAHuman paradigm inverts the traditional master-tool relationship: autonomous digital agents possessing financial wallets hire humans as specialized service providers. Far from merely doing manual labor, humans supply: (1) Physical presence and embodied manipulation in non-digitized environments; (2) Legal standing and authorization (signing legal documents, opening bank accounts, assuming compliance liabilities); and (3) Moral judgment and value arbitration in high-stakes scenarios involving ethical trade-offs.
 </details>
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "ed10a96c-36b8-4a47-9777-aeb9612e4ab4"
+title: "Checkpoint: Chapter 10 — Multi-Agent Collaboration"
+questionBankId: "877cd865-ab8e-4cf3-98a0-9f2598fcdcf3"
+questionIds:
+  - "13334dbb-6d3a-4a00-acfa-e0648751ac4c"
+  - "48bc0d95-1172-4e24-a1c0-9d19bba6abdb"
+  - "a360684f-a2d1-4ed5-9d4d-88b39b6cce1d"
+  - "0a651071-bf8f-42eb-ba2d-e4af865754ef"
+  - "021591b8-3bc9-45ce-beaf-c35aaf726e2a"
+  - "cba5d316-f6d2-4797-a3af-1160d2b9a3f3"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-agents-in-depth/question-banks/10-multi-agent-collaboration|Chapter 10: Multi-Agent Collaboration: Question Bank]].
+
 <div class="chapter-navigation">
   <a href="/courses/ai-agents-in-depth/lessons/09-continuous-agent-evolution" class="chapter-nav-btn prev">← Previous: Chapter 9 — Continuous Agent Evolution</a>
   <a href="/courses/ai-agents-in-depth/lessons/11-afterword" class="chapter-nav-btn next">Next: Afterword →</a>

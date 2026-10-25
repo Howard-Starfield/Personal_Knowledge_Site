@@ -1278,6 +1278,22 @@ Proactive support systems represent the natural evolution of IT operations: tran
     [ ] Maintain strict rate-limiting on proactive messaging to prevent employee alert fatigue.
 ```
 
+```knowledge-quiz
+schemaVersion: 1
+quizId: "2d13709d-7fc6-4dd5-b43e-a34bef152d63"
+title: "Checkpoint: anomaly detection, digital twins and guarded self-healing"
+questionBankId: "71b100dd-2325-44ad-a362-8ee555af1ffc"
+questionIds:
+  - "4f2f31e7-2fd3-499d-be80-695d10f1b0fb"
+  - "0e5c72d1-6bc5-4618-aefe-51ee691a14bf"
+  - "8415aeec-6040-490e-a933-93b5da83b471"
+  - "723d8133-1568-4d84-b124-edc93fcd43bb"
+  - "7cdaffc2-fb68-4a71-bf4f-73578531d2bb"
+  - "ec997e67-ca7c-4549-ab23-bddf275d4cad"
+```
+
+The full question bank — every question with its sample answer and its explanation — is at [[courses/ai-solutions-and-techniques-for-help-desk-operations/question-banks/06-proactive-support-anomaly-detection-automated-workflows|Proactive Support Systems: Edge Telemetry Anomaly Detection, Digital Twins & Self-Healing Remediation: Question Bank]].
+
 ---
 
 <div class="chapter-navigation">
