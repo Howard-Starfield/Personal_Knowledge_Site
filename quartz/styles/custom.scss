@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "./variables.scss" as *;
 
 :root {
@@ -1281,47 +1282,89 @@ body[data-slug="index"] {
   }
 }
 
-.chapter-navigation {
+// The chapter navigation: the previous and next buttons at the foot of a
+// lesson. It is pinned to the bottom of the viewport so the reader can move
+// through the material without scrolling back to the end of the page, and its
+// titles are truncated rather than wrapped, so the two buttons never fall
+// onto a second row.
+//
+// Two kinds of markup use these classes: the chapter-navigation plugin's
+// "Previous: ... / Next: ..." and the hand-written navigation in the
+// LinkedIn-derived lessons. The plugin already skips a page that carries its
+// own, so the two never appear together.
+//
+// The rules below deliberately do not restate the padding, the border or the
+// radius of a button: the theme's own link rules win over the site's, and
+// restating them would change how the buttons look.
+//
+// Plan: docs/exec-plans/active/pinned-chapter-navigation.md
+.page .chapter-navigation {
+  position: fixed;
+  inset: auto 0 0 0;
+  // Below the Explorer drawer (200) and its scrim (150), so the drawer still
+  // covers the bar when it opens.
+  z-index: 100;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-wrap: nowrap;
+  justify-content: center;
   align-items: center;
   gap: 1rem;
-  margin: 3.5rem 0 2rem 0;
-  padding-top: 1.75rem;
+  margin: 0;
+  padding: 0.5rem 1rem;
   border-top: 1px solid var(--lightgray);
+  background-color: var(--light);
 
   .chapter-nav-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.65rem 1.25rem;
-    border: 1px solid var(--notebook-border, var(--lightgray));
-    border-radius: 6px;
-    background: var(--notebook-panel-raised, var(--light));
+    // The button may shrink below the width of its title, and the title is
+    // then cut with an ellipsis instead of wrapping onto a second line.
+    min-width: 0;
+    max-width: 46%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.88rem;
+    // The theme's own link rules set the colour of an anchor, so the colour
+    // has to be stated here to keep the button the colour it has always been.
     color: var(--dark) !important;
-    font-size: 0.95rem;
-    font-weight: 550;
     text-decoration: none !important;
     transition:
       background-color 0.15s ease,
-      border-color 0.15s ease,
-      transform 0.1s ease;
+      color 0.15s ease,
+      border-color 0.15s ease;
 
     &:hover {
-      background: color-mix(
-        in srgb,
-        var(--lightgray) 60%,
-        var(--notebook-panel-raised, var(--light))
-      );
-      border-color: var(--secondary);
       color: var(--secondary) !important;
       transform: translateY(-1px);
+    }
+
+    &.prev {
+      margin-right: auto;
     }
 
     &.next {
       margin-left: auto;
     }
+  }
+}
+
+// The bar sits at the foot of the viewport, so the page keeps room for it and
+// the last line of a lesson can still be read.
+.page {
+  padding-bottom: 4rem;
+}
+
+// Where :has() is supported, a page without a navigation gives the room back.
+.page:not(:has(.chapter-navigation)) {
+  padding-bottom: 0;
+}
+
+@media all and (min-width: #{map.get($breakpoints, mobile) + 1}) {
+  .page .chapter-navigation {
+    // The bar spans the viewport, but the buttons sit at the edges of the
+    // content column, which starts after the sidebar. The column is centred
+    // once the viewport is wider than the grid.
+    padding-left: calc(max(1rem, (100vw - 1280px) / 2) + #{$sidePanelWidth});
+    padding-right: max(1rem, (100vw - 1280px) / 2);
   }
 }
 
@@ -1362,49 +1405,6 @@ details.quiz-answer {
       margin-bottom: 0.75rem;
       border-bottom: 1px dashed var(--lightgray);
       padding-bottom: 0.5rem;
-    }
-  }
-}
-
-.chapter-navigation {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 3rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--lightgray);
-  flex-wrap: wrap;
-
-  .chapter-nav-btn {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.6rem 1.1rem;
-    border-radius: 6px;
-    background-color: color-mix(in srgb, var(--lightgray) 60%, transparent);
-    border: 1px solid var(--lightgray);
-    color: var(--dark);
-    font-size: 0.88rem;
-    font-weight: 550;
-    text-decoration: none;
-    transition:
-      background-color 0.15s ease,
-      color 0.15s ease,
-      border-color 0.15s ease;
-
-    &:hover {
-      background-color: var(--secondary);
-      border-color: var(--secondary);
-      color: var(--light);
-      text-decoration: none;
-    }
-
-    &.prev {
-      margin-right: auto;
-    }
-
-    &.next {
-      margin-left: auto;
     }
   }
 }
